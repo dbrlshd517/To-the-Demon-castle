@@ -1,0 +1,967 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Default Local Group
+  m_GUID: c8914b1fda0f99943900088ed1edf885
+  m_SerializeEntries:
+  - m_GUID: 00d027bd0d565664fa935c8315d95947
+    m_Address: Data/Cards/24301
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 028f8670f8f9081458e065e0f6fa79f1
+    m_Address: Data/Cards/24205
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 035f50e015cacfc468e503e1649ec45f
+    m_Address: Data/Cards/24206
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 045614e12e6e763458a14df7eac84500
+    m_Address: Data/RelicDatabase
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05791533060a5cf488a8100dc5d39c45
+    m_Address: Data/Enemies/10200
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemies
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 06fce5b81055f9d4c9d7370ba0b87c07
+    m_Address: Sprites/Combat/Rangepreview/4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09012024e0917834ea7782470ca7d295
+    m_Address: Data/Cards/21100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09c02ca81ccb7344b9738f89bd63398b
+    m_Address: Data/Enemies/10400
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemies
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09f023a7af6781f4594d2acc5bcbf5ff
+    m_Address: Data/Allies/10002
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Allies
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a12d66fadeb8e6468f721f18737a85d
+    m_Address: Data/Cards/24201
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0bf7240c9a155f141beb3c66134ea78e
+    m_Address: Prefabs/Common/RelicPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ccacfa7fa267ae44923d42217439375
+    m_Address: Data/Cards/23103
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 111ae9fdb08dd36408d6aedff9b174f1
+    m_Address: Sprites/Common/Hpbar
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 131a13cc07ed30f4e92bb8dfe5f38297
+    m_Address: Data/Cards/24202
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13eed42375fbe374b8df2f5b66a079f1
+    m_Address: Sprites/Ingame/Item/101
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1627a0c72aaaee14dbadae3d7caf2fde
+    m_Address: Data/Cards/22301
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1746590c78b806545ad2a1b0a45e95f8
+    m_Address: Sprites/Combat/Condition/attack
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 177f5204d946f9e43bf9ac336ad27654
+    m_Address: Data/Cards/32100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17a7c55636ae68048a7727c4f54a0d68
+    m_Address: Data/Cards/22000
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1902882cfe6e2e74bbfb8b0a6927aa42
+    m_Address: Prefabs/RestAreaprefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1ae0ccc73039d2c4ea4cdfcb935cb9e4
+    m_Address: Data/Cards/13201
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bc8a6f81afd95649b47ad8b9f732c8e
+    m_Address: Data/Cards/13200
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1dc855f79d1766f46a61d5db1651c38a
+    m_Address: Data/Cards/12201
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 234773fb6a4fc174fa5dab0440c638fa
+    m_Address: Data/Cards/11200
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2351a58846d25c84cb9f0daac0661850
+    m_Address: Data/Cards/41100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 242095e08c9cd374db284a42ec3b4a5f
+    m_Address: Prefabs/Combat/moveiconprefap
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29050893189a62f44a6461e070a94949
+    m_Address: Prefabs/Common/Confirmuseitemprefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a5901365d968ef4d9046761af8402cc
+    m_Address: mWooshSmallCrit
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2bc2ee8023c218f4c86386f64b801449
+    m_Address: Sprites/Common/Sheldbar
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ca60c0d555a4f14d92a15a096346ed0
+    m_Address: Prefabs/Combat/CombatBoardCell
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d565ce6bd1bc0d44840a5a74ba342ce
+    m_Address: Data/Cards/31100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2effa35761f69c643b51c0b67ea7cfe8
+    m_Address: Data/Cards/24305
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3072d693562de6548922889948567347
+    m_Address: Sprites/Combat/background_1-export
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32455ff49bb3b224bb71417bc0661b7c
+    m_Address: Data/Allies/10000
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Allies
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3280635abfa40c14bab7a80d11055e97
+    m_Address: Sprites/Combat/Rangepreview/enemyallyattackmark 1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 338c16ae58ed1224baff15411d5670d0
+    m_Address: Sprites/Combat/stage1_Tilemap
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3613dfb5c5b48be4e98868f3190f3f65
+    m_Address: Sprites/Relic/101
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 377045df6e6b9a5468d0965baaf41b04
+    m_Address: Sprites/Combat/rewardbox1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37c4d085f1f290644bdb3c2e5724c343
+    m_Address: Data/Cards/42101
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b06472e6f94c284da572cd660f819e9
+    m_Address: Data/Cards/23104
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e3ecd2ae65d0854f9480c5a0025158f
+    m_Address: Sprites/Combat/Rangepreview/playerattackmark
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f554e3b8dc0d824eb1b2f4422165af2
+    m_Address: Data/Cards/41101
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 406fbc0fdebba98478d9711e159be9ba
+    m_Address: Data/Cards/12301
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 409c3141072bf224ea187dececb32bd4
+    m_Address: Prefabs/Combat/Combateffectprefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 40d788fc8cc4d0740a8858cbc635975e
+    m_Address: Data/Cards/33101
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4da93a0210f5ce44d9e04e0253f07397
+    m_Address: Data/Cards/33102
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ecc82e93d02d8d4d945a463e9b84aee
+    m_Address: Data/Cards/21001
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f2705cf015a43e4899489c5e510f390
+    m_Address: TooltipDatabase
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 519afbe24175fb440ba5db08daf0c485
+    m_Address: Sprites/Combat/Sprite-0003 1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 538d28d160189b0498035db09ecc616e
+    m_Address: Data/Cards/33100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5580015b95e7eaa4b90f0881686f00c3
+    m_Address: Data/Cards/23102
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 55ba6c2bc0ccd02418335828310bde1d
+    m_Address: Prefabs/RestButtonprefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 561841f42df5c6e4184ca6d75f642f6f
+    m_Address: Sprites/Combat/Rangepreview/enemyallyskillmark
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 570fc6072ebd51c4ebb180e76a2e8832
+    m_Address: Sprites/Common/Topbar/thumbnail
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 575e2a59489c29e488cc990f6ad960d4
+    m_Address: Data/Cards/32201
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 593dc85952befcb469ab65ac7096681e
+    m_Address: Data/Cards/22200
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a3476bf19ae7ab4d9319a7c8f379444
+    m_Address: Data/Cards/12303
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5db5f430db908d6458d2597f738009af
+    m_Address: Data/Cards/22100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f1d5c5b25daaf34c8591f66e2cea0ce
+    m_Address: Data/Cards/34200
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f540f8a4bf4eed4ba01b4789bdcd3a4
+    m_Address: Sprites/Combat/Rangepreview/3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6118a175f7fa3d5489773e4539d80a4f
+    m_Address: Data/Cards/24200
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6505a87c802651040ab02c94d2318854
+    m_Address: Data/Cards/43120
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 662728673c95cdc419c9bde442fb07f0
+    m_Address: Sprites/Combat/card deck2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66351988c9bbc3143bb58ae074ea2290
+    m_Address: Data/Cards/42100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6967bb1baa61d1d4aa7be3bd1e899f7d
+    m_Address: Data/Cards/12207
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69948686fe47a554485389fef7491234
+    m_Address: Data/Cards/24303
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d667282317304f4ea8dff64bd8d4fcc
+    m_Address: Data/Cards/12205
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e2bb0a6bf970704582416a9571e1df7
+    m_Address: Data/Cards/24302
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6fd0045e8ab255840bab94972f2d192b
+    m_Address: Sprites/Common/Topbar/map sprite
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7001dea2b42a7214d95e3505370f3aec
+    m_Address: Prefabs/Rewardprefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 706beef814dd93746a5b923484fb41ae
+    m_Address: Sprites/Common/Topbar/heart
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 73cae6b4b7c09fb4db1086b841f6272a
+    m_Address: Sprites/Combat/background_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 73e35de4134fada49b9b99301036aaa9
+    m_Address: Data/Cards/31101
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75571b45d3a73c14c93a4e96c66608e9
+    m_Address: Data/Cards/21203
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 770f08467f38b95439a9ca9839e73a42
+    m_Address: Data/Cards/12204
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a923d045d927b948b2c811aa5f48c8f
+    m_Address: Data/Cards/13202
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7de5823b53820b34fb3191982ac70df9
+    m_Address: Data/Cards/32105
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e464a59d5cb7b34ab1d969589c2e434
+    m_Address: Data/Cards/31120
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f6c9d793656e4e4eaf6592679625c4f
+    m_Address: Sprites/Combat/Sprite-0001
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84a3880db813f0f44959eae474bcef8c
+    m_Address: Data/ItemDatabase
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 855e253e7cf6bd2429c8d11a7e83e286
+    m_Address: Data/Cards/12203
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86fecc03dbe53194d9d0a46b20715a12
+    m_Address: Data/Cards/22202
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8875dad6b9c0ec240a1425396aa48ce6
+    m_Address: Data/Cards/21201
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88b907ca9b80bea4faeb06703dfd5950
+    m_Address: Sprites/Combat/discardcard
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 890861925b332df4a8f8ee8189b20f11
+    m_Address: Data/Cards/21101
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89c2a70dbee606f469227e41064b5c8b
+    m_Address: Data/Allies/10003
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Allies
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90cfd14774c369f4ebcf7bdd59c9dea0
+    m_Address: Data/Cards/21000
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92bb1f0d45f981b4d9d974e600d8b15b
+    m_Address: Data/Cards/31300
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9321003a07d227d4eaf71aa924ab9926
+    m_Address: Sprites/Combat/Rangepreview/playermovemark
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 954c9655e345e0e4392ad6e209feddc4
+    m_Address: Sprites/Cards/Shield block 1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95530ae901159834db0f6ac0905d62ec
+    m_Address: Data/Cards/21103
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95b446b166db68040b853b3898ecf602
+    m_Address: Data/Encounters/11400
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Encounters
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97b1b509fd51e2a439afb7fcc6182708
+    m_Address: Sprites/Combat/combatline
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98c72773178e9384cab6681785704497
+    m_Address: Prefabs/Common/SettingsPanel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a1978544269c5e4388a8da2e4fcc82a
+    m_Address: Data/Enemies/10100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemies
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a99d4d4b2df06d4484b8ed18f3b99b1
+    m_Address: Data/Cards/13203
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ba193ca53813d54a8158ef57159932b
+    m_Address: Data/Cards/12200
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c267f2fc28340b459beb4aa7b73a2dd
+    m_Address: Data/Cards/24307
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d88808af1eb2a442a03002048c680e1
+    m_Address: Data/Cards/21105
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a0383fd9ca01bda40b348836be58627f
+    m_Address: Data/Cards/12302
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a23cf05ee0b7aec4c96e0a1c8ac94fba
+    m_Address: Data/Cards/22103
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3c32dc2a4f74644683dcbb5cd9848c1
+    m_Address: Data/Cards/24207
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a517e2c3f15fb7b4fa34ad6776855851
+    m_Address: Prefabs/Map/Nodebutton
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6817682dad6bb14188eeee4fbeb10c3
+    m_Address: Sprites/map/questionicon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a825915026b6acc4dac93b4b56d3eebd
+    m_Address: Data/Cards/33103
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a87c74f129b01264aaea50fc5719b41d
+    m_Address: Data/Cards/43101
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8f3fa3c8b523c14f97b929ee7949b24
+    m_Address: Data/Cards/31140
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9ce10fcb5b817645840ef1a14ec45b2
+    m_Address: Prefabs/Combat/Unitprefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac56ae8a8f8bae24aaa60f3bdc895c88
+    m_Address: Prefabs/Event/ChooseButtonprefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ada99ff62c396204c9b44cb27ab05cae
+    m_Address: Data/Cards/32104
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af90f7914c539b34aa66ed9a0370f3cd
+    m_Address: Data/Cards/23100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: afe10329dc90c784799a1600a81da811
+    m_Address: Data/Cards/22203
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1447b7730e5989409969c2cad981299
+    m_Address: Data/Cards/24203
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4314b209a6436e41a88f3432fd3ac09
+    m_Address: Data/Cards/24306
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7585c7f6bcd7044e9c4a3629f1bd0d6
+    m_Address: Sprites/map/restnode
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7e314e1ca10b1242887c55aebf53514
+    m_Address: Sprites/Common/energy sprite
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba7b00ebe7e6e82448ff5601a910ae31
+    m_Address: Data/Cards/24204
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: baf3dd4e07e31fc419f47cdebdc05651
+    m_Address: Sprites/Combat/Sprite-0004
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc63d0b6cf7f7934788e70f00b37e5a3
+    m_Address: Data/Cards/22102
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bcc71f7ba333dc448b6ea07ab1f9096b
+    m_Address: Data/Cards/23300
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd566fa9250861344b254fa8a36602fa
+    m_Address: Data/Cards/22101
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf37d0cf5da52cb48ae72d822ce84c64
+    m_Address: Data/Cards/34100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1f4d4dfff7e55a4fafb614f44c4b9d1
+    m_Address: Data/Cards/12202
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4d1cb3de946336469676edbcfcc1293
+    m_Address: Data/Cards/23101
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c56a83665e8c02d4290ee55bbaffdabb
+    m_Address: Data/Cards/24304
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c5ea4c620d5741f4e825e81266823cd6
+    m_Address: Data/Cards/21200
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6242b4f1af8ff149b66d1081922a671
+    m_Address: Sprites/map/shopnode
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8b2ce9fc64413f4292fbf9d9f0f9ab2
+    m_Address: Data/Cards/21102
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8e299d54371ed6408aecf96defafc70
+    m_Address: Prefabs/Combat/attackiconprefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9a494efaf8e75d4fb57cf746208c50e
+    m_Address: Data/Cards/22001
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cad640ef1556a7b4fb8c046fdca07d23
+    m_Address: Prefabs/Common/BackButton
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cafc85da4f7b2d34e83010bb124b9dd9
+    m_Address: Data/Encounters/11300
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Encounters
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cebbfe39fd1130a4e8281dc97b4082b4
+    m_Address: Data/Cards/22300
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cec81be40a5ddd948b0fb7731d848c8e
+    m_Address: Prefabs/Common/Tooltip
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf0cd4738b9dbe04bae13ecf1f2dd1e6
+    m_Address: Data/Cards/22201
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d0b9ea04b80e8fe4eb64a26774b1f39a
+    m_Address: Data/Cards/23301
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1697839f59bdb54ea9834068a005afc
+    m_Address: Assets/GameResources
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2556a9b89ff9a942be7331fcfcfbec6
+    m_Address: Sprites/Common/Topbar/coin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d28e33fca43893b4691d35b1e7ae515b
+    m_Address: Data/Cards/11201
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2b308e05e0c25b4e8ac2ba7da8c43c0
+    m_Address: Data/Enemies/10300
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemies
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d468d5718e74850439ad87136f3ee353
+    m_Address: Data/Encounters/11200
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Encounters
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5fb3be0f03ca7e4f92be57186e55f79
+    m_Address: Sprites/Combat/Sprite-0005 1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d691df62206bc434da1c924a98998a7e
+    m_Address: Sprites/map/combatsprite 1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7340b3885f18bb49a420cca0eee3d0c
+    m_Address: Data/LocalizationDatabase
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da1f93a626e6c1d45877768fe70170cd
+    m_Address: Data/Encounters/11100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Encounters
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e07c3d7203effc245a1585a819c5de36
+    m_Address: Prefabs/Common/Itemprefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1f14dc2c4ba4e54fb40ecb75130da78
+    m_Address: Sprites/Common/Sheld
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e26d9858710d78e4cad485a61d42eb50
+    m_Address: Data/Cards/21202
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6a08620f9b2bed4ca7b98c81e81d643
+    m_Address: Data/Cards/12300
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e75bebb796c6fcf46906dc5910a58cab
+    m_Address: Data/Cards/23302
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e77deb38132e67c48b9dd4165d6323d6
+    m_Address: Data/Cards/12206
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea8cda2a944919f4d9a36d68d79de0c2
+    m_Address: Sprites/Common/arrow1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eb8f7fe696ca4b94fa50b979db8cbdee
+    m_Address: Data/Cards/32200
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: edb49ce2d2f90cb4db2fd4251df2b656
+    m_Address: Sprites/Combat/Rangepreview/playerskillmark
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: edd016a0bcee14f4380988dd4a28228c
+    m_Address: Sprites/Common/card deck
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0024486c4980644c970fce585bd6b87
+    m_Address: Sprites/Combat/Rangepreview/enemyallymovemark
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6223f54d7f9a9e478b82cee5f8e8161
+    m_Address: Data/Cards/32101
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7d5572a15d70aa4887ccb06cf2e6c61
+    m_Address: punch-middle2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f881e37f8d34e69448a6a867780a716c
+    m_Address: Data/Cards/34140
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8d17cffe7f5941489c16daebf9b60ec
+    m_Address: Sprites/Combat/Rangepreview/2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9655bab0ca68e846b90f3a87d2bb86f
+    m_Address: Data/Cards/23303
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa74c9a748275e44a9d93c285d1eee5e
+    m_Address: Sprites/Combat/Rangepreview/1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb597844af1df11419bf1a1046fe6a2e
+    m_Address: Data/Cards/23105
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb7f72080364a47449a2dee77a252caa
+    m_Address: Sprites/map/bosssprite
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbf6d9ad0d76f974c967494445378763
+    m_Address: Data/Cards/43100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fd24407f2175ab040b9fefc1cd0efa81
+    m_Address: Prefabs/Common/Cardprefap
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fdec91833a262144ea21276ea62735e1
+    m_Address: Data/Cards/24300
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: feed90517263e9b46a05afa6bd8a960e
+    m_Address: Data/Cards/21104
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 94a5671940d58d341babfa2844d753ca, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 987ff0acad2c87f4c90a2b6fa882ebe2, type: 2}
+    - {fileID: 11400000, guid: dacfeebedddc3954e89ccbaae9e20644, type: 2}

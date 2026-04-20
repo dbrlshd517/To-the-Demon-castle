@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce8a02488310d74289bbabe84a49796, type: 3}
+  m_Name: 32201
+  m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.Cards.CardData
+  cardCode: 32201
+  cardName: "\uC218\uB958\uD0C4"
+  description: "\uC120\uD0DD\uD55C \uC140 \uC8FC\uBCC0\uC5D0 {D} \uD53C\uD574."
+  cardArt: {fileID: 0}
+  energyCost: 2
+  effects:
+  - effectType: 7
+    value: 9
+    targeting: 6
+    rangeOffsets:
+    - col: 1
+      row: 0
+    - col: 2
+      row: 0
+    - col: 3
+      row: 0
+    useAbsoluteCoords: 0
+    customEffectId: area_damage
+  keywords: 2
+  playSFX: {fileID: 0}
+  playVFX: {fileID: 0}
+  cardGlow: {r: 0, g: 0, b: 0, a: 0}

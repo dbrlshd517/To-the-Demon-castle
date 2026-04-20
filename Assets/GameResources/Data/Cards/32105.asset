@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce8a02488310d74289bbabe84a49796, type: 3}
+  m_Name: 32105
+  m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.Cards.CardData
+  cardCode: 32105
+  cardName: "\uB3CC\uC9C4+"
+  description: "\uB4A4\uB85C \uC774\uB3D9 \uD6C4 \uC55E \uBC94\uC704 \uACF5\uACA9."
+  cardArt: {fileID: 0}
+  energyCost: 2
+  effects:
+  - effectType: 5
+    value: 1
+    targeting: 6
+    rangeOffsets:
+    - col: -1
+      row: 0
+    - col: -1
+      row: 1
+    - col: -1
+      row: -1
+    useAbsoluteCoords: 0
+    customEffectId: 
+  - effectType: 0
+    value: 10
+    targeting: 0
+    rangeOffsets:
+    - col: 1
+      row: 0
+    - col: 2
+      row: 0
+    - col: 3
+      row: 0
+    useAbsoluteCoords: 0
+    customEffectId: 
+  keywords: 2
+  playSFX: {fileID: 0}
+  playVFX: {fileID: 0}
+  cardGlow: {r: 0, g: 0, b: 0, a: 0}

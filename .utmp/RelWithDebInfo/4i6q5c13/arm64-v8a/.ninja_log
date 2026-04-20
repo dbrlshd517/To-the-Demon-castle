@@ -1,0 +1,23 @@
+# ninja log v5
+57	4075	7974770031968265	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	4747b8c13a724eb
+210	1078	7974770002689629	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	a606e3fd90fb745
+1181	2223	7974770012380091	C:/To the Demon Castle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4i6q5c13/obj/arm64-v8a/libswappywrapper.so	579c184075163c54
+116	3357	7974770025011328	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	7b4ac85bab261d58
+98	3381	7974770025375914	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	759ccfcc91916a84
+140	3897	7974770030736401	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	2d192e1ad41718d7
+34	3425	7974770025515535	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	55785e4873e534f3
+1	3475	7974770026645527	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	c05d6c474727bb7f
+168	3435	7974770026193971	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a87f6ade7c99b292
+78	3818	7974770030067835	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	615f3e6edbf73e20
+4076	4359	7974770035580493	C:/To the Demon Castle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4i6q5c13/obj/arm64-v8a/libgame.so	bb46f1c3caef225b
+81	543	7979625069955626	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	a606e3fd90fb745
+544	855	7979625072987197	C:/To the Demon Castle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4i6q5c13/obj/arm64-v8a/libswappywrapper.so	579c184075163c54
+18	2110	7979625085524305	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	759ccfcc91916a84
+60	2113	7979625085539411	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	7b4ac85bab261d58
+32	2145	7979625085931085	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	55785e4873e534f3
+50	2176	7979625086260636	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a87f6ade7c99b292
+24	2245	7979625086983023	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	c05d6c474727bb7f
+70	2403	7979625088554081	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	2d192e1ad41718d7
+41	2478	7979625089325205	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	615f3e6edbf73e20
+9	2595	7979625090484240	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	4747b8c13a724eb
+2596	2715	7979625091717653	C:/To the Demon Castle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4i6q5c13/obj/arm64-v8a/libgame.so	bb46f1c3caef225b

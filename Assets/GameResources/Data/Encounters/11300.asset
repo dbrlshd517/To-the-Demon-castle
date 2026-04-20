@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff49589fe67bb8546b97c864f674d22b, type: 3}
+  m_Name: 11300
+  m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.Combat.EnemyEncounterData
+  encounterId: 11300
+  encounterName: "\uC11D\uC0C1\uC758 \uC2DC\uD5D8"
+  encounterType: 0
+  enemies:
+  - enemyData: {fileID: 11400000, guid: d2b308e05e0c25b4e8ac2ba7da8c43c0, type: 2}
+    col: 2
+    row: 0
+  isBossEncounter: 0
+  encounterMusic: {fileID: 0}
+  backgroundOverride: {fileID: 0}

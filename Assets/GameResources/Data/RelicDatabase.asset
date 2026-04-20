@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556633198ba40544396952a70ad0dff3, type: 3}
+  m_Name: RelicDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.Relic.RelicDatabase
+  relics:
+  - relicCode: 101
+    relicName: "\uD53C\uC758 \uC57D\uBCD1"
+    description: "\uC804\uD22C \uC2DC\uC791 \uC2DC HP\uB97C 4 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    icon: {fileID: 2674749960476766153, guid: 3613dfb5c5b48be4e98868f3190f3f65, type: 3}
+  - relicCode: 102
+    relicName: "\uACE0\uB300\uC758 \uBC29\uD328"
+    description: "\uC804\uD22C \uC911 \uCCAB \uBC88\uC9F8 \uD53C\uD574\uB97C 1\uD68C
+      \uC644\uC804\uD788 \uBB34\uD6A8\uD654\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - relicCode: 103
+    relicName: "\uBD88\uD0C0\uB294 \uC2EC\uC7A5"
+    description: "\uC804\uD22C \uC2DC\uC791 \uC2DC \uC5D0\uB108\uC9C0 \uCD5C\uB300\uCE58\uAC00
+      1 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - relicCode: 104
+    relicName: "\uC601\uD63C\uC758 \uBCF4\uC11D"
+    description: "\uC801\uC744 \uCC98\uCE58\uD560 \uB54C\uB9C8\uB2E4 HP\uB97C 1 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - relicCode: 105
+    relicName: "\uD798"
+    description: "\uD798\uC774 1 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - relicCode: 106
+    relicName: "\uCD5C\uB300\uCC44\uB825"
+    description: "\uCD5C\uB300\uCC44\uB825\uC7747 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - relicCode: 107
+    relicName: "\uC774\uB3D9"
+    description: "3\uBC88\uC9F8 \uC774\uB3D9\uC2DC \uCE74\uB4DC\uC758 \uBE44\uC6A9\uC774
+      1 \uD558\uB77D\uD569\uB2C8\uB2E4"
+    icon: {fileID: 0}
+  - relicCode: 201
+    relicName: "\uB2F4\uBC30"
+    description: "\uD734\uC2DD \uC7A5\uC18C\uC5D0\uC11C \uC81C\uAC70\uAC00 \uAC00\uB2A5\uD569\uB2C8\uB2E4."
+    icon: {fileID: 2674749960476766153, guid: 3613dfb5c5b48be4e98868f3190f3f65, type: 3}
+  - relicCode: 202
+    relicName: "\uC0BD"
+    description: "\uD734\uC2DD \uC7A5\uC18C\uC5D0\uC11C \uBC1C\uAD74\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - relicCode: 203
+    relicName: "\uC5B4\uB460\uC758 \uC655\uAD00"
+    description: "\uB9E4 \uD134 \uC2DC\uC791 \uC2DC \uC5D0\uB108\uC9C0 +1\uC744 \uC5BB\uC9C0\uB9CC
+      HP 1\uC744 \uC783\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - relicCode: 301
+    relicName: "\uC7A5\uC778\uC758 \uB9DD\uCE58"
+    description: "\uD734\uC2DD \uC7A5\uC18C\uC5D0\uC11C \uB450\uC7A5\uC758 \uCE74\uB4DC\uB97C
+      \uAC15\uD654\uD560\uC218\uC788\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - relicCode: 302
+    relicName: "\uACE0\uAE09 \uBCA0\uAC8C"
+    description: "\uD734\uC2DD \uC7A5\uC18C\uC5D0\uC11C \uD734\uC2DD\uC2DC 30%\uCC44\uB825\uC744
+      \uB354 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - relicCode: 303
+    relicName: "\uBC18\uC0AC"
+    description: "\uACF5\uACA9\uBC1B\uC740\uB9CC\uD07C \uD53C\uD574\uB97C \uB418\uB3CC\uB824\uC90D\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - relicCode: 901
+    relicName: "\uC601\uD63C\uC774 \uB2F4\uAE34 \uAD6C\uC2AC"
+    description: "\uC5D0\uB108\uC9C0\uAC00 1 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - relicCode: 902
+    relicName: "\uC601\uD63C\uC774 \uB2F4\uAE34 \uCE74\uB4DC"
+    description: "\uCE74\uB4DC\uB97C \uB9E4\uD134 \uD55C\uC7A5 \uB354 \uBF51\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}

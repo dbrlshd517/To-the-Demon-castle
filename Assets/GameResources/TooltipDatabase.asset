@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4799f0ec8dc5849a53ed26bf96568f, type: 3}
+  m_Name: TooltipDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.UI.TooltipDatabase
+  entries:
+  - code: 101
+    uiType: 0
+    name: "\uBC29\uC5B4\uB3C4"
+    description: "\uC774\uBC88 \uD134\uC5D0 \uBC1B\uB294 \uD53C\uD574\uB97C \uBA3C\uC800
+      \uB9C9\uC544\uC90D\uB2C8\uB2E4. \uBC29\uC5B4\uB3C4 1\uC740 \uD53C\uD574 1\uC744
+      \uB9C9\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - code: 102
+    uiType: 0
+    name: "\uD798"
+    description: "\uACF5\uACA9 \uB370\uBBF8\uC9C0\uAC00 \uD798 \uC218\uCE58\uB9CC\uD07C
+      \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - code: 103
+    uiType: 0
+    name: "\uBBFC\uCCA9"
+    description: "\uBC29\uC5B4 \uCE74\uB4DC \uC0AC\uC6A9 \uC2DC \uBC29\uC5B4\uB3C4\uB97C
+      \uBBFC\uCCA9 \uC218\uCE58\uB9CC\uD07C \uCD94\uAC00\uB85C \uD68D\uB4DD\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - code: 201
+    uiType: 0
+    name: "\uAC15\uD654"
+    description: "\uC774 \uCE74\uB4DC\uC758 \uAC15\uD654 \uBC84\uC804\uC785\uB2C8\uB2E4.
+      \uD6A8\uACFC\uAC00 \uD5A5\uC0C1\uB429\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - code: 301
+    uiType: 0
+    name: "\uB371 \uBCF4\uAE30"
+    description: "\uD604\uC7AC \uB371\uC5D0 \uC788\uB294 \uBAA8\uB4E0 \uCE74\uB4DC\uB97C\uB9C8
+      \uD655\uC778\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - code: 302
+    uiType: 0
+    name: "\uBC84\uB9AC\uAE30 \uB354\uBBF8"
+    description: "\uC774\uBC88 \uC804\uD22C\uC5D0\uC11C \uC0AC\uC6A9\uB41C \uCE74\uB4DC
+      \uBAA9\uB85D\uC785\uB2C8\uB2E4."
+    icon: {fileID: 0}

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"/c/To the Demon Castle/Assets/Resources/\" | grep -E \"\\\\.png$|\\\\.prefab$\")",
+      "Bash(mkdir -p Data/Cards Data/Encounters Data/Enemies)",
+      "Bash(cp -r Cards/. Data/Cards/)",
+      "Bash(cp -r Encounters/. Data/Encounters/)",
+      "Bash(cp -r Enemies/. Data/Enemies/)",
+      "Bash(cp RelicDatabase.asset RelicDatabase.asset.meta Data/)",
+      "Bash(cd:*)",
+      "Bash(sed -i 's|Resources.LoadAll<CardData>\\(\"\"Cards\"\"\\)|Resources.LoadAll<CardData>\\(\"\"Data/Cards\"\"\\)|g' \"C:/To the Demon Castle/Assets/Scripts/Core/CardRegistry.cs\")",
+      "Bash(sed -i 's|Resources.LoadAll<EnemyEncounterData>\\(\"\"Encounters\"\"\\)|Resources.LoadAll<EnemyEncounterData>\\(\"\"Data/Encounters\"\"\\)|g' \"C:/To the Demon Castle/Assets/Scripts/Core/EncounterRegistry.cs\")",
+      "Bash(sed -i 's|Resources.LoadAll<EnemyData>\\(\"\"Enemies\"\"\\)|Resources.LoadAll<EnemyData>\\(\"\"Data/Enemies\"\"\\)|g' \"C:/To the Demon Castle/Assets/Scripts/Core/EnemyRegistry.cs\")",
+      "Bash(sed -i 's|Resources.Load<RelicDatabase>\\(\"\"RelicDatabase\"\"\\)|Resources.Load<RelicDatabase>\\(\"\"Data/RelicDatabase\"\"\\)|g' \"C:/To the Demon Castle/Assets/Scripts/Relic/RelicLibrary.cs\")",
+      "Bash(sed -i 's|Resources.Load<RelicDatabase>\\(\"\"RelicDatabase\"\"\\)|Resources.Load<RelicDatabase>\\(\"\"Data/RelicDatabase\"\"\\)|g' \"C:/To the Demon Castle/Assets/Scripts/UI/TooltipTrigger.cs\")",
+      "Bash(grep -v \"Debug\\\\|Log\\\\|//\")",
+      "Bash(grep -h \"guid:\" \"C:/To the Demon Castle/Assets/Resources/Data/Encounters/\"*.asset)",
+      "Bash(grep -rl \"c6003ee1facbd1c43a75c07ab9ec6f5c\\\\|b960305e1e0961e4c87c42dcd106ca3d\\\\|2cadf5af7160a2c45a4074e5ead5c23c\\\\|16a8ca9e992459341a4e93e8bd59eb35\" 'C:/To the Demon Castle/Assets/' --include=*.asset --include=*.prefab --include=*.unity)"
+    ]
+  }
+}

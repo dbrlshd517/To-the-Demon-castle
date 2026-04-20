@@ -1,0 +1,6455 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f38e5240a2f2b44b296da78a624795, type: 3}
+  m_Name: LocalizationDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.Core.LocalizationDatabase
+  entries:
+  - code: main_title
+    en: New Game
+    pt_BR: Novo Jogo
+    zh_CN: "\u65B0\u6E38\u620F"
+    zh_TW: "\u65B0\u904A\u6232"
+    nl: Nieuw Spel
+    eo: Nova Ludo
+    fi: Uusi Peli
+    fr: Nouveau Jeu
+    de: Neues Spiel
+    id: Game Baru
+    it: Nuova Partita
+    ja: "\u65B0\u3057\u3044\u30B2\u30FC\u30E0"
+    ko: "\uC0C8 \uAC8C\uC784"
+    pl: "\uBA54\uC778\uBA54\uB274 - \uC0C8 \uAC8C\uC784 \uBC84\uD2BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: main_newgame
+    en: New Game
+    pt_BR: Novo Jogo
+    zh_CN: "\u65B0\u6E38\u620F"
+    zh_TW: "\u65B0\u904A\u6232"
+    nl: Nieuw Spel
+    eo: Nova Ludo
+    fi: Uusi Peli
+    fr: Nouveau Jeu
+    de: Neues Spiel
+    id: Game Baru
+    it: Nuova Partita
+    ja: "\u65B0\u3057\u3044\u30B2\u30FC\u30E0"
+    ko: "\uC0C8 \uAC8C\uC784"
+    pl: "\uBA54\uC778\uBA54\uB274 - \uC0C8 \uAC8C\uC784 \uBC84\uD2BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: main_continue
+    en: Continue
+    pt_BR: Continuar
+    zh_CN: "\u7EE7\u7EED"
+    zh_TW: "\u7E7C\u7E8C"
+    nl: Doorgaan
+    eo: "Da\u016Drigi"
+    fi: Jatka
+    fr: Continuer
+    de: Fortfahren
+    id: Lanjutkan
+    it: Continua
+    ja: "\u7D9A\u3051\u308B"
+    ko: "\uACC4\uC18D\uD558\uAE30"
+    pl: "\uBA54\uC778\uBA54\uB274 - \uC774\uC5B4\uD558\uAE30 \uBC84\uD2BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: main_compendium
+    en: Credits
+    pt_BR: "Cr\xE9ditos"
+    zh_CN: "\u5236\u4F5C\u4EBA\u5458"
+    zh_TW: "\u88FD\u4F5C\u4EBA\u54E1"
+    nl: Credits
+    eo: Kreditoj
+    fi: "Tekij\xE4t"
+    fr: "Cr\xE9dits"
+    de: Mitwirkende
+    id: Kredit
+    it: Crediti
+    ja: "\u30AF\u30EC\u30B8\u30C3\u30C8"
+    ko: "\uD06C\uB808\uB527"
+    pl: "\uBA54\uC778\uBA54\uB274 - \uAC1C\uC694 "
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: main_ranking
+    en: Credits
+    pt_BR: "Cr\xE9ditos"
+    zh_CN: "\u5236\u4F5C\u4EBA\u5458"
+    zh_TW: "\u88FD\u4F5C\u4EBA\u54E1"
+    nl: Credits
+    eo: Kreditoj
+    fi: "Tekij\xE4t"
+    fr: "Cr\xE9dits"
+    de: Mitwirkende
+    id: Kredit
+    it: Crediti
+    ja: "\u30AF\u30EC\u30B8\u30C3\u30C8"
+    ko: "\uD06C\uB808\uB527"
+    pl: "\uBA54\uC778\uBA54\uB274 - \uB7AD\uD0B9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: main_quit
+    en: Quit
+    pt_BR: Sair
+    zh_CN: "\u9000\u51FA"
+    zh_TW: "\u9000\u51FA"
+    nl: Afsluiten
+    eo: Eliri
+    fi: Lopeta
+    fr: Quitter
+    de: Beenden
+    id: Keluar
+    it: Esci
+    ja: "\u7D42\u4E86"
+    ko: "\uAC8C\uC784 \uC885\uB8CC"
+    pl: "\uBA54\uC778\uBA54\uB274 - \uC885\uB8CC \uBC84\uD2BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: main_warrior
+    en: Quit
+    pt_BR: Sair
+    zh_CN: "\u9000\u51FA"
+    zh_TW: "\u9000\u51FA"
+    nl: Afsluiten
+    eo: Eliri
+    fi: Lopeta
+    fr: Quitter
+    de: Beenden
+    id: Keluar
+    it: Esci
+    ja: "\u7D42\u4E86"
+    ko: "\uAC8C\uC784 \uC885\uB8CC"
+    pl: "\uBA54\uC778\uBA54\uB274 - \uC885\uB8CC \uBC84\uD2BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: main_gunner
+    en: Quit
+    pt_BR: Sair
+    zh_CN: "\u9000\u51FA"
+    zh_TW: "\u9000\u51FA"
+    nl: Afsluiten
+    eo: Eliri
+    fi: Lopeta
+    fr: Quitter
+    de: Beenden
+    id: Keluar
+    it: Esci
+    ja: "\u7D42\u4E86"
+    ko: "\uAC8C\uC784 \uC885\uB8CC"
+    pl: "\uBA54\uC778\uBA54\uB274 - \uC885\uB8CC \uBC84\uD2BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: main_mage
+    en: Quit
+    pt_BR: Sair
+    zh_CN: "\u9000\u51FA"
+    zh_TW: "\u9000\u51FA"
+    nl: Afsluiten
+    eo: Eliri
+    fi: Lopeta
+    fr: Quitter
+    de: Beenden
+    id: Keluar
+    it: Esci
+    ja: "\u7D42\u4E86"
+    ko: "\uAC8C\uC784 \uC885\uB8CC"
+    pl: "\uBA54\uC778\uBA54\uB274 - \uC885\uB8CC \uBC84\uD2BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: main_startrun
+    en: Start Run
+    pt_BR: Iniciar
+    zh_CN: "\u5F00\u59CB"
+    zh_TW: "\u958B\u59CB"
+    nl: Starten
+    eo: Komenci
+    fi: Aloita
+    fr: "D\xE9marrer"
+    de: Starten
+    id: Mulai
+    it: Inizia
+    ja: "\u30B9\u30BF\u30FC\u30C8"
+    ko: "\uB7F0 \uC2DC\uC791"
+    pl: "\uCE90\uB9AD\uD130 \uC120\uD0DD - \uB7F0 \uC2DC\uC791 \uBC84\uD2BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: ingame_endturn
+    en: End Turn
+    pt_BR: Fim do Turno
+    zh_CN: "\u7ED3\u675F\u56DE\u5408"
+    zh_TW: "\u7D50\u675F\u56DE\u5408"
+    nl: "Beurt Be\xEBindigen"
+    eo: Fini Turo
+    fi: Lopeta Vuoro
+    fr: Fin du Tour
+    de: Zug Beenden
+    id: Akhiri Giliran
+    it: Fine Turno
+    ja: "\u30BF\u30FC\u30F3\u7D42\u4E86"
+    ko: "\uD134 \uC885\uB8CC"
+    pl: "\uC804\uD22C - \uD134 \uC885\uB8CC \uBC84\uD2BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: char_select_title
+    en: Select Character
+    pt_BR: Selecionar Personagem
+    zh_CN: "\u9009\u62E9\u89D2\u8272"
+    zh_TW: "\u9078\u64C7\u89D2\u8272"
+    nl: Personage Kiezen
+    eo: Elekti Personagon
+    fi: Valitse Hahmo
+    fr: Choisir un Personnage
+    de: "Charakter W\xE4hlen"
+    id: Pilih Karakter
+    it: Scegli Personaggio
+    ja: "\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC\u9078\u629E"
+    ko: "\uCE90\uB9AD\uD130 \uC120\uD0DD"
+    pl: "\uCE90\uB9AD\uD130 \uC120\uD0DD \uD654\uBA74 \uC81C\uBAA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: char_stats_hp
+    en: HP
+    pt_BR: HP
+    zh_CN: "\u751F\u547D\u503C"
+    zh_TW: "\u751F\u547D\u503C"
+    nl: LP
+    eo: VP
+    fi: HP
+    fr: PV
+    de: LP
+    id: HP
+    it: HP
+    ja: HP
+    ko: HP
+    pl: "\uCE90\uB9AD\uD130 \uC2A4\uD0EF - HP"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: char_stats_energy
+    en: Energy
+    pt_BR: Energia
+    zh_CN: "\u80FD\u91CF"
+    zh_TW: "\u80FD\u91CF"
+    nl: Energie
+    eo: Energio
+    fi: Energia
+    fr: "\xC9nergie"
+    de: Energie
+    id: Energi
+    it: Energia
+    ja: "\u30A8\u30CD\u30EB\u30AE\u30FC"
+    ko: "\uC5D0\uB108\uC9C0"
+    pl: "\uCE90\uB9AD\uD130 \uC2A4\uD0EF - \uC5D0\uB108\uC9C0"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: combat_my_turn
+    en: My Turn
+    pt_BR: Meu Turno
+    zh_CN: "\u6211\u7684\u56DE\u5408"
+    zh_TW: "\u6211\u7684\u56DE\u5408"
+    nl: Mijn Beurt
+    eo: Mia Turo
+    fi: Minun Vuoroni
+    fr: Mon Tour
+    de: Mein Zug
+    id: Giliran Saya
+    it: Turno Mio
+    ja: "\u81EA\u5206\u306E\u30BF\u30FC\u30F3"
+    ko: "\uB0B4 \uD134"
+    pl: "\uC804\uD22C - \uD50C\uB808\uC774\uC5B4 \uD134 \uD45C\uC2DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: combat_enemy_turn
+    en: Enemy Turn
+    pt_BR: Turno Inimigo
+    zh_CN: "\u654C\u4EBA\u56DE\u5408"
+    zh_TW: "\u6575\u4EBA\u56DE\u5408"
+    nl: Vijand Beurt
+    eo: Malamika Turo
+    fi: Vihollisen Vuoro
+    fr: Tour Ennemi
+    de: Feind Zug
+    id: Giliran Musuh
+    it: Turno Nemico
+    ja: "\u6575\u306E\u30BF\u30FC\u30F3"
+    ko: "\uC801 \uD134"
+    pl: "\uC804\uD22C - \uC801 \uD134 \uD45C\uC2DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: combat_draw_pile
+    en: Draw
+    pt_BR: Comprar
+    zh_CN: "\u724C\u5806"
+    zh_TW: "\u724C\u5806"
+    nl: Trekstapel
+    eo: Tiri
+    fi: Nosto
+    fr: Piocher
+    de: Ziehen
+    id: Tarik
+    it: Pesca
+    ja: "\u5C71\u672D"
+    ko: "\uB4DC\uB85C\uC6B0"
+    pl: "\uC804\uD22C - \uB4DC\uB85C\uC6B0 \uB354\uBBF8"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: combat_discard_pile
+    en: Discard
+    pt_BR: Descarte
+    zh_CN: "\u5F03\u724C\u5806"
+    zh_TW: "\u68C4\u724C\u5806"
+    nl: Aflegstapel
+    eo: "For\u0135eti"
+    fi: Pakka
+    fr: "D\xE9fausse"
+    de: Ablegen
+    id: Buang
+    it: Scarto
+    ja: "\u6368\u3066\u672D"
+    ko: "\uBC84\uB9B0 \uCE74\uB4DC"
+    pl: "\uC804\uD22C - \uBC84\uB9B0 \uCE74\uB4DC \uB354\uBBF8"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: combat_block
+    en: Block
+    pt_BR: Bloqueio
+    zh_CN: "\u683C\u6321"
+    zh_TW: "\u683C\u64CB"
+    nl: Blokkeren
+    eo: Bloki
+    fi: Suojaus
+    fr: Blocage
+    de: Block
+    id: Blokir
+    it: Blocco
+    ja: "\u30D6\u30ED\u30C3\u30AF"
+    ko: "\uBC29\uC5B4\uB3C4"
+    pl: "\uC804\uD22C - \uBC29\uC5B4\uB3C4 \uD45C\uC2DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_draw_pile
+    en: Draw Pile
+    pt_BR: Monte de Compras
+    zh_CN: "\u724C\u5806"
+    zh_TW: "\u724C\u5806"
+    nl: Trekstapel
+    eo: Tiri-amaso
+    fi: Nostopakka
+    fr: Pioche
+    de: Ziehstapel
+    id: Tumpukan Tarik
+    it: Mazzo Pesca
+    ja: "\u5C71\u672D"
+    ko: "\uB4DC\uB85C\uC6B0 \uB354\uBBF8"
+    pl: "\uCE74\uB4DC \uBAA9\uB85D \uD328\uB110 \uC81C\uBAA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_discard_pile
+    en: Discard Pile
+    pt_BR: Pilha de Descarte
+    zh_CN: "\u5F03\u724C\u5806"
+    zh_TW: "\u68C4\u724C\u5806"
+    nl: Aflegstapel
+    eo: "For\u0135et-amaso"
+    fi: "Hylk\xE4yspakka"
+    fr: "D\xE9fausse"
+    de: Ablagestapel
+    id: Tumpukan Buang
+    it: Scarti
+    ja: "\u6368\u3066\u672D"
+    ko: "\uBC84\uB9B0 \uCE74\uB4DC"
+    pl: "\uCE74\uB4DC \uBAA9\uB85D \uD328\uB110 \uC81C\uBAA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: deck_viewer
+    en: Deck
+    pt_BR: Baralho
+    zh_CN: "\u724C\u7EC4"
+    zh_TW: "\u724C\u7D44"
+    nl: Deck
+    eo: Kartaro
+    fi: Pakka
+    fr: Deck
+    de: Deck
+    id: Dek
+    it: Mazzo
+    ja: "\u30C7\u30C3\u30AD"
+    ko: "\uB371 \uBCF4\uAE30"
+    pl: "\uCE74\uB4DC \uBAA9\uB85D \uD328\uB110 \uC81C\uBAA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_view_original
+    en: View Original
+    pt_BR: Ver Original
+    zh_CN: "\u67E5\u770B\u539F\u7248"
+    zh_TW: "\u67E5\u770B\u539F\u7248"
+    nl: Origineel Bekijken
+    eo: Vidi Originalan
+    fi: "N\xE4yt\xE4 Alkuper\xE4inen"
+    fr: Voir Original
+    de: Original Ansehen
+    id: Lihat Asli
+    it: Vedi Originale
+    ja: "\u30AA\u30EA\u30B8\u30CA\u30EB\u3092\u898B\u308B"
+    ko: "\uC6D0\uBCF8 \uBCF4\uAE30"
+    pl: "\uCE74\uB4DC \uAC15\uD654 \uD1A0\uAE00"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_view_upgraded
+    en: View Upgraded
+    pt_BR: Ver Melhorado
+    zh_CN: "\u67E5\u770B\u5F3A\u5316"
+    zh_TW: "\u67E5\u770B\u5F37\u5316"
+    nl: Verbetering Bekijken
+    eo: Vidi Plibonigitan
+    fi: "N\xE4yt\xE4 Parannettu"
+    fr: "Voir Am\xE9lior\xE9"
+    de: Verbessert Ansehen
+    id: Lihat Ditingkatkan
+    it: Vedi Potenziato
+    ja: "\u5F37\u5316\u7248\u3092\u898B\u308B"
+    ko: "\uAC15\uD654 \uBCF4\uAE30"
+    pl: "\uCE74\uB4DC \uAC15\uD654 \uD1A0\uAE00"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: rest_heal
+    en: Rest
+    pt_BR: Descansar
+    zh_CN: "\u4F11\u606F"
+    zh_TW: "\u4F11\u606F"
+    nl: Rusten
+    eo: Ripozi
+    fi: Lepo
+    fr: Se Reposer
+    de: Ausruhen
+    id: Beristirahat
+    it: Riposati
+    ja: "\u4F11\u61A9"
+    ko: "\uD734\uC2DD"
+    pl: "\uD734\uC2DD\uCC98 - \uD734\uC2DD \uC635\uC158"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: rest_upgrade
+    en: Upgrade
+    pt_BR: Melhorar
+    zh_CN: "\u5F3A\u5316"
+    zh_TW: "\u5F37\u5316"
+    nl: Verbeteren
+    eo: Plibonigi
+    fi: Paranna
+    fr: "Am\xE9liorer"
+    de: Verbessern
+    id: Tingkatkan
+    it: Migliora
+    ja: "\u5F37\u5316"
+    ko: "\uAC15\uD654"
+    pl: "\uD734\uC2DD\uCC98 - \uCE74\uB4DC \uAC15\uD654 \uC635\uC158"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: rest_remove
+    en: Remove
+    pt_BR: Remover
+    zh_CN: "\u79FB\u9664"
+    zh_TW: "\u79FB\u9664"
+    nl: Verwijderen
+    eo: Forigi
+    fi: Poista
+    fr: Supprimer
+    de: Entfernen
+    id: Hapus
+    it: Rimuovi
+    ja: "\u524A\u9664"
+    ko: "\uC81C\uAC70"
+    pl: "\uD734\uC2DD\uCC98 - \uCE74\uB4DC \uC81C\uAC70 \uC635\uC158"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: rest_excavate
+    en: Excavate
+    pt_BR: Escavar
+    zh_CN: "\u6316\u6398"
+    zh_TW: "\u6316\u6398"
+    nl: Graven
+    eo: Elfosi
+    fi: Kaivaa
+    fr: Fouiller
+    de: Ausgraben
+    id: Gali
+    it: Scava
+    ja: "\u767A\u6398"
+    ko: "\uBC1C\uAD74"
+    pl: "\uD734\uC2DD\uCC98 - \uC720\uBB3C \uBC1C\uAD74 \uC635\uC158"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: upgrade_cardselect
+    en: Select Card to Upgrade
+    pt_BR: Selecionar Carta
+    zh_CN: "\u9009\u62E9\u5F3A\u5316\u5361"
+    zh_TW: "\u9078\u64C7\u5F37\u5316\u724C"
+    nl: Kaart Selecteren
+    eo: Elekti Karton
+    fi: Valitse Kortti
+    fr: Choisir une Carte
+    de: "Karte Ausw\xE4hlen"
+    id: Pilih Kartu
+    it: Seleziona Carta
+    ja: "\u30AB\u30FC\u30C9\u3092\u9078\u3093\u3067\u304F\u3060\u3055\u3044"
+    ko: "\uAC15\uD654\uD560 \uCE74\uB4DC \uC120\uD0DD"
+    pl: "\uD734\uC2DD\uCC98 - \uAC15\uD654 \uC120\uD0DD \uC81C\uBAA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: remove_cardselect
+    en: Select Card to Remove
+    pt_BR: Selecionar para Remover
+    zh_CN: "\u9009\u62E9\u79FB\u9664\u5361"
+    zh_TW: "\u9078\u64C7\u79FB\u9664\u724C"
+    nl: Kaart om te Verwijderen
+    eo: Elekti Karton
+    fi: Valitse Poistettava
+    fr: "Choisir \xE0 Supprimer"
+    de: Karte zum Entfernen
+    id: Pilih Kartu Hapus
+    it: Seleziona da Rimuovere
+    ja: "\u524A\u9664\u3059\u308B\u30AB\u30FC\u30C9\u3092\u9078\u3093\u3067\u304F\u3060\u3055\u3044"
+    ko: "\uC81C\uAC70\uD560 \uCE74\uB4DC \uC120\uD0DD"
+    pl: "\uD734\uC2DD\uCC98 - \uC81C\uAC70 \uC120\uD0DD \uC81C\uBAA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: reward_card
+    en: Pick a Card
+    pt_BR: Escolher Carta
+    zh_CN: "\u9009\u62E9\u5361\u724C"
+    zh_TW: "\u9078\u64C7\u5361\u724C"
+    nl: Kies een Kaart
+    eo: Elekti Karton
+    fi: Valitse Kortti
+    fr: Choisir une Carte
+    de: "Karte W\xE4hlen"
+    id: Pilih Kartu
+    it: Scegli una Carta
+    ja: "\u30AB\u30FC\u30C9\u3092\u9078\u3093\u3067\u304F\u3060\u3055\u3044"
+    ko: "\uCE74\uB4DC \uC120\uD0DD"
+    pl: "\uBCF4\uC0C1 - \uCE74\uB4DC \uC120\uD0DD"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: reward_skip
+    en: Skip
+    pt_BR: Pular
+    zh_CN: "\u8DF3\u8FC7"
+    zh_TW: "\u8DF3\u904E"
+    nl: Overslaan
+    eo: Preterlasi
+    fi: Ohita
+    fr: Passer
+    de: "\xDCberspringen"
+    id: Lewati
+    it: Salta
+    ja: "\u30B9\u30AD\u30C3\u30D7"
+    ko: "\uAC74\uB108\uB700"
+    pl: "\uBCF4\uC0C1 - \uAC74\uB108\uB6F0\uAE30"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_type_normal
+    en: Normal Relic
+    pt_BR: "Rel\xEDquia Normal"
+    zh_CN: "\u666E\u901A\u9057\u7269"
+    zh_TW: "\u666E\u901A\u907A\u7269"
+    nl: Normaal Relikwie
+    eo: Normala Relikvo
+    fi: Normaali Relikki
+    fr: Relique Normale
+    de: Normales Relikt
+    id: Relik Normal
+    it: Reliquia Normale
+    ja: "\u901A\u5E38\u306E\u907A\u7269"
+    ko: "\uC77C\uBC18 \uC720\uBB3C"
+    pl: "\uC720\uBB3C \uD328\uB110 - \uC77C\uBC18 \uC720\uBB3C"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_type_boss
+    en: Boss Relic
+    pt_BR: "Rel\xEDquia de Chefe"
+    zh_CN: "\u9996\u9886\u9057\u7269"
+    zh_TW: "\u9996\u9818\u907A\u7269"
+    nl: Baas Relikwie
+    eo: Estro-Relikvo
+    fi: "Pomorelikki\xE4"
+    fr: Relique Boss
+    de: Bosskampf-Relikt
+    id: Relik Bos
+    it: Reliquia Boss
+    ja: "\u30DC\u30B9\u306E\u907A\u7269"
+    ko: "\uBCF4\uC2A4 \uC720\uBB3C"
+    pl: "\uC720\uBB3C \uD328\uB110 - \uBCF4\uC2A4 \uC720\uBB3C"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: gameover
+    en: Game Over
+    pt_BR: Fim de Jogo
+    zh_CN: "\u6E38\u620F\u7ED3\u675F"
+    zh_TW: "\u904A\u6232\u7D50\u675F"
+    nl: Spel Over
+    eo: Ludo Finita
+    fi: Peli Ohi
+    fr: Game Over
+    de: Spiel Vorbei
+    id: Game Over
+    it: Game Over
+    ja: "\u30B2\u30FC\u30E0\u30AA\u30FC\u30D0\u30FC"
+    ko: "\uAC8C\uC784 \uC624\uBC84"
+    pl: "\uAC8C\uC784 \uC624\uBC84 \uD654\uBA74 \uC81C\uBAA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: victory_title
+    en: Victory!
+    pt_BR: "Vit\xF3ria!"
+    zh_CN: "\u80DC\u5229\uFF01"
+    zh_TW: "\u52DD\u5229\uFF01"
+    nl: Overwinning!
+    eo: Venko!
+    fi: Voitto!
+    fr: Victoire !
+    de: Sieg!
+    id: Kemenangan!
+    it: Vittoria!
+    ja: "\u52DD\u5229\uFF01"
+    ko: "\uC2B9\uB9AC!"
+    pl: "\uC2B9\uB9AC \uD654\uBA74 \uC81C\uBAA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: ui_floor
+    en: Floor {0}
+    pt_BR: Andar {0}
+    zh_CN: "\u7B2C{0}\u5C42"
+    zh_TW: "\u7B2C{0}\u5C64"
+    nl: Verdieping {0}
+    eo: "Eta\u011Do {0}"
+    fi: Kerros {0}
+    fr: "\xC9tage {0}"
+    de: Etage {0}
+    id: Lantai {0}
+    it: Piano {0}
+    ja: "{0}\u968E"
+    ko: "\uCE35: {0}"
+    pl: "\uC778\uAC8C\uC784 - \uCE35 \uD45C\uC2DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: playerinfo_gold
+    en: Gold
+    pt_BR: Ouro
+    zh_CN: "\u91D1\u5E01"
+    zh_TW: "\u91D1\u5E63"
+    nl: Goud
+    eo: Oro
+    fi: Kulta
+    fr: Or
+    de: Gold
+    id: Emas
+    it: Oro
+    ja: "\u30B4\u30FC\u30EB\u30C9"
+    ko: "\uACE8\uB4DC"
+    pl: "\uC778\uAC8C\uC784 - \uACE8\uB4DC \uD45C\uC2DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: public_back
+    en: Back
+    pt_BR: Voltar
+    zh_CN: "\u8FD4\u56DE"
+    zh_TW: "\u8FD4\u56DE"
+    nl: Terug
+    eo: Reen
+    fi: Takaisin
+    fr: Retour
+    de: "Zur\xFCck"
+    id: Kembali
+    it: Indietro
+    ja: "\u623B\u308B"
+    ko: "\uB3CC\uC544\uAC00\uAE30"
+    pl: "\uACF5\uD1B5 - \uB4A4\uB85C\uAC00\uAE30 \uBC84\uD2BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: public_settings
+    en: Settings
+    pt_BR: "Configura\xE7\xF5es"
+    zh_CN: "\u8BBE\u7F6E"
+    zh_TW: "\u8A2D\u5B9A"
+    nl: Instellingen
+    eo: Agordoj
+    fi: Asetukset
+    fr: "Param\xE8tres"
+    de: Einstellungen
+    id: Pengaturan
+    it: Impostazioni
+    ja: "\u8A2D\u5B9A"
+    ko: "\uC124\uC815"
+    pl: "\uACF5\uD1B5 - \uC124\uC815 \uBC84\uD2BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: reward_card
+    en: Gold
+    pt_BR: Ouro
+    zh_CN: "\u91D1\u5E01"
+    zh_TW: "\u91D1\u5E63"
+    nl: Goud
+    eo: Oro
+    fi: Kulta
+    fr: Or
+    de: Gold
+    id: Emas
+    it: Oro
+    ja: "\u30B4\u30FC\u30EB\u30C9"
+    ko: "\uACE8\uB4DC"
+    pl: "\uC778\uAC8C\uC784 - \uACE8\uB4DC \uD45C\uC2DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21100
+    en: Strike
+    pt_BR: Golpe
+    zh_CN: "\u6253\u51FB"
+    zh_TW: "\u6253\u64CA"
+    nl: Aanval
+    eo: Frapi
+    fi: Isku
+    fr: Frappe
+    de: Schlag
+    id: Serangan
+    it: Colpo
+    ja: "\u30B9\u30C8\u30E9\u30A4\u30AF"
+    ko: "\uD3FC\uB9EC\uD0C0\uACA9"
+    pl: "\uC804\uC0AC \uACF5\uACA9 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21101
+    en: Strike+
+    pt_BR: Golpe+
+    zh_CN: "\u6253\u51FB+"
+    zh_TW: "\u6253\u64CA+"
+    nl: Aanval+
+    eo: Frapi+
+    fi: Isku+
+    fr: Frappe+
+    de: Schlag+
+    id: Serangan+
+    it: Colpo+
+    ja: "\u30B9\u30C8\u30E9\u30A4\u30AF+"
+    ko: "\uD3FC\uBC00\uD0C0\uACA9+"
+    pl: "\uC804\uC0AC \uAC15\uD654 \uACF5\uACA9 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22100
+    en: Move
+    pt_BR: Mover
+    zh_CN: "\u79FB\u52A8"
+    zh_TW: "\u79FB\u52D5"
+    nl: Bewegen
+    eo: Movi
+    fi: Liiku
+    fr: "D\xE9placer"
+    de: Bewegen
+    id: Bergerak
+    it: Muoviti
+    ja: "\u79FB\u52D5"
+    ko: "\uC774\uB3D9"
+    pl: "\uC804\uC0AC \uC774\uB3D9 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22101
+    en: Move+
+    pt_BR: Mover+
+    zh_CN: "\u79FB\u52A8+"
+    zh_TW: "\u79FB\u52D5+"
+    nl: Bewegen+
+    eo: Movi+
+    fi: Liiku+
+    fr: "D\xE9placer+"
+    de: Bewegen+
+    id: Bergerak+
+    it: Muoviti+
+    ja: "\u79FB\u52D5+"
+    ko: "\uC774\uB3D9+"
+    pl: "\uC804\uC0AC \uAC15\uD654 \uC774\uB3D9 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_23100
+    en: Defend
+    pt_BR: Defender
+    zh_CN: "\u9632\u5FA1"
+    zh_TW: "\u9632\u79A6"
+    nl: Verdedigen
+    eo: Defendi
+    fi: Puolusta
+    fr: "D\xE9fendre"
+    de: Verteidigen
+    id: Bertahan
+    it: Difendi
+    ja: "\u30C7\u30A3\u30D5\u30A7\u30F3\u30C9"
+    ko: "\uC0AC\uD608"
+    pl: "\uC804\uC0AC \uBC29\uC5B4 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_23101
+    en: Defend+
+    pt_BR: Defender+
+    zh_CN: "\u9632\u5FA1+"
+    zh_TW: "\u9632\u79A6+"
+    nl: Verdedigen+
+    eo: Defendi+
+    fi: Puolusta+
+    fr: "D\xE9fendre+"
+    de: Verteidigen+
+    id: Bertahan+
+    it: Difendi+
+    ja: "\u30C7\u30A3\u30D5\u30A7\u30F3\u30C9+"
+    ko: "\uC0AC\uD608+"
+    pl: "\uC804\uC0AC \uAC15\uD654 \uBC29\uC5B4 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31100
+    en: Shoot
+    pt_BR: Disparar
+    zh_CN: "\u5C04\u51FB"
+    zh_TW: "\u5C04\u64CA"
+    nl: Schieten
+    eo: Pafi
+    fi: Ammu
+    fr: Tirer
+    de: "Schie\xDFen"
+    id: Tembak
+    it: Spara
+    ja: "\u30B7\u30E5\u30FC\u30C8"
+    ko: "\uBC1C\uC0AC"
+    pl: "\uAC70\uB108 \uACF5\uACA9 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31101
+    en: Shoot+
+    pt_BR: Disparar+
+    zh_CN: "\u5C04\u51FB+"
+    zh_TW: "\u5C04\u64CA+"
+    nl: Schieten+
+    eo: Pafi+
+    fi: Ammu+
+    fr: Tirer+
+    de: "Schie\xDFen+"
+    id: Tembak+
+    it: Spara+
+    ja: "\u30B7\u30E5\u30FC\u30C8+"
+    ko: "\uBC1C\uC0AC+"
+    pl: "\uAC70\uB108 \uAC15\uD654 \uACF5\uACA9 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31120
+    en: Mighty Shot
+    pt_BR: Tiro Poderoso
+    zh_CN: "\u5F3A\u529B\u5C04\u51FB"
+    zh_TW: "\u5F37\u529B\u5C04\u64CA"
+    nl: Machtige Schot
+    eo: Forta Pafo
+    fi: Voimakas Laukaus
+    fr: Tir Puissant
+    de: "M\xE4chtiger Schuss"
+    id: Tembakan Kuat
+    it: Colpo Potente
+    ja: "\u5F37\u529B\u30B7\u30E7\u30C3\u30C8"
+    ko: "\uAC15\uD0C0"
+    pl: "\uAC70\uB108 \uAC15\uB825 \uACF5\uACA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31140
+    en: Sweep
+    pt_BR: Varredura
+    zh_CN: "\u6A2A\u626B"
+    zh_TW: "\u6A6B\u6383"
+    nl: Vegen
+    eo: Balai
+    fi: "Pyyhk\xE4isy"
+    fr: Balayer
+    de: Fegen
+    id: Sapuan
+    it: Spazzata
+    ja: "\u30B9\u30A6\u30A3\u30FC\u30D7"
+    ko: "\uD729\uC4F8\uAE30"
+    pl: "\uAC70\uB108 \uAD11\uC5ED \uACF5\uACA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31300
+    en: Grenade
+    pt_BR: Granada
+    zh_CN: "\u624B\u69B4\u5F39"
+    zh_TW: "\u624B\u69B4\u5F48"
+    nl: Granaat
+    eo: Granato
+    fi: Kranaatti
+    fr: Grenade
+    de: Granate
+    id: Granat
+    it: Granata
+    ja: "\u30B0\u30EC\u30CD\u30FC\u30C9"
+    ko: "\uC218\uB958\uD0C4"
+    pl: "\uAC70\uB108 \uC218\uB958\uD0C4"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32100
+    en: Move
+    pt_BR: Mover
+    zh_CN: "\u79FB\u52A8"
+    zh_TW: "\u79FB\u52D5"
+    nl: Bewegen
+    eo: Movi
+    fi: Liiku
+    fr: "D\xE9placer"
+    de: Bewegen
+    id: Bergerak
+    it: Muoviti
+    ja: "\u79FB\u52D5"
+    ko: "\uC774\uB3D9"
+    pl: "\uAC70\uB108 \uC774\uB3D9 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32104
+    en: Dash
+    pt_BR: Arremeter
+    zh_CN: "\u51B2\u523A"
+    zh_TW: "\u885D\u523A"
+    nl: Dash
+    eo: Kuregxon
+    fi: Viuhti
+    fr: Foncer
+    de: "St\xFCrmen"
+    id: Terjang
+    it: Scatta
+    ja: "\u30C0\u30C3\u30B7\u30E5"
+    ko: "\uB3CC\uC9C4"
+    pl: "\uAC70\uB108 \uB3CC\uC9C4 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_33100
+    en: Defend
+    pt_BR: Defender
+    zh_CN: "\u9632\u5FA1"
+    zh_TW: "\u9632\u79A6"
+    nl: Verdedigen
+    eo: Defendi
+    fi: Puolusta
+    fr: "D\xE9fendre"
+    de: Verteidigen
+    id: Bertahan
+    it: Difendi
+    ja: "\u30C7\u30A3\u30D5\u30A7\u30F3\u30C9"
+    ko: "\uC218\uBE44"
+    pl: "\uAC70\uB108 \uBC29\uC5B4 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_33102
+    en: Rapid Fire
+    pt_BR: "Tiro R\xE1pido"
+    zh_CN: "\u901F\u5C04"
+    zh_TW: "\u901F\u5C04"
+    nl: Snel Vuur
+    eo: Rapida Pafado
+    fi: Nopeatuli
+    fr: Tir Rapide
+    de: Schnellfeuer
+    id: Tembak Cepat
+    it: Fuoco Rapido
+    ja: "\u901F\u5C04"
+    ko: "\uC18D\uC0AC"
+    pl: "\uAC70\uB108 \uB4DC\uB85C\uC6B0 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_33103
+    en: Recharge
+    pt_BR: Recarregar
+    zh_CN: "\u5145\u80FD"
+    zh_TW: "\u5145\u80FD"
+    nl: Opladen
+    eo: "Re\u015Dargi"
+    fi: Lataa
+    fr: Recharger
+    de: Aufladen
+    id: Isi Ulang
+    it: Ricarica
+    ja: "\u30EA\u30C1\u30E3\u30FC\u30B8"
+    ko: "\uC7AC\uCDA9\uC804"
+    pl: "\uAC70\uB108 \uC5D0\uB108\uC9C0 \uD68C\uBCF5"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_34100
+    en: Strength Up
+    pt_BR: "For\xE7a"
+    zh_CN: "\u529B\u91CF\u63D0\u5347"
+    zh_TW: "\u529B\u91CF\u63D0\u5347"
+    nl: Kracht
+    eo: Forto
+    fi: Vahvista
+    fr: Force
+    de: "St\xE4rke"
+    id: Kekuatan
+    it: Forza
+    ja: "\u7B4B\u529B\u30A2\u30C3\u30D7"
+    ko: "\uADFC\uB825 \uAC15\uD654"
+    pl: "\uAC70\uB108 \uD798 \uC99D\uAC00 \uD30C\uC6CC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_34140
+    en: Dexterity Up
+    pt_BR: Destreza
+    zh_CN: "\u654F\u6377\u63D0\u5347"
+    zh_TW: "\u654F\u6377\u63D0\u5347"
+    nl: Behendigheid
+    eo: Lerteco
+    fi: Ketteryys
+    fr: "Dext\xE9rit\xE9"
+    de: Geschicklichkeit
+    id: Ketangkasan
+    it: Destrezza
+    ja: "\u654F\u6377\u30A2\u30C3\u30D7"
+    ko: "\uBC1C\uB180\uB9BC"
+    pl: "\uAC70\uB108 \uBBFC\uCCA9 \uC99D\uAC00 \uD30C\uC6CC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_34200
+    en: Battle Frenzy
+    pt_BR: Frenesi
+    zh_CN: "\u6218\u6597\u72C2\u70ED"
+    zh_TW: "\u6230\u9B25\u72C2\u71B1"
+    nl: Gevechtswaan
+    eo: Batala Frenezio
+    fi: Taisteluraivo
+    fr: "Fr\xE9n\xE9sie de Combat"
+    de: Kampfrausch
+    id: Kegilaan Tempur
+    it: Frenesia da Battaglia
+    ja: "\u30D0\u30C8\u30EB\u30D5\u30EC\u30F3\u30B8\u30FC"
+    ko: "\uC804\uD22C \uD669\uD640\uACBD"
+    pl: "\uAC70\uB108 \uBCF5\uD569 \uD30C\uC6CC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_41100
+    en: Strike
+    pt_BR: Golpe
+    zh_CN: "\u6253\u51FB"
+    zh_TW: "\u6253\u64CA"
+    nl: Aanval
+    eo: Frapi
+    fi: Isku
+    fr: Frappe
+    de: Schlag
+    id: Serangan
+    it: Colpo
+    ja: "\u30B9\u30C8\u30E9\u30A4\u30AF"
+    ko: "\uD0C0\uACA9"
+    pl: "\uB9C8\uBC95\uC0AC \uACF5\uACA9 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_41101
+    en: Strike+
+    pt_BR: Golpe+
+    zh_CN: "\u6253\u51FB+"
+    zh_TW: "\u6253\u64CA+"
+    nl: Aanval+
+    eo: Frapi+
+    fi: Isku+
+    fr: Frappe+
+    de: Schlag+
+    id: Serangan+
+    it: Colpo+
+    ja: "\u30B9\u30C8\u30E9\u30A4\u30AF+"
+    ko: "\uD0C0\uACA9+"
+    pl: "\uB9C8\uBC95\uC0AC \uAC15\uD654 \uACF5\uACA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_42100
+    en: Move
+    pt_BR: Mover
+    zh_CN: "\u79FB\u52A8"
+    zh_TW: "\u79FB\u52D5"
+    nl: Bewegen
+    eo: Movi
+    fi: Liiku
+    fr: "D\xE9placer"
+    de: Bewegen
+    id: Bergerak
+    it: Muoviti
+    ja: "\u79FB\u52D5"
+    ko: "\uC774\uB3D9"
+    pl: "\uB9C8\uBC95\uC0AC \uC774\uB3D9 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_42101
+    en: Move+
+    pt_BR: Mover+
+    zh_CN: "\u79FB\u52A8+"
+    zh_TW: "\u79FB\u52D5+"
+    nl: Bewegen+
+    eo: Movi+
+    fi: Liiku+
+    fr: "D\xE9placer+"
+    de: Bewegen+
+    id: Bergerak+
+    it: Muoviti+
+    ja: "\u79FB\u52D5+"
+    ko: "\uC774\uB3D9+"
+    pl: "\uB9C8\uBC95\uC0AC \uAC15\uD654 \uC774\uB3D9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_43100
+    en: Defend
+    pt_BR: Defender
+    zh_CN: "\u9632\u5FA1"
+    zh_TW: "\u9632\u79A6"
+    nl: Verdedigen
+    eo: Defendi
+    fi: Puolusta
+    fr: "D\xE9fendre"
+    de: Verteidigen
+    id: Bertahan
+    it: Difendi
+    ja: "\u30C7\u30A3\u30D5\u30A7\u30F3\u30C9"
+    ko: "\uC218\uBE44"
+    pl: "\uB9C8\uBC95\uC0AC \uBC29\uC5B4 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_43101
+    en: Defend+
+    pt_BR: Defender+
+    zh_CN: "\u9632\u5FA1+"
+    zh_TW: "\u9632\u79A6+"
+    nl: Verdedigen+
+    eo: Defendi+
+    fi: Puolusta+
+    fr: "D\xE9fendre+"
+    de: Verteidigen+
+    id: Bertahan+
+    it: Difendi+
+    ja: "\u30C7\u30A3\u30D5\u30A7\u30F3\u30C9+"
+    ko: "\uC218\uBE44+"
+    pl: "\uB9C8\uBC95\uC0AC \uAC15\uD654 \uBC29\uC5B4"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_43120
+    en: Summon Ally
+    pt_BR: Invocar Aliado
+    zh_CN: "\u53EC\u5524\u76DF\u53CB"
+    zh_TW: "\u53EC\u559A\u76DF\u53CB"
+    nl: Bondgenoot Oproepen
+    eo: Voki Aliancon
+    fi: Kutsu Liittolainen
+    fr: "Invoquer un Alli\xE9"
+    de: "Verb\xFCndeten Rufen"
+    id: Panggil Sekutu
+    it: Evoca Alleato
+    ja: "\u30A2\u30EA\u30FC\u53EC\u559A"
+    ko: "\uC544\uAD70 \uC18C\uD658"
+    pl: "\uB9C8\uBC95\uC0AC \uC18C\uD658 \uCE74\uB4DC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: enemy_name_10100
+    en: Slime
+    pt_BR: Gosma
+    zh_CN: "\u53F2\u83B1\u59C6"
+    zh_TW: "\u53F2\u840A\u59C6"
+    nl: Slijm
+    eo: "\u015Climo"
+    fi: Limainen
+    fr: Limon
+    de: Schleim
+    id: Slime
+    it: Melma
+    ja: "\u30B9\u30E9\u30A4\u30E0"
+    ko: "\uC2AC\uB77C\uC784"
+    pl: "\uC77C\uBC18 \uC801"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: enemy_name_10200
+    en: Skeleton Warrior
+    pt_BR: Esqueleto
+    zh_CN: "\u9AB7\u9AC5\u6218\u58EB"
+    zh_TW: "\u9AB7\u9ACF\u6230\u58EB"
+    nl: Skelet
+    eo: Skeleto
+    fi: Luurankosoturi
+    fr: Guerrier Squelette
+    de: Skelettkrieger
+    id: Pejuang Kerangka
+    it: Guerriero Scheletro
+    ja: "\u30B9\u30B1\u30EB\u30C8\u30F3"
+    ko: "\uD574\uACE8 \uC804\uC0AC"
+    pl: "\uC77C\uBC18 \uC801"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: enemey_name_10300
+    en: Stone Guardian
+    pt_BR: "Guardi\xE3o de Pedra"
+    zh_CN: "\u77F3\u50CF\u5B88\u536B"
+    zh_TW: "\u77F3\u50CF\u5B88\u885B"
+    nl: Stenen Bewaker
+    eo: "\u015Ctona Gardanto"
+    fi: Kivivartija
+    fr: Gardien de Pierre
+    de: "Steinw\xE4chter"
+    id: Penjaga Batu
+    it: Guardiano di Pietra
+    ja: "\u77F3\u306E\u5B88\u8B77\u8005"
+    ko: "\uC11D\uC0C1 \uC218\uD638\uC790"
+    pl: "\uC77C\uBC18 \uC801"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: enemy_name_10400
+    en: Demon Lord
+    pt_BR: "Lorde Dem\xF4nio"
+    zh_CN: "\u9B54\u738B"
+    zh_TW: "\u9B54\u738B"
+    nl: Demonenlord
+    eo: Demona Sinjoro
+    fi: Demoniherra
+    fr: "Seigneur D\xE9mon"
+    de: "D\xE4monenf\xFCrst"
+    id: Tuan Iblis
+    it: Signore dei Demoni
+    ja: "\u9B54\u738B"
+    ko: "\uC545\uB9C8 \uAD70\uC8FC"
+    pl: "\uBCF4\uC2A4 \uC801"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_name_101
+    en: Blood Vial
+    pt_BR: Frasco de Sangue
+    zh_CN: "\u8840\u74F6"
+    zh_TW: "\u8840\u74F6"
+    nl: Bloedampul
+    eo: Sango-Fiolo
+    fi: Veriampulli
+    fr: Fiole de Sang
+    de: "Blutfl\xE4schchen"
+    id: Botol Darah
+    it: Fiala di Sangue
+    ja: "\u8840\u306E\u30D0\u30A4\u30A2\u30EB"
+    ko: "\uD53C\uC758 \uC57D\uBCD1"
+    pl: "\uC720\uBB3C"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_name_102
+    en: Ancient Shield
+    pt_BR: Escudo Antigo
+    zh_CN: "\u53E4\u76FE"
+    zh_TW: "\u53E4\u76FE"
+    nl: Oud Schild
+    eo: "Antikva \u015Cildo"
+    fi: Muinainen Kilpi
+    fr: Bouclier Ancien
+    de: Altes Schild
+    id: Perisai Kuno
+    it: Scudo Antico
+    ja: "\u53E4\u4EE3\u306E\u76FE"
+    ko: "\uACE0\uB300\uC758 \uBC29\uD328"
+    pl: "\uC720\uBB3C"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_name_103
+    en: Burning Heart
+    pt_BR: "Cora\xE7\xE3o Ardente"
+    zh_CN: "\u71C3\u70E7\u4E4B\u5FC3"
+    zh_TW: "\u71C3\u71D2\u4E4B\u5FC3"
+    nl: Brandend Hart
+    eo: Brulanta Koro
+    fi: "Palava Syd\xE4n"
+    fr: "C\u0153ur Ardent"
+    de: Brennendes Herz
+    id: Jantung Membara
+    it: Cuore Ardente
+    ja: "\u71C3\u3048\u308B\u5FC3\u81D3"
+    ko: "\uBD88\uD0C0\uB294 \uC2EC\uC7A5"
+    pl: "\uC720\uBB3C"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_name_104
+    en: Soul Gem
+    pt_BR: Gema da Alma
+    zh_CN: "\u7075\u9B42\u5B9D\u77F3"
+    zh_TW: "\u9748\u9B42\u5BF6\u77F3"
+    nl: Zieledelsteeen
+    eo: Anima-Gemo
+    fi: Sielukivi
+    fr: "Gemme d'\xC2me"
+    de: Seelenedelstein
+    id: Batu Jiwa
+    it: Gemma dell'Anima
+    ja: "\u9B42\u306E\u5B9D\u77F3"
+    ko: "\uC601\uD63C\uC758 \uBCF4\uC11D"
+    pl: "\uC720\uBB3C"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_name_105
+    en: Dark Crown
+    pt_BR: Coroa Sombria
+    zh_CN: "\u6697\u51A0"
+    zh_TW: "\u6697\u51A0"
+    nl: Donkere Kroon
+    eo: Malluma Krono
+    fi: "Pime\xE4 Kruunu"
+    fr: Couronne Sombre
+    de: Dunkle Krone
+    id: Mahkota Gelap
+    it: Corona Oscura
+    ja: "\u6697\u9ED2\u306E\u738B\u51A0"
+    ko: "\uC5B4\uB460\uC758 \uC655\uAD00"
+    pl: "\uC720\uBB3C"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_name_901
+    en: Demon Core
+    pt_BR: "N\xFAcleo Demon\xEDaco"
+    zh_CN: "\u9B54\u6838"
+    zh_TW: "\u9B54\u6838"
+    nl: Demonen Kern
+    eo: Demona Kerno
+    fi: Demoniytdin
+    fr: "C\u0153ur D\xE9mon"
+    de: "D\xE4monenkern"
+    id: Inti Setan
+    it: Nucleo Demoniaco
+    ja: "\u9B54\u6838"
+    ko: "\uC545\uB9C8\uC758 \uD575"
+    pl: "\uBCF4\uC2A4 \uC720\uBB3C"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: keyword_block
+    en: Block
+    pt_BR: Bloqueio
+    zh_CN: "\u683C\u6321"
+    zh_TW: "\u683C\u64CB"
+    nl: Blokkeren
+    eo: Bloko
+    fi: Suojaus
+    fr: Blocage
+    de: Block
+    id: Blokir
+    it: Blocco
+    ja: "\u30D6\u30ED\u30C3\u30AF"
+    ko: "\uBC29\uC5B4\uB3C4"
+    pl: "\uD0A4\uC6CC\uB4DC - \uBC29\uC5B4\uB3C4"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: keyword_Strength
+    en: Strength
+    pt_BR: "For\xE7a"
+    zh_CN: "\u529B\u91CF"
+    zh_TW: "\u529B\u91CF"
+    nl: Kracht
+    eo: Forto
+    fi: Vahvuus
+    fr: Force
+    de: "St\xE4rke"
+    id: Kekuatan
+    it: Forza
+    ja: "\u7B4B\u529B"
+    ko: "\uD798"
+    pl: "\uD0A4\uC6CC\uB4DC - \uD798"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: keyword_dexterity
+    en: Dexterity
+    pt_BR: Destreza
+    zh_CN: "\u654F\u6377"
+    zh_TW: "\u654F\u6377"
+    nl: Behendigheid
+    eo: Lerteco
+    fi: Ketteryys
+    fr: "Dext\xE9rit\xE9"
+    de: Geschicklichkeit
+    id: Ketangkasan
+    it: Destrezza
+    ja: "\u654F\u6377"
+    ko: "\uBBFC\uCCA9"
+    pl: "\uD0A4\uC6CC\uB4DC - \uBBFC\uCCA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: keyword_upgraded
+    en: Upgraded
+    pt_BR: Melhorado
+    zh_CN: "\u5F3A\u5316"
+    zh_TW: "\u5F37\u5316"
+    nl: Verbeterd
+    eo: Plibonigita
+    fi: Parannettu
+    fr: "Am\xE9lior\xE9"
+    de: Verbessert
+    id: Ditingkatkan
+    it: Migliorato
+    ja: "\u5F37\u5316\u6E08\u307F"
+    ko: "\uAC15\uD654"
+    pl: "\uD0A4\uC6CC\uB4DC - \uAC15\uD654"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_title
+    en: Settings
+    pt_BR: "Configura\xE7\xF5es"
+    zh_CN: "\u8BBE\u7F6E"
+    zh_TW: "\u8A2D\u5B9A"
+    nl: Instellingen
+    eo: Agordoj
+    fi: Asetukset
+    fr: "Param\xE8tres"
+    de: Einstellungen
+    id: Pengaturan
+    it: Impostazioni
+    ja: "\u8A2D\u5B9A"
+    ko: "\uC124\uC815"
+    pl: "\uC124\uC815 \uD654\uBA74 \uC81C\uBAA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_master_volume
+    en: Master Volume
+    pt_BR: Volume Principal
+    zh_CN: "\u4E3B\u97F3\u91CF"
+    zh_TW: "\u4E3B\u97F3\u91CF"
+    nl: Hoofdvolume
+    eo: "\u0108efa Volumo"
+    fi: "P\xE4\xE4\xE4nenvoimakkuus"
+    fr: Volume Principal
+    de: "Hauptlautst\xE4rke"
+    id: Volume Utama
+    it: Volume Principale
+    ja: "\u30DE\u30B9\u30BF\u30FC\u97F3\u91CF"
+    ko: "\uB9C8\uC2A4\uD130 \uBCFC\uB968"
+    pl: "\uC124\uC815 - \uB9C8\uC2A4\uD130 \uBCFC\uB968"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_music_volume
+    en: Music Volume
+    pt_BR: "Volume da M\xFAsica"
+    zh_CN: "\u97F3\u4E50\u97F3\u91CF"
+    zh_TW: "\u97F3\u6A02\u97F3\u91CF"
+    nl: Muziekvolume
+    eo: Muzika Volumo
+    fi: "Musiikki\xE4\xE4nenvoimakkuus"
+    fr: Volume Musique
+    de: "Musiklautst\xE4rke"
+    id: Volume Musik
+    it: Volume Musica
+    ja: "\u97F3\u697D\u97F3\u91CF"
+    ko: "\uC74C\uC545 \uBCFC\uB968"
+    pl: "\uC124\uC815 - \uC74C\uC545 \uBCFC\uB968"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_sfx_volume
+    en: SFX Volume
+    pt_BR: Volume de Efeitos
+    zh_CN: "\u97F3\u6548\u97F3\u91CF"
+    zh_TW: "\u97F3\u6548\u97F3\u91CF"
+    nl: Geluidseffecten
+    eo: Efekta Volumo
+    fi: "\xC4\xE4nitehoste"
+    fr: Volume Effets
+    de: "Effektlautst\xE4rke"
+    id: Volume Efek
+    it: Volume Effetti
+    ja: "\u52B9\u679C\u97F3\u91CF"
+    ko: "\uD6A8\uACFC\uC74C \uBCFC\uB968"
+    pl: "\uC124\uC815 - \uD6A8\uACFC\uC74C \uBCFC\uB968"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_fullscreen
+    en: Fullscreen
+    pt_BR: Tela Cheia
+    zh_CN: "\u5168\u5C4F"
+    zh_TW: "\u5168\u87A2\u5E55"
+    nl: Volledig Scherm
+    eo: Plena Ekrano
+    fi: "Koko N\xE4ytt\xF6"
+    fr: "Plein \xC9cran"
+    de: Vollbild
+    id: Layar Penuh
+    it: Schermo Intero
+    ja: "\u5168\u753B\u9762"
+    ko: "\uC804\uCCB4\uD654\uBA74"
+    pl: "\uC124\uC815 - \uC804\uCCB4\uD654\uBA74"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_vsync
+    en: VSync
+    pt_BR: VSync
+    zh_CN: "\u5782\u76F4\u540C\u6B65"
+    zh_TW: "\u5782\u76F4\u540C\u6B65"
+    nl: VSync
+    eo: VSync
+    fi: VSync
+    fr: VSync
+    de: VSync
+    id: VSync
+    it: VSync
+    ja: VSync
+    ko: VSync
+    pl: "\uC124\uC815 - VSync"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_language
+    en: Language
+    pt_BR: Idioma
+    zh_CN: "\u8BED\u8A00"
+    zh_TW: "\u8A9E\u8A00"
+    nl: Taal
+    eo: Lingvo
+    fi: Kieli
+    fr: Langue
+    de: Sprache
+    id: Bahasa
+    it: Lingua
+    ja: "\u8A00\u8A9E"
+    ko: "\uC5B8\uC5B4"
+    pl: "\uC124\uC815 - \uC5B8\uC5B4 \uC120\uD0DD"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_screenshake
+    en: Screen Shake
+    pt_BR: "Vibra\xE7\xE3o"
+    zh_CN: "\u5C4F\u5E55\u9707\u52A8"
+    zh_TW: "\u87A2\u5E55\u9707\u52D5"
+    nl: Schudden
+    eo: Ekranoskuo
+    fi: "N\xE4yt\xF6n t\xE4rin\xE4"
+    fr: "Secousse \xC9cran"
+    de: Bildschirmzittern
+    id: Getaran Layar
+    it: Scuotimento Schermo
+    ja: "\u753B\u9762\u63FA\u308C"
+    ko: "\uD654\uBA74 \uD754\uB4E4\uB9BC"
+    pl: "\uC124\uC815 - \uD654\uBA74 \uD754\uB4E4\uB9BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_Exhausts
+    en: Exhausts
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: ' '
+    fr: ' '
+    de: 
+    id: ' '
+    it: ' '
+    ja: 
+    ko: "\uC18C\uBA78"
+    pl: "\uC124\uC815 - \uD654\uBA74 \uD754\uB4E4\uB9BC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_fps30
+    en: 30 FPS
+    pt_BR: 30 FPS
+    zh_CN: 30 FPS
+    zh_TW: 30 FPS
+    nl: 30 FPS
+    eo: 30 FPS
+    fi: 30 FPS
+    fr: 30 FPS
+    de: 30 FPS
+    id: 30 FPS
+    it: 30 FPS
+    ja: 30 FPS
+    ko: 30 FPS
+    pl: "\uC124\uC815 - \uD504\uB808\uC784 30"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_fps60
+    en: 60 FPS
+    pt_BR: 60 FPS
+    zh_CN: 60 FPS
+    zh_TW: 60 FPS
+    nl: 60 FPS
+    eo: 60 FPS
+    fi: 60 FPS
+    fr: 60 FPS
+    de: 60 FPS
+    id: 60 FPS
+    it: 60 FPS
+    ja: 60 FPS
+    ko: 60 FPS
+    pl: "\uC124\uC815 - \uD504\uB808\uC784 60"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_fps120
+    en: 120 FPS
+    pt_BR: 120 FPS
+    zh_CN: 120 FPS
+    zh_TW: 120 FPS
+    nl: 120 FPS
+    eo: 120 FPS
+    fi: 120 FPS
+    fr: 120 FPS
+    de: 120 FPS
+    id: 120 FPS
+    it: 120 FPS
+    ja: 120 FPS
+    ko: 120 FPS
+    pl: "\uC124\uC815 - \uD504\uB808\uC784 120"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_fpsunlimited
+    en: Unlimited
+    pt_BR: Ilimitado
+    zh_CN: "\u65E0\u9650\u5236"
+    zh_TW: "\u7121\u9650\u5236"
+    nl: Onbeperkt
+    eo: Senlima
+    fi: Rajoittamaton
+    fr: "Illimit\xE9"
+    de: Unbegrenzt
+    id: Tak Terbatas
+    it: Illimitato
+    ja: "\u7121\u5236\u9650"
+    ko: "\uBB34\uC81C\uD55C"
+    pl: "\uC124\uC815 - \uBB34\uC81C\uD55C fps"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_fastmode
+    en: Normal
+    pt_BR: Normal
+    zh_CN: "\u666E\u901A"
+    zh_TW: "\u666E\u901A"
+    nl: Normaal
+    eo: Normala
+    fi: Normaali
+    fr: Normal
+    de: Normal
+    id: Normal
+    it: Normale
+    ja: "\u666E\u901A"
+    ko: "\uBCF4\uD1B5"
+    pl: "\uC124\uC815 - \uAC8C\uC784\uC18D\uB3C4 \uBCF4\uD1B5"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_abandonrun
+    en: Abandon Run
+    pt_BR: Abandonar
+    zh_CN: "\u653E\u5F03\u672C\u5C40"
+    zh_TW: "\u653E\u68C4\u672C\u5C40"
+    nl: Run Verlaten
+    eo: Forlasi Ludon
+    fi: "Hylk\xE4\xE4 Peli"
+    fr: Abandonner
+    de: Run Aufgeben
+    id: Tinggalkan
+    it: Abbandona
+    ja: "\u30E9\u30F3\u3092\u8AE6\u3081\u308B"
+    ko: "\uB7F0 \uD3EC\uAE30"
+    pl: "\uAC8C\uC784\uC624\uBC84 - \uB7F0 \uD3EC\uAE30"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: setting_returnmenu
+    en: Return to Menu
+    pt_BR: Menu Principal
+    zh_CN: "\u8FD4\u56DE\u4E3B\u83DC\u5355"
+    zh_TW: "\u8FD4\u56DE\u4E3B\u9078\u55AE"
+    nl: Terug naar Menu
+    eo: Revenu al Menuo
+    fi: Palaa Valikkoon
+    fr: Retour au Menu
+    de: "Zur\xFCck zum Men\xFC"
+    id: Kembali ke Menu
+    it: Torna al Menu
+    ja: "\u30E1\u30CB\u30E5\u30FC\u306B\u623B\u308B"
+    ko: "\uBA54\uB274\uB85C \uB3CC\uC544\uAC00\uAE30"
+    pl: "\uAC8C\uC784\uC624\uBC84 - \uBA54\uB274\uB85C \uBCF5\uADC0"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: item_name_201
+    en: Healing Potion
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD68C\uBCF5 \uD3EC\uC158"
+    pl: "\uC544\uC774\uD15C \uC774\uB984"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: item_desc_201
+    en: Instantly restores 10 HP.
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC989\uC2DC HP\uB97C 10 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    pl: "\uC544\uC774\uD15C \uC124\uBA85"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: item_name_202
+    en: Strength Potion
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uAC15\uD654 \uD3EC\uC158"
+    pl: "\uC544\uC774\uD15C \uC774\uB984"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: item_desc_202
+    en: Attack power +2 for this combat.
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uBC88 \uC804\uD22C\uC5D0\uC11C \uACF5\uACA9\uB825\uC774 2 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    pl: "\uC544\uC774\uD15C \uC124\uBA85"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: item_name_203
+    en: Defense Potion
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC29\uC5B4 \uD3EC\uC158"
+    pl: "\uC544\uC774\uD15C \uC774\uB984"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: item_desc_203
+    en: Block +3 for this combat.
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uBC88 \uC804\uD22C\uC5D0\uC11C \uBC29\uC5B4\uB3C4\uAC00 3 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    pl: "\uC544\uC774\uD15C \uC124\uBA85"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: item_name_204
+    en: Speed Potion
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC18D\uB3C4 \uD3EC\uC158"
+    pl: "\uC544\uC774\uD15C \uC774\uB984"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: item_desc_204
+    en: Draw 2 extra cards this turn.
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uBC88 \uD134\uC5D0 \uCE74\uB4DC\uB97C 2\uC7A5 \uCD94\uAC00\uB85C
+      \uB4DC\uB85C\uC6B0\uD569\uB2C8\uB2E4."
+    pl: "\uC544\uC774\uD15C \uC124\uBA85"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: item_name_301
+    en: Iron Ring
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uAC15\uCCA0 \uBC18\uC9C0"
+    pl: "\uC544\uC774\uD15C \uC774\uB984"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: item_desc_301
+    en: Gain 3 Block at the start of combat.
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC804\uD22C \uC2DC\uC791 \uC2DC \uBC29\uC5B4\uB3C4 3\uC744 \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: "\uC544\uC774\uD15C \uC124\uBA85"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: item_name_302
+    en: Strength Bracelet
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD798\uC758 \uD314\uCC0C"
+    pl: "\uC544\uC774\uD15C \uC774\uB984"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: item_desc_302
+    en: Gain 1 Strength at the start of combat.
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC804\uD22C \uC2DC\uC791 \uC2DC \uD798\uC774 1 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    pl: "\uC544\uC774\uD15C \uC124\uBA85"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_desc_101
+    en: Recover 4 HP at the start of combat.
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC804\uD22C \uC2DC\uC791 \uC2DC HP\uB97C 4 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    pl: "\uC720\uBB3C \uC124\uBA85"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_desc_102
+    en: Completely nullify the first hit taken in combat.
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC804\uD22C \uC911 \uCCAB \uBC88\uC9F8 \uD53C\uD574\uB97C 1\uD68C \uC644\uC804\uD788
+      \uBB34\uD6A8\uD654\uD569\uB2C8\uB2E4."
+    pl: "\uC720\uBB3C \uC124\uBA85"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_desc_103
+    en: Max Energy +1 at the start of combat.
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC804\uD22C \uC2DC\uC791 \uC2DC \uC5D0\uB108\uC9C0 \uCD5C\uB300\uCE58\uAC00
+      1 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    pl: "\uC720\uBB3C \uC124\uBA85"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_desc_104
+    en: Recover 1 HP each time you defeat an enemy.
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uC744 \uCC98\uCE58\uD560 \uB54C\uB9C8\uB2E4 HP\uB97C 1 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    pl: "\uC720\uBB3C \uC124\uBA85"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_desc_105
+    en: Gain +1 Energy each turn but lose 1 HP.
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB9E4 \uD134 \uC2DC\uC791 \uC2DC \uC5D0\uB108\uC9C0 +1\uC744 \uC5BB\uC9C0\uB9CC
+      HP 1\uC744 \uC783\uC2B5\uB2C8\uB2E4."
+    pl: "\uC720\uBB3C \uC124\uBA85"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: relic_desc_901
+    en: Max HP +20. Gain +1 Energy at the start of combat.
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCD5C\uB300 HP\uAC00 20 \uC99D\uAC00\uD569\uB2C8\uB2E4. \uC804\uD22C \uC2DC\uC791
+      \uC2DC \uC5D0\uB108\uC9C0 +1\uC744 \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: "\uBCF4\uC2A4 \uC720\uBB3C \uC124\uBA85"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: rewardcard_name_class_normal
+    en: Class Card Reward (Normal)
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC9C1\uC5C5 \uCE74\uB4DC \uBCF4\uC0C1 (\uC77C\uBC18)"
+    pl: "\uCE74\uB4DC \uBCF4\uC0C1 \uD234\uD301"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: rewardcard_name_common_normal
+    en: Neutral Card Reward (Normal)
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uACF5\uC6A9 \uCE74\uB4DC \uBCF4\uC0C1 (\uC77C\uBC18)"
+    pl: "\uCE74\uB4DC \uBCF4\uC0C1 \uD234\uD301"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_type_attack
+    en: Attack
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uACF5\uACA9"
+    pl: "\uCE74\uB4DC \uD0C0\uC785 - \uACF5\uACA9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_type_move
+    en: Move
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9"
+    pl: "\uCE74\uB4DC \uD0C0\uC785 - \uC774\uB3D9"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_type_skill
+    en: Skill
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC2A4\uD0AC"
+    pl: "\uCE74\uB4DC \uD0C0\uC785 - \uC2A4\uD0AC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_type_power
+    en: Power
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD30C\uC6CC"
+    pl: "\uCE74\uB4DC \uD0C0\uC785 - \uD30C\uC6CC"
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_11200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB2E8\uAC80 \uB358\uC9C0\uAE30"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_11200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uD574\uB97C {D}\uC90D\uB2C8\uB2E4.\\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
+      \uBF51\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_11201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB2E8\uAC80 \uB358\uC9C0\uAE30"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_11201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uD574\uB97C {D}\uC90D\uB2C8\uB2E4.\\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
+      \uBF51\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_12200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uD3F0"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_12200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC55E\uC73C\uB85C\\n\uD55C\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_12201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uD3F0+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_12201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC55E\uC73C\uB85C\\n\uD55C\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_12202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uB098\uC774\uD2B8"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_12202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC55E \uB300\uAC01\uC120\uC73C\uB85C\\n\uD55C\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_12203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uB098\uC774\uD2B8+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_12203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC55E \uB300\uAC01\uC120\uC73C\uB85C\\n\uD55C\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_12204
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uBE44\uC20D"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_12204
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB300\uAC01\uC120 \uBC29\uD5A5\uC73C\uB85C\\n\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_12205
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uBE44\uC20D+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_12205
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB300\uAC01\uC120 \uBC29\uD5A5\uC73C\uB85C\\n\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_12206
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uB8E9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_12206
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC0C1\uD558\uC88C\uC6B0 \uBC29\uD5A5\uC73C\uB85C\\n\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_12207
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uB8E9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_12207
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC0C1\uD558\uC88C\uC6B0 \uBC29\uD5A5\uC73C\uB85C\\n\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_12300
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uD0B9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_12300
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC0C1\uD558\uC88C\uC6B0 \uB300\uAC01\uC120 \uBC29\uD5A5\uC73C\uB85C\\n\uD55C\uCE78
+      \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_12301
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uD0B9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_12301
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC0C1\uD558\uC88C\uC6B0 \uB300\uAC01\uC120 \uBC29\uD5A5\uC73C\uB85C\\n\uD55C\uCE78
+      \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_12302
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uD038"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_12302
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC0C1\uD558\uC88C\uC6B0 \uB300\uAC01\uC120 \uBC29\uD5A5\uC73C\uB85C\\n\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_12303
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uD038+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_12303
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC0C1\uD558\uC88C\uC6B0 \uB300\uAC01\uC120 \uBC29\uD5A5\uC73C\uB85C\\n\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_13200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC18C\uB9E4\uCE58\uAE30"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_13200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uACE8\uB4DC\uB97C 20\uB9CC\uD07C \uD68D\uB4DD\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_13201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC18C\uB9E4\uCE58\uAE30+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_13201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uACE8\uB4DC\uB97C 30\uB9CC\uD07C \uD68D\uB4DD\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_13202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBD95\uB300"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_13202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCCB4\uB825\uC744 4\uB9CC\uD07C \uD68D\uB4DD\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_13203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBD95\uB300+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_13203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 6\uB9CC\uD07C \uD68D\uB4DD\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21000
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD0C0\uACA9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21000
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21001
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD0C0\uACA9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21001
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22000
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22000
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC88C\uC6B0\uC911 \uBC29\uD5A5\uC73C\uB85C\\n\uD55C\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22001
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22001
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC0C1\uD558\uC88C\uC6B0 \uBC29\uD5A5\uC73C\uB85C\\n\uD55C\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4.\\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
+      \uBF51\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4.\\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
+      \uBF51\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21102
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC601\uD63C\uBC30\uAE30"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21102
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4.\\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
+      \uC18C\uBA78\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21103
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC601\uD63C\uBC30\uAE30+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21103
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4.\\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
+      \uC18C\uBA78\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21104
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD608\uB958"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21104
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 2 \uC783\uC2B5\uB2C8\uB2E4.\\n{D} \uD53C\uD574\uB97C
+      \uC785\uD799\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21105
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD608\uB958+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21105
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 2 \uC783\uC2B5\uB2C8\uB2E4.\\n{D} \uD53C\uD574\uB97C
+      \uC785\uD799\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21106
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uC911 \uD0C0\uACA9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21106
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uD574\uB97C {D}\uB9CC\uD07C 2\uBC88 \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21107
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uC911 \uD0C0\uACA9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21107
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uD574\uB97C {D}\uB9CC\uD07C 2\uBC88 \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC5F0\uC18D\uBC30\uAE30"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC190\uC5D0 \uC788\uB294 \uCE74\uB4DC\uB97C \uC804\uBD80 \uBC84\uB9BD\uB2C8\uB2E4.\\n\uBC84\uB9B0
+      \uCE74\uB4DC \uC218\uB9CC\uD07C {D}\uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC5F0\uC18D\uBC30\uAE30+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC190\uC5D0 \uC788\uB294 \uCE74\uB4DC\uB97C \uC804\uBD80 \uBC84\uB9BD\uB2C8\uB2E4.\\n\uBC84\uB9B0
+      \uCE74\uB4DC \uC218\uB9CC\uD07C {D}\uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC5F0\uC18D\uBC30\uAE30"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uD574\uB97C {D}\uB9CC\uD07C\\n{X}\uBC88 \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC5F0\uC18D\uBC30\uAE30+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uD574\uB97C {D}\uB9CC\uD07C\\n{X}\uBC88 \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC88C\uC6B0 \uBC29\uD5A5\uC73C\uB85C\\n\uD55C\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC0C1\uD558\uC88C\uC6B0 \uBC29\uD5A5\uC73C\uB85C\\n\uD55C\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22102
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22102
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB300\uAC01\uC120 \uBC29\uD5A5\uC73C\uB85C \uD55C\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22103
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22103
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB300\uAC01\uC120 \uBC29\uD5A5\uC73C\uB85C \uD55C\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB3CC\uC9C4"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC55E\uC73C\uB85C \uD55C\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4.\\n\uC801\uC774
+      \uC788\uB2E4\uBA74 \uB4A4\uB85C \uD55C\uCE78 \uBC00\uB824\uB098\uAC8C \uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB3CC\uC9C4+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC55E\uC73C\uB85C \uD55C\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4.\\n\uC801\uC774
+      \uC788\uB2E4\uBA74 \uB4A4\uB85C \uD55C\uCE78 \uBC00\uB824\uB098\uAC8C \uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC219\uBA85"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC774 9\uC774\uD558\uC778 \uC801\uC744 \uCC98\uCE58\uD558\uACE0\\n\uC801\uC774\uC788\uB294
+      \uC704\uCE58\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC219\uBA85+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC774 12\uC774\uD558\uC778 \uC801\uC744 \uCC98\uCE58\uD558\uACE0\\n\uC801\uC774\uC788\uB294
+      \uC704\uCE58\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22300
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBCBD\uB825\uC77C\uC12C"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22300
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC0C1\uB300\uBC29\uC758 \uB4A4\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4.\\n\uD53C\uD574\uB97C
+      {D}\uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22301
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBCBD\uB825\uC77C\uC12C+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22301
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC0C1\uB300\uBC29\uC758 \uB4A4\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4.\\n\uD53C\uD574\uB97C
+      {D}\uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_23100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 3 \uC783\uC2B5\uB2C8\uB2E4.\\n2\uC5D0\uB108\uC9C0\uB97C
+      \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_23101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 3 \uC783\uC2B5\uB2C8\uB2E4.\\n3\uC5D0\uB108\uC9C0\uB97C
+      \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_23102
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC218\uBE44"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_23102
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 2 \uC783\uC2B5\uB2C8\uB2E4.\\n\uCE74\uB4DC\uB97C \uB450\uC7A5
+      \uBF51\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_23103
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC218\uBE44+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_23103
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 2 \uC783\uC2B5\uB2C8\uB2E4.\\n\uCE74\uB4DC\uB97C \uC138\uC7A5
+      \uBF51\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_23104
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBAB8 \uD480\uAE30"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_23104
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD798\uC7442 \uC5BB\uC2B5\uB2C8\uB2E4.\\n\uD134\uC774 \uB05D\uB0A0\uB54C
+      \uD798\uC744 2 \uC783\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_23105
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBAB8 \uD480\uAE30+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_23105
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD798\uC7443 \uC5BB\uC2B5\uB2C8\uB2E4.\\n\uD134\uC774 \uB05D\uB0A0\uB54C
+      \uD798\uC744 3 \uC783\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_23300
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD55C\uACC4\uB3CC\uD30C"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_23300
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD798\uC774 \uB450\uBC30\uB85C\\n\uC99D\uAC00\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_23301
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD55C\uACC4\uB3CC\uD30C+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_23301
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 3 \uC783\uC2B5\uB2C8\uB2E4. 3\uC5D0\uB108\uC9C0\uB97C
+      \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_23302
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCD5C\uD6C4\uC758 \uACF5\uACA9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_23302
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uBC88\uD134\uC5D0 \uAC00\uD558\uB294 \uB370\uBBF8\uC9C0\uC640 \uBC1B\uB294
+      \uB370\uBBF8\uC9C0\uAC00 \uB450\uBC30\uAC00 \uB429\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_23303
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCD5C\uD6C4\uC758 \uACF5\uACA9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_23303
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uBC88\uD134\uC5D0 \uAC00\uD558\uB294 \uB370\uBBF8\uC9C0\uC640 \uBC1B\uB294
+      \uB370\uBBF8\uC9C0\uAC00 \uB450\uBC30\uAC00 \uB429\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uADFC\uB825 \uAC15\uD654"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD798\uC744 2 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uADFC\uB825 \uAC15\uD654+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD798\uC744 2 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uADFC\uB825 \uAC15\uD654"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 \uC783\uC744\uB54C\uB9C8\uB2E4 \uD798\uC744 1 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uADFC\uB825 \uAC15\uD654+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 \uC783\uC744\uB54C\uB9C8\uB2E4 \uD798\uC744 2 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24204
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uADFC\uB825 \uAC15\uD654"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24204
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uC744 \uCC98\uCE58\uD560\uB54C\uB9C8\uB2E4 \uD798\uC744 2 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24205
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uADFC\uB825 \uAC15\uD654+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24205
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uC744 \uCC98\uCE58\uD560\uB54C\uB9C8\uB2E4 \uD798\uC744 3 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24206
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uADFC\uB825 \uAC15\uD654"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24206
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCE74\uB4DC\uAC00 \uC18C\uBA78\uB420\uB54C\uB9C8\uB2E4 \uD798\uC744 2 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24207
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uADFC\uB825 \uAC15\uD654+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24207
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCE74\uB4DC\uAC00 \uC18C\uBA78\uB420\uB54C\uB9C8\uB2E4 \uD798\uC744 3 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24300
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uAD11\uD3ED\uD654"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24300
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB9E4\uD134 \uD798\uC744 2 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24301
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uAD11\uD3ED\uD654"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24301
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB9E4\uD134 \uD798\uC744 3 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24302
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD608\uC561\uC21C\uD658"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24302
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCE74\uB4DC\uC758 \uD6A8\uACFC\uB85C \uCC44\uB825\uC744 \uC77D\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24303
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD608\uC561\uC21C\uD658"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24303
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCE74\uB4DC\uC758 \uD6A8\uACFC\uB85C \uCC44\uB825\uC744 \uC77D\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24304
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD608\uC561\uC21C\uD658"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24304
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCE74\uB4DC\uAC00 \uC18C\uBA78\uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24305
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD608\uC561\uC21C\uD658"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24305
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCE74\uB4DC\uAC00 \uC18C\uBA78\uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24306
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD608\uC561\uC21C\uD658"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24306
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB9E4\uD134 1 \uC5D0\uB108\uC9C0\uB97C \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_24307
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD608\uC561\uC21C\uD658"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_24307
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB9E4\uD134 2 \uC5D0\uB108\uC9C0\uB97C \uC5BB\uC2B5\uB2C8\uB2E4.."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC218\uB958\uD0C4"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC120\uD0DD\uD55C \uC140 \uC8FC\uBCC0\uC5D0 {D} \uD53C\uD574."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC218\uB958\uD0C4"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC120\uD0DD\uD55C \uC140 \uC8FC\uBCC0\uC5D0 {D} \uD53C\uD574."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC94\uC704 \uB0B4 \uCE78\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC94\uC704 \uB0B4 \uCE78\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_42100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC6D0\uD558\uB294 \uCE78\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_42101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC6D0\uD558\uB294 \uCE78\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_43120
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBE48 \uCE78\uC5D0 \uC544\uAD70\uC744 \uC18C\uD658\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 

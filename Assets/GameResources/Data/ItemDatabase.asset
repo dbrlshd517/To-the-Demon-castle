@@ -1,0 +1,194 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433cfb17ada5c0c41969fe803d21836d, type: 3}
+  m_Name: ItemDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.Item.ItemDatabase
+  items:
+  - itemCode: 101
+    itemName: "\uD3ED\uD0C4"
+    description: "9\uCE78 \uBC94\uC704\uC758 \uB300\uBBF8\uC9C0 10 \uAD11\uC5ED \uD53C\uD574\uB97C
+      \uC90D\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 102
+    itemName: "\uBC29\uC5B4 \uD3EC\uC158"
+    description: "\uBC29\uC5B4\uB3C4\uAC00 12 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 103
+    itemName: "\uC2E0\uC18D \uD3EC\uC158"
+    description: "\uC774\uBC88 \uD134\uC5D0 \uCE74\uB4DC\uB97C 3\uC7A5 \uCD94\uAC00\uB85C
+      \uB4DC\uB85C\uC6B0\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 104
+    itemName: "\uACF5\uACA9 \uD3EC\uC158"
+    description: "\uBB34\uC791\uC704 \uACF5\uACA9 \uCE74\uB4DC 3\uC7A5 \uC911 1\uC7A5\uC744\uC120\uD0DD\uD574
+      \uC190\uC73C\uB85C \uAC00\uC838\uC635\uB2C8\uB2E4.\uC774\uBC88 \uD134 \uB3D9\uC548
+      \uADF8 \uCE74\uB4DC\uB97C\uBE44\uC6A9 \uC5C6\uC774 \uC0AC\uC6A9\uD560 \uC218
+      \uC788\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 105
+    itemName: "\uBB34\uC0C9 \uD3EC\uC158"
+    description: "\uBB34\uC791\uC704 \uC911\uB9BD \uCE74\uB4DC 3\uC7A5 \uC911 1\uC7A5\uC744\uC120\uD0DD\uD574
+      \uC190\uC73C\uB85C \uAC00\uC838\uC635\uB2C8\uB2E4.\uC774\uBC88 \uD134 \uB3D9\uC548
+      \uADF8 \uCE74\uB4DC\uB97C\uBE44\uC6A9 \uC5C6\uC774 \uC0AC\uC6A9\uD560 \uC218
+      \uC788\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 106
+    itemName: "\uC2A4\uD0AC \uD3EC\uC158"
+    description: "\uBB34\uC791\uC704 \uC2A4\uD0AC \uCE74\uB4DC 3\uC7A5 \uC911 1\uC7A5\uC744\uC120\uD0DD\uD574
+      \uC190\uC73C\uB85C \uAC00\uC838\uC635\uB2C8\uB2E4.\uC774\uBC88 \uD134 \uB3D9\uC548
+      \uADF8 \uCE74\uB4DC\uB97C\uBE44\uC6A9 \uC5C6\uC774 \uC0AC\uC6A9\uD560 \uC218
+      \uC788\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 107
+    itemName: "\uD654\uC0B4"
+    description: "\uC801\uC5D0\uAC8C \uD53C\uD574\uB97C 20 \uC90D\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 109
+    itemName: "\uC5D0\uB108\uC9C0 \uD3EC\uC158"
+    description: "2\uC758 \uC5D0\uB108\uC9C0\uB97C \uC5BB\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 119
+    itemName: "\uC774\uB3D9 \uD3EC\uC158"
+    description: "1\uCE78 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 170
+    itemName: "\uACF5\uC911 \uD3EC\uACA9"
+    description: "\uBAA8\uB4E0 \uD0C0\uC77C\uC5D0 10 \uB300\uBBF8\uC9C0\uB97C \uC90D\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 180
+    itemName: "\uC544\uB4DC\uB808\uB0A0\uB9B0"
+    description: "\uD798\uC744 3 \uC5BB\uC2B5\uB2C8\uB2E4 \uD53C\uD574\uB97C 1\uC529
+      3\uBC88 \uBC1B\uC2B5\uB2C8\uB2E4"
+    icon: {fileID: 0}
+  - itemCode: 190
+    itemName: "\uD654\uC5FC\uBCD1"
+    description: "\uD654\uC5FC\uC744 5 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 201
+    itemName: "\uC5D0\uC774\uC2A4 \uCE74\uB4DC"
+    description: "\uC190\uC5D0\uC11C \uCE74\uB4DC\uB97C 1\uC7A5 \uC120\uD0DD\uD569\uB2C8\uB2E4.\uC774\uBC88
+      \uC804\uD22C \uB3D9\uC548 \uADF8 \uCE74\uB4DC\uB97C \uBE44\uC6A9 \uC5C6\uC774
+      \uC0AC\uC6A9\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 202
+    itemName: "\uD798 \uD3EC\uC158"
+    description: "\uD798\uC744 3 \uC5BB\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 203
+    itemName: "\uCD08\uCF54\uBC14"
+    description: "\uC774\uBC88\uD134\uC5D0 \uD798\uC744 8 \uC5BB\uC2B5\uB2C8\uB2E4"
+    icon: {fileID: 0}
+  - itemCode: 204
+    itemName: "\uAC15\uD654 \uD3EC\uC158"
+    description: "\uC190\uC5D0 \uC788\uB294 \uBAA8\uB4E0 \uCE74\uB4DC\uB97C \uAC15\uD654\uD569\uB2C8\uB2E4"
+    icon: {fileID: 0}
+  - itemCode: 205
+    itemName: "\uC5F0\uB9C9\uD0C4"
+    description: "\uBCF4\uC2A4\uAC00 \uC544\uB2CC \uC801\uC73C\uB85C\uBD80\uD130
+      \uB3C4\uB9DD\uCE69\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 206
+    itemName: "\uCC44\uB825 \uD3EC\uC158"
+    description: "\uCC44\uB825\uC744 20% \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 207
+    itemName: "\uC7AC\uD65C\uC6A9\uB41C \uD3EC\uC158"
+    description: "\uBC84\uB9B0 \uCE74\uB4DC \uB354\uBBF8\uC5D0\uC11C \uCE74\uB4DC\uB97C1\uC7A5
+      \uC120\uD0DD\uD574 \uC190\uC73C\uB85C \uAC00\uC838\uC635\uB2C8\uB2E4.\uC774\uBC88
+      \uD134 \uB3D9\uC548 \uADF8 \uCE74\uB4DC\uC758 \uBE44\uC6A9\uC774 0\uC774 \uB429\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 208
+    itemName: "\uC608\uC9C0\uC758 \uACE0\uC11C"
+    description: "\uBF51\uC744 \uCE74\uB4DC \uB354\uBBF8\uC5D0\uC11C \uCE74\uB4DC\uB97C1\uC7A5
+      \uC120\uD0DD\uD574 \uC190\uC73C\uB85C \uAC00\uC838\uC635\uB2C8\uB2E4.\uC774\uBC88
+      \uD134 \uB3D9\uC548 \uADF8 \uCE74\uB4DC\uC758 \uBE44\uC6A9\uC774 0\uC774 \uB429\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 209
+    itemName: "\uC7AC\uC0AC\uC6A9 \uD3EC\uC158"
+    description: "\uB2E4\uC74C\uC5D0 \uC4F0\uB294 \uCE74\uB4DC\uB97C \uB450\uBC88
+      \uC0AC\uC6A9\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 270
+    itemName: "\uAC15\uCCA0\uD654 \uD3EC\uD604"
+    description: "\uBC29\uC5B4\uB3C4\uAC00 3\uBC30 \uC624\uB985\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 280
+    itemName: "\uD0C4\uC57D"
+    description: "\uBC1C\uC0AC 3\uC7A5\uC744 \uC5BB\uC2B5\uB2C8\uB2E4. \uADF8 \uCE74\uB4DC\uB4E4\uC758
+      \uBE44\uC6A9\uC774 0\uC774 \uB429\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 290
+    itemName: "\uBF08\uD53C\uB9AC"
+    description: "\uD574\uACE8\uBCD1\uC0AC\uC758 \uCC44\uB825\uC744 5 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 301
+    itemName: "\uBD84\uB178\uC758 \uD3EC\uC158"
+    description: "\uB2E4\uC74C \uACF5\uACA9\uCE74\uB4DC\uC758 \uD53C\uD574\uB7C9\uC774
+      3\uBC30\uB85C \uC99D\uAC00\uD569\uB2C8\uB2E4"
+    icon: {fileID: 0}
+  - itemCode: 302
+    itemName: "\uD658\uC0C1\uC758 \uAC00\uB8E8"
+    description: "\uC190\uC774 \uAC00\uB4DD\uCC30\uB54C \uAE4C\uC9C0 \uCE74\uB4DC\uB97C
+      \uBF51\uACE0 \uCE74\uB4DC\uC758 \uBE44\uC6A9\uC744 \uBB34\uC791\uC704\uB85C
+      \uBCC0\uACBD\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 303
+    itemName: "\uB3CC\uB9BC\uD310"
+    description: "\uBF51\uC744 \uCE74\uB4DC \uB354\uBBF8 \uC704\uC5D0\uC11C\uBD80\uD1303\uC7A5\uC758
+      \uCE74\uB4DC\uB97C \uC0AC\uC6A9\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 304
+    itemName: "\uC131\uC218"
+    description: "\uC790\uC2E0\uC5D0\uAC8C \uAC78\uB9B0 \uD574\uB85C\uC6B4 \uD6A8\uACFC\uB97C
+      \uBAA8\uB450 \uC81C\uAC70\uD569\uB2C8\uB2E4"
+    icon: {fileID: 0}
+  - itemCode: 305
+    itemName: "\uC0AC\uAE30 \uC8FC\uC0AC\uC704"
+    description: "\uBB34\uC791\uC704 \uACF5\uACA9\uC2A4\uD0AC \uD30C\uC6CC\uCE74\uB4DC\uB97C
+      \uC190\uC73C\uB85C \uAC00\uC838\uC635\uB2C8\uB2E4. \uC774\uBC88 \uD134 \uB3D9\uC548
+      \uADF8 \uCE74\uB4DC\uB4E4\uC744\uBE44\uC6A9 \uC5C6\uC774 \uC0AC\uC6A9\uD560
+      \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 306
+    itemName: "\uBB34\uC9C0\uAC8C \uD3EC\uC158"
+    description: "\uBE48 \uD3EC\uC158 \uC2AC\uB86F\uC744 \uBB34\uC791\uC704 \uD3EC\uC158\uC73C\uB85C
+      \uCC44\uC6C1\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 307
+    itemName: "\uC21C\uAC04\uC774\uB3D9 \uD3EC\uC158"
+    description: "\uC6D0\uD558\uB294 \uACF3\uC73C\uB85C \uC21C\uAC04\uC774\uB3D9\uC744
+      \uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 308
+    itemName: "\uC12C\uAD11\uD0C4"
+    description: "\uD55C\uBA85\uC744 \uAE30\uC808\uC2DC\uD0B5\uB2C8\uB2E4"
+    icon: {fileID: 0}
+  - itemCode: 309
+    itemName: "\uC18C\uC0DD\uC758\uD32C\uB358\uD2B8"
+    description: "\uC0AC\uB9DD \uC2DC \uADF8 \uB300\uC2E0 \uC774 \uD3EC\uC158\uC774
+      \uBC84\uB824\uC9C0\uACE0 \uCD5C\uB300 \uCCB4\uB825\uC758 30%\uB9CC\uD07C \uCCB4\uB825\uC744
+      \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 370
+    itemName: "\uCCA0\uAC00\uBA74"
+    description: "\uC774\uBC88\uD134\uC758 \uB370\uBBF8\uC9C0\uB97C \uB450\uBC30
+      \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4. \uBC1B\uB294\uD53C\uD574\uAC00 \uB450\uBC30\uAC00
+      \uB429\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 380
+    itemName: "\uAD70\uBC88\uC904"
+    description: "\uD68C\uD53C\uB97C 1\uD68C \uC5BB\uC2B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 390
+    itemName: "\uB4DC\uB77C\uC774\uC544\uC774\uC2A4"
+    description: "\uC0C1\uB300\uBC29\uC744 \uC5BC\uB9BD\uB2C8\uB2E4."
+    icon: {fileID: 0}
