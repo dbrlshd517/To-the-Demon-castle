@@ -51,6 +51,16 @@ namespace DeckRoguelike.Item
             return result;
         }
 
+        /// <summary>itemCode로 아이템 데이터를 조회합니다.</summary>
+        public static ItemData GetItem(int itemCode)
+        {
+            EnsureLoaded();
+            foreach (var item in items)
+                if (item != null && item.itemCode == itemCode) return item;
+            Debug.LogWarning($"[ItemRegistry] itemCode {itemCode}를 찾을 수 없습니다.");
+            return null;
+        }
+
         /// <summary>등록된 모든 ItemData 목록을 반환합니다.</summary>
         public static List<ItemData> GetAll()
         {

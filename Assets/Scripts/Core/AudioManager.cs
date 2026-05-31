@@ -209,25 +209,12 @@ namespace DeckRoguelike.Audio
             musicSource.volume = currentMusicVolume;
         }
 
-        /// <summary>
-        /// 게임 상태에 따른 음악 재생
-        /// </summary>
-        public void PlayMusicForState(GameState state)
-        {
-            AudioClip clip = state switch
-            {
-                GameState.MainMenu => mainMenuMusic,
-                GameState.CharacterSelect => mainMenuMusic,
-                GameState.Map => mapMusic,
-                GameState.Combat => combatMusic,
-                GameState.Shop => shopMusic,
-                GameState.Victory => victoryMusic,
-                GameState.GameOver => defeatMusic,
-                _ => mapMusic
-            };
-
-            PlayMusic(clip);
-        }
+        public void PlayMapMusic() { PlayMusic(mapMusic); }
+        public void PlayCombatMusic() { PlayMusic(combatMusic); }
+        public void PlayShopMusic() { PlayMusic(shopMusic); }
+        public void PlayVictoryMusic() { PlayMusic(victoryMusic); }
+        public void PlayDefeatMusic() { PlayMusic(defeatMusic); }
+        public void PlayMainMenuMusic() { PlayMusic(mainMenuMusic); }
 
         public void PlayBossMusic()
         {

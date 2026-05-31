@@ -13,19 +13,22 @@ MonoBehaviour:
   m_Name: 22300
   m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.Cards.CardData
   cardCode: 22300
-  cardName: "\uBCBD\uB825\uC77C\uC12C"
-  description: "\uC0C1\uB300\uBC29\uC758 \uB4A4\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4.\\n\uD53C\uD574\uB97C
-    {D}\uC90D\uB2C8\uB2E4."
+  cardName: "\uCE58\uD0A8\uAC8C\uC784"
+  description: "\uCC44\uB8252\uC744 \uC783\uACE0\n\uCC44\uB825\uC774 \uAC00\uC7A5
+    \uB0AE\uC740\n\uC801\uC5D0\uAC8C {D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uC801\uC774
+    \uCC98\uCE58\uB418\uBA74 \uBC18\uBCF5\uD569\uB2C8\uB2E4."
   cardArt: {fileID: 0}
-  energyCost: 3
+  imagePath: 
   effects:
-  - effectType: 0
-    value: 6
+  - effectType: 6
+    value: 15
+    valueRaw: 15.1
     targeting: 5
     rangeOffsets: []
     useAbsoluteCoords: 0
-    customEffectId: 
+    customEffectId: Whenkill_losehp
   keywords: 0
+  iconCode: 0
   playSFX: {fileID: 0}
   playVFX: {fileID: 0}
   cardGlow: {r: 0, g: 0, b: 0, a: 0}

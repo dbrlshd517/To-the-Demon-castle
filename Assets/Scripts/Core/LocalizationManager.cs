@@ -63,5 +63,14 @@ namespace DeckRoguelike.Core
                 Debug.LogWarning($"[Localization] 키를 찾을 수 없음: '{code}' (언어: {currentLanguage})");
             return result;
         }
+
+        /// <summary>경고 없이 조회. 키가 없으면 null 반환.</summary>
+        public static string GetOrNull(string code)
+        {
+            EnsureInitialized();
+            if (string.IsNullOrEmpty(code) || db == null) return null;
+            string result = db.GetText(code, currentLanguage);
+            return result == code ? null : result;
+        }
     }
 }

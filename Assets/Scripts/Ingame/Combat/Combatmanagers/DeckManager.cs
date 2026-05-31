@@ -85,7 +85,7 @@ namespace DeckRoguelike.Combat
                     _                     => 1,
                 };
                 var codes = new List<int>();
-                for (int i = 0; i < 2; i++) codes.Add(c * 10000 + 1100); // 공격 첫번째 카드 2장
+                for (int i = 0; i < 2; i++) codes.Add(c * 10000 + 1100); // 액션 첫번째 카드 2장
                 codes.Add(c * 10000 + 2100);                              // 이동 첫번째 카드 1장
                 source = CardRegistry.GetCards(codes);
             }
@@ -115,10 +115,13 @@ namespace DeckRoguelike.Combat
         /// </summary>
         public void ShuffleDeck()
         {
+            var rng = DeckRoguelike.Core.GameManager.Instance?.Rng;
             // Fisher-Yates 셔플
             for (int i = drawPile.Count - 1; i > 0; i--)
             {
-                int randomIndex = Random.Range(0, i + 1);
+                int randomIndex = rng != null
+                    ? rng.CardShuffleRange(i + 1)
+                    : Random.Range(0, i + 1);
                 CardData temp = drawPile[i];
                 drawPile[i] = drawPile[randomIndex];
                 drawPile[randomIndex] = temp;
@@ -195,6 +198,15 @@ namespace DeckRoguelike.Combat
             UpdateUI();
             OnExhaustPileChanged?.Invoke(exhaustPile.Count);
 
+            // 971 유물 등 — 카드 소멸 시 유물 훅 발화
+            if (GameManager.Instance != null)
+            {
+                var combat = FindObjectOfType<DeckRoguelike.UI.BoardController>();
+                var ctx = new DeckRoguelike.Relic.RelicCombatContext { Board = combat };
+                foreach (var relic in GameManager.Instance.Relics)
+                    relic.OnCardExhausted(ctx, card);
+            }
+
             Debug.Log($"[DeckManager] 카드 소멸: {card.cardName}");
         }
 
@@ -206,13 +218,30 @@ namespace DeckRoguelike.Combat
             if (card == null) return;
 
             CardData cardCopy = card.Clone();
+
+            // 212~215 유물 - 획득 카드 자동 강화 훅
+            if (GameManager.Instance != null)
+            {
+                CardData replacement = null;
+                foreach (var relic in GameManager.Instance.Relics)
+                {
+                    relic.OnCardObtained(cardCopy, ref replacement);
+                    if (replacement != null)
+                    {
+                        cardCopy = replacement;
+                        replacement = null;
+                    }
+                }
+            }
+
             masterDeck.Add(cardCopy);
             discardPile.Add(cardCopy);
+            DeckRoguelike.Core.DiscoveryManager.DiscoverCard(cardCopy.cardCode);
 
             UpdateUI();
             OnDiscardPileChanged?.Invoke(discardPile.Count);
 
-            Debug.Log($"[DeckManager] 덱에 카드 추가: {card.cardName}");
+            Debug.Log($"[DeckManager] 덱에 카드 추가: {cardCopy.cardName}");
         }
 
         /// <summary>
@@ -267,6 +296,34 @@ namespace DeckRoguelike.Combat
 
                 Debug.Log($"[DeckManager] 카드 업그레이드: {card.cardName}({card.cardCode}) → {upgradedCopy.cardName}({upgradedCode})");
             }
+        }
+
+        /// <summary>
+        /// 임시 강화된 카드를 원래(강화 전) 카드로 되돌립니다.
+        /// upgradedCard 인스턴스를 master/draw/discard/exhaust 더미에서 찾아 originalDef.Clone()으로 교체.
+        /// 인스턴스 단위 비교로 이미 영구 강화된 동일 코드 카드는 건드리지 않습니다.
+        /// </summary>
+        public void DowngradeCard(CardData upgradedCard, CardData originalDef)
+        {
+            if (upgradedCard == null || originalDef == null) return;
+
+            CardData replacement = originalDef.Clone();
+            bool replaced = false;
+
+            int mIdx = masterDeck.IndexOf(upgradedCard);
+            if (mIdx >= 0) { masterDeck[mIdx] = replacement; replaced = true; }
+
+            int dIdx = drawPile.IndexOf(upgradedCard);
+            if (dIdx >= 0) { drawPile[dIdx] = replacement; replaced = true; }
+
+            int discIdx = discardPile.IndexOf(upgradedCard);
+            if (discIdx >= 0) { discardPile[discIdx] = replacement; replaced = true; }
+
+            int eIdx = exhaustPile.IndexOf(upgradedCard);
+            if (eIdx >= 0) { exhaustPile[eIdx] = replacement; replaced = true; }
+
+            if (replaced)
+                Debug.Log($"[DeckManager] 카드 다운그레이드: {upgradedCard.cardName}({upgradedCard.cardCode}) → {replacement.cardName}({replacement.cardCode})");
         }
 
         /// <summary>
@@ -359,9 +416,43 @@ namespace DeckRoguelike.Combat
             return drawPile.OrderBy(c => c.cardName).ToList();
         }
 
+        /// <summary>
+        /// 207 유물 전용: 드로우 더미를 실제 순서대로 반환합니다 (다음에 뽑힐 카드가 0번 인덱스).
+        /// </summary>
+        public List<CardData> GetDrawPileInOrder()
+        {
+            return new List<CardData>(drawPile);
+        }
+
         public List<CardData> GetDiscardPileForView()
         {
             return new List<CardData>(discardPile);
+        }
+
+        /// <summary>207/208 포션: 드로우 더미에서 지정 카드를 제거합니다.</summary>
+        public bool RemoveFromDrawPile(CardData card)
+        {
+            if (card == null) return false;
+            bool ok = drawPile.Remove(card);
+            if (ok) OnDrawPileChanged?.Invoke(drawPile.Count);
+            return ok;
+        }
+
+        /// <summary>207/208 포션: 버린 더미에서 지정 카드를 제거합니다.</summary>
+        public bool RemoveFromDiscardPile(CardData card)
+        {
+            if (card == null) return false;
+            bool ok = discardPile.Remove(card);
+            if (ok) OnDiscardPileChanged?.Invoke(discardPile.Count);
+            return ok;
+        }
+
+        public void MoveDiscardToDrawPile()
+        {
+            drawPile.AddRange(discardPile);
+            discardPile.Clear();
+            OnDiscardPileChanged?.Invoke(0);
+            OnDrawPileChanged?.Invoke(drawPile.Count);
         }
 
         public List<CardData> GetExhaustPileForView()

@@ -10,10 +10,10 @@ namespace DeckRoguelike.Item
     public class ItemUseContext
     {
         public GameManager GM;
-        public CombatController Combat;
+        public BoardController Board;
 
         /// <summary>전투 중에 사용되었으면 true.</summary>
-        public bool InCombat => Combat != null;
+        public bool InCombat => Board != null;
 
         /// <summary>
         /// NeedsTargetingMode 아이템 전용.

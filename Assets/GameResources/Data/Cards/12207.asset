@@ -13,58 +13,22 @@ MonoBehaviour:
   m_Name: 12207
   m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.Cards.CardData
   cardCode: 12207
-  cardName: "\uC774\uB3D9:\uB8E9+"
-  description: "\uC0C1\uD558\uC88C\uC6B0 \uBC29\uD5A5\uC73C\uB85C\\n\uC774\uB3D9\uD569\uB2C8\uB2E4."
+  cardName: "\uC601\uD63C\uC774 \uAE43\uB4E0 \uAC80+"
+  description: "\uD53C\uD574\uB97C {D} \uC90D\uB2C8\uB2E4.\n\uC801\uC744 \uCC98\uCE58\uD558\uBA74
+    \uC774 \uCE74\uB4DC\uC758\n \uD53C\uD574\uB7C9\uC774 \uC601\uAD6C\uC801\uC73C\uB85C\n8
+    \uB9CC\uD07C \uC5BB\uC2B5\uB2C8\uB2E4."
   cardArt: {fileID: 0}
-  energyCost: 2
+  imagePath: 
   effects:
-  - effectType: 5
-    value: 0
-    targeting: 6
-    rangeOffsets:
-    - col: 0
-      row: 1
-    - col: 0
-      row: -1
-    - col: -1
-      row: 0
-    - col: 1
-      row: 0
-    - col: 0
-      row: 2
-    - col: 0
-      row: -2
-    - col: -2
-      row: 0
-    - col: 2
-      row: 0
-    - col: 0
-      row: 3
-    - col: 0
-      row: -3
-    - col: -3
-      row: 0
-    - col: 3
-      row: 0
-    - col: 0
-      row: 4
-    - col: 0
-      row: -4
-    - col: -4
-      row: 0
-    - col: 4
-      row: 0
-    - col: 0
-      row: 5
-    - col: 0
-      row: -5
-    - col: -5
-      row: 0
-    - col: 5
-      row: 0
+  - effectType: 6
+    value: 6
+    valueRaw: 6.8
+    targeting: 5
+    rangeOffsets: []
     useAbsoluteCoords: 0
-    customEffectId: 
-  keywords: 0
+    customEffectId: Damage_killeddamage
+  keywords: 2
+  iconCode: 0
   playSFX: {fileID: 0}
   playVFX: {fileID: 0}
   cardGlow: {r: 0, g: 0, b: 0, a: 0}

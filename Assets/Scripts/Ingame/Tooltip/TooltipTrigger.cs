@@ -138,7 +138,7 @@ namespace DeckRoguelike.UI
             _cachedRelicData = db.relics.Find(r => r.relicCode == relicCode);
             if (_cachedRelicData != null && _cachedRelicData.icon == null)
             {
-                var sprite = Addressables.LoadAssetAsync<Sprite>($"Sprites/Relic/{relicCode}").WaitForCompletion();
+                var sprite = Addressables.LoadAssetAsync<Sprite>($"Sprites/Ingame/Relic/{relicCode}").WaitForCompletion();
                 if (sprite != null) _cachedRelicData.icon = sprite;
             }
             return _cachedRelicData;

@@ -29,7 +29,7 @@ namespace DeckRoguelike.Cards
             {
                 CardKeyword.Ethereal,
                 new KeywordInfo(
-                    "소각",
+                    "휘발성",
                     "턴 종료 시 손패에서 버려지면 덱으로 돌아가지 않고 소멸합니다.",
                     new Color(0.75f, 0.4f, 1f))   // 보라
             },

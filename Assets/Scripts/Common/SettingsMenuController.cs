@@ -39,9 +39,12 @@ namespace DeckRoguelike.UI
         [SerializeField] private Slider masterVolumeSlider;
         [SerializeField] private Slider musicVolumeSlider;
         [SerializeField] private Slider sfxVolumeSlider;
-        [SerializeField] private TextMeshProUGUI masterVolumeText;
-        [SerializeField] private TextMeshProUGUI musicVolumeText;
-        [SerializeField] private TextMeshProUGUI sfxVolumeText;
+        [Tooltip("마스터 볼륨 슬라이더 옆 퍼센트 값 표시")]
+        [SerializeField] private TextMeshProUGUI masterVolumePercentText;
+        [Tooltip("음악 볼륨 슬라이더 옆 퍼센트 값 표시")]
+        [SerializeField] private TextMeshProUGUI musicVolumePercentText;
+        [Tooltip("효과음 볼륨 슬라이더 옆 퍼센트 값 표시")]
+        [SerializeField] private TextMeshProUGUI sfxVolumePercentText;
         [SerializeField] private Toggle muteToggle;
         [SerializeField] private Toggle muteInBackgroundToggle;
 
@@ -64,6 +67,39 @@ namespace DeckRoguelike.UI
         [SerializeField] private Button resetButton;
         [SerializeField] private Button backButton;
 
+        [Header("=== Game Buttons ===")]
+        [SerializeField] private Button mainMenuButton;
+        [SerializeField] private Button abandonRunButton;
+        [SerializeField] private Button restartCombatButton;
+
+        [Header("=== Localized Labels ===")]
+        [Tooltip("마스터 볼륨")]
+        [SerializeField] private TextMeshProUGUI masterVolumeText;
+        [Tooltip("효과 볼륨")]
+        [SerializeField] private TextMeshProUGUI sfxVolumeText;
+        [Tooltip("음악 볼륨")]
+        [SerializeField] private TextMeshProUGUI musicVolumeText;
+        [Tooltip("전투 재시작 버튼 라벨 (setting_combatrestart)")]
+        [SerializeField] private TextMeshProUGUI combatRestartText;
+        [Tooltip("런 포기 버튼 라벨 (setting_abandonrun)")]
+        [SerializeField] private TextMeshProUGUI abandonRunText;
+        [Tooltip("메인메뉴 버튼 라벨 — MainMenu 씬에서는 main_exit, 그 외에서는 setting_mainmenubutton")]
+        [SerializeField] private TextMeshProUGUI mainMenuButtonText;
+        [Tooltip("언어 선택 라벨 (setting_language)")]
+        [SerializeField] private TextMeshProUGUI languageText;
+        [Tooltip("전체화면 토글 라벨 (setting_fullscreen)")]
+        [SerializeField] private TextMeshProUGUI fullscreenText;
+        [Tooltip("화면 흔들림 토글 라벨 (setting_screenshake)")]
+        [SerializeField] private TextMeshProUGUI screenShakeText;
+        [Tooltip("VSync 토글 라벨 (setting_vsync)")]
+        [SerializeField] private TextMeshProUGUI vSyncText;
+        [Tooltip("카드 확인 토글 라벨 (setting_cardconfirmation)")]
+        [SerializeField] private TextMeshProUGUI cardConfirmationText;
+        [Tooltip("빠른 모드 토글 라벨 (setting_fastmode)")]
+        [SerializeField] private TextMeshProUGUI fastModeText;
+        [Tooltip("백그라운드 음소거 토글 라벨 (setting_muteinbackground)")]
+        [SerializeField] private TextMeshProUGUI muteInBackgroundText;
+
         [Header("=== Audio ===")]
         [SerializeField] private AudioClip buttonClickSound;
 
@@ -74,6 +110,9 @@ namespace DeckRoguelike.UI
         private List<Vector2Int> resolutionList = new List<Vector2Int>(); // 드롭다운 index → (width, height)
         private GameSettings tempSettings;
         private int currentTab = 0;
+        // Open() 호출로 명시적으로 열린 경우에만 true.
+        // 첫 활성화 시 Start의 자동 Close가 Open() 호출 직후 실행돼 패널이 사라지는 버그 방지용.
+        private bool _explicitlyOpened;
 
         // CSV 헤더 순서와 동일: en,pt_BR,zh_CN,zh_TW,nl,eo,fi,fr,de,id,it,ja,ko,pl,ru,sr,sr_Latn,es,th,tr,uk,vi
         private static readonly string[] LanguageCodes =
@@ -97,7 +136,16 @@ namespace DeckRoguelike.UI
             SetupDropdowns();
             InitializeSlidersFromSettings();
             SetupListeners();
-            Close();
+            RefreshLocalizedLabels();
+            LocalizationManager.OnLanguageChanged += RefreshLocalizedLabels;
+            // 명시적 Open() 호출 없이 활성 상태로 도달한 경우에만 닫는다.
+            // (씬 저장이 활성으로 돼 있을 때만 닫고, Open() 직후 Start가 실행되는 경우는 건드리지 않음)
+            if (!_explicitlyOpened) Close();
+        }
+
+        private void OnDestroy()
+        {
+            LocalizationManager.OnLanguageChanged -= RefreshLocalizedLabels;
         }
 
         private void Update()
@@ -116,14 +164,17 @@ namespace DeckRoguelike.UI
         {
             if (settingsPanel == null) return;
 
+            _explicitlyOpened = true;
             settingsPanel.SetActive(true);
             LoadCurrentSettings();
             ShowTab(0);
+            UpdateGameButtons();
         }
 
         public void Close()
         {
             if (settingsPanel == null) return;
+            _explicitlyOpened = false;
             ApplyTempSettings();
             settingsPanel.SetActive(false);
         }
@@ -182,17 +233,25 @@ namespace DeckRoguelike.UI
                 frameRateDropdown.AddOptions(new List<string> { "30 FPS", "60 FPS", "120 FPS", "무제한" });
             }
 
-            if (languageDropdown != null)
-            {
-                languageDropdown.ClearOptions();
-                languageDropdown.AddOptions(new List<string>
-                {
-                    "English", "Português (BR)", "中文(简体)", "中文(繁體)", "Nederlands", "Esperanto",
-                    "Suomi", "Français", "Deutsch", "Bahasa Indonesia", "Italiano",
-                    "日本語", "한국어", "Polski", "Русский", "Српски", "Srpski (lat.)",
-                    "Español", "ภาษาไทย", "Türkçe", "Українська", "Tiếng Việt"
-                });
-            }
+            RefreshLanguageDropdownLabels();
+        }
+
+        /// <summary>
+        /// 언어 드롭다운 옵션을 현재 언어 기준으로 채워 넣습니다.
+        /// LocalizationManager.Get("lang_<code>")로 각 언어 이름을 가져오므로 언어 변경 시마다 새로 호출되어야 합니다.
+        /// </summary>
+        private void RefreshLanguageDropdownLabels()
+        {
+            if (languageDropdown == null) return;
+
+            int prevValue = languageDropdown.value;
+            languageDropdown.ClearOptions();
+            var options = new List<string>(LanguageCodes.Length);
+            foreach (var code in LanguageCodes)
+                options.Add(LocalizationManager.Get($"lang_{code}"));
+            languageDropdown.AddOptions(options);
+            languageDropdown.SetValueWithoutNotify(Mathf.Clamp(prevValue, 0, options.Count - 1));
+            languageDropdown.RefreshShownValue();
         }
 
         private void SetupListeners()
@@ -227,6 +286,11 @@ namespace DeckRoguelike.UI
             if (applyButton != null) applyButton.onClick.AddListener(OnApplyClicked);
             if (resetButton != null) resetButton.onClick.AddListener(OnResetClicked);
             if (backButton != null) backButton.onClick.AddListener(OnBackClicked);
+
+            // 게임 버튼
+            if (mainMenuButton != null) mainMenuButton.onClick.AddListener(OnMainMenuClicked);
+            if (abandonRunButton != null) abandonRunButton.onClick.AddListener(OnAbandonRunClicked);
+            if (restartCombatButton != null) restartCombatButton.onClick.AddListener(OnRestartCombatClicked);
         }
 
         #endregion
@@ -315,9 +379,9 @@ namespace DeckRoguelike.UI
             float music  = settings?.musicVolume  ?? (musicVolumeSlider  != null ? musicVolumeSlider.value  : 1f);
             float sfx    = settings?.sfxVolume    ?? (sfxVolumeSlider    != null ? sfxVolumeSlider.value    : 1f);
 
-            if (masterVolumeText != null) masterVolumeText.text = $"{Mathf.RoundToInt(master * 100)}%";
-            if (musicVolumeText  != null) musicVolumeText.text  = $"{Mathf.RoundToInt(music  * 100)}%";
-            if (sfxVolumeText    != null) sfxVolumeText.text    = $"{Mathf.RoundToInt(sfx    * 100)}%";
+            if (masterVolumePercentText != null) masterVolumePercentText.text = $"{Mathf.RoundToInt(master * 100)}%";
+            if (musicVolumePercentText  != null) musicVolumePercentText.text  = $"{Mathf.RoundToInt(music  * 100)}%";
+            if (sfxVolumePercentText    != null) sfxVolumePercentText.text    = $"{Mathf.RoundToInt(sfx    * 100)}%";
         }
 
         #endregion
@@ -485,7 +549,90 @@ namespace DeckRoguelike.UI
             OnClosed?.Invoke();
         }
 
+        private void OnMainMenuClicked()
+        {
+            PlaySound(buttonClickSound);
+
+            // MainMenu 씬에서는 이 버튼이 Exit로 동작 (이미 메인 메뉴이므로 이동 불필요)
+            if (IsInMainMenuScene())
+            {
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+#else
+                Application.Quit();
+#endif
+                return;
+            }
+
+            Close();
+            Time.timeScale = 1f;
+            GameManager.Instance?.EnterMainMenu();
+            DeckRoguelike.Core.SceneLoader.Instance?.LoadScene("MainMenu");
+        }
+
+        private static bool IsInMainMenuScene() =>
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "MainMenu";
+
+        /// <summary>
+        /// Inspector에 연결된 라벨 텍스트를 현재 언어로 갱신합니다.
+        /// Start와 LocalizationManager.OnLanguageChanged에서 호출됩니다.
+        /// </summary>
+        private void RefreshLocalizedLabels()
+        {
+            RefreshLanguageDropdownLabels();
+
+            SetLocalized(masterVolumeText, "setting_mastervolume");
+            SetLocalized(sfxVolumeText,    "setting_sfxvolume");
+            SetLocalized(musicVolumeText,  "setting_musicvolume");
+            SetLocalized(combatRestartText,       "setting_combatrestart");
+            SetLocalized(abandonRunText,          "setting_abandonrun");
+            SetLocalized(languageText,            "setting_language");
+            SetLocalized(fullscreenText,          "setting_fullscreen");
+            SetLocalized(screenShakeText,         "setting_screenshake");
+            SetLocalized(vSyncText,               "setting_vsync");
+            SetLocalized(cardConfirmationText,    "setting_cardconfirmation");
+            SetLocalized(fastModeText,            "setting_fastmode");
+            SetLocalized(muteInBackgroundText,    "setting_muteinbackground");
+
+            // MainMenu 씬: Exit 라벨, 그 외 씬: Main Menu 라벨
+            SetLocalized(mainMenuButtonText, IsInMainMenuScene() ? "main_exit" : "setting_mainmenubutton");
+        }
+
+        private static void SetLocalized(TextMeshProUGUI text, string code)
+        {
+            if (text == null || string.IsNullOrEmpty(code)) return;
+            text.text = LocalizationManager.Get(code);
+        }
+
+        private void OnAbandonRunClicked()
+        {
+            PlaySound(buttonClickSound);
+            Close();
+            Time.timeScale = 1f;
+            GameManager.Instance?.AbandonRun();
+        }
+
+        private void OnRestartCombatClicked()
+        {
+            PlaySound(buttonClickSound);
+            Close();
+            Time.timeScale = 1f;
+            var inGameUI = FindObjectOfType<DeckRoguelike.UI.InGameUIController>();
+            inGameUI?.RestartCombat();
+        }
+
         #endregion
+
+        private void UpdateGameButtons()
+        {
+            var gm = GameManager.Instance;
+            bool inRun = gm != null && gm.IsPlaying;
+            bool inCombat = gm != null && gm.IsInCombat;
+
+            if (mainMenuButton != null) mainMenuButton.gameObject.SetActive(true);
+            if (abandonRunButton != null) abandonRunButton.gameObject.SetActive(inRun);
+            if (restartCombatButton != null) restartCombatButton.gameObject.SetActive(inCombat);
+        }
 
         private void PlaySound(AudioClip clip)
         {

@@ -15,11 +15,34 @@ namespace DeckRoguelike.Combat
     {
         public static void RegisterAll()
         {
+            AllyBehaviorRegistry.Register(14200, () => new GoldChestBehavior(20));
+            AllyBehaviorRegistry.Register(14201, () => new GoldChestBehavior(30));
             AllyBehaviorRegistry.Register(30100, () => new ShieldSoldierBehavior());
             AllyBehaviorRegistry.Register(30200, () => new ArcherBehavior());
             AllyBehaviorRegistry.Register(30300, () => new HealerBehavior());
             AllyBehaviorRegistry.Register(30400, () => new BerserkerBehavior());
         }
+    }
+
+    /// <summary>
+    /// 골드 상자: 행동하지 않으며, 파괴(사망) 시 일정 골드를 지급합니다.
+    /// 14200 → 20골드, 14201 → 30골드.
+    /// </summary>
+    public class GoldChestBehavior : AllyBehavior
+    {
+        private readonly int rewardGold;
+        public GoldChestBehavior(int gold) { rewardGold = gold; }
+
+        public override void PlanTurn(AllyInstance self, BoardController board)
+            => PlanWait("대기");
+
+        public override void OnDeath(AllyInstance self, BoardController board)
+        {
+            DeckRoguelike.Core.GameManager.Instance?.ModifyGold(rewardGold);
+            Debug.Log($"[GoldChest] 파괴 → 골드 +{rewardGold}");
+        }
+
+        public override string GetIntentText(AllyInstance self) => "대기";
     }
 
     // ── 행동 구현 ─────────────────────────────────────────────────────
@@ -29,7 +52,7 @@ namespace DeckRoguelike.Combat
     /// </summary>
     public class ShieldSoldierBehavior : AllyBehavior
     {
-        public override void ExecuteTurn(AllyInstance self, CombatController combat)
+        public override void ExecuteTurn(AllyInstance self, BoardController board)
         {
             // TODO: 인접 적 공격
             Debug.Log($"[ShieldSoldierBehavior] 방패 병사 행동 @ {self.GridPos}");
@@ -43,7 +66,7 @@ namespace DeckRoguelike.Combat
     /// </summary>
     public class ArcherBehavior : AllyBehavior
     {
-        public override void ExecuteTurn(AllyInstance self, CombatController combat)
+        public override void ExecuteTurn(AllyInstance self, BoardController board)
         {
             // TODO: 가장 먼 적 탐색 → 원거리 공격
             Debug.Log($"[ArcherBehavior] 궁수 행동 @ {self.GridPos}");
@@ -57,7 +80,7 @@ namespace DeckRoguelike.Combat
     /// </summary>
     public class HealerBehavior : AllyBehavior
     {
-        public override void ExecuteTurn(AllyInstance self, CombatController combat)
+        public override void ExecuteTurn(AllyInstance self, BoardController board)
         {
             // TODO: 가장 HP가 낮은 아군 탐색 → 회복
             Debug.Log($"[HealerBehavior] 치유사 행동 @ {self.GridPos}");
@@ -71,7 +94,7 @@ namespace DeckRoguelike.Combat
     /// </summary>
     public class BerserkerBehavior : AllyBehavior
     {
-        public override void ExecuteTurn(AllyInstance self, CombatController combat)
+        public override void ExecuteTurn(AllyInstance self, BoardController board)
         {
             float hpRatio   = (float)self.CurrentHP / self.MaxHP;
             int   bonusDmg  = Mathf.RoundToInt(self.Damage * (1f - hpRatio));

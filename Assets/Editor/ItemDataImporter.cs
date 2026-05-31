@@ -154,7 +154,7 @@ public class ItemDataImporter : EditorWindow
 
             data.itemCode    = ic;
             data.itemName    = GetField(f, col, "itemName");
-            data.description = GetField(f, col, "description");
+            data.description = GetField(f, col, "description").Replace("\\n", "\n");
 
             string iconPath = GetField(f, col, "iconPath");
             if (!string.IsNullOrEmpty(iconPath))

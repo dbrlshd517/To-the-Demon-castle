@@ -77,11 +77,11 @@ public class AllyDataImporter : EditorWindow
     private void CreateTemplate()
     {
         var sb = new System.Text.StringBuilder();
-        sb.AppendLine("allyCode,allyName,hp,damage,behaviorId");
-        sb.AppendLine("30100,방패 병사,40,4,ally_shield_soldier");
-        sb.AppendLine("30200,궁수,25,8,ally_archer");
-        sb.AppendLine("30300,치유사,20,2,ally_healer");
-        sb.AppendLine("30400,광전사,35,12,ally_berserker");
+        sb.AppendLine("allyCode,allyName,description,hp,damage,behaviorId");
+        sb.AppendLine("30100,방패 병사,적의 공격을 받아냅니다.,40,4,ally_shield_soldier");
+        sb.AppendLine("30200,궁수,멀리 떨어진 적을 공격합니다.,25,8,ally_archer");
+        sb.AppendLine("30300,치유사,아군을 치유합니다.,20,2,ally_healer");
+        sb.AppendLine("30400,광전사,적에게 돌격합니다.,35,12,ally_berserker");
 
         File.WriteAllText(DefaultTemplatePath, sb.ToString(), new System.Text.UTF8Encoding(true));
         AssetDatabase.Refresh();
@@ -107,6 +107,7 @@ public class AllyDataImporter : EditorWindow
             col[headers[i].Trim()] = i;
 
         int created = 0, updated = 0, skipped = 0;
+        var csvCodes = new HashSet<int>();
 
         for (int row = 1; row < lines.Length; row++)
         {
@@ -124,20 +125,69 @@ public class AllyDataImporter : EditorWindow
 
             data.allyCode      = ParseInt(codeStr, 0);
             data.allyName      = GetField(f, col, "allyName");
+            data.description   = GetField(f, col, "description").Replace("\\n", "\n");
             data.maxHP         = ParseInt(GetField(f, col, "hp"), 1);
             data.baseDamage    = ParseInt(GetField(f, col, "damage"), 0);
             data.durationTurns = ParseInt(GetField(f, col, "duration"), 0);
 
             if (isNew) { AssetDatabase.CreateAsset(data, assetPath); created++; }
             else       { EditorUtility.SetDirty(data); updated++; }
+
+            csvCodes.Add(data.allyCode);
         }
+
+        int deleted = DeleteAssetsNotInCsv(csvCodes);
 
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
 
-        string msg = $"생성: {created}개\n업데이트: {updated}개\n건너뜀: {skipped}개";
+        string msg = $"생성: {created}개\n업데이트: {updated}개\n건너뜀: {skipped}개\n삭제: {deleted}개";
         EditorUtility.DisplayDialog("임포트 완료", msg, "확인");
         Debug.Log($"[AllyDataImporter] {msg}");
+    }
+
+    /// <summary>
+    /// outputFolder의 AllyData.asset 중 allyCode가 csvCodes에 없는 항목을 삭제합니다.
+    /// 사용자에게 미리 대상 목록을 보여주고 승인받은 뒤 실제로 삭제합니다.
+    /// </summary>
+    private int DeleteAssetsNotInCsv(HashSet<int> csvCodes)
+    {
+        if (!AssetDatabase.IsValidFolder(outputFolder)) return 0;
+
+        string[] guids = AssetDatabase.FindAssets("t:AllyData", new[] { outputFolder });
+        var orphans = new List<(string path, int code, string name)>();
+        foreach (var guid in guids)
+        {
+            string p = AssetDatabase.GUIDToAssetPath(guid);
+            var d = AssetDatabase.LoadAssetAtPath<AllyData>(p);
+            if (d == null) continue;
+            if (csvCodes.Contains(d.allyCode)) continue;
+            orphans.Add((p, d.allyCode, d.allyName));
+        }
+
+        if (orphans.Count == 0) return 0;
+
+        const int previewMax = 15;
+        var preview = new System.Text.StringBuilder();
+        for (int i = 0; i < Mathf.Min(previewMax, orphans.Count); i++)
+            preview.AppendLine($"  {orphans[i].code} {orphans[i].name}");
+        if (orphans.Count > previewMax)
+            preview.AppendLine($"  ... 외 {orphans.Count - previewMax}개");
+
+        bool confirm = EditorUtility.DisplayDialog(
+            "CSV에 없는 아군 삭제",
+            $"CSV에 없는 아군 {orphans.Count}개를 삭제합니다.\n\n{preview}\n계속할까요?",
+            "삭제",
+            "취소");
+        if (!confirm) return 0;
+
+        int deleted = 0;
+        foreach (var o in orphans)
+        {
+            if (AssetDatabase.DeleteAsset(o.path)) deleted++;
+            else Debug.LogWarning($"[AllyDataImporter] 삭제 실패: {o.path}");
+        }
+        return deleted;
     }
 
     // ─── 유틸리티 ───────────────────────────────────

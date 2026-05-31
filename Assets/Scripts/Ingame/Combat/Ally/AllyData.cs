@@ -30,6 +30,10 @@ namespace DeckRoguelike.Combat
         public int maxHP;
         public int baseDamage;
 
+        [Header("Grid Size")]
+        [Tooltip("그리드에서 차지하는 셀 크기 (가로, 세로). 기본 1x1. EnemyData.gridSize와 동일 규칙.")]
+        public Vector2Int gridSize = new Vector2Int(1, 1);
+
         [Header("Duration")]
         [Tooltip("0 = 전투 종료까지 유지. behaviorId 함수에서 직접 참조.")]
         public int durationTurns = 0;

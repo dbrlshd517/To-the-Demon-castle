@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
@@ -41,9 +42,10 @@ namespace DeckRoguelike.UI
         private Canvas parentCanvas;
         private bool isClosing = false;
 
-        // 패널이 생성된 바로 그 프레임에는 외부 클릭 감지를 하지 않음
-        // (슬롯 클릭 → 패널 생성이 같은 프레임에 일어나므로 즉시 닫히는 현상 방지)
+        // 패널 생성 직후 같은 프레임의 PointerDown은 무시 (생성 클릭으로 즉시 닫히지 않도록)
         private bool readyToDetectOutsideClick = false;
+
+        public ItemSlotUI SourceSlot => sourceSlot;
 
         private void Awake()
         {
@@ -60,17 +62,16 @@ namespace DeckRoguelike.UI
 
         private void LateUpdate()
         {
-            // 생성 첫 프레임은 건너뜀
-            if (!readyToDetectOutsideClick)
-            {
-                readyToDetectOutsideClick = true;
-                return;
-            }
-
+            if (!readyToDetectOutsideClick) { readyToDetectOutsideClick = true; return; }
             if (isClosing) return;
+            if (Mouse.current == null || !Mouse.current.leftButton.wasPressedThisFrame) return;
 
-            if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && !IsPointerInsidePanel())
-                Close();
+            // 패널 내부에서 클릭 → 닫지 않음
+            if (IsPointerInsidePanel()) return;
+            // 소스 슬롯 위 클릭 → 슬롯 자체의 토글 로직이 닫기를 처리하므로 여기선 무시
+            if (IsPointerInsideSourceSlot()) return;
+
+            Close();
         }
 
         /// <summary>패널을 초기화하고 표시합니다.</summary>
@@ -92,6 +93,10 @@ namespace DeckRoguelike.UI
 
             if (itemNameText != null) itemNameText.text = item.itemName;
             if (itemDescText  != null) itemDescText.text  = item.description;
+
+            // 308 소생의 팬던트: 패시브 아이템이므로 사용 버튼 비활성화 (전투 시작 시 자동 활성화됨)
+            if (useButton != null)
+                useButton.interactable = (item.itemCode != 308);
         }
 
         // ─────────────────────────────────────────────
@@ -115,6 +120,17 @@ namespace DeckRoguelike.UI
             return RectTransformUtility.RectangleContainsScreenPoint(rt, mousePos, cam);
         }
 
+        private bool IsPointerInsideSourceSlot()
+        {
+            if (sourceSlot == null) return false;
+            var rt = sourceSlot.transform as RectTransform;
+            if (rt == null) return false;
+            Camera cam = (parentCanvas != null && parentCanvas.renderMode != RenderMode.ScreenSpaceOverlay)
+                ? parentCanvas.worldCamera : null;
+            Vector2 mousePos = Mouse.current != null ? Mouse.current.position.ReadValue() : Vector2.zero;
+            return RectTransformUtility.RectangleContainsScreenPoint(rt, mousePos, cam);
+        }
+
         // ─────────────────────────────────────────────
         // 버튼 콜백
         // ─────────────────────────────────────────────
@@ -124,6 +140,12 @@ namespace DeckRoguelike.UI
             if (currentItem == null || GameManager.Instance == null) return;
 
             var combat = InGameUIController.Instance?.GetCombatController();
+
+            // 105/109/201/202/208/301/302: 사용 버튼을 누른 직후 전체 타일에 사거리 스프라이트 표시
+            int code = currentItem.itemCode;
+            if (combat != null && (code == 105 || code == 109 || code == 201 || code == 202 || code == 208 || code == 301 || code == 302))
+                combat.ShowItemAllTilePreview(code);
+
             bool used  = GameManager.Instance.UseItem(currentItem, combat);
 
             if (used)
@@ -131,8 +153,18 @@ namespace DeckRoguelike.UI
                 // 타겟팅 모드 진입 시 슬롯 즉시 파괴 금지 — 취소/확정 시 CombatController가 처리
                 if (combat != null && combat.IsItemTargetingActive)
                     combat.SetPendingItemSlot(sourceSlot);
-                else if (sourceSlot != null)
-                    Destroy(sourceSlot.gameObject);
+                else
+                {
+                    // 305 무지개 포션처럼 효과에서 자기 슬롯에 새 아이템을 채워넣었다면 파괴하지 않는다.
+                    bool slotReused = sourceSlot != null
+                        && sourceSlot.ItemData != null
+                        && GameManager.Instance != null
+                        && GameManager.Instance.Items.Contains(sourceSlot.ItemData);
+                    if (sourceSlot != null && !slotReused)
+                        Destroy(sourceSlot.gameObject);
+                    // 비-타겟팅 아이템(103/104 등)은 타겟팅 완료 콜백이 없으므로 미리보기 직접 정리
+                    combat?.ClearItemAllTilePreview();
+                }
             }
             else
             {
@@ -147,7 +179,7 @@ namespace DeckRoguelike.UI
             if (currentItem == null || GameManager.Instance == null) return;
 
             GameManager.Instance.RemoveItem(currentItem);
-            if (sourceSlot != null) Destroy(sourceSlot.gameObject);
+            InGameUIController.Instance?.ClearItemSlot(sourceSlot);
 
             Close();
         }
@@ -160,6 +192,17 @@ namespace DeckRoguelike.UI
         {
             if (isClosing) return;
             isClosing = true;
+
+            // Sprite 정리 규칙:
+            //   1) 아이템 타겟팅 모드가 시작됐으면(=Use 클릭 후) → 그대로 유지 (셀 hover 효과에 사용)
+            //   2) 소스 슬롯 위에서 hover 중이면 → 고정 해제만 (hover-exit 시 자연 정리)
+            //   3) 그 외 (화면 밖 클릭) → 즉시 제거
+            var combat = InGameUIController.Instance?.GetCombatController();
+            if (combat != null && !combat.IsItemTargetingActive)
+            {
+                if (IsPointerInsideSourceSlot()) combat.UnpinItemAllTilePreview();
+                else                            combat.ClearItemAllTilePreview();
+            }
 
             if (InGameUIController.Instance != null)
                 InGameUIController.Instance.ClearConfirmPanel(this);

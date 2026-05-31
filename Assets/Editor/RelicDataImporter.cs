@@ -161,7 +161,7 @@ public class RelicDataImporter : EditorWindow
 
             data.relicCode   = rc;
             data.relicName   = GetField(f, col, "relicName");
-            data.description = GetField(f, col, "description");
+            data.description = GetField(f, col, "description").Replace("\\n", "\n");
 
             // iconPath가 있으면 Sprite 로드 시도
             string iconPath = GetField(f, col, "iconPath");

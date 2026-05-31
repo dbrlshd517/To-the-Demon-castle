@@ -8,13 +8,14 @@ namespace DeckRoguelike.Item
     /// 아이템의 정적 데이터.
     ///
     /// [itemCode 규칙 — 3자리 XYZ]
-    ///   X (백의 자리) = 희귀도
+    ///   X (백의 자리) = 희귀도 (아이템은 일반/희귀 2등급 — 영웅 등급 없음)
     ///     1xx = 일반(Common) 아이템
-    ///     2xx = 고급(Uncommon) 아이템
-    ///     3xx = 희귀(Rare) 아이템
+    ///     2xx = 희귀(Uncommon) 아이템
+    ///     3xx = 희귀(Uncommon) 아이템 (상위 등급 폐지 — Uncommon=희귀에 통합)
     ///     9xx = 보스 아이템
     ///
     ///   Y (십의 자리) = 캐릭터 전용 여부
+    ///     _6_ = Mage 획득 불가
     ///     _7_ = Warrior 전용
     ///     _8_ = Gunner 전용
     ///     _9_ = Mage 전용
@@ -33,8 +34,17 @@ namespace DeckRoguelike.Item
 
         public bool IsBossItem => itemCode / 100 == 9;
 
-        /// <summary>코드 첫째 자리(1/2/3)를 희귀도 인덱스(0/1/2)로 반환합니다.</summary>
-        public int RarityIndex => Mathf.Clamp(itemCode / 100 - 1, 0, 2);
+        /// <summary>코드 첫째 자리를 희귀도 인덱스로 반환합니다 (아이템은 일반/희귀 2등급).
+        /// 1xx → 0(일반/Common), 2xx/3xx → 1(희귀/Uncommon).</summary>
+        public int RarityIndex
+        {
+            get
+            {
+                int hundreds = itemCode / 100;
+                if (hundreds <= 1) return 0; // Common
+                return 1;                    // Uncommon (2xx/3xx 통합)
+            }
+        }
 
         /// <summary>
         /// 십의 자리 숫자로 결정되는 캐릭터 전용 제한.
@@ -50,14 +60,25 @@ namespace DeckRoguelike.Item
                     7 => CharacterType.Warrior,
                     8 => CharacterType.Gunner,
                     9 => CharacterType.Mage,
-                    _ => (CharacterType?)null
+                    _ => null
                 };
+            }
+        }
+
+        /// <summary>둘째 자리가 6이면 Mage는 획득 불가.</summary>
+        public CharacterType? ExcludedCharacter
+        {
+            get
+            {
+                int tens = (itemCode / 10) % 10;
+                return tens == 6 ? CharacterType.Mage : null;
             }
         }
 
         /// <summary>지정한 캐릭터가 이 아이템을 사용할 수 있으면 true를 반환합니다.</summary>
         public bool IsForCharacter(CharacterType character)
         {
+            if (ExcludedCharacter == character) return false;
             var req = RequiredCharacter;
             return req == null || req == character;
         }

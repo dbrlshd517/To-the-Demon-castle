@@ -19,6 +19,12 @@ namespace DeckRoguelike.Combat
         public int maxHP;
         public int baseDamage;
 
+        [Header("Grid Size")]
+        [Tooltip("그리드에서 차지하는 셀 크기 (가로, 세로). 기본 1x1. " +
+                 "예: (2,2)면 4칸 차지. 앵커(GridPos)는 항상 왼쪽 위 칸 — " +
+                 "footprint = (anchor.x+dx, anchor.y-dy), dx∈[0,W-1], dy∈[0,H-1].")]
+        public Vector2Int gridSize = new Vector2Int(1, 1);
+
         [Header("Duration")]
         [Tooltip("0 = 전투 종료까지 유지.")]
         public int durationTurns = 0;

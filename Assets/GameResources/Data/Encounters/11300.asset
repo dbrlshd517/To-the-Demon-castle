@@ -16,9 +16,13 @@ MonoBehaviour:
   encounterName: "\uC11D\uC0C1\uC758 \uC2DC\uD5D8"
   encounterType: 0
   enemies:
-  - enemyData: {fileID: 11400000, guid: d2b308e05e0c25b4e8ac2ba7da8c43c0, type: 2}
-    col: 2
+  - enemyData: {fileID: 11400000, guid: 7f63a926407c9ec4990c6a2d67308918, type: 2}
+    placementType: 1
+    col: 0
     row: 0
+    placementRange: 3
+    oppositePosition: 0
+    spawnGroupId: 1
   isBossEncounter: 0
   encounterMusic: {fileID: 0}
   backgroundOverride: {fileID: 0}

@@ -15,7 +15,16 @@
       "Bash(sed -i 's|Resources.Load<RelicDatabase>\\(\"\"RelicDatabase\"\"\\)|Resources.Load<RelicDatabase>\\(\"\"Data/RelicDatabase\"\"\\)|g' \"C:/To the Demon Castle/Assets/Scripts/UI/TooltipTrigger.cs\")",
       "Bash(grep -v \"Debug\\\\|Log\\\\|//\")",
       "Bash(grep -h \"guid:\" \"C:/To the Demon Castle/Assets/Resources/Data/Encounters/\"*.asset)",
-      "Bash(grep -rl \"c6003ee1facbd1c43a75c07ab9ec6f5c\\\\|b960305e1e0961e4c87c42dcd106ca3d\\\\|2cadf5af7160a2c45a4074e5ead5c23c\\\\|16a8ca9e992459341a4e93e8bd59eb35\" 'C:/To the Demon Castle/Assets/' --include=*.asset --include=*.prefab --include=*.unity)"
+      "Bash(grep -rl \"c6003ee1facbd1c43a75c07ab9ec6f5c\\\\|b960305e1e0961e4c87c42dcd106ca3d\\\\|2cadf5af7160a2c45a4074e5ead5c23c\\\\|16a8ca9e992459341a4e93e8bd59eb35\" 'C:/To the Demon Castle/Assets/' --include=*.asset --include=*.prefab --include=*.unity)",
+      "Bash(powershell -Command \"Get-Content 'Assets\\\\Scripts\\\\Ingame\\\\Combat\\\\CombatController.cs' -TotalCount 900 | Select-Object -Index 800..900\")",
+      "PowerShell(head *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Card Hero\\\\Assets\" -Recurse -Directory | Where-Object { $_.Name -match '\\(sprite|icon|image|UI|ui\\)' })",
+      "Bash(xargs ls -lh)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Card Hero\\\\Assets\" -Recurse -Directory | Where-Object { $_.Name -match '\\(sprite|icon\\)' } | Select-Object -ExpandProperty FullName)",
+      "Bash(xargs grep -l \"strength\\\\|dexterity\\\\|fire\\\\|stun\\\\|freeze\\\\|fear\\\\|unknown\")",
+      "Bash(findstr /i event)",
+      "PowerShell(New-Item *)"
     ]
-  }
+  },
+  "prefersReducedMotion": false
 }

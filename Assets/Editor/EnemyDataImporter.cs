@@ -106,6 +106,7 @@ public class EnemyDataImporter : EditorWindow
             col[headers[i].Trim()] = i;
 
         int created = 0, updated = 0, skipped = 0;
+        var csvCodes = new HashSet<int>();
 
         for (int row = 1; row < lines.Length; row++)
         {
@@ -126,17 +127,66 @@ public class EnemyDataImporter : EditorWindow
             data.maxHP         = ParseInt(GetField(f, col, "hp"), 1);
             data.baseDamage    = ParseInt(GetField(f, col, "damage"), 0);
             data.durationTurns = ParseInt(GetField(f, col, "duration"), 0);
+            data.gridSize      = ParseSize(GetField(f, col, "size"));
 
             if (isNew) { AssetDatabase.CreateAsset(data, assetPath); created++; }
             else       { EditorUtility.SetDirty(data); updated++; }
+
+            csvCodes.Add(data.enemyId);
         }
+
+        int deleted = DeleteAssetsNotInCsv(csvCodes);
 
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
 
-        string msg = $"생성: {created}개\n업데이트: {updated}개\n건너뜀: {skipped}개";
+        string msg = $"생성: {created}개\n업데이트: {updated}개\n건너뜀: {skipped}개\n삭제: {deleted}개";
         EditorUtility.DisplayDialog("임포트 완료", msg, "확인");
         Debug.Log($"[EnemyDataImporter] {msg}");
+    }
+
+    /// <summary>
+    /// outputFolder의 EnemyData.asset 중 enemyId가 csvCodes에 없는 항목을 삭제합니다.
+    /// 사용자에게 미리 대상 목록을 보여주고 승인받은 뒤 실제로 삭제합니다.
+    /// </summary>
+    private int DeleteAssetsNotInCsv(HashSet<int> csvCodes)
+    {
+        if (!AssetDatabase.IsValidFolder(outputFolder)) return 0;
+
+        string[] guids = AssetDatabase.FindAssets("t:EnemyData", new[] { outputFolder });
+        var orphans = new List<(string path, int code, string name)>();
+        foreach (var guid in guids)
+        {
+            string p = AssetDatabase.GUIDToAssetPath(guid);
+            var d = AssetDatabase.LoadAssetAtPath<EnemyData>(p);
+            if (d == null) continue;
+            if (csvCodes.Contains(d.enemyId)) continue;
+            orphans.Add((p, d.enemyId, d.enemyName));
+        }
+
+        if (orphans.Count == 0) return 0;
+
+        const int previewMax = 15;
+        var preview = new System.Text.StringBuilder();
+        for (int i = 0; i < Mathf.Min(previewMax, orphans.Count); i++)
+            preview.AppendLine($"  {orphans[i].code} {orphans[i].name}");
+        if (orphans.Count > previewMax)
+            preview.AppendLine($"  ... 외 {orphans.Count - previewMax}개");
+
+        bool confirm = EditorUtility.DisplayDialog(
+            "CSV에 없는 적 삭제",
+            $"CSV에 없는 적 {orphans.Count}개를 삭제합니다.\n\n{preview}\n계속할까요?",
+            "삭제",
+            "취소");
+        if (!confirm) return 0;
+
+        int deleted = 0;
+        foreach (var o in orphans)
+        {
+            if (AssetDatabase.DeleteAsset(o.path)) deleted++;
+            else Debug.LogWarning($"[EnemyDataImporter] 삭제 실패: {o.path}");
+        }
+        return deleted;
     }
 
     // ─── 유틸리티 ───────────────────────────────────
@@ -192,4 +242,28 @@ public class EnemyDataImporter : EditorWindow
     private static float ParseFloat(string value, float fallback)
         => float.TryParse(value, System.Globalization.NumberStyles.Float,
             System.Globalization.CultureInfo.InvariantCulture, out float r) ? r : fallback;
+
+    /// <summary>
+    /// size 컬럼 파싱. "W.H" / "WxH" / "W,H" / "N"(= NxN) 형식 모두 지원.
+    /// 빈 값이면 (1,1).
+    /// 예: "2.2" → (2,2),  "3x1" → (3,1),  "2" → (2,2),  "" → (1,1)
+    /// </summary>
+    private static Vector2Int ParseSize(string value)
+    {
+        if (string.IsNullOrWhiteSpace(value)) return new Vector2Int(1, 1);
+        string v = value.Trim();
+        char[] seps = new[] { '.', 'x', 'X', ',', ':', '*' };
+        int sepIdx = v.IndexOfAny(seps);
+        if (sepIdx < 0)
+        {
+            int n = ParseInt(v, 1);
+            n = Mathf.Max(1, n);
+            return new Vector2Int(n, n);
+        }
+        string ws = v.Substring(0, sepIdx);
+        string hs = v.Substring(sepIdx + 1);
+        int w = Mathf.Max(1, ParseInt(ws, 1));
+        int h = Mathf.Max(1, ParseInt(hs, 1));
+        return new Vector2Int(w, h);
+    }
 }

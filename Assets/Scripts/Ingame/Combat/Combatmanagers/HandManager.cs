@@ -278,11 +278,11 @@ namespace DeckRoguelike.Combat
         /// <summary>
         /// 카드 플레이 가능 상태 업데이트
         /// </summary>
-        public void UpdateCardPlayability(int currentEnergy)
+        public void UpdateCardPlayability()
         {
             foreach (var card in handCards)
             {
-                bool canPlay = currentEnergy >= card.CardData.energyCost && !card.CardData.IsUnplayable && !card.IsRuntimeUnplayable;
+                bool canPlay = !card.CardData.IsUnplayable && !card.IsRuntimeUnplayable;
                 card.SetPlayable(canPlay);
             }
         }

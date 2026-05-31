@@ -13,27 +13,28 @@ MonoBehaviour:
   m_Name: 22101
   m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.Cards.CardData
   cardCode: 22101
-  cardName: "\uC774\uB3D9+"
-  description: "\uC0C1\uD558\uC88C\uC6B0 \uBC29\uD5A5\uC73C\uB85C\\n\uD55C\uCE78
-    \uC774\uB3D9\uD569\uB2C8\uB2E4."
+  cardName: "\uC601\uD63C\uBC30\uAE30+"
+  description: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
   cardArt: {fileID: 0}
-  energyCost: 2
+  imagePath: 
   effects:
-  - effectType: 5
-    value: 0
-    targeting: 6
+  - effectType: 0
+    value: 24
+    valueRaw: 24
+    targeting: 5
     rangeOffsets:
-    - col: 0
-      row: 1
-    - col: 0
-      row: -1
     - col: -1
       row: 0
+    - col: 0
+      row: -1
+    - col: 0
+      row: 1
     - col: 1
       row: 0
     useAbsoluteCoords: 0
     customEffectId: 
-  keywords: 0
+  keywords: 2
+  iconCode: 0
   playSFX: {fileID: 0}
   playVFX: {fileID: 0}
   cardGlow: {r: 0, g: 0, b: 0, a: 0}

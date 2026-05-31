@@ -13,18 +13,20 @@ MonoBehaviour:
   m_Name: 42100
   m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.Cards.CardData
   cardCode: 42100
-  cardName: "\uC774\uB3D9"
-  description: "\uC6D0\uD558\uB294 \uCE78\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+  cardName: "\uD654\uC5FC\uAD6C"
+  description: "\uC801\uC5D0\uAC8C \uD654\uC5FC\uC744 2 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
   cardArt: {fileID: 0}
-  energyCost: 2
+  imagePath: 
   effects:
-  - effectType: 5
-    value: 0
-    targeting: 6
+  - effectType: 6
+    value: 2
+    valueRaw: 2
+    targeting: 0
     rangeOffsets: []
     useAbsoluteCoords: 0
-    customEffectId: 
+    customEffectId: fireball
   keywords: 0
+  iconCode: 0
   playSFX: {fileID: 0}
   playVFX: {fileID: 0}
   cardGlow: {r: 0, g: 0, b: 0, a: 0}

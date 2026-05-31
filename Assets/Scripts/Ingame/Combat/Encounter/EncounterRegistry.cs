@@ -31,7 +31,8 @@ namespace DeckRoguelike.Core
         /// D/A/N 코드에 맞는 인카운터를 가중치 랜덤으로 선택.
         /// 정확한 N이 없으면 가장 가까운 N으로 fallback.
         /// </summary>
-        public static EnemyEncounterData SelectEncounter(int gameDifficulty, int act, int actDifficulty)
+        public static EnemyEncounterData SelectEncounter(int gameDifficulty, int act, int actDifficulty,
+                                                          SeededRandom rng = null)
         {
             EnsureLoaded();
 
@@ -50,7 +51,10 @@ namespace DeckRoguelike.Core
                 return null;
             }
 
-            return candidates[Random.Range(0, candidates.Count)];
+            int idx = rng != null
+                ? rng.EncounterRange(candidates.Count)
+                : Random.Range(0, candidates.Count);
+            return candidates[idx];
         }
 
         private static List<EnemyEncounterData> FindCandidates(int d, int a, int n)

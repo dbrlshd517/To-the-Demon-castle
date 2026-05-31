@@ -13,58 +13,20 @@ MonoBehaviour:
   m_Name: 12205
   m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.Cards.CardData
   cardCode: 12205
-  cardName: "\uC774\uB3D9:\uBE44\uC20D+"
-  description: "\uB300\uAC01\uC120 \uBC29\uD5A5\uC73C\uB85C\\n\uC774\uB3D9\uD569\uB2C8\uB2E4."
+  cardName: "\uCC44\uB825 \uD68C\uBCF5+"
+  description: "\uCCB4\uB825\uC744 8 \uC5BB\uC2B5\uB2C8\uB2E4."
   cardArt: {fileID: 0}
-  energyCost: 2
+  imagePath: 
   effects:
-  - effectType: 5
-    value: 0
-    targeting: 6
-    rangeOffsets:
-    - col: 1
-      row: 1
-    - col: -1
-      row: -1
-    - col: 1
-      row: -1
-    - col: -1
-      row: 1
-    - col: 2
-      row: 2
-    - col: -2
-      row: -2
-    - col: 2
-      row: -2
-    - col: -2
-      row: 2
-    - col: 3
-      row: 3
-    - col: -3
-      row: -3
-    - col: 3
-      row: -3
-    - col: -3
-      row: 3
-    - col: 4
-      row: 4
-    - col: -4
-      row: -4
-    - col: 4
-      row: -4
-    - col: -4
-      row: 4
-    - col: 5
-      row: 5
-    - col: -5
-      row: -5
-    - col: 5
-      row: -5
-    - col: -5
-      row: 5
+  - effectType: 6
+    value: 8
+    valueRaw: 8
+    targeting: 0
+    rangeOffsets: []
     useAbsoluteCoords: 0
-    customEffectId: 
-  keywords: 0
+    customEffectId: Hp
+  keywords: 2
+  iconCode: 0
   playSFX: {fileID: 0}
   playVFX: {fileID: 0}
   cardGlow: {r: 0, g: 0, b: 0, a: 0}

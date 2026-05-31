@@ -112,6 +112,8 @@ namespace DeckRoguelike.Editor
                 for (int c = 0; c < headers.Count && c < cells.Count; c++)
                 {
                     string val = cells[c];
+                    // CSV에 작성한 "\n"(백슬래시+n)을 실제 줄바꿈으로 변환 — 화면 표시용
+                    if (headers[c] != "stringcode") val = val.Replace("\\n", "\n");
                     switch (headers[c])
                     {
                         case "stringcode":  entry.code        = val; break;

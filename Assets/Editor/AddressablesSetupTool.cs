@@ -10,7 +10,7 @@ using System.IO;
 ///
 /// 주소 규칙: Assets/GameResources/ 접두사와 확장자를 제거한 경로
 ///   예) Assets/GameResources/Data/ItemDatabase.asset  →  "Data/ItemDatabase"
-///       Assets/GameResources/Sprites/relic/101.png   →  "Sprites/relic/101"
+///       Assets/GameResources/Sprites/Ingame/Relic/101.png   →  "Sprites/Ingame/Relic/101"
 ///
 /// 라벨 규칙 (LoadAssetsAsync에서 사용):
 ///   Data/Cards/      →  "Cards"
@@ -27,7 +27,9 @@ public static class AddressablesSetupTool
     private static readonly Dictionary<string, string> FolderLabels = new Dictionary<string, string>
     {
         { "Data/Cards/",      "Cards"      },
+        { "Data/Events/",     "Events"     },
         { "Data/Allies/",     "Allies"     },
+        { "Data/Hazards/",    "Hazards"    },
         { "Data/Enemies/",    "Enemies"    },
         { "Data/Encounters/", "Encounters" },
     };

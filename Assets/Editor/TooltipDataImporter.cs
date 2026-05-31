@@ -118,7 +118,7 @@ public class TooltipDataImporter : EditorWindow
             {
                 code        = code,
                 name        = Get(f, col, "name"),
-                description = Get(f, col, "description"),
+                description = Get(f, col, "description").Replace("\\n", "\n"),
             };
 
             // icon (1xx = Object UI)

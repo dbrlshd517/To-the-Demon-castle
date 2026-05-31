@@ -22,52 +22,50 @@ namespace DeckRoguelike.Item
             new Dictionary<int, System.Func<ItemEffect>>
             {
                 // ── Common (1xx) ────────────────────────────────────────
-                { 101, () => new BombItem() },             // 폭탄
-                { 102, () => new ShieldPotionItem() },     // 방어 포션
-                { 103, () => new SpeedPotionItem() },      // 신속 포션
-                { 104, () => new AttackPotionItem() },     // 공격 포션
-                { 105, () => new ColorlessPotionItem() },  // 무색 포션
-                { 106, () => new SkillPotionItem() },      // 스킬 포션
-                { 107, () => new ArrowItem() },            // 화살
-                { 109, () => new EnergyPotionItem() },     // 에너지 포션
-                { 119, () => new MovePotionItem() },       // 이동 포션
+                
+
+                { 100, () => new ActionPotionItem() },  // 액션 포션
+                { 101, () => new MovePotionItem() },       // 이동 포션
+                { 102, () => new PowerPotionItem() },      // 파워 포션
+                { 103, () => new RecyclePotionItem() },    // 재활용 포션 (버린 더미에서 1장)
+                { 104, () => new ForesightPotionItem() },  // 예지 포션 (뽑을 더미에서 1장)
+                { 105, () => new ArrowItem() },            // 화살
+                { 106, () => new ChocolateBarItem() },     // 초코바
+                { 107, () => new StrengthPotionItem() },   // 힘 포션
+                { 108, () => new ReusePotionItem() },      // 재사용 포션
+                { 109, () => new FlashbangItem() },        // 섬광탄
 
                 // Common - 직업 전용
-                { 170, () => new AirStrikeItem() },        // 공중 포격 (Warrior)
-                { 180, () => new AdrenalineItem() },       // 아드레날린 (Gunner)
+
+                { 170, () => new ScissorsItem() },         // 가위 (Warrior)
+                { 180, () => new MagazineItem() },         // 탄알집 (Gunner)
                 { 190, () => new MolotovItem() },          // 화염병 (Mage)
 
                 // ── Uncommon (2xx) ──────────────────────────────────────
-                { 201, () => new AceCardItem() },          // 에이스 카드
-                { 202, () => new StrengthPotionItem() },   // 힘 포션
-                { 203, () => new ChocolateBarItem() },     // 초코바
-                { 204, () => new UpgradePotionItem() },    // 강화 포션
-                { 205, () => new SmokeBombItem() },        // 연막탄
-                { 206, () => new HealthPotionItem() },     // 체력 포션
-                { 207, () => new RecycledPotionItem() },   // 재활용된 포션
-                { 208, () => new OmenBookItem() },         // 예지의 고서
-                { 209, () => new ReusePotionItem() },      // 재사용 포션
+
+
+
+
 
                 // Uncommon - 직업 전용
-                { 270, () => new SteelPotionItem() },      // 강철화 포션 (Warrior)
-                { 280, () => new AmmoItem() },             // 탄약 (Gunner)
-                { 290, () => new BoneFluteItem() },        // 뼈피리 (Mage)
+
+
 
                 // ── Rare (3xx) ──────────────────────────────────────────
-                { 301, () => new RagePotionItem() },       // 분노의 포션
-                { 302, () => new PhantomDustItem() },      // 환상의 가루
-                { 303, () => new RouletteItem() },         // 돌림판
-                { 304, () => new HolyWaterItem() },        // 성수
-                { 305, () => new LuckyDiceItem() },        // 사기 주사위
-                { 306, () => new RainbowPotionItem() },    // 무지개 포션
-                { 307, () => new TeleportPotionItem() },   // 순간이동 포션
-                { 308, () => new FlashbangItem() },        // 섬광탄
-                { 309, () => new RevivePendantItem() },    // 소생의 팬던트
-
+                { 200, () => new HealthPotionItem() },     // 체력 포션
+                { 201, () => new GhostPotionItem() },      // 유령 포션
+                { 202, () => new BombItem() },             // 폭탄
+                { 203, () => new HolyWaterItem() },        // 성수
+                { 204, () => new LuckyDiceItem() },        // 사기 주사위
+                { 205, () => new RainbowPotionItem() },    // 무지개 포션
+                { 206, () => new RouletteItem() },         // 돌림판
+                { 207, () => new DrawPileItem() },         // 카드더미
+                { 208, () => new PortalGunItem() },        // 포탈건 (적과 위치 교환)
+                { 209, () => new UpgradePotionItem() }, 
                 // Rare - 직업 전용
-                { 370, () => new IronMaskItem() },         // 철가면 (Warrior)
-                { 380, () => new DogTagItem() },           // 군번줄 (Gunner)
-                { 390, () => new DryIceItem() },           // 드라이아이스 (Mage)
+                { 270, () => new IronMaskItem() },         // 철가면 (Warrior)
+                { 280, () => new DogTagItem() },           // 군번줄 (Gunner)
+                { 290, () => new BoneFluteItem() },        // 뼈피리 (Mage)
             };
 
         public static void RegisterAll()
@@ -98,17 +96,17 @@ namespace DeckRoguelike.Item
 
         // ── 공통 헬퍼 ───────────────────────────────────────────────────
 
-        private static List<CardData> GetCardsByType(System.Func<CardData, bool> filter, int maxCount)
+        internal static List<CardData> GetRandomCardsOfType(CardType type, int maxCount)
         {
             var character = GameManager.Instance?.SelectedCharacter ?? CharacterType.Warrior;
             var pool = CardRegistry.GetRewardPool(character)
-                .Where(c => !c.IsUpgraded && filter(c))
+                .Where(c => !c.IsUpgraded && c.ClassDigit != 1 && c.CardTypeFromCode == type)
                 .ToList();
             Shuffle(pool);
             return pool.Take(maxCount).ToList();
         }
 
-        private static void Shuffle<T>(List<T> list)
+        internal static void Shuffle<T>(List<T> list)
         {
             for (int i = list.Count - 1; i > 0; i--)
             {
@@ -122,134 +120,130 @@ namespace DeckRoguelike.Item
     // Common (1xx) — 공용
     // ════════════════════════════════════════════════════════════════════
 
-    /// <summary>101 폭탄 - 선택한 셀 기준 3×3 범위에 피해 10</summary>
-    public class BombItem : ItemEffect
+    /// <summary>100 액션 포션 - 무작위 액션 카드 1장을 손으로 가져옵니다</summary>
+    public class ActionPotionItem : ItemEffect
     {
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
+        public override void OnItemUsed(ItemUseContext ctx)
+        {
+            var cards = ItemLibrary.GetRandomCardsOfType(CardType.Action, 1);
+            if (cards.Count == 0) return;
+            ctx.Board.AddCardToHandFree(cards[0]);
+        }
+    }
+
+    /// <summary>101 이동 포션 - 무작위 이동 카드 1장을 손으로 가져옵니다</summary>
+    public class MovePotionItem : ItemEffect
+    {
+        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
+        public override void OnItemUsed(ItemUseContext ctx)
+        {
+            var cards = ItemLibrary.GetRandomCardsOfType(CardType.Move, 1);
+            if (cards.Count == 0) return;
+            ctx.Board.AddCardToHandFree(cards[0]);
+        }
+    }
+
+    /// <summary>102 파워 포션 - 무작위 파워 카드 1장을 손으로 가져옵니다</summary>
+    public class PowerPotionItem : ItemEffect
+    {
+        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
+        public override void OnItemUsed(ItemUseContext ctx)
+        {
+            var cards = ItemLibrary.GetRandomCardsOfType(CardType.Power, 1);
+            if (cards.Count == 0) return;
+            ctx.Board.AddCardToHandFree(cards[0]);
+        }
+    }
+
+    /// <summary>103 재활용 포션 - 버린 카드 더미에서 카드 1장 선택해 손으로 가져옵니다</summary>
+    public class RecyclePotionItem : ItemEffect
+    {
+        public override bool CanUse(ItemUseContext ctx) =>
+            ctx.InCombat && DeckManager.Instance != null && DeckManager.Instance.DiscardPileCount > 0;
         public override bool NeedsTargetingMode => true;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            ctx.Combat.EnterItemAreaTargetingMode(
-                pos =>
-                {
-                    ctx.Combat.DealDamageInArea(pos, 1, 10);
-                    Debug.Log($"[BombItem] 폭탄 폭발! {pos} 기준 3×3 범위 10 피해");
-                },
-                onCancel: null,
-                onConfirmedUse: ctx.OnConfirmedUse
-            );
-        }
+        public override void OnItemUsed(ItemUseContext ctx) =>
+            PotionPickHelper.BeginPick(ctx, fromDiscard: true);
     }
 
-    /// <summary>102 방어 포션 - 방어도 12 획득</summary>
-    public class ShieldPotionItem : ItemEffect
+    /// <summary>104 예지 포션 - 뽑을 카드 더미에서 카드 1장 선택해 손으로 가져옵니다</summary>
+    public class ForesightPotionItem : ItemEffect
     {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            ctx.Combat.AddBlock(12);
-            Debug.Log("[ShieldPotionItem] 방어도 +12");
-        }
+        public override bool CanUse(ItemUseContext ctx) =>
+            ctx.InCombat && DeckManager.Instance != null && DeckManager.Instance.DrawPileCount > 0;
+        public override bool NeedsTargetingMode => true;
+        public override void OnItemUsed(ItemUseContext ctx) =>
+            PotionPickHelper.BeginPick(ctx, fromDiscard: false);
     }
 
-    /// <summary>103 신속 포션 - 카드 3장 드로우</summary>
-    public class SpeedPotionItem : ItemEffect
+    /// <summary>
+    /// 103/104 포션 공용 — drawPanel/discardPanel을 열고 CardUI.OnPotionPick으로 카드 선택을 받습니다.
+    /// 카드 선택 성공 시 OnConfirmedUse로 아이템을 소모하고, 패널이 그냥 닫히면 아이템을 유지합니다.
+    /// </summary>
+    internal static class PotionPickHelper
     {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
+        public static void BeginPick(ItemUseContext ctx, bool fromDiscard)
         {
-            ctx.Combat.DrawExtraCards(3);
-            Debug.Log("[SpeedPotionItem] 카드 3장 드로우");
-        }
-    }
+            var ui = DeckRoguelike.UI.InGameUIController.Instance;
+            var dm = DeckManager.Instance;
+            if (ui == null || dm == null || ctx.Board == null) return;
+            // 이미 다른 포션 픽 모드 진행 중이면 중복 진입 차단 (아이템은 미소모로 유지)
+            if (DeckRoguelike.Cards.CardUI.PotionPickModeActive) return;
 
-    /// <summary>104 공격 포션 - 공격 카드 3장 중 1장 선택, 비용 0</summary>
-    public class AttackPotionItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            var cards = GetAttackCards(3);
-            if (cards.Count == 0) return;
-            ctx.Combat.OpenItemCardSelection(cards, picked =>
+            System.Action<DeckRoguelike.Cards.CardData> pickHandler = null;
+            System.Action cancelHandler = null;
+
+            void Cleanup()
             {
-                if (picked != null) ctx.Combat.AddCardToHandFree(picked);
-            });
-        }
-
-        private static List<CardData> GetAttackCards(int count)
-        {
-            var character = GameManager.Instance?.SelectedCharacter ?? CharacterType.Warrior;
-            var pool = CardRegistry.GetRewardPool(character)
-                .Where(c => !c.IsUpgraded && c.CardTypeFromCode == CardType.Attack)
-                .ToList();
-            for (int i = pool.Count - 1; i > 0; i--)
-            {
-                int j = Random.Range(0, i + 1);
-                (pool[i], pool[j]) = (pool[j], pool[i]);
+                DeckRoguelike.Cards.CardUI.PotionPickModeActive = false;
+                DeckRoguelike.Cards.CardUI.OnPotionPick         -= pickHandler;
+                DeckRoguelike.Cards.CardUI.OnPotionPickCancelled -= cancelHandler;
             }
-            return pool.Take(count).ToList();
+
+            pickHandler = (picked) =>
+            {
+                if (picked == null) return;
+                // 성공 분기: PotionPickModeActive=false 먼저 설정 — 패널 닫기로 인한 cancelHandler 발화 방지.
+                Cleanup();
+
+                bool removed = fromDiscard
+                    ? dm.RemoveFromDiscardPile(picked)
+                    : dm.RemoveFromDrawPile(picked);
+                if (removed)
+                    ctx.Board.AddCardToHandFree(picked);
+
+                ctx.OnConfirmedUse?.Invoke();
+
+                if (fromDiscard) ui.ToggleDiscardPanel();
+                else             ui.ToggleDrawPanel();
+            };
+
+            cancelHandler = () =>
+            {
+                // 사용자가 카드 선택 없이 패널을 닫음 — 아이템 미소모 (OnConfirmedUse 호출 안 함)
+                Cleanup();
+            };
+
+            DeckRoguelike.Cards.CardUI.OnPotionPick         += pickHandler;
+            DeckRoguelike.Cards.CardUI.OnPotionPickCancelled += cancelHandler;
+            DeckRoguelike.Cards.CardUI.PotionPickModeActive  = true;
+
+            if (fromDiscard) ui.ShowDiscardPanel();
+            else             ui.ShowDrawPanel();
         }
     }
 
-    /// <summary>105 무색 포션 - 중립(ClassDigit==1) 카드 3장 중 1장 선택, 비용 0</summary>
-    public class ColorlessPotionItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            var pool = CardRegistry.GetRewardPool(CharacterType.Warrior) // neutral = class 1
-                .Where(c => !c.IsUpgraded && c.ClassDigit == 1)
-                .ToList();
-            for (int i = pool.Count - 1; i > 0; i--)
-            {
-                int j = Random.Range(0, i + 1);
-                (pool[i], pool[j]) = (pool[j], pool[i]);
-            }
-            var cards = pool.Take(3).ToList();
-            if (cards.Count == 0) return;
-            ctx.Combat.OpenItemCardSelection(cards, picked =>
-            {
-                if (picked != null) ctx.Combat.AddCardToHandFree(picked);
-            });
-        }
-    }
-
-    /// <summary>106 스킬 포션 - 스킬 카드 3장 중 1장 선택, 비용 0</summary>
-    public class SkillPotionItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            var character = GameManager.Instance?.SelectedCharacter ?? CharacterType.Warrior;
-            var pool = CardRegistry.GetRewardPool(character)
-                .Where(c => !c.IsUpgraded && c.CardTypeFromCode == CardType.Skill)
-                .ToList();
-            for (int i = pool.Count - 1; i > 0; i--)
-            {
-                int j = Random.Range(0, i + 1);
-                (pool[i], pool[j]) = (pool[j], pool[i]);
-            }
-            var cards = pool.Take(3).ToList();
-            if (cards.Count == 0) return;
-            ctx.Combat.OpenItemCardSelection(cards, picked =>
-            {
-                if (picked != null) ctx.Combat.AddCardToHandFree(picked);
-            });
-        }
-    }
-
-    /// <summary>107 화살 - 선택한 적에게 피해 20</summary>
+    /// <summary>106 화살 - 선택한 적에게 피해 10</summary>
     public class ArrowItem : ItemEffect
     {
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
         public override bool NeedsTargetingMode => true;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            ctx.Combat.EnterItemEnemyTargetingMode(
+            ctx.Board.EnterItemEnemyTargetingMode(
                 enemy =>
                 {
-                    ctx.Combat.DamageEnemy(enemy, 20);
+                    ctx.Board.DamageEnemy(enemy, 20);
                     Debug.Log($"[ArrowItem] 화살 발사! {enemy.Name} 20 피해");
                 },
                 null, onCancel: null,
@@ -258,68 +252,94 @@ namespace DeckRoguelike.Item
         }
     }
 
-    /// <summary>109 에너지 포션 - 에너지 2 획득</summary>
-    public class EnergyPotionItem : ItemEffect
+    /// <summary>107 초코바 - 이번 턴 힘 +5 (턴 종료 시 사라짐)</summary>
+    public class ChocolateBarItem : ItemEffect
     {
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            ctx.Combat.AddEnergy(2);
-            Debug.Log("[EnergyPotionItem] 에너지 +2");
+            ctx.Board.AddTempStrength(5);
+            Debug.Log("[ChocolateBarItem] 이번 턴 힘 +5");
         }
     }
 
-    /// <summary>119 이동 포션 - 인접 1칸 이동 (우클릭 취소 가능)</summary>
-    public class MovePotionItem : ItemEffect
+    /// <summary>108 돌림판 - 드로우 더미 맨 위 3장 자동 실행 (무작위 대상)</summary>
+    public class RouletteItem : ItemEffect
     {
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override bool NeedsTargetingMode => true;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            ctx.Combat.SetItemMoveModeConfirmCallback(ctx.OnConfirmedUse);
-            ctx.Combat.EnterItemMoveMode();
-            Debug.Log("[MovePotionItem] 이동 포션 발동 - 이동할 칸을 선택하세요");
+            ctx.Board.PlayTopCardsFromDraw(3);
+            Debug.Log("[RouletteItem] 드로우 더미 상위 3장 자동 실행");
+        }
+    }
+
+    /// <summary>108 재사용 포션 - 다음에 사용하는 카드를 복사하고 복사본에 소멸을 부여합니다</summary>
+    public class ReusePotionItem : ItemEffect
+    {
+        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
+        public override void OnItemUsed(ItemUseContext ctx)
+        {
+            ctx.Board.SetNextCardCopyExhaust();
+            Debug.Log("[ReusePotionItem] 다음에 사용하는 카드를 복사하고 소멸을 부여합니다");
         }
     }
 
     // ── Common 직업 전용 ─────────────────────────────────────────────────
 
-    /// <summary>170 공중 포격 (Warrior) - 모든 타일에 피해 10</summary>
-    public class AirStrikeItem : ItemEffect
+    /// <summary>170 가위 (Warrior) - 이번 전투 힘 +3, 체력을 1씩 3번 잃습니다</summary>
+    public class ScissorsItem : ItemEffect
     {
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            ctx.Combat.DealDamageToAllEnemies(10);
-            Debug.Log("[AirStrikeItem] 공중 포격! 전체 10 피해");
-        }
-    }
-
-    /// <summary>180 아드레날린 (Gunner) - 힘 +3, 1씩 3번 피해</summary>
-    public class AdrenalineItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            ctx.Combat.AddStrength(3);
+            ctx.Board.AddStrength(3);
             for (int i = 0; i < 3; i++)
-                ctx.Combat.ApplyDamageToPlayer(1);
-            Debug.Log("[AdrenalineItem] 힘 +3, 피해 1×3 수령");
+                ctx.GM.TakeDamage(1);
+            Debug.Log("[ScissorsItem] 힘 +3, 체력 -1 × 3");
         }
     }
 
-    /// <summary>190 화염병 (Mage) - 선택한 적에게 화염 5 부여</summary>
+    /// <summary>180 탄알집 (Gunner) - 발사 카드 2장을 손패에 추가합니다 (비용 0)</summary>
+    public class MagazineItem : ItemEffect
+    {
+        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
+        public override void OnItemUsed(ItemUseContext ctx)
+        {
+            var character = GameManager.Instance?.SelectedCharacter ?? CharacterType.Warrior;
+            // 발사 카드 풀: 키워드가 아닌 customEffectId로 식별 (BoardController.IsShootAttackEffect).
+            var shootPool = CardRegistry.GetRewardPool(character)
+                .Where(c => !c.IsUpgraded && c.effects != null &&
+                            c.effects.Any(fx => DeckRoguelike.UI.BoardController.IsShootAttackEffect(fx)))
+                .ToList();
+
+            if (shootPool.Count == 0)
+            {
+                Debug.LogWarning("[MagazineItem] 발사 카드를 찾을 수 없습니다");
+                return;
+            }
+
+            for (int i = 0; i < 2; i++)
+            {
+                var picked = shootPool[Random.Range(0, shootPool.Count)];
+                ctx.Board.AddCardToHandFree(picked);
+            }
+            Debug.Log("[MagazineItem] 발사 카드 2장 추가");
+        }
+    }
+
+    /// <summary>190 화염병 (Mage) - 선택한 적에게 화염 4 부여</summary>
     public class MolotovItem : ItemEffect
     {
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
         public override bool NeedsTargetingMode => true;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            ctx.Combat.EnterItemEnemyTargetingMode(
+            ctx.Board.EnterItemEnemyTargetingMode(
                 enemy =>
                 {
-                    ctx.Combat.ApplyStatus(enemy, StatusEffectType.Fire, 5);
-                    Debug.Log($"[MolotovItem] {enemy.Name}에게 화염 5 부여");
+                    ctx.Board.ApplyStatus(enemy, StatusEffectType.Fire, 4);
+                    Debug.Log($"[MolotovItem] {enemy.Name}에게 화염 4 부여");
                 },
                 null, onCancel: null,
                 onConfirmedUse: ctx.OnConfirmedUse
@@ -331,40 +351,25 @@ namespace DeckRoguelike.Item
     // Uncommon (2xx) — 공용
     // ════════════════════════════════════════════════════════════════════
 
-    /// <summary>201 에이스 카드 - 손패에서 1장 선택, 이번 전투 비용 0</summary>
-    public class AceCardItem : ItemEffect
+    /// <summary>201 카드더미 - 카드 2장 드로우</summary>
+    public class DrawPileItem : ItemEffect
     {
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            var hand = new List<CardData>(ctx.Combat.GetHand());
-            if (hand.Count == 0) return;
-            ctx.Combat.OpenItemCardSelection(hand, picked =>
-            {
-                if (picked != null) ctx.Combat.SetHandCardFree(picked);
-            });
+            ctx.Board.DrawExtraCards(2);
+            Debug.Log("[DrawPileItem] 카드 2장 드로우");
         }
     }
 
-    /// <summary>202 힘 포션 - 힘 +3</summary>
+    /// <summary>202 힘 포션 - 이번 전투 힘 +3</summary>
     public class StrengthPotionItem : ItemEffect
     {
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            ctx.Combat.AddStrength(3);
-            Debug.Log("[StrengthPotionItem] 힘 +3");
-        }
-    }
-
-    /// <summary>203 초코바 - 이번 턴 힘 +8 (턴 종료 시 사라짐)</summary>
-    public class ChocolateBarItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            ctx.Combat.AddTempStrength(8);
-            Debug.Log("[ChocolateBarItem] 이번 턴 힘 +8");
+            ctx.Board.AddStrength(2);
+            Debug.Log("[StrengthPotionItem] 힘 +2");
         }
     }
 
@@ -374,20 +379,8 @@ namespace DeckRoguelike.Item
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            ctx.Combat.UpgradeAllHandCards();
+            ctx.Board.UpgradeAllHandCards();
             Debug.Log("[UpgradePotionItem] 손패 모든 카드 강화");
-        }
-    }
-
-    /// <summary>205 연막탄 - 보스 아닌 전투에서 도망</summary>
-    public class SmokeBombItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx)
-            => ctx.InCombat && GameManager.Instance?.IsBossEncounter == false;
-
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            ctx.Combat.EscapeCombat();
         }
     }
 
@@ -402,107 +395,23 @@ namespace DeckRoguelike.Item
         }
     }
 
-    /// <summary>207 재활용된 포션 - 버린 더미에서 1장 선택, 비용 0</summary>
-    public class RecycledPotionItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            var discardView = DeckManager.Instance?.GetDiscardPileForView();
-            if (discardView == null || discardView.Count == 0) return;
-
-            // 최대 6장까지 표시
-            var show = discardView.Take(Mathf.Min(6, discardView.Count)).ToList();
-            ctx.Combat.OpenItemCardSelection(show, picked =>
-            {
-                if (picked == null) return;
-                // 버린 더미에서 제거 후 손패에 비용 0으로 추가
-                DeckManager.Instance?.GetDiscardPileForView(); // 뷰는 복사본이므로 실 제거는 아래
-                ctx.Combat.AddCardToHandFree(picked);
-                Debug.Log($"[RecycledPotionItem] {picked.cardName} 재활용");
-            });
-        }
-    }
-
-    /// <summary>208 예지의 고서 - 드로우 더미에서 1장 선택, 비용 0</summary>
-    public class OmenBookItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            var drawView = DeckManager.Instance?.GetDrawPileForView();
-            if (drawView == null || drawView.Count == 0) return;
-
-            var show = drawView.Take(Mathf.Min(6, drawView.Count)).ToList();
-            ctx.Combat.OpenItemCardSelection(show, picked =>
-            {
-                if (picked == null) return;
-                ctx.Combat.AddCardToHandFree(picked);
-                Debug.Log($"[OmenBookItem] {picked.cardName} 드로우 더미에서 가져옴");
-            });
-        }
-    }
-
-    /// <summary>209 재사용 포션 - 다음 카드를 2번 사용</summary>
-    public class ReusePotionItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            ctx.Combat.SetNextCardDoublePlay();
-            Debug.Log("[ReusePotionItem] 다음 카드 2회 실행 준비");
-        }
-    }
-
     // ── Uncommon 직업 전용 ────────────────────────────────────────────
 
-    /// <summary>270 강철화 포션 (Warrior) - 방어도 3배</summary>
-    public class SteelPotionItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            ctx.Combat.TripleCurrentBlock();
-            Debug.Log("[SteelPotionItem] 방어도 3배!");
-        }
-    }
-
-    /// <summary>280 탄약 (Gunner) - 발사(cardCode 31100) 3장, 비용 0</summary>
-    public class AmmoItem : ItemEffect
-    {
-        private const int ShotCardCode = 31100;
-
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            var shotCard = CardRegistry.GetCard(ShotCardCode);
-            if (shotCard == null)
-            {
-                Debug.LogWarning("[AmmoItem] 발사 카드(31100)를 찾을 수 없습니다.");
-                return;
-            }
-            for (int i = 0; i < 3; i++)
-                ctx.Combat.AddCardToHandFree(shotCard);
-            Debug.Log("[AmmoItem] 발사 카드 3장 추가 (비용 0)");
-        }
-    }
-
-    /// <summary>290 뼈피리 (Mage) - 아군 스켈레톤의 최대 HP +5</summary>
+    /// <summary>290 뼈피리 (Mage) - 자신을 제외한 모든 아군 유닛의 체력 +10</summary>
     public class BoneFluteItem : ItemEffect
     {
+        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            if (!ctx.InCombat) return;
             int buffed = 0;
-            foreach (var ally in ctx.Combat.GetAllies())
+            foreach (var ally in ctx.Board.GetAllies())
             {
-                if (ally.Name != "스켈레톤") continue;
-                ally.MaxHP     += 5;
-                ally.CurrentHP += 5;
+                ally.MaxHP     += 10;
+                ally.CurrentHP += 10;
                 ally.UI?.UpdateHP(ally.CurrentHP, ally.MaxHP);
                 buffed++;
             }
-            Debug.Log($"[BoneFluteItem] 스켈레톤 {buffed}마리 최대 HP +5");
+            Debug.Log($"[BoneFluteItem] 아군 {buffed}마리 체력 +10");
         }
     }
 
@@ -510,122 +419,35 @@ namespace DeckRoguelike.Item
     // Rare (3xx) — 공용
     // ════════════════════════════════════════════════════════════════════
 
-    /// <summary>301 분노의 포션 - 다음 공격 카드 피해 3배</summary>
-    public class RagePotionItem : ItemEffect
+    public class GhostPotionItem : ItemEffect
     {
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
+        public override bool NeedsTargetingMode => true;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            ctx.Combat.SetNextAttackMultiplier(3);
-            Debug.Log("[RagePotionItem] 다음 공격 카드 3배 준비");
+            ctx.Board.EnterItemEnemyTargetingMode(
+                enemy =>
+                {
+                    ctx.Board.ApplyStatus(enemy, StatusEffectType.Fear, 1);
+                    Debug.Log($"[GhostPotionItem] {enemy.Name}에게 공포 부여");
+                },
+                null, onCancel: null,
+                onConfirmedUse: ctx.OnConfirmedUse
+            );
         }
     }
 
-    /// <summary>302 환상의 가루 - 손 가득 드로우 후 모든 카드 비용 무작위화</summary>
-    public class PhantomDustItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            ctx.Combat.DrawUntilFull();
-            ctx.Combat.RandomizeAllHandCosts();
-            Debug.Log("[PhantomDustItem] 손 가득 드로우 + 비용 무작위화");
-        }
-    }
-
-    /// <summary>303 돌림판 - 드로우 더미 맨 위 3장 자동 실행</summary>
-    public class RouletteItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            ctx.Combat.PlayTopCardsFromDraw(3);
-            Debug.Log("[RouletteItem] 드로우 더미 상위 3장 자동 실행");
-        }
-    }
-
-    /// <summary>304 성수 - 자신에게 걸린 모든 해로운 효과 제거</summary>
-    public class HolyWaterItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            ctx.Combat.RemovePlayerDebuffs();
-            Debug.Log("[HolyWaterItem] 모든 디버프 제거");
-        }
-    }
-
-    /// <summary>305 사기 주사위 - 공격·스킬·파워 카드 각 1장씩 손패에 추가 (비용 0)</summary>
-    public class LuckyDiceItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            var character = GameManager.Instance?.SelectedCharacter ?? CharacterType.Warrior;
-            var pool = CardRegistry.GetRewardPool(character)
-                .Where(c => !c.IsUpgraded).ToList();
-
-            AddRandomOfType(ctx, pool, CardType.Attack);
-            AddRandomOfType(ctx, pool, CardType.Skill);
-            AddRandomOfType(ctx, pool, CardType.Power);
-            Debug.Log("[LuckyDiceItem] 공격·스킬·파워 카드 각 1장 추가");
-        }
-
-        private static void AddRandomOfType(ItemUseContext ctx, List<CardData> pool, CardType type)
-        {
-            var candidates = pool.Where(c => c.CardTypeFromCode == type).ToList();
-            if (candidates.Count == 0) return;
-            var picked = candidates[Random.Range(0, candidates.Count)];
-            ctx.Combat.AddCardToHandFree(picked);
-        }
-    }
-
-    /// <summary>306 무지개 포션 - 무작위 아이템 3개를 인벤토리에 추가</summary>
-    public class RainbowPotionItem : ItemEffect
-    {
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            var character = GameManager.Instance?.SelectedCharacter ?? CharacterType.Warrior;
-            var pool = ItemRegistry.GetForCharacter(character, bossItem: false);
-            // 이미 보유 중인 동일 코드 제외
-            var owned = new System.Collections.Generic.HashSet<int>(
-                ctx.GM.Items.Select(i => i.itemCode));
-            pool.RemoveAll(i => owned.Contains(i.itemCode));
-
-            for (int i = pool.Count - 1; i > 0; i--)
-            {
-                int j = Random.Range(0, i + 1);
-                (pool[i], pool[j]) = (pool[j], pool[i]);
-            }
-            int count = Mathf.Min(3, pool.Count);
-            for (int i = 0; i < count; i++)
-                ctx.GM.AddItem(pool[i]);
-            Debug.Log($"[RainbowPotionItem] 무작위 아이템 {count}개 추가");
-        }
-    }
-
-    /// <summary>307 순간이동 포션 - 보드 내 빈 칸으로 순간이동 (취소 불가)</summary>
-    public class TeleportPotionItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            ctx.Combat.EnterItemTeleportMode();
-            Debug.Log("[TeleportPotionItem] 순간이동 포션 발동 - 이동할 칸을 선택하세요");
-        }
-    }
-
-    /// <summary>308 섬광탄 - 선택한 적 기절 (1턴)</summary>
+    /// <summary>109 섬광탄 - 선택한 적 기절 (1턴)</summary>
     public class FlashbangItem : ItemEffect
     {
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
         public override bool NeedsTargetingMode => true;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            ctx.Combat.EnterItemEnemyTargetingMode(
+            ctx.Board.EnterItemEnemyTargetingMode(
                 enemy =>
                 {
-                    ctx.Combat.ApplyStatus(enemy, StatusEffectType.Stun, 1);
+                    ctx.Board.ApplyStatus(enemy, StatusEffectType.Stun, 1);
                     Debug.Log($"[FlashbangItem] {enemy.Name} 기절 1턴");
                 },
                 null, onCancel: null,
@@ -634,14 +456,122 @@ namespace DeckRoguelike.Item
         }
     }
 
-    /// <summary>309 소생의 팬던트 - 사망 시 자동 발동, 최대 HP 30% 회복 (패시브)</summary>
-    public class RevivePendantItem : ItemEffect
+    /// <summary>302 폭탄 - 선택한 셀 기준 3×3 범위에 피해 10</summary>
+    public class BombItem : ItemEffect
     {
+        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
+        public override bool NeedsTargetingMode => true;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            if (!ctx.InCombat) return;
-            ctx.Combat.RegisterRevivePassive(Data, 0.3f);
-            Debug.Log("[RevivePendantItem] 소생의 팬던트 패시브 활성화");
+            ctx.Board.EnterItemAreaTargetingMode(
+                pos =>
+                {
+                    ctx.Board.DealDamageInArea(pos, 1, 10);
+                    Debug.Log($"[BombItem] 폭탄 폭발! {pos} 기준 3×3 범위 10 피해");
+                },
+                onCancel: null,
+                onConfirmedUse: ctx.OnConfirmedUse
+            );
+        }
+    }
+
+    /// <summary>303 성수 - 자신에게 걸린 모든 해로운 효과 제거</summary>
+    public class HolyWaterItem : ItemEffect
+    {
+        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
+        public override void OnItemUsed(ItemUseContext ctx)
+        {
+            ctx.Board.RemovePlayerDebuffs();
+            Debug.Log("[HolyWaterItem] 모든 디버프 제거");
+        }
+    }
+
+    /// <summary>304 사기 주사위 - 액션·파워·이동 카드 각 1장씩 손패에 추가 (비용 0)</summary>
+    public class LuckyDiceItem : ItemEffect
+    {
+        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
+        public override void OnItemUsed(ItemUseContext ctx)
+        {
+            var character = GameManager.Instance?.SelectedCharacter ?? CharacterType.Warrior;
+            var pool = CardRegistry.GetRewardPool(character)
+                .Where(c => !c.IsUpgraded && c.ClassDigit != 1).ToList();
+
+            AddRandomOfType(ctx, pool, CardType.Action);
+            AddRandomOfType(ctx, pool, CardType.Power);
+            AddRandomOfType(ctx, pool, CardType.Move);
+            Debug.Log("[LuckyDiceItem] 액션·파워·이동 카드 각 1장 추가");
+        }
+
+        private static void AddRandomOfType(ItemUseContext ctx, List<CardData> pool, CardType type)
+        {
+            var candidates = pool.Where(c => c.CardTypeFromCode == type).ToList();
+            if (candidates.Count == 0) return;
+            var picked = candidates[Random.Range(0, candidates.Count)];
+            ctx.Board.AddCardToHandFree(picked);
+        }
+    }
+
+    /// <summary>305 무지개 포션 - 자기 슬롯을 비운 뒤 빈 슬롯을 무작위 포션으로 채웁니다</summary>
+    public class RainbowPotionItem : ItemEffect
+    {
+        private const int TotalItemSlots = 10;  // InGameUIController: ItemCols(5) * ItemsPerCol(2)
+
+        public override void OnItemUsed(ItemUseContext ctx)
+        {
+            // GameManager.UseItem은 items 리스트에서만 제거하고 슬롯 UI는 ConfirmUseItemPanel이 나중에 파괴한다.
+            // 이 시점에 자기 슬롯 UI는 여전히 ItemData=305를 들고 있어 AddItem이 그 자리를 건너뛰면 1칸이 빈다.
+            // → 먼저 자기 슬롯을 비워 AddItem이 사용할 수 있도록 한다.
+            var ui = DeckRoguelike.UI.InGameUIController.Instance;
+            var srcSlot = ui?.GetActiveConfirmSlot();
+            if (srcSlot != null) ui.ClearItemSlot(srcSlot);
+
+            var character = GameManager.Instance?.SelectedCharacter ?? CharacterType.Warrior;
+            var pool = ItemRegistry.GetForCharacter(character, bossItem: false);
+            // 무지개 포션 자체는 제외하여 무한 루프 방지
+            pool.RemoveAll(i => i.itemCode == 305);
+
+            ItemLibrary.Shuffle(pool);
+
+            int emptySlots = Mathf.Max(0, TotalItemSlots - ctx.GM.Items.Count);
+            int count = Mathf.Min(emptySlots, pool.Count);
+            for (int i = 0; i < count; i++)
+                ctx.GM.AddItem(pool[i]);
+            Debug.Log($"[RainbowPotionItem] 빈 슬롯 {emptySlots}개 중 {count}개를 무작위 포션으로 채움");
+        }
+    }
+
+    /// <summary>208 포탈건 - 선택한 적과 플레이어의 위치를 맞바꿉니다 (카드 11301 위치변경술과 동일).</summary>
+    public class PortalGunItem : ItemEffect
+    {
+        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
+        public override bool NeedsTargetingMode => true;
+        public override void OnItemUsed(ItemUseContext ctx)
+        {
+            ctx.Board.EnterItemEnemyTargetingMode(
+                enemy =>
+                {
+                    bool swapped = ctx.Board.SwapPlayerEnemy(enemy);
+                    Debug.Log(swapped
+                        ? $"[PortalGunItem] {enemy.Name}와 위치 교환"
+                        : $"[PortalGunItem] {enemy.Name}와 위치 교환 실패 (멀티셀 적 등)");
+                },
+                null, onCancel: null,
+                onConfirmedUse: ctx.OnConfirmedUse
+            );
+        }
+    }
+
+    /// <summary>308 소생의 팬던트 - 사용 시 패시브 등록, 사망 시 진짜 소모되며 최대 HP 30% 회복</summary>
+    public class RevivePendantItem : ItemEffect
+    {
+        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
+        public override void OnItemUsed(ItemUseContext ctx)
+        {
+            // GameManager.UseItem이 이미 인벤토리에서 제거했으므로 사망 시까지 유지되도록 다시 추가한다.
+            // (사망 시 BoardController가 RemoveItem으로 진짜 소모)
+            ctx.GM.AddItem(Data);
+            ctx.Board.RegisterRevivePassive(Data, 0.3f);
+            Debug.Log("[RevivePendantItem] 소생의 팬던트 패시브 활성화 (사망 시 소모)");
         }
     }
 
@@ -653,38 +583,26 @@ namespace DeckRoguelike.Item
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            ctx.Combat.SetTurnDamageMultipliers(2f, 2f);
+            ctx.Board.SetTurnDamageMultipliers(2f, 2f);
+            DeckRoguelike.UI.InGameUIController.Instance?.SetPlayerEffect(
+                "iron_mask",
+                Data?.icon,
+                2,
+                Data?.itemName ?? "철가면",
+                Data?.description ?? "이번 턴 데미지·받는 피해 2배");
             Debug.Log("[IronMaskItem] 이번 턴 데미지 2배 / 받는 피해 2배");
         }
     }
 
-    /// <summary>380 군번줄 (Gunner) - 회피 1회 획득</summary>
+    /// <summary>280 군번줄 (Gunner) - 회피 1회 획득</summary>
     public class DogTagItem : ItemEffect
     {
         public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
         public override void OnItemUsed(ItemUseContext ctx)
         {
-            ctx.Combat.AddDodge(1);
+            ctx.Board.AddDodge(1);
             Debug.Log("[DogTagItem] 회피 1회 획득");
         }
     }
 
-    /// <summary>390 드라이아이스 (Mage) - 선택한 적 빙결 (1턴)</summary>
-    public class DryIceItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override bool NeedsTargetingMode => true;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            ctx.Combat.EnterItemEnemyTargetingMode(
-                enemy =>
-                {
-                    ctx.Combat.ApplyStatus(enemy, StatusEffectType.Freeze, 1);
-                    Debug.Log($"[DryIceItem] {enemy.Name} 빙결 1턴");
-                },
-                null, onCancel: null,
-                onConfirmedUse: ctx.OnConfirmedUse
-            );
-        }
-    }
 }

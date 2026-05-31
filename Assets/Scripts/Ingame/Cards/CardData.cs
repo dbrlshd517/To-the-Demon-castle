@@ -14,8 +14,10 @@ namespace DeckRoguelike.Cards
         public string description;
         public Sprite cardArt;
 
-        [Header("Cost")]
-        public int energyCost;
+        [Tooltip("카드 효과 전용 이미지 주소 (소멸배기 칼 등). 비어 있으면 Inspector 기본값 사용.\n" +
+                 "값에 '/'이 없으면 'Sprites/Combat/Player/{값}' 으로 해석.\n" +
+                 "예) Exhaustsknife → Sprites/Combat/Player/Exhaustsknife")]
+        public string imagePath;
 
         [Header("Effects")]
         [Tooltip("효과 목록. 각 효과는 자체 targeting/rangeOffsets를 가집니다.\n" +
@@ -24,6 +26,10 @@ namespace DeckRoguelike.Cards
 
         [Header("Keywords")]
         public CardKeyword keywords;
+
+        [Header("Icon")]
+        [Tooltip("카드 아이콘 코드. 보상카드의 경우 유물/아이템 코드, 일반카드는 0(cardCode 사용)")]
+        [HideInInspector] public int iconCode;
 
         [Header("Audio/Visual")]
         public AudioClip playSFX;
@@ -37,20 +43,18 @@ namespace DeckRoguelike.Cards
         public string Description => description;
         public Sprite CardArt     => cardArt;
 
-        public int  EnergyCost   => energyCost;
-        public bool IsXCost      => energyCost < 0;
-
         public bool IsUnplayable => keywords.HasFlag(CardKeyword.Unplayable);
         public bool Exhaust      => keywords.HasFlag(CardKeyword.Exhausts);
         public bool Ethereal     => keywords.HasFlag(CardKeyword.Ethereal);
         public bool Innate       => keywords.HasFlag(CardKeyword.Innate);
         public bool Retain       => keywords.HasFlag(CardKeyword.Retain);
+        public bool NonRemovable => keywords.HasFlag(CardKeyword.NonRemovable);
 
         // ── cardCode 파싱 프로퍼티 ────────────────────────────
         // [구조] C T R N O
-        //   C(1): 클래스  1=중립 2=전사 3=거너 4=메이지
-        //   T(2): 타입    1=공격 2=이동 3=스킬 4=파워
-        //   R(3): 희귀도  1=일반 2=고급 3=희귀 4=전설
+        //   C(1): 클래스  1=공통 2=전사 3=거너 4=메이지
+        //   T(2): 타입    1=이동 2=액션 3=파워
+        //   R(3): 희귀도  1=일반 2=희귀 3=영웅 4=전설
         //   N(4): 번호
         //   O(5): 강화    짝수=강화전 홀수=강화후
 
@@ -68,16 +72,31 @@ namespace DeckRoguelike.Cards
             _ => CardRarity.Common,
         };
 
-        public CardType CardTypeFromCode => TypeDigit switch
-        {
-            1 => CardType.Attack,
-            2 => CardType.Move,
-            3 => CardType.Skill,
-            4 => CardType.Power,
-            _ => CardType.Status,
-        };
+        // 카드 분류 (ClassDigit):
+        //   1~4 : 전투 카드 — TypeDigit으로 Move/Action/Power 결정.
+        //   6,7 : 비전투 사용 카드 — CardType.None.
+        //         6xxxx = 보상/시스템 카드(골드/유물/아이템/카드보상/넘기기/휴식/강화/카드제거/전투재시작/메인메뉴).
+        //         7xxxx = 맵 이동, 강화 등.
+        //   8   : 사용 불가능 카드 — CardType.None.
+        //
+        // 비전투 카드를 None으로 두는 이유: combat type filter(`cardTypeRestrictions[Action/Move/Power]` 봉인,
+        // relic 트리거 "다음 X 카드", `OnCardPlayed`의 type 매칭으로 strength 가산, type별 카운트, "type X 카드 모두 버리기" 등)에
+        // 잘못 매칭되는 것을 원천 차단. 6/7 카드는 모두 자체 dispatch 경로(`HandleShopCardPlay`/`HandleRestCardPlay`/
+        // `HandleMapMoveCardPlay`/`ExecuteCard` for _rewardCards)로 실행되므로 generic type 기반 실행 흐름이 필요 없음.
+        // IsSelfPlayCard는 `PrimaryTargeting == TargetType.Self`로 여전히 true가 되므로 SelfPlay UI 흐름 유지됨.
+        public CardType CardTypeFromCode => (ClassDigit == 6 || ClassDigit == 7 || ClassDigit == 8)
+            ? CardType.None
+            : TypeDigit switch
+            {
+                1 => CardType.Move,
+                2 => CardType.Action,
+                3 => CardType.Power,
+                _ => CardType.Action,
+            };
 
-        public bool IsUpgraded   => cardCode % 2 == 1;
+        // 강화 여부는 정규 카드(ClassDigit 1~4)에만 적용. 보상/특수 템플릿(5xxxx, 6xxxx, 7xxxx, 8xxxx)은
+        // cardCode 마지막 자리가 강화 플래그가 아니므로 IsUpgraded가 항상 false 여야 한다.
+        public bool IsUpgraded   => ClassDigit >= 1 && ClassDigit <= 4 && cardCode % 2 == 1;
         public int  UpgradedCode => IsUpgraded ? cardCode : cardCode + 1;
 
         public bool BelongsToClass(DeckRoguelike.Core.CharacterType character)
@@ -104,20 +123,20 @@ namespace DeckRoguelike.Cards
         /// 설명 텍스트 내 플레이스홀더를 실제 수치로 치환
         /// {D} = 첫 번째 Damage 효과값 + strength
         /// {B} = 첫 번째 Block 효과값 + dexterity
-        /// {Draw} / {E} / {Heal} = 해당 타입 첫 번째 효과값
-        /// {X} = 현재 에너지
+        /// {Draw} / {Heal} = 해당 타입 첫 번째 효과값
         /// </summary>
-        public string GetFormattedDescription(int strength = 0, int dexterity = 0, int currentEnergy = 0)
-            => GetFormattedDescription(description, strength, dexterity, currentEnergy);
+        public string GetFormattedDescription(int strength = 0, int dexterity = 0)
+            => GetFormattedDescription(description, strength, dexterity);
 
-        public string GetFormattedDescription(string baseDesc, int strength = 0, int dexterity = 0, int currentEnergy = 0)
+        public string GetFormattedDescription(string baseDesc, int strength = 0, int dexterity = 0)
         {
             string desc = baseDesc.Replace("\\n", "\n");
 
-            if (Effects == null) return desc;
+            // {T} = 현재 Act 번호 (순간이동 카드 사용 가능 횟수)
+            if (desc.Contains("{T}"))
+                desc = desc.Replace("{T}", (DeckRoguelike.Core.GameManager.Instance?.CurrentAct ?? 1).ToString());
 
-            if (desc.Contains("{X}"))
-                desc = desc.Replace("{X}", currentEnergy.ToString());
+            if (Effects == null) return desc;
 
             foreach (var effect in Effects)
             {
@@ -127,27 +146,56 @@ namespace DeckRoguelike.Cards
                     EffectType.Damage => "{D}",
                     EffectType.Block  => "{B}",
                     EffectType.Draw   => "{Draw}",
-                    EffectType.Energy => "{E}",
                     EffectType.Heal   => "{Heal}",
                     _                 => null
                 };
 
-                // Custom 데미지 효과 (ID에 "damage" 포함): {D} 치환 + 힘 반영
-                bool isCustomDamage = key == null &&
+                // Shoot 공격 효과 (Shoot/Allrange_Shoot/6times_Shoot): {D} = value + ShootDamage + Strength
+                bool isShootAttack = key == null
+                    && DeckRoguelike.UI.BoardController.IsShootAttackEffect(effect);
+
+                // Custom 데미지 효과: ID에 "damage"가 포함되거나, "damage"가 없지만 {D}(피해)를 쓰는 알려진 효과(돌진/치킨게임 등).
+                // Shoot 공격은 별도 처리하므로 여기서 제외한다.
+                bool isCustomDamage = key == null && !isShootAttack &&
                     effect.effectType == EffectType.Custom &&
-                    effect.customEffectId != null &&
-                    effect.customEffectId.IndexOf("damage", System.StringComparison.OrdinalIgnoreCase) >= 0;
+                    !string.IsNullOrEmpty(effect.customEffectId) &&
+                    (effect.customEffectId.IndexOf("damage", System.StringComparison.OrdinalIgnoreCase) >= 0
+                     || IsKnownCustomDamageId(effect.customEffectId));
+
                 if (isCustomDamage) key = "{D}";
+                else if (isShootAttack) key = "{D}";
+
+                // 골드 보상 카드: {G}를 미리 결정된 골드량으로 치환
+                if (key == null &&
+                    effect.effectType == EffectType.Custom &&
+                    string.Equals(effect.customEffectId, "Reward_Gold", System.StringComparison.OrdinalIgnoreCase))
+                    key = "{G}";
 
                 if (key == null || !desc.Contains(key)) continue;
 
-                if (effect.effectType == EffectType.Damage || isCustomDamage) val += strength;
+                if (effect.effectType == EffectType.Damage || isCustomDamage)
+                    val = ApplyOutgoingMultiplierForDisplay(val + strength);
+                else if (isShootAttack)
+                    val = ApplyOutgoingMultiplierForDisplay(val + strength + DeckRoguelike.UI.BoardController.CurrentShootDamage);
                 else if (effect.effectType == EffectType.Block) val += dexterity;
 
                 desc = desc.Replace(key, val.ToString());
             }
 
             return desc;
+        }
+
+        /// <summary>customEffectId에 "damage" 문자열은 없지만 {D}(피해)를 사용하는 커스텀 데미지 효과 판별.</summary>
+        private static bool IsKnownCustomDamageId(string id) =>
+            id.Equals("pushEnmemy",       System.StringComparison.OrdinalIgnoreCase) ||  // 돌진
+            id.Equals("Whenkill_losehp",  System.StringComparison.OrdinalIgnoreCase) ||  // 치킨게임 (카드 에셋 ID)
+            id.Equals("Untilkill_losehp", System.StringComparison.OrdinalIgnoreCase);    // 치킨게임 (레지스트리 등록 ID)
+
+        /// <summary>표시용 {D} 값에 이번 턴 데미지 배율(23302 최후의 공격 등)을 반영합니다.</summary>
+        private static int ApplyOutgoingMultiplierForDisplay(int dmg)
+        {
+            float m = DeckRoguelike.UI.BoardController.CurrentOutgoingDamageMultiplier;
+            return m != 1f ? Mathf.RoundToInt(dmg * m) : dmg;
         }
 
         public CardData Clone()
@@ -165,6 +213,8 @@ namespace DeckRoguelike.Cards
     {
         public EffectType effectType;
         public int value;
+        [Tooltip("CSV value 토큰 원본 (예: \"6.20\"). 다중 값 핸들러가 '.'로 split하여 사용.")]
+        public string valueRaw;
 
         [Header("Targeting")]
         [Tooltip("이 효과의 타겟 방식\n" +
@@ -204,29 +254,31 @@ namespace DeckRoguelike.Cards
     [System.Flags]
     public enum CardKeyword
     {
-        None       = 0,
-        Unplayable = 1 << 0,  // 손에 있어도 사용 불가 (저주/상태이상 카드)
-        Exhausts   = 1 << 1,  // 사용 후 소멸
-        Ethereal   = 1 << 2,  // 버리면 소멸
-        Innate     = 1 << 3,  // 항상 첫 손패에 포함
-        Retain     = 1 << 4,  // 턴 넘겨도 유지
+        None         = 0,
+        Unplayable   = 1 << 0,  // 손에 있어도 사용 불가 (저주/상태이상 카드)
+        Exhausts     = 1 << 1,  // 사용 후 소멸
+        Ethereal     = 1 << 2,  // 버리면 소멸
+        Innate       = 1 << 3,  // 항상 첫 손패에 포함
+        Retain       = 1 << 4,  // 턴 넘겨도 유지
+        NonRemovable = 1 << 5,  // 덱에서 제거할 수 없음 (저주 카드 등)
+        Shoot        = 1 << 6,  // (구) 발사형 카드 식별 키워드. 현재는 customEffectId 기반(BoardController.IsShootAttackEffect)으로 판별. 직렬화 호환을 위해 유지.
     }
 
     public enum CardType
     {
-        Attack,  // 공격 카드 (빨간색)   코드 2자리: 0/1
-        Move,    // 이동 카드 (초록색)   코드 2자리: 2/3
-        Skill,   // 스킬 카드 (파란색)   코드 2자리: 4/5
-        Power,   // 파워 카드 (노란색)   코드 2자리: 6/7
-        Status,  // 예비/상태이상 (회색) 코드 2자리: 8/9
+        Action,  // 액션 카드 (빨간색)   코드 T자리: 2
+        Move,    // 이동 카드 (초록색)   코드 T자리: 1
+        Power,   // 파워 카드 (노란색)   코드 T자리: 3
+        Status,  // 상태이상 (회색)
         Curse,   // 저주 카드 (검은색)   직접 지정
+        None,    // 타입 없음 — 전투 중에 사용되지 않는 시스템/맵 카드 (예: 70xxx 맵 이동). cardTypeRestrictions에 영향받지 않음.
     }
 
     public enum CardRarity
     {
         Common,    // 일반  코드 3자리: 0~2
-        Uncommon,  // 고급  코드 3자리: 3~5
-        Rare,      // 희귀  코드 3자리: 6~8
+        Uncommon,  // 희귀  코드 3자리: 3~5  (표시명: 희귀)
+        Rare,      // 영웅  코드 3자리: 6~8  (표시명: 영웅)
         Legendary  // 전설  코드 3자리: 9
     }
 
@@ -242,14 +294,15 @@ namespace DeckRoguelike.Cards
 
     public enum EffectType
     {
-        Damage,      // 적에게 피해
-        Block,       // 방어도 획득
-        Draw,        // 카드 드로우
-        Energy,      // 에너지 획득
-        Heal,        // 체력 회복
-        Move,        // 플레이어 이동
-        SummonAlly,  // 지정 위치에 아군 유닛 소환
-        Custom,      // CustomEffectRegistry에 등록된 커스텀 함수 호출
+        Damage   = 0, // 적에게 피해
+        Block    = 1, // 방어도 획득
+        Draw     = 2, // 카드 드로우
+        Heal     = 3, // 체력 회복
+        Move     = 4, // 플레이어 이동
+        // 5 = (구) SummonAlly — 직렬화 호환을 위해 자리 비움. 이제 Custom + customEffectId="summon_{code}" 로 처리.
+        Custom   = 6, // CustomEffectRegistry에 등록된 커스텀 함수 호출 (summon_{allyCode} 포함)
+        Exhausts = 7, // 손패에서 카드를 직접 선택해 소멸 (value = 최대 선택 수)
+        Discard  = 8, // 손패에서 카드를 직접 선택해 버리기 (value = 최대 선택 수)
     }
 
     #endregion

@@ -9,15 +9,11 @@ using DeckRoguelike.Combat;
 /// 메뉴: Tools > Enemy Data > Import Encounters from CSV
 ///
 /// [encounterCode 5자리 구조]  D A N X X
-///   D (1자리) : 게임 난이도   1=easy  2=normal  3=hard  4=hell
+///   D (1자리) : 게임 난이도  1=normal  2=hard  3=hell
 ///   A (2자리) : 액트 번호     1~9
 ///   N (3자리) : 액트 내 난이도  1~8=일반  9=보스
 ///   XX(4-5자리): 개별 번호    00~99
-///
-///   예) 11100 = easy / 액트1 / 난이도1 / 00번
-///       11900 = easy / 액트1 / 보스    / 00번
-///       21200 = normal / 액트1 / 난이도2 / 00번
-///
+
 ///   ※ 액트 난이도: 전투 2회 클리어마다 +1 (1부터 시작), 다음 액트 진입 시 초기화
 ///   ※ type은 코드에서 자동 추론됨 (N자리 9 = Boss, 나머지 = Normal)
 ///
@@ -58,9 +54,12 @@ public class EnemyEncounterImporter : EditorWindow
         EditorGUILayout.Space();
 
         EditorGUILayout.HelpBox(
-            "enemies 포맷: enemyCode:col.row / enemyCode:col.row\n" +
-            "예) 10100:1.0/10200:2.1  →  코드 10100은 (col=1,row=0), 10200은 (col=2,row=1)\n" +
-            "EnemyData 에셋을 먼저 임포트해야 참조가 연결됩니다.",
+            "enemies 포맷:\n" +
+            "  랜덤: 11000:3.random:3 → 11000 유닛 3개, 플레이어 맨해튼 거리 3 이내\n" +
+            "  고정: 11000:2.1 → 11000 유닛 1개, (col=2,row=1)\n" +
+            "  반대편: 11000:3.opposite:1.2.3 → 11000 유닛 3개를 1/2/3번 셀에 배치.\n" +
+            "          번호는 플레이어 사분면 반대 코너에서 시작해 행→열 순(플레이어 쪽으로) 1~N.\n" +
+            "여러 그룹은 / 로 구분. EnemyData 에셋을 먼저 임포트해야 참조가 연결됩니다.",
             MessageType.Info);
 
         EditorGUILayout.Space();
@@ -97,10 +96,10 @@ public class EnemyEncounterImporter : EditorWindow
     {
         var sb = new System.Text.StringBuilder();
         sb.AppendLine("encounterCode,encounterName,enemies");
-        sb.AppendLine("11100,슬라임 무리,10100:1.0/10100:2.0/10100:3.0");
-        sb.AppendLine("11200,해골 군단,10200:1.0/10200:3.0");
-        sb.AppendLine("11800,석상의 시험,10300:2.0");
-        sb.AppendLine("11900,악마 군주,10400:2.0");
+        sb.AppendLine("11100,슬라임 무리,10100:3.random:3");
+        sb.AppendLine("11200,해골 군단,10200:2.random:3");
+        sb.AppendLine("11800,석상의 시험,10300:1.random:3");
+        sb.AppendLine("11900,악마 군주,10400:1.random:3");
 
         File.WriteAllText(DefaultTemplatePath, sb.ToString(), new System.Text.UTF8Encoding(true));
         AssetDatabase.Refresh();
@@ -118,6 +117,10 @@ public class EnemyEncounterImporter : EditorWindow
             return;
         }
 
+        // 임포트 직전에 AssetDatabase를 강제로 갱신 — 외부에서 새로 추가된 EnemyData .asset 파일이
+        // 아직 AssetDatabase에 등록되지 않아 LoadAssetAtPath가 null을 반환하는 사고를 막는다.
+        AssetDatabase.Refresh();
+
         EnsureFolderExists(outputFolder);
 
         string[] headers = ParseLine(lines[0]);
@@ -125,7 +128,39 @@ public class EnemyEncounterImporter : EditorWindow
         for (int i = 0; i < headers.Length; i++)
             col[headers[i].Trim()] = i;
 
-        int created = 0, updated = 0, skipped = 0, missingEnemy = 0;
+        // 기존 에셋 중 CSV에 없는 것 삭제를 위해 코드 수집
+        var validCodes = new HashSet<string>();
+        for (int row = 1; row < lines.Length; row++)
+        {
+            if (string.IsNullOrWhiteSpace(lines[row])) continue;
+            string[] tmp = ParseLine(lines[row]);
+            string code = GetField(tmp, col, "encounterCode");
+            if (!string.IsNullOrEmpty(code)) validCodes.Add(code);
+        }
+
+        // CSV에 없는 기존 에셋 삭제
+        int deleted = 0;
+        string[] existingAssets = Directory.GetFiles(outputFolder, "*.asset");
+        foreach (string path in existingAssets)
+        {
+            string fileName = Path.GetFileNameWithoutExtension(path);
+            if (!validCodes.Contains(fileName))
+            {
+                string assetPath = path.Replace("\\", "/");
+                AssetDatabase.DeleteAsset(assetPath);
+                deleted++;
+                Debug.Log($"[EnemyEncounterImporter] CSV에 없는 에셋 삭제: {fileName}");
+            }
+        }
+
+        int created = 0, updated = 0, skipped = 0, missingEnemy = 0, outOfBounds = 0;
+
+        // 씬에서 boardCols/boardRows 자동 추출 — 못 찾으면 검증 생략
+        bool hasBoardSize = TryLoadBoardSize(out int boardCols, out int boardRows, out string sceneSource);
+        if (hasBoardSize)
+            Debug.Log($"[EnemyEncounterImporter] 보드 크기 자동 감지: {boardCols} x {boardRows} (출처: {sceneSource})");
+        else
+            Debug.LogWarning("[EnemyEncounterImporter] 씬에서 boardCols/boardRows를 찾지 못해 좌표 범위 검증을 건너뜁니다.");
 
         for (int row = 1; row < lines.Length; row++)
         {
@@ -149,7 +184,7 @@ public class EnemyEncounterImporter : EditorWindow
 
             // enemies: "enemyCode:col.row / enemyCode:col.row"
             string enemiesRaw = GetField(f, col, "enemies");
-            var slots = ParseEnemySlots(enemiesRaw, ref missingEnemy);
+            var slots = ParseEnemySlots(enemiesRaw, code, hasBoardSize, boardCols, boardRows, ref missingEnemy, ref outOfBounds);
             enc.enemies = slots;
 
             if (isNew) { AssetDatabase.CreateAsset(enc, assetPath); created++; }
@@ -159,49 +194,192 @@ public class EnemyEncounterImporter : EditorWindow
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
 
-        string msg = $"생성: {created}개\n업데이트: {updated}개\n건너뜀: {skipped}개";
+        string msg = $"생성: {created}개\n업데이트: {updated}개\n삭제: {deleted}개\n건너뜀: {skipped}개";
         if (missingEnemy > 0)
             msg += $"\n\n경고: EnemyData 못 찾음 {missingEnemy}개 (Console 확인)";
+        if (outOfBounds > 0)
+            msg += $"\n경고: 보드 범위 밖 고정 좌표 {outOfBounds}개 (Console 확인)";
         EditorUtility.DisplayDialog("임포트 완료", msg, "확인");
         Debug.Log($"[EnemyEncounterImporter] {msg}");
     }
 
     /// <summary>
-    /// "enemyCode:col.row/enemyCode:col.row" 파싱 -> EnemySlot[]
-    /// col.row 에서 마지막 '.' 기준으로 col / row 분리 (음수 row 지원)
+    /// Assets/Scenes 의 .unity 파일에서 BoardController의 boardCols/boardRows를 찾아 반환.
+    /// 여러 씬에 있을 수 있으므로 첫 번째 매칭을 사용하며, 우선순위로 Ingame.unity가 있으면 그것을 사용.
     /// </summary>
-    private static EnemySlot[] ParseEnemySlots(string raw, ref int missingCount)
+    private static bool TryLoadBoardSize(out int boardCols, out int boardRows, out string sceneSource)
+    {
+        boardCols = 0;
+        boardRows = 0;
+        sceneSource = null;
+
+        const string ScenesFolder = "Assets/Scenes";
+        if (!Directory.Exists(ScenesFolder)) return false;
+
+        var scenePaths = new List<string>(Directory.GetFiles(ScenesFolder, "*.unity", SearchOption.AllDirectories));
+        // Ingame.unity 우선
+        scenePaths.Sort((a, b) =>
+        {
+            bool aIngame = Path.GetFileName(a).Equals("Ingame.unity", System.StringComparison.OrdinalIgnoreCase);
+            bool bIngame = Path.GetFileName(b).Equals("Ingame.unity", System.StringComparison.OrdinalIgnoreCase);
+            if (aIngame && !bIngame) return -1;
+            if (!aIngame && bIngame) return 1;
+            return string.Compare(a, b, System.StringComparison.OrdinalIgnoreCase);
+        });
+
+        var colsRegex = new System.Text.RegularExpressions.Regex(@"^\s*boardCols:\s*(\d+)\s*$", System.Text.RegularExpressions.RegexOptions.Multiline);
+        var rowsRegex = new System.Text.RegularExpressions.Regex(@"^\s*boardRows:\s*(\d+)\s*$", System.Text.RegularExpressions.RegexOptions.Multiline);
+
+        foreach (string path in scenePaths)
+        {
+            string text;
+            try { text = File.ReadAllText(path); }
+            catch { continue; }
+
+            var colMatch = colsRegex.Match(text);
+            var rowMatch = rowsRegex.Match(text);
+            if (!colMatch.Success || !rowMatch.Success) continue;
+
+            if (int.TryParse(colMatch.Groups[1].Value, out int c) &&
+                int.TryParse(rowMatch.Groups[1].Value, out int r) &&
+                c > 0 && r > 0)
+            {
+                boardCols = c;
+                boardRows = r;
+                sceneSource = path.Replace("\\", "/");
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// enemies 파싱 -> EnemySlot[]
+    /// 랜덤: 11000:3.random:3 → 11000 유닛 3개, 플레이어 맨해튼 거리 3 이내
+    /// 고정: 11000:2.1 → 11000 유닛 1개, (col=2, row=1)
+    /// 여러 그룹은 / 로 구분
+    /// boardCols/boardRows가 주어지면 고정 좌표가 범위 밖일 때 경고를 찍는다.
+    /// </summary>
+    private static EnemySlot[] ParseEnemySlots(
+        string raw,
+        string encounterCode,
+        bool hasBoardSize,
+        int boardCols,
+        int boardRows,
+        ref int missingCount,
+        ref int outOfBoundsCount)
     {
         var list = new List<EnemySlot>();
         if (string.IsNullOrEmpty(raw)) return list.ToArray();
+
+        // CSV 엔트리(예: "11901:5.random:3")마다 1, 2, 3 ... 증가하는 그룹 ID 부여.
+        // 같은 엔트리에서 펼쳐진 슬롯은 모두 같은 spawnGroupId — SnakeBehavior 등이
+        // "한 번의 소환 호출 = 한 그룹"으로 묶는 근거로 사용.
+        int groupId = 0;
 
         foreach (var entry in raw.Split('/'))
         {
             string trimmed = entry.Trim();
             if (string.IsNullOrEmpty(trimmed)) continue;
 
-            // enemyCode:col.row
-            int colonIdx = trimmed.IndexOf(':');
-            if (colonIdx < 0) continue;
+            int firstColon = trimmed.IndexOf(':');
+            if (firstColon < 0) continue;
 
-            string enemyCodeStr = trimmed.Substring(0, colonIdx).Trim();
-            string posStr       = trimmed.Substring(colonIdx + 1).Trim();
-
-            // col.row 분리
-            int dotIdx = posStr.LastIndexOf('.');
-            if (dotIdx <= 0) continue;
-            int slotCol = ParseInt(posStr.Substring(0, dotIdx), 0);
-            int slotRow = ParseInt(posStr.Substring(dotIdx + 1), 0);
+            string enemyCodeStr = trimmed.Substring(0, firstColon).Trim();
+            string rest = trimmed.Substring(firstColon + 1).Trim();
 
             string enemyAssetPath = $"{EnemyAssetFolder}/{enemyCodeStr}.asset";
             EnemyData enemyData = AssetDatabase.LoadAssetAtPath<EnemyData>(enemyAssetPath);
             if (enemyData == null)
             {
-                Debug.LogWarning($"[EnemyEncounterImporter] EnemyData 없음: {enemyAssetPath}");
+                Debug.LogWarning(
+                    $"[EnemyEncounterImporter] 인카운터 {encounterCode}: EnemyData 없음 → {enemyAssetPath}. " +
+                    $"EnemyData CSV를 먼저 임포트했는지 확인하세요 (Tools > Enemy Data > Import from CSV).");
                 missingCount++;
             }
+            else if (enemyData.enemyId.ToString() != enemyCodeStr)
+            {
+                // 파일명과 내부 enemyId 불일치 — 잘못 복사된 에셋이거나 AssetDatabase 캐시 문제일 수 있음
+                Debug.LogWarning(
+                    $"[EnemyEncounterImporter] 인카운터 {encounterCode}: {enemyAssetPath} 의 내부 enemyId({enemyData.enemyId})가 " +
+                    $"파일명({enemyCodeStr})과 다릅니다. EnemyData 임포트를 다시 실행해 동기화하세요.");
+            }
 
-            list.Add(new EnemySlot { enemyData = enemyData, col = slotCol, row = slotRow });
+            int dotIdx = rest.IndexOf('.');
+            if (dotIdx < 0) continue;
+
+            string beforeDot = rest.Substring(0, dotIdx);
+            string afterDot = rest.Substring(dotIdx + 1);
+
+            groupId++;
+
+            if (afterDot.StartsWith("random:"))
+            {
+                int count = ParseInt(beforeDot, 1);
+                int range = ParseInt(afterDot.Substring(7), 3);
+                for (int i = 0; i < count; i++)
+                    list.Add(new EnemySlot
+                    {
+                        enemyData = enemyData,
+                        placementType = PlacementType.Random,
+                        placementRange = range,
+                        spawnGroupId = groupId,
+                    });
+            }
+            else if (afterDot.StartsWith("opposite:"))
+            {
+                int count = ParseInt(beforeDot, 1);
+                string posListRaw = afterDot.Substring(9);
+                var posTokens = posListRaw.Split('.');
+                var positions = new List<int>(posTokens.Length);
+                foreach (var t in posTokens)
+                {
+                    string trimmedTok = t.Trim();
+                    if (string.IsNullOrEmpty(trimmedTok)) continue;
+                    positions.Add(ParseInt(trimmedTok, 0));
+                }
+
+                if (positions.Count != count)
+                {
+                    Debug.LogWarning(
+                        $"[EnemyEncounterImporter] 인카운터 {encounterCode}: opposite 개수({count})와 " +
+                        $"위치 수({positions.Count})가 다릅니다. 위치 수에 맞춰 생성합니다.");
+                }
+
+                foreach (int p in positions)
+                {
+                    list.Add(new EnemySlot
+                    {
+                        enemyData = enemyData,
+                        placementType = PlacementType.Opposite,
+                        oppositePosition = p,
+                        spawnGroupId = groupId,
+                    });
+                }
+            }
+            else
+            {
+                int slotCol = ParseInt(beforeDot, 0);
+                int slotRow = ParseInt(afterDot, 0);
+
+                if (hasBoardSize &&
+                    (slotCol < 0 || slotCol >= boardCols || slotRow < 0 || slotRow >= boardRows))
+                {
+                    Debug.LogWarning(
+                        $"[EnemyEncounterImporter] 인카운터 {encounterCode}: 고정 좌표 ({slotCol},{slotRow}) " +
+                        $"가 보드 범위 (0..{boardCols - 1}, 0..{boardRows - 1}) 밖입니다 — 런타임에 -1로 처리되어 적이 생성되지 않습니다.");
+                    outOfBoundsCount++;
+                }
+
+                list.Add(new EnemySlot
+                {
+                    enemyData = enemyData,
+                    placementType = PlacementType.Fixed,
+                    col = slotCol,
+                    row = slotRow,
+                    spawnGroupId = groupId,
+                });
+            }
         }
         return list.ToArray();
     }
