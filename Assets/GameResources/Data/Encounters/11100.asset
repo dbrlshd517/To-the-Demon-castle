@@ -16,21 +16,21 @@ MonoBehaviour:
   encounterName: "\uC2AC\uB77C\uC784 \uBB34\uB9AC"
   encounterType: 0
   enemies:
-  - enemyData: {fileID: 11400000, guid: 413abfd03f4c56443ab5ad5eb065e45d, type: 2}
+  - enemyData: {fileID: 11400000, guid: d817e7c460374df4aba9f17725d31e70, type: 2}
     placementType: 2
     col: 0
     row: 0
     placementRange: 0
     oppositePosition: 2
     spawnGroupId: 1
-  - enemyData: {fileID: 11400000, guid: 413abfd03f4c56443ab5ad5eb065e45d, type: 2}
+  - enemyData: {fileID: 11400000, guid: d817e7c460374df4aba9f17725d31e70, type: 2}
     placementType: 2
     col: 0
     row: 0
     placementRange: 0
     oppositePosition: 5
     spawnGroupId: 1
-  - enemyData: {fileID: 11400000, guid: 413abfd03f4c56443ab5ad5eb065e45d, type: 2}
+  - enemyData: {fileID: 11400000, guid: d817e7c460374df4aba9f17725d31e70, type: 2}
     placementType: 2
     col: 0
     row: 0

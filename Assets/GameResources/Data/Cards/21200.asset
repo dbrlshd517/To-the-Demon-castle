@@ -13,16 +13,15 @@ MonoBehaviour:
   m_Name: 21200
   m_EditorClassIdentifier: Assembly-CSharp::DeckRoguelike.Cards.CardData
   cardCode: 21200
-  cardName: "\uB3CC\uC9C4"
-  description: "\uC774\uB3D9\uD569\uB2C8\uB2E4.\n\uC774\uB3D9\uBC29\uD5A5\uC73C\uB85C
-    \uC801\uC744\n\uBC00\uCE58\uACE0 {D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+  cardName: "\uB1CC\uC9C4\uD0D5"
+  description: "{D} \uD53C\uD574\uB97C \uC8FC\uACE0\n\uAE30\uC808\uC744 1 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
   cardArt: {fileID: 0}
   imagePath: 
   effects:
-  - effectType: 6
+  - effectType: 0
     value: 6
     valueRaw: 6
-    targeting: 6
+    targeting: 5
     rangeOffsets:
     - col: -1
       row: 0
@@ -33,8 +32,8 @@ MonoBehaviour:
     - col: 1
       row: 0
     useAbsoluteCoords: 0
-    customEffectId: pushEnmemy
-  keywords: 0
+    customEffectId: 
+  keywords: 2
   iconCode: 0
   playSFX: {fileID: 0}
   playVFX: {fileID: 0}

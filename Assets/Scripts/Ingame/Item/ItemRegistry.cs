@@ -26,13 +26,14 @@ namespace DeckRoguelike.Item
             }
         }
 
-        /// <summary>보스 아이템(9xx) 또는 일반 아이템 목록을 반환합니다.</summary>
+        /// <summary>보스 아이템(9xx) 또는 일반 아이템 목록을 반환합니다.
+        /// 7xx 미사용 아이템(IsUnused)은 풀에서 제외됩니다.</summary>
         public static List<ItemData> GetByType(bool bossItem)
         {
             EnsureLoaded();
             var result = new List<ItemData>();
             foreach (var item in items)
-                if (item != null && item.IsBossItem == bossItem)
+                if (item != null && item.IsBossItem == bossItem && !item.IsUnused)
                     result.Add(item);
             return result;
         }
@@ -40,13 +41,14 @@ namespace DeckRoguelike.Item
         /// <summary>
         /// 지정한 캐릭터가 획득할 수 있는 일반/보스 아이템 목록을 반환합니다.
         /// 캐릭터 전용 아이템(십의 자리 7/8/9)은 해당 캐릭터만, 공용 아이템은 모두 포함됩니다.
+        /// 7xx 미사용 아이템(IsUnused)은 제외됩니다.
         /// </summary>
         public static List<ItemData> GetForCharacter(CharacterType character, bool bossItem = false)
         {
             EnsureLoaded();
             var result = new List<ItemData>();
             foreach (var item in items)
-                if (item != null && item.IsBossItem == bossItem && item.IsForCharacter(character))
+                if (item != null && item.IsBossItem == bossItem && !item.IsUnused && item.IsForCharacter(character))
                     result.Add(item);
             return result;
         }
@@ -61,11 +63,16 @@ namespace DeckRoguelike.Item
             return null;
         }
 
-        /// <summary>등록된 모든 ItemData 목록을 반환합니다.</summary>
+        /// <summary>등록된 모든 ItemData 목록을 반환합니다.
+        /// 7xx 미사용 아이템(IsUnused)은 도감 등 열거에서 제외됩니다.</summary>
         public static List<ItemData> GetAll()
         {
             EnsureLoaded();
-            return new List<ItemData>(items);
+            var result = new List<ItemData>();
+            foreach (var item in items)
+                if (item != null && !item.IsUnused)
+                    result.Add(item);
+            return result;
         }
 
         /// <summary>캐시를 초기화합니다 (에디터/테스트용).</summary>

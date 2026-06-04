@@ -1034,7 +1034,7 @@ MonoBehaviour:
     id: Bergerak
     it: Muoviti
     ja: "\u79FB\u52D5"
-    ko: "\uC601\uD63C\uBC30\uAE30"
+    ko: "\uADFC\uB825 \uAC15\uD654"
     pl: Move
     ru: Move
     sr: Move
@@ -1058,7 +1058,7 @@ MonoBehaviour:
     id: Bergerak+
     it: Muoviti+
     ja: "\u79FB\u52D5+"
-    ko: "\uC601\uD63C\uBC30\uAE30+"
+    ko: "\uADFC\uB825 \uAC15\uD654+"
     pl: Move+
     ru: Move+
     sr: Move+
@@ -1069,54 +1069,6 @@ MonoBehaviour:
     uk: Move+
     vi: Move+
     description: "\uC804\uC0AC \uAC15\uD654 \uC774\uB3D9 \uCE74\uB4DC"
-  - code: card_name_23100
-    en: Defend
-    pt_BR: Defender
-    zh_CN: "\u9632\u5FA1"
-    zh_TW: "\u9632\u79A6"
-    nl: Verdedigen
-    eo: Defendi
-    fi: Puolusta
-    fr: "D\xE9fendre"
-    de: Verteidigen
-    id: Bertahan
-    it: Difendi
-    ja: "\u30C7\u30A3\u30D5\u30A7\u30F3\u30C9"
-    ko: "\uADFC\uB825 \uAC15\uD654"
-    pl: Defend
-    ru: Defend
-    sr: Defend
-    sr_Latn: Defend
-    es: Defend
-    th: Defend
-    tr: Defend
-    uk: Defend
-    vi: Defend
-    description: "\uC804\uC0AC \uBC29\uC5B4 \uCE74\uB4DC"
-  - code: card_name_23101
-    en: Defend+
-    pt_BR: Defender+
-    zh_CN: "\u9632\u5FA1+"
-    zh_TW: "\u9632\u79A6+"
-    nl: Verdedigen+
-    eo: Defendi+
-    fi: Puolusta+
-    fr: "D\xE9fendre+"
-    de: Verteidigen+
-    id: Bertahan+
-    it: Difendi+
-    ja: "\u30C7\u30A3\u30D5\u30A7\u30F3\u30C9+"
-    ko: "\uADFC\uB825 \uAC15\uD654+"
-    pl: Defend+
-    ru: Defend+
-    sr: Defend+
-    sr_Latn: Defend+
-    es: Defend+
-    th: Defend+
-    tr: Defend+
-    uk: Defend+
-    vi: Defend+
-    description: "\uC804\uC0AC \uAC15\uD654 \uBC29\uC5B4 \uCE74\uB4DC"
   - code: card_name_31120
     en: Mighty Shot
     pt_BR: Tiro Poderoso
@@ -1130,7 +1082,7 @@ MonoBehaviour:
     id: Tembakan Kuat
     it: Colpo Potente
     ja: "\u5F37\u529B\u30B7\u30E7\u30C3\u30C8"
-    ko: "\uAC15\uD0C0"
+    ko: "\uACF0\uB36B"
     pl: Mighty Shot
     ru: Mighty Shot
     sr: Mighty Shot
@@ -1178,7 +1130,7 @@ MonoBehaviour:
     id: Granat
     it: Granata
     ja: "\u30B0\u30EC\u30CD\u30FC\u30C9"
-    ko: "\uC218\uB958\uD0C4"
+    ko: "\uC11D\uC591\uC774 \uC9C4\uB2E4"
     pl: Grenade
     ru: Grenade
     sr: Grenade
@@ -1189,78 +1141,6 @@ MonoBehaviour:
     uk: Grenade
     vi: Grenade
     description: "\uAC70\uB108 \uC218\uB958\uD0C4"
-  - code: card_name_33100
-    en: Defend
-    pt_BR: Defender
-    zh_CN: "\u9632\u5FA1"
-    zh_TW: "\u9632\u79A6"
-    nl: Verdedigen
-    eo: Defendi
-    fi: Puolusta
-    fr: "D\xE9fendre"
-    de: Verteidigen
-    id: Bertahan
-    it: Difendi
-    ja: "\u30C7\u30A3\u30D5\u30A7\u30F3\u30C9"
-    ko: "\uC815\uD655\uB3C4 \uD5A5\uC0C1"
-    pl: Defend
-    ru: Defend
-    sr: Defend
-    sr_Latn: Defend
-    es: Defend
-    th: Defend
-    tr: Defend
-    uk: Defend
-    vi: Defend
-    description: "\uAC70\uB108 \uBC29\uC5B4 \uCE74\uB4DC"
-  - code: card_name_33102
-    en: Rapid Fire
-    pt_BR: "Tiro R\xE1pido"
-    zh_CN: "\u901F\u5C04"
-    zh_TW: "\u901F\u5C04"
-    nl: Snel Vuur
-    eo: Rapida Pafado
-    fi: Nopeatuli
-    fr: Tir Rapide
-    de: Schnellfeuer
-    id: Tembak Cepat
-    it: Fuoco Rapido
-    ja: "\u901F\u5C04"
-    ko: "\uD0C4\uC18D \uC99D\uAC00"
-    pl: Rapid Fire
-    ru: Rapid Fire
-    sr: Rapid Fire
-    sr_Latn: Rapid Fire
-    es: Rapid Fire
-    th: Rapid Fire
-    tr: Rapid Fire
-    uk: Rapid Fire
-    vi: Rapid Fire
-    description: "\uAC70\uB108 \uB4DC\uB85C\uC6B0 \uCE74\uB4DC"
-  - code: card_name_33103
-    en: Recharge
-    pt_BR: Recarregar
-    zh_CN: "\u5145\u80FD"
-    zh_TW: "\u5145\u80FD"
-    nl: Opladen
-    eo: "Re\u015Dargi"
-    fi: Lataa
-    fr: Recharger
-    de: Aufladen
-    id: Isi Ulang
-    it: Ricarica
-    ja: "\u30EA\u30C1\u30E3\u30FC\u30B8"
-    ko: "\uD0C4\uC18D \uC99D\uAC00+"
-    pl: Recharge
-    ru: Recharge
-    sr: Recharge
-    sr_Latn: Recharge
-    es: Recharge
-    th: Recharge
-    tr: Recharge
-    uk: Recharge
-    vi: Recharge
-    description: "\uAC70\uB108 \uC5D0\uB108\uC9C0 \uD68C\uBCF5"
   - code: card_name_34100
     en: Strength Up
     pt_BR: "For\xE7a"
@@ -1346,7 +1226,7 @@ MonoBehaviour:
     id: Serangan
     it: Colpo
     ja: "\u30B9\u30C8\u30E9\u30A4\u30AF"
-    ko: "\uD0C0\uACA9"
+    ko: "\uD654\uC5FC\uAD6C"
     pl: Strike
     ru: Strike
     sr: Strike
@@ -1370,7 +1250,7 @@ MonoBehaviour:
     id: Serangan+
     it: Colpo+
     ja: "\u30B9\u30C8\u30E9\u30A4\u30AF+"
-    ko: "\uD0C0\uACA9+"
+    ko: "\uD654\uC5FC\uAD6C+"
     pl: Strike+
     ru: Strike+
     sr: Strike+
@@ -1381,54 +1261,6 @@ MonoBehaviour:
     uk: Strike+
     vi: Strike+
     description: "\uB9C8\uBC95\uC0AC \uAC15\uD654 \uACF5\uACA9"
-  - code: card_name_42100
-    en: Teleport
-    pt_BR: Teletransporte
-    zh_CN: "\u77AC\u95F4\u79FB\u52A8"
-    zh_TW: "\u77AC\u9593\u79FB\u52D5"
-    nl: Teleport
-    eo: Teleporto
-    fi: Teleportti
-    fr: "T\xE9l\xE9portation"
-    de: Teleport
-    id: Teleportasi
-    it: Teletrasporto
-    ja: "\u77AC\u9593\u79FB\u52D5"
-    ko: "\uD654\uC5FC\uAD6C"
-    pl: Teleport
-    ru: Teleport
-    sr: Teleport
-    sr_Latn: Teleport
-    es: Teleport
-    th: Teleport
-    tr: Teleport
-    uk: Teleport
-    vi: Teleport
-    description: "\uB9C8\uBC95\uC0AC \uC21C\uAC04\uC774\uB3D9 \uCE74\uB4DC"
-  - code: card_name_42101
-    en: Move+
-    pt_BR: Mover+
-    zh_CN: "\u79FB\u52A8+"
-    zh_TW: "\u79FB\u52D5+"
-    nl: Bewegen+
-    eo: Movi+
-    fi: Liiku+
-    fr: "D\xE9placer+"
-    de: Bewegen+
-    id: Bergerak+
-    it: Muoviti+
-    ja: "\u79FB\u52D5+"
-    ko: "\uD654\uC5FC\uAD6C+"
-    pl: Move+
-    ru: Move+
-    sr: Move+
-    sr_Latn: Move+
-    es: Move+
-    th: Move+
-    tr: Move+
-    uk: Move+
-    vi: Move+
-    description: "\uB9C8\uBC95\uC0AC \uAC15\uD654 \uC774\uB3D9"
   - code: card_name_43100
     en: Defend
     pt_BR: Defender
@@ -4699,7 +4531,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9:\uB098\uC774\uD2B8"
+    ko: "\uC18C\uB9E4\uCE58\uAE30"
     pl: 
     ru: 
     sr: 
@@ -4723,7 +4555,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    ko: "\uACE8\uB4DC\uB97C 20 \uC5BB\uC2B5\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 
@@ -4747,7 +4579,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9:\uD038"
+    ko: "\uC18C\uB9E4\uCE58\uAE30+"
     pl: 
     ru: 
     sr: 
@@ -4771,7 +4603,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    ko: "\uACE8\uB4DC\uB97C 40 \uC5BB\uC2B5\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 
@@ -4795,7 +4627,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9:\uBE44\uC20D"
+    ko: "\uCC44\uB825 \uD68C\uBCF5"
     pl: 
     ru: 
     sr: 
@@ -4819,7 +4651,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    ko: "\uCCB4\uB825\uC744 4 \uC5BB\uC2B5\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 
@@ -4843,7 +4675,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9:\uD038"
+    ko: "\uCC44\uB825 \uD68C\uBCF5+"
     pl: 
     ru: 
     sr: 
@@ -4867,7 +4699,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    ko: "\uCCB4\uB825\uC744 8 \uC5BB\uC2B5\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 
@@ -4891,488 +4723,6 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9:\uB8E9"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_11206
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_11207
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uB3D9:\uD038"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_11207
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_11208
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uB3D9:\uD0B9"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_11208
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_11209
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uB3D9:\uD038"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_11209
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_12200
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uB2E8\uAC80 \uB358\uC9C0\uAE30"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_12200
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD53C\uD574\uB97C {D} \uC90D\uB2C8\uB2E4.\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
-      \uBF51\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_12201
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uB2E8\uAC80 \uB358\uC9C0\uAE30+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_12201
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD53C\uD574\uB97C {D} \uC90D\uB2C8\uB2E4.\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
-      \uBF51\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_12202
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC18C\uB9E4\uCE58\uAE30"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_12202
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uACE8\uB4DC\uB97C 20 \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_12203
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC18C\uB9E4\uCE58\uAE30+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_12203
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uACE8\uB4DC\uB97C 40 \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_12204
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uCC44\uB825 \uD68C\uBCF5"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_12204
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uCCB4\uB825\uC744 4 \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_12205
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uCC44\uB825 \uD68C\uBCF5+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_12205
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uCCB4\uB825\uC744 8 \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_12206
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
     ko: "\uC601\uD63C\uC774 \uAE43\uB4E0 \uAC80"
     pl: 
     ru: 
@@ -5384,7 +4734,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_12206
+  - code: card_desc_11206
     en: 
     pt_BR: 
     zh_CN: 
@@ -5410,7 +4760,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_12207
+  - code: card_name_11207
     en: 
     pt_BR: 
     zh_CN: 
@@ -5434,7 +4784,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_12207
+  - code: card_desc_11207
     en: 
     pt_BR: 
     zh_CN: 
@@ -5450,198 +4800,6 @@ MonoBehaviour:
     ko: "\uD53C\uD574\uB97C {D} \uC90D\uB2C8\uB2E4.\n\uC801\uC744 \uCC98\uCE58\uD558\uBA74
       \uC774 \uCE74\uB4DC\uC758\n \uD53C\uD574\uB7C9\uC774 \uC601\uAD6C\uC801\uC73C\uB85C\n8
       \uB9CC\uD07C \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22000
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD0C0\uACA9"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22000
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22001
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD0C0\uACA9+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22001
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22002
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uB2E8\uAC80"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22002
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22003
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uB2E8\uAC80+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22003
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 
@@ -5761,7 +4919,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uB3CC\uC9C4"
+    ko: "\uB1CC\uC9C4\uD0D5"
     pl: 
     ru: 
     sr: 
@@ -5785,8 +4943,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4.\n\uC774\uB3D9\uBC29\uD5A5\uC73C\uB85C \uC801\uC744\n\uBC00\uCE58\uACE0
-      {D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    ko: "{D} \uD53C\uD574\uB97C \uC8FC\uACE0\n\uAE30\uC808\uC744 1 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 
@@ -5810,7 +4967,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uB3CC\uC9C4+"
+    ko: "\uB1CC\uC9C4\uD0D5+"
     pl: 
     ru: 
     sr: 
@@ -5834,8 +4991,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4.\n\uC774\uB3D9\uBC29\uD5A5\uC73C\uB85C \uC801\uC744\n\uBC00\uCE58\uACE0{D}
-      \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    ko: "{D} \uD53C\uD574\uB97C \uC8FC\uACE0\n\uAE30\uC808\uC744 1 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 
@@ -5859,7 +5015,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uBE44\uACA8\uCE58\uAE30"
+    ko: "\uCE58\uD0A8\uAC8C\uC784"
     pl: 
     ru: 
     sr: 
@@ -5883,8 +5039,9 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4.\n\uBAA8\uB4E0 \uBC94\uC704\uC5D0\n{D} \uD53C\uD574\uB97C
-      \uC90D\uB2C8\uB2E4."
+    ko: "\uCC44\uB8252\uC744 \uC783\uACE0\n\uCC44\uB825\uC774 \uAC00\uC7A5 \uB0AE\uC740\n\uC801\uC5D0\uAC8C
+      {D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uC801\uC774 \uCC98\uCE58\uB418\uBA74
+      \uBC18\uBCF5\uD569\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 
@@ -5908,7 +5065,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uBE44\uAEF4\uCE58\uAE30+"
+    ko: "\uCE58\uD0A8\uAC8C\uC784+"
     pl: 
     ru: 
     sr: 
@@ -5932,8 +5089,9 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4.\n\uBAA8\uB4E0 \uBC94\uC704\uC5D0\n{D} \uD53C\uD574\uB97C
-      \uC90D\uB2C8\uB2E4."
+    ko: "\uCC44\uB8252\uC744 \uC783\uACE0\n\uCC44\uB825\uC774 \uAC00\uC7A5 \uB0AE\uC740\n\uC801\uC5D0\uAC8C
+      {D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uC801\uC774 \uCC98\uCE58\uB418\uBA74
+      \uBC18\uBCF5\uD569\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 
@@ -5957,1316 +5115,6 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uBCBD\uB825\uC77C\uC12C"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_21302
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC801\uC758 \uB4A4\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_21303
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBCBD\uB825\uC77C\uC12C+."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_21303
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC801\uC758 \uB4A4\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22100
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22101
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22104
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uC911 \uD0C0\uACA9"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22104
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD53C\uD574\uB97C {D}\uB9CC\uD07C 2\uBC88\n\uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22105
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uC911 \uD0C0\uACA9+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22105
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD53C\uD574\uB97C {D}\uB9CC\uD07C 2\uBC88\n\uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22106
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD608\uB958"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22106
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uCC44\uB825\uC744 2 \uC783\uC2B5\uB2C8\uB2E4.\n{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22107
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD608\uB958+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22107
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uCC44\uB825\uC744 2 \uC783\uC2B5\uB2C8\uB2E4.\n{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22108
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD729\uC4F8\uAE30"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22108
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC120\uD0DD\uD55C \uBC94\uC704\uC5D0\n{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22109
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD729\uC4F8\uAE30+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22109
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC120\uD0DD\uD55C \uBC94\uC704\uC5D0\n{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22200
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uB1CC\uC9C4\uD0D5"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22200
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC8FC\uACE0\n\uAE30\uC808\uC744 1 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22201
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uB1CC\uC9C4\uD0D5+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22201
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC8FC\uACE0\n\uAE30\uC808\uC744 1 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22202
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD3FC\uB9EC\uD0C0\uACA9"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22202
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
-      \uBF51\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22203
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD3FC\uBC00\uD0C0\uACA9+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22203
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
-      \uBF51\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22204
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC5F0\uC18D\uBC30\uAE30"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22204
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD53C\uD574\uB97C {D}\uB9CC\uD07C 4\uBC88\n\uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22205
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC5F0\uC18D\uBC30\uAE30+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22205
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD53C\uD574\uB97C {D}\uB9CC\uD07C 4\uBC88\n\uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22206
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC219\uBA85"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22206
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uC801\uC774 \uCC98\uCE58\uB418\uBA74\n\uADF8
-      \uC704\uCE58\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22207
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC219\uBA85+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22207
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uC801\uC774 \uCC98\uCE58\uB418\uBA74\n\uADF8
-      \uC704\uCE58\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22208
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD53C\uACF5\uACA9"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22208
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uCC44\uB825\uC744 2 \uC783\uC2B5\uB2C8\uB2E4\n\uBAA8\uB4E0 \uBC94\uC704\uC5D0\n{D}
-      \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22209
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD53C\uACF5\uACA9+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22209
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uCC44\uB825\uC744 2 \uC783\uC2B5\uB2C8\uB2E4\n\uBAA8\uB4E0 \uBC94\uC704\uC5D0\n{D}
-      \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22210
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uACE0\uAE30 \uAC08\uACE0\uB9AC"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22210
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC801\uC744 \uC790\uC2E0\uC758 \uC55E\uC73C\uB85C\n\uB04C\uC5B4\uB2F9\uAE30\uACE0
-      {D} \uD53C\uD574\uB97C\n\uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22211
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uACE0\uAE30 \uAC08\uACE0\uB9AC+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22211
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC801\uC744 \uC790\uC2E0\uC758 \uC55E\uC73C\uB85C\n\uB04C\uC5B4\uB2F9\uAE30\uACE0
-      {D} \uD53C\uD574\uB97C\n\uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22212
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uADFC\uB825 \uAC15\uD654"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22212
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uBC88 \uD134\uC5D0 \uC0AC\uC6A9\uB418\uB294\n\uB2E4\uC74C \uC561\uC158\uCE74\uB4DC\uB97C\n\uD55C\uC7A5
-      \uBCF5\uC0AC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22213
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uADFC\uB825 \uAC15\uD654+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22213
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uBC88 \uD134\uC5D0 \uC0AC\uC6A9\uB418\uB294\n\uB2E4\uC74C \uC561\uC158\uCE74\uB4DC\uB97C\n\uB450\uC7A5
-      \uBCF5\uC0AC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22214
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBB34\uAE30 \uC0C1\uC790"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22214
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBB34\uC791\uC704 \uC561\uC158\uCE74\uB4DC\uB97C\n\uD55C\uC7A5 \uC0DD\uC131\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22215
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBB34\uAE30 \uC0C1\uC790+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22215
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBB34\uC791\uC704 \uC561\uC158\uCE74\uB4DC\uB97C\n\uB450\uC7A5 \uC0DD\uC131\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22300
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uCE58\uD0A8\uAC8C\uC784"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22300
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uCC44\uB8252\uC744 \uC783\uACE0\n\uCC44\uB825\uC774 \uAC00\uC7A5 \uB0AE\uC740\n\uC801\uC5D0\uAC8C
-      {D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uC801\uC774 \uCC98\uCE58\uB418\uBA74
-      \uBC18\uBCF5\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22301
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uCE58\uD0A8\uAC8C\uC784+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22301
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uCC44\uB8252\uC744 \uC783\uACE0\n\uCC44\uB825\uC774 \uAC00\uC7A5 \uB0AE\uC740\n\uC801\uC5D0\uAC8C
-      {D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uC801\uC774 \uCC98\uCE58\uB418\uBA74
-      \uBC18\uBCF5\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22302
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
     ko: "\uAC80\uC758 \uC648\uCE20"
     pl: 
     ru: 
@@ -7278,7 +5126,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_22302
+  - code: card_desc_21302
     en: 
     pt_BR: 
     zh_CN: 
@@ -7303,7 +5151,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_22303
+  - code: card_name_21303
     en: 
     pt_BR: 
     zh_CN: 
@@ -7327,7 +5175,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_22303
+  - code: card_desc_21303
     en: 
     pt_BR: 
     zh_CN: 
@@ -7352,202 +5200,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23304
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uAD11\uD3ED\uD654"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_23304
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uB0B4 \uD134 \uC2DC\uC791 \uC2DC\n \uD798\uC744 2 \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_23305
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uAD11\uD3ED\uD654"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_23305
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uB0B4 \uD134 \uC2DC\uC791 \uC2DC\n \uD798\uC744 4 \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22306
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC29\uC5B4\uD0DC\uC138"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22306
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uBC88 \uD134\uB3D9\uC548 \uC801\uC758\n\uBAA8\uB4E0 \uACF5\uACA9\uC744
-      \uBC18\uC0AC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_22307
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC29\uC5B4\uD0DC\uC138+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_22307
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC774\uBC88 \uD134\uB3D9\uC548 \uC801\uC758\n\uBAA8\uB4E0 \uACF5\uACA9\uC744
-      \uBC18\uC0AC\uD569\uB2C8\uB2E4.\n\uBC18\uC0AC\uB41C \uACF5\uACA9\uC740\n2 \uBC30\uC758
-      \uB370\uBBF8\uC9C0\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_23100
+  - code: card_desc_22100
     en: 
     pt_BR: 
     zh_CN: 
@@ -7571,7 +5224,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23101
+  - code: card_desc_22101
     en: 
     pt_BR: 
     zh_CN: 
@@ -7595,105 +5248,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23102
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uADFC\uB825 \uAC15\uD654"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_23102
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD798\uC744 6 \uC5BB\uC2B5\uB2C8\uB2E4.\n\uC774\uBC88 \uD134\uC774 \uB05D\uB0A0\uB54C\n\uD798\uC744
-      6 \uC783\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_23103
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uADFC\uB825 \uAC15\uD654+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_23103
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD798\uC744 12 \uC5BB\uC2B5\uB2C8\uB2E4.\n\uC774\uBC88 \uD134\uC774 \uB05D\uB0A0\uB54C\n\uD798\uC744
-      12 \uC783\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_23104
+  - code: card_name_22104
     en: 
     pt_BR: 
     zh_CN: 
@@ -7717,7 +5272,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23104
+  - code: card_desc_22104
     en: 
     pt_BR: 
     zh_CN: 
@@ -7742,7 +5297,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23105
+  - code: card_name_22105
     en: 
     pt_BR: 
     zh_CN: 
@@ -7766,7 +5321,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23105
+  - code: card_desc_22105
     en: 
     pt_BR: 
     zh_CN: 
@@ -7791,7 +5346,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23106
+  - code: card_name_22106
     en: 
     pt_BR: 
     zh_CN: 
@@ -7815,7 +5370,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23106
+  - code: card_desc_22106
     en: 
     pt_BR: 
     zh_CN: 
@@ -7839,7 +5394,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23107
+  - code: card_name_22107
     en: 
     pt_BR: 
     zh_CN: 
@@ -7863,7 +5418,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23107
+  - code: card_desc_22107
     en: 
     pt_BR: 
     zh_CN: 
@@ -7887,7 +5442,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23200
+  - code: card_name_22200
     en: 
     pt_BR: 
     zh_CN: 
@@ -7911,7 +5466,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23200
+  - code: card_desc_22200
     en: 
     pt_BR: 
     zh_CN: 
@@ -7935,7 +5490,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23201
+  - code: card_name_22201
     en: 
     pt_BR: 
     zh_CN: 
@@ -7959,7 +5514,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23201
+  - code: card_desc_22201
     en: 
     pt_BR: 
     zh_CN: 
@@ -7983,7 +5538,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23202
+  - code: card_name_22202
     en: 
     pt_BR: 
     zh_CN: 
@@ -8007,7 +5562,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23202
+  - code: card_desc_22202
     en: 
     pt_BR: 
     zh_CN: 
@@ -8031,7 +5586,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23203
+  - code: card_name_22203
     en: 
     pt_BR: 
     zh_CN: 
@@ -8055,7 +5610,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23203
+  - code: card_desc_22203
     en: 
     pt_BR: 
     zh_CN: 
@@ -8079,7 +5634,105 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23204
+  - code: card_name_22204
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uADFC\uB825"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22204
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC18C\uBA78 \uCE74\uB4DC\uB97C \uC0AC\uC6A9\uD560\n\uB54C\uB9C8\uB2E4 \uD798\uC744
+      4\n\uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22205
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uADFC\uB825 \uAC15\uD654+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22205
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC18C\uBA78 \uCE74\uB4DC\uB97C \uC0AC\uC6A9\uD560\n\uB54C\uB9C8\uB2E4 \uD798\uC744
+      8\n\uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22206
     en: 
     pt_BR: 
     zh_CN: 
@@ -8103,7 +5756,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23204
+  - code: card_desc_22206
     en: 
     pt_BR: 
     zh_CN: 
@@ -8128,7 +5781,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23205
+  - code: card_name_22207
     en: 
     pt_BR: 
     zh_CN: 
@@ -8152,7 +5805,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23205
+  - code: card_desc_22207
     en: 
     pt_BR: 
     zh_CN: 
@@ -8177,7 +5830,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23300
+  - code: card_name_22300
     en: 
     pt_BR: 
     zh_CN: 
@@ -8201,7 +5854,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23300
+  - code: card_desc_22300
     en: 
     pt_BR: 
     zh_CN: 
@@ -8225,7 +5878,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23301
+  - code: card_name_22301
     en: 
     pt_BR: 
     zh_CN: 
@@ -8249,7 +5902,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23301
+  - code: card_desc_22301
     en: 
     pt_BR: 
     zh_CN: 
@@ -8273,7 +5926,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23306
+  - code: card_name_22306
     en: 
     pt_BR: 
     zh_CN: 
@@ -8297,7 +5950,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23306
+  - code: card_desc_22306
     en: 
     pt_BR: 
     zh_CN: 
@@ -8322,7 +5975,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23307
+  - code: card_name_22307
     en: 
     pt_BR: 
     zh_CN: 
@@ -8346,7 +5999,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23307
+  - code: card_desc_22307
     en: 
     pt_BR: 
     zh_CN: 
@@ -8361,516 +6014,6 @@ MonoBehaviour:
     ja: 
     ko: "\uB0B4 \uD134 \uC2DC\uC791 \uC2DC\n\uCC44\uB825\uC744 1 \uC783\uACE0\n\uCE74\uB4DC\uB97C
       2 \uC7A5 \uBF51\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_23308
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uAD11\uD3ED\uD654"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_23308
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC18C\uBA78 \uCE74\uB4DC\uB97C\n\uC0AC\uC6A9\uD560 \uB54C\uB9C8\uB2E4\n\uCE74\uB4DC\uB97C
-      1 \uC7A5 \uBF51\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_23309
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uAD11\uD3ED\uD654"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_23309
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC18C\uBA78 \uCE74\uB4DC\uB97C\n\uC0AC\uC6A9\uD560 \uB54C\uB9C8\uB2E4\n\uCE74\uB4DC\uB97C
-      2 \uC7A5 \uBF51\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32000
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC1C\uC0AC"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32000
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32001
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC1C\uC0AC+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32001
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_33100
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC1C\uC0AC\uC758 \uC0AC\uAC70\uB9AC\uB97C\n1 \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_33101
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC815\uD655\uB3C4 \uD5A5\uC0C1+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_33101
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC1C\uC0AC\uC758 \uC0AC\uAC70\uB9AC\uB97C\n2 \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_33300
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD0C4\uC18D \uC99D\uAC00"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_33300
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC1C\uC0AC\uB97C \uD560\uB54C\uB9C8\uB2E4\n\uC774\uB3D9\uCE74\uB4DC\uB97C\n\uD55C\uC7A5
-      \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_33301
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD0C4\uC18D \uC99D\uAC00+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_33301
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC1C\uC0AC\uB97C \uD560\uB54C\uB9C8\uB2E4\n\uC774\uB3D9+\uCE74\uB4DC\uB97C\n\uD55C\uC7A5
-      \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_33102
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC1C\uC0AC\uC758 \uB370\uBBF8\uC9C0\uB97C\n3 \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_33103
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC1C\uC0AC\uC758 \uB370\uBBF8\uC9C0\uB97C\n6 \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_33304
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC800\uACA9"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_33304
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC801\uACFC\uC758 \uAC70\uB9AC\uAC00 \uD55C\uCE78\uB5A8\uC5B4\uC9C8\uC218\uB85D\n\uBC1C\uC0AC\uC758
-      \uB370\uBBF8\uC9C0\uAC00 2\uBC30\uAC00 \uB429\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_33305
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC800\uACA9+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_33305
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC801\uACFC\uC758 \uAC70\uB9AC\uAC00 \uD55C\uCE78\uB5A8\uC5B4\uC9C8\uC218\uB85D\n\uBC1C\uC0AC\uC758
-      \uB370\uBBF8\uC9C0\uAC00 2\uBC30\uAC00 \uB429\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 
@@ -9650,685 +6793,7 @@ MonoBehaviour:
     uk: "\u041F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u0442\u0438"
     vi: "B\u1ECF qua"
     description: "\uC804\uD22C - \uCE74\uB4DC\uBCF4\uC0C1 \uB118\uAE30\uAE30 \uBC84\uD2BC"
-  - code: card_name_32002
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC7AC\uC7A5\uC804 \uBC1C\uC0AC"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32002
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uB0B4 \uD134\uC774 \uB05D\uB098\uBA74
-      \uC18C\uBA78\uB429\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32003
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC7AC\uC7A5\uC804 \uBC1C\uC0AC+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32003
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uB0B4 \uD134\uC774 \uB05D\uB098\uBA74
-      \uC18C\uBA78\uB429\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
   - code: card_name_32200
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC7AC\uC7A5\uC804"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32200
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC1C\uC0AC\uB97C 2 \uC7A5 \uC0DD\uC131\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32201
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC7AC\uC7A5\uC804+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32201
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC1C\uC0AC\uB97C 4 \uC7A5 \uC0DD\uC131\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32300
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC11D\uC591\uC774 \uC9C4\uB2E4"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32300
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBAA8\uB4E0 \uBC94\uC704\uC5D0\n\uBC1C\uC0AC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32301
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC11D\uC591\uC774 \uC9C4\uB2E4+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32301
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBAA8\uB4E0 \uBC94\uC704\uC5D0\n\uBC1C\uC0AC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32302
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uB09C\uC0AC"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32302
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC94\uC704 \uB0B4\uC758 \uBB34\uC791\uC704 \uC801\uC5D0\uAC8C 6\uBC88
-      \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32303
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uB09C\uC0AC+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32303
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC94\uC704 \uB0B4\uC758 \uBB34\uC791\uC704 \uC801\uC5D0\uAC8C 12\uBC88
-      \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32304
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC11D\uC591\uC774 \uC9C4\uB2E4"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32304
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD3EC\uACA9 \uC9C0\uC6D0 \uBC84\uD2BC\uC744 \uC124\uCE58\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32305
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC11D\uC591\uC774 \uC9C4\uB2E4+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32305
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD3EC\uACA9 \uC9C0\uC6D0 \uBC84\uD2BC\uC744 \uC124\uCE58\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32306
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC11D\uC591\uC774 \uC9C4\uB2E4"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32306
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC124\uCE58\uAC00 \uAC00\uB2A5\uD55C \uBAA8\uB4E0 \uC7A5\uC18C\uC5D0 \uC9C0\uB8B0\uB97C
-      \uC124\uCE58\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32307
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC11D\uC591\uC774 \uC9C4\uB2E4+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32307
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC124\uCE58\uAC00 \uAC00\uB2A5\uD55C \uBAA8\uB4E0 \uC7A5\uC18C\uC5D0 \uC9C0\uB8B0\uB97C
-      \uC124\uCE58\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_33104
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC124\uCE58\uAC00\uC18D"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_33104
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC124\uCE58 \uD560\uB54C\uB9C8\uB2E4\n\uD798\uC744 1 \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_33105
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC124\uD53C\uAC00\uC18D+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_33105
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC124\uCE58 \uD560\uB300\uB9C8\uB2E4\n\uD798\uC744 2 \uC5BB\uC2B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_33200
     en: 
     pt_BR: 
     zh_CN: 
@@ -10352,7 +6817,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_33200
+  - code: card_desc_32200
     en: 
     pt_BR: 
     zh_CN: 
@@ -10376,7 +6841,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_33201
+  - code: card_name_32201
     en: 
     pt_BR: 
     zh_CN: 
@@ -10400,7 +6865,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_33201
+  - code: card_desc_32201
     en: 
     pt_BR: 
     zh_CN: 
@@ -10424,105 +6889,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_33202
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uB3C4\uD0C4"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_33202
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC1C\uC0AC\uB97C \uB450\uBC88 \uD560\uB54C\uB9C8\uB2E4.\n \uACF5\uACA9\uD55C
-      \uB300\uC0C1\uC774 \uC544\uB2CC\n \uBB34\uC791\uC704 \uC801\uC5D0\uAC8C\n \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_33203
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uB3C4\uD0C4+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_33203
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBC1C\uC0AC\uB97C \uD560\uB54C\uB9C8\uB2E4\n \uACF5\uACA9\uD55C \uB300\uC0C1\uC774
-      \uC544\uB2CC\n \uBB34\uC791\uC704 \uC801\uC5D0\uAC8C\n \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_33302
+  - code: card_name_32300
     en: 
     pt_BR: 
     zh_CN: 
@@ -10546,7 +6913,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_33302
+  - code: card_desc_32300
     en: 
     pt_BR: 
     zh_CN: 
@@ -10559,7 +6926,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC124\uCE58\uB97C \uD560\uB54C\uB9C8\uB2E4.\n\uC774\uB3D9\uCE74\uB4DC\uB97C\n\uD55C\uC7A5
+    ko: "\uBC1C\uC0AC\uB97C \uD560\uB54C\uB9C8\uB2E4\n\uC774\uB3D9\uCE74\uB4DC\uB97C\n\uD55C\uC7A5
       \uC5BB\uC2B5\uB2C8\uB2E4."
     pl: 
     ru: 
@@ -10571,7 +6938,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_33303
+  - code: card_name_32301
     en: 
     pt_BR: 
     zh_CN: 
@@ -10595,7 +6962,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_33303
+  - code: card_desc_32301
     en: 
     pt_BR: 
     zh_CN: 
@@ -10608,7 +6975,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC124\uCE58\uB97C \uD560\uB54C\uB9C8\uB2E4.\n\uC774\uB3D9+\uCE74\uB4DC\uB97C\n\uB450\uC7A5
+    ko: "\uBC1C\uC0AC\uB97C \uD560\uB54C\uB9C8\uB2E4\n\uC774\uB3D9+\uCE74\uB4DC\uB97C\n\uD55C\uC7A5
       \uC5BB\uC2B5\uB2C8\uB2E4."
     pl: 
     ru: 
@@ -10620,7 +6987,201 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_33306
+  - code: card_name_32302
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBB34\uAE30 \uC219\uB7B8"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32302
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC1C\uC0AC\uB97C \uD560\uB54C\uB9C8\uB2E4. \uD798\uC744 1 \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32303
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBB34\uAE30 \uC21C\uB825+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32303
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC1C\uC0AC\uB97C \uD560\uB54C\uB9C8\uB2E4.  \uD798\uC744 2 \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32304
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC800\uACA9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32304
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uACFC\uC758 \uAC70\uB9AC\uAC00 \uD55C\uCE78\uB5A8\uC5B4\uC9C8\uC218\uB85D\n\uBC1C\uC0AC\uC758
+      \uB370\uBBF8\uC9C0\uAC00 2\uBC30\uAC00 \uB429\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32305
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC800\uACA9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32305
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uACFC\uC758 \uAC70\uB9AC\uAC00 \uD55C\uCE78\uB5A8\uC5B4\uC9C8\uC218\uB85D\n\uBC1C\uC0AC\uC758
+      \uB370\uBBF8\uC9C0\uAC00 2\uBC30\uAC00 \uB429\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32306
     en: 
     pt_BR: 
     zh_CN: 
@@ -10644,7 +7205,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_33306
+  - code: card_desc_32306
     en: 
     pt_BR: 
     zh_CN: 
@@ -10668,7 +7229,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_33307
+  - code: card_name_32307
     en: 
     pt_BR: 
     zh_CN: 
@@ -10692,7 +7253,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_33307
+  - code: card_desc_32307
     en: 
     pt_BR: 
     zh_CN: 
@@ -10706,1112 +7267,6 @@ MonoBehaviour:
     it: 
     ja: 
     ko: "\uBC1C\uC0AC\uAC00 \n\uBC94\uC704 \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_42100
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC801\uC5D0\uAC8C \uD654\uC5FC\uC744 2 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_42101
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC801\uC5D0\uAC8C \uD654\uC5FC\uC744 4 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32120
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uACF0\uB36B"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32120
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uACF0\uB36B\uC744 \uC124\uCE58 \uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32121
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uACF0\uB36B+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32121
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uACF0\uB36B+\uC744 \uC124\uCE58 \uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32122
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC9C0\uB8B0"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32122
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC9C0\uB8B0\uB97C \uC124\uCE58 \uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32123
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC9C0\uB8B0+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32123
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC9C0\uB8B0+\uB97C \uC124\uCE58 \uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32220
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC2ED\uC790\uD3ED\uD0C4"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32220
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC2ED\uC790\uD3ED\uD0C4\uC744 \uC124\uCE58\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32221
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC2ED\uC790\uD3ED\uD0C4+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32221
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC2ED\uC790\uD3ED\uD0C4+\uC744 \uC124\uCE58\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32223
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC810\uD504\uB300"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32223
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC810\uD504\uB300\uB97C \uC124\uCE58\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_32224
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC810\uD504\uB300+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_32224
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC810\uD504\uB300+\uB97C \uC124\uCE58\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_42000
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD654\uC5FC\uAD6C"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_42000
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC801\uC5D0\uAC8C \uD654\uC5FC\uC744 2 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_42001
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD654\uC5FC\uAD6C+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_42001
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC801\uC5D0\uAC8C \uD654\uC5FC\uC744 4 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_42020
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD574\uACE8 \uBCD1\uC0AC."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_42020
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD574\uACE8 \uBCD1\uC0AC\uB97C \uC18C\uD658\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_42021
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD574\uACE8 \uBCD1\uC0AC."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_42021
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD574\uACE8 \uBCD1\uC0AC\uB97C \uC18C\uD658\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_42120
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD574\uACE8 \uBCD1\uC0AC."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_42120
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD574\uACE8 \uBCD1\uC0AC\uB97C \uC18C\uD658\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_42121
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD574\uACE8 \uBCD1\uC0AC."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_42121
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD574\uACE8 \uBCD1\uC0AC\uB97C \uC18C\uD658\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_42140
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC6A9\uC554 \uC9C0\uB300"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_42140
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC6A9\uC554 \uC9C0\uB300\uB97C \uC0DD\uC131\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_42141
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC6A9\uC554 \uC9C0\uB300+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_42141
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC6A9\uC554 \uC9C0\uB300+\uB97C \uC0DD\uC131\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_42240
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBE59\uD558 \uC9C0\uB300"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_42240
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBE59\uD558 \uC9C0\uB300\uB97C \uC0DD\uC131\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_42241
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBE59\uD558 \uC9C0\uB300+"
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_42241
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBE59\uD558 \uC9C0\uB300+\uB97C \uC0DD\uC131\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_43200
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC911\uB825."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_43200
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBAA8\uB4E0 \uC801\uC744 1 \uD134\uAC04 \uC18D\uBC15\uC2DC\uD0B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_43201
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uC911\uB825."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_43201
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uBAA8\uB4E0 \uC801\uC744 2 \uD134\uAC04 \uC18D\uBC15\uC2DC\uD0B5\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_43300
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD55C\uD30C."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_43300
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "2 \uD134\uC5D0 \uD55C\uBC88 \uBAA8\uB4E0 \uC801\uC5D0\uAC8C \uB0C9\uAE30\uB97C
-      \uBD80\uC5EC\uD569\uB2C8\uB2E4."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_name_43301
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "\uD55C\uD30C."
-    pl: 
-    ru: 
-    sr: 
-    sr_Latn: 
-    es: 
-    th: 
-    tr: 
-    uk: 
-    vi: 
-    description: 
-  - code: card_desc_43301
-    en: 
-    pt_BR: 
-    zh_CN: 
-    zh_TW: 
-    nl: 
-    eo: 
-    fi: 
-    fr: 
-    de: 
-    id: 
-    it: 
-    ja: 
-    ko: "1 \uD134\uC5D0 \uD55C\uBC88 \uBAA8\uB4E0 \uC801\uC5D0\uAC8C \uB0C9\uAE30\uB97C
-      \uBD80\uC5EC\uD569\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 
@@ -11918,7 +7373,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23206
+  - code: card_name_11252
     en: 
     pt_BR: 
     zh_CN: 
@@ -11931,7 +7386,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uCD5C\uD6C4\uC758 \uACF5\uACA9"
+    ko: "\uC774\uB3D9:\uB098\uC774\uD2B8"
     pl: 
     ru: 
     sr: 
@@ -11942,7 +7397,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23206
+  - code: card_desc_11252
     en: 
     pt_BR: 
     zh_CN: 
@@ -11955,8 +7410,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uBC88\uD134\uC5D0 \uB370\uBBF8\uC9C0\uB97C\n2 \uBC30 \uC8FC\uACE0\n2
-      \uBC30 \uBC1B\uC2B5\uB2C8\uB2E4."
+    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 
@@ -11967,7 +7421,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_name_23207
+  - code: card_name_11253
     en: 
     pt_BR: 
     zh_CN: 
@@ -11980,7 +7434,7 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uCD5C\uD6C4\uC758 \uACF5\uACA9+"
+    ko: "\uC774\uB3D9:\uD038"
     pl: 
     ru: 
     sr: 
@@ -11991,7 +7445,7 @@ MonoBehaviour:
     uk: 
     vi: 
     description: 
-  - code: card_desc_23207
+  - code: card_desc_11253
     en: 
     pt_BR: 
     zh_CN: 
@@ -12004,8 +7458,4548 @@ MonoBehaviour:
     id: 
     it: 
     ja: 
-    ko: "\uC774\uBC88\uD134\uC5D0 \uB370\uBBF8\uC9C0\uB97C\n2 \uBC30 \uC8FC\uACE0\n2
-      \uBC30 \uBC1B\uC2B5\uB2C8\uB2E4."
+    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_11254
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uBE44\uC20D"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_11254
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_11255
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uD038"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_11255
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_11256
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uB8E9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_11256
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_11257
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uD038"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_11257
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_11258
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uD0B9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_11258
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_11259
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9:\uD038"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_11259
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_11200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB2E8\uAC80 \uB358\uC9C0\uAE30"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_11200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uD574\uB97C {D} \uC90D\uB2C8\uB2E4.\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
+      \uBF51\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_11201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB2E8\uAC80 \uB358\uC9C0\uAE30+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_11201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uD574\uB97C {D} \uC90D\uB2C8\uB2E4.\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
+      \uBF51\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21002
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD0C0\uACA9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21002
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21003
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD0C0\uACA9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21003
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21004
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB2E8\uAC80"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21004
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21005
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB2E8\uAC80+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21005
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21250
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB3CC\uC9C4"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21250
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4.\n\uC774\uB3D9\uBC29\uD5A5\uC73C\uB85C \uC801\uC744\n\uBC00\uCE58\uACE0
+      {D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21251
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB3CC\uC9C4+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21251
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4.\n\uC774\uB3D9\uBC29\uD5A5\uC73C\uB85C \uC801\uC744\n\uBC00\uCE58\uACE0{D}
+      \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21350
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBE44\uACA8\uCE58\uAE30"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21350
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4.\n\uBAA8\uB4E0 \uBC94\uC704\uC5D0\n{D} \uD53C\uD574\uB97C
+      \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21351
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBE44\uAEF4\uCE58\uAE30+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21351
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uB3D9\uD569\uB2C8\uB2E4.\n\uBAA8\uB4E0 \uBC94\uC704\uC5D0\n{D} \uD53C\uD574\uB97C
+      \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21352
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBCBD\uB825\uC77C\uC12C"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21352
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uC758 \uB4A4\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21353
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBCBD\uB825\uC77C\uC12C+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21353
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uC758 \uB4A4\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC601\uD63C\uBC30\uAE30"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC601\uD63C\uBC30\uAE30+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21104
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uC911 \uD0C0\uACA9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21104
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uD574\uB97C {D}\uB9CC\uD07C 2\uBC88\n\uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21105
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uC911 \uD0C0\uACA9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21105
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uD574\uB97C {D}\uB9CC\uD07C 2\uBC88\n\uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21106
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD608\uB958"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21106
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 2 \uC783\uC2B5\uB2C8\uB2E4.\n{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21107
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD608\uB958+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21107
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 2 \uC783\uC2B5\uB2C8\uB2E4.\n{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21108
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD729\uC4F8\uAE30"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21108
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC120\uD0DD\uD55C \uBC94\uC704\uC5D0\n{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21109
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD729\uC4F8\uAE30+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21109
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC120\uD0DD\uD55C \uBC94\uC704\uC5D0\n{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD3FC\uB9EC\uD0C0\uACA9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
+      \uBF51\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD3FC\uBC00\uD0C0\uACA9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uCE74\uB4DC\uB97C \uD55C\uC7A5
+      \uBF51\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21204
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC5F0\uC18D\uBC30\uAE30"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21204
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uD574\uB97C {D}\uB9CC\uD07C 4\uBC88\n\uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21205
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC5F0\uC18D\uBC30\uAE30+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21205
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uD574\uB97C {D}\uB9CC\uD07C 4\uBC88\n\uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21206
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC219\uBA85"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21206
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uC801\uC774 \uCC98\uCE58\uB418\uBA74\n\uADF8
+      \uC704\uCE58\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21207
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC219\uBA85+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21207
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\n\uC801\uC774 \uCC98\uCE58\uB418\uBA74\n\uADF8
+      \uC704\uCE58\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21208
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uACF5\uACA9"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21208
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 2 \uC783\uC2B5\uB2C8\uB2E4\n\uBAA8\uB4E0 \uBC94\uC704\uC5D0\n{D}
+      \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21209
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD53C\uACF5\uACA9+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21209
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uCC44\uB825\uC744 2 \uC783\uC2B5\uB2C8\uB2E4\n\uBAA8\uB4E0 \uBC94\uC704\uC5D0\n{D}
+      \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21210
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uACE0\uAE30 \uAC08\uACE0\uB9AC"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21210
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uC744 \uC790\uC2E0\uC758 \uC55E\uC73C\uB85C\n\uB04C\uC5B4\uB2F9\uAE30\uACE0
+      {D} \uD53C\uD574\uB97C\n\uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21211
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uACE0\uAE30 \uAC08\uACE0\uB9AC+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21211
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uC744 \uC790\uC2E0\uC758 \uC55E\uC73C\uB85C\n\uB04C\uC5B4\uB2F9\uAE30\uACE0
+      {D} \uD53C\uD574\uB97C\n\uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21212
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uADFC\uB825 \uAC15\uD654"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21212
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uBC88 \uD134\uC5D0 \uC0AC\uC6A9\uB418\uB294\n\uB2E4\uC74C \uC561\uC158\uCE74\uB4DC\uB97C\n\uD55C\uC7A5
+      \uBCF5\uC0AC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21213
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uADFC\uB825 \uAC15\uD654+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21213
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uBC88 \uD134\uC5D0 \uC0AC\uC6A9\uB418\uB294\n\uB2E4\uC74C \uC561\uC158\uCE74\uB4DC\uB97C\n\uB450\uC7A5
+      \uBCF5\uC0AC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21214
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBB34\uAE30 \uC0C1\uC790"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21214
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBB34\uC791\uC704 \uC561\uC158\uCE74\uB4DC\uB97C\n\uD55C\uC7A5 \uC0DD\uC131\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21215
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBB34\uAE30 \uC0C1\uC790+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21215
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBB34\uC791\uC704 \uC561\uC158\uCE74\uB4DC\uB97C\n\uB450\uC7A5 \uC0DD\uC131\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21304
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC6B0\uB801\uCC2C \uD45C\uD6A8"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21304
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBAA8\uB4E0 \uBC94\uC704\uC5D0\n\uACF5\uD3EC\uB97C \uBD80\uC5EC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21305
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC6B0\uB801\uCC2C \uD45C\uD6A8+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21305
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBAA8\uB4E0 \uBC94\uC704\uC5D0\n\uACF5\uD3EC\uB97C \uBD80\uC5EC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21306
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC29\uC5B4\uD0DC\uC138"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21306
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uBC88 \uD134\uB3D9\uC548 \uC801\uC758\n\uBAA8\uB4E0 \uACF5\uACA9\uC744
+      \uBC18\uC0AC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_21307
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC29\uC5B4\uD0DC\uC138+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_21307
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC774\uBC88 \uD134\uB3D9\uC548 \uC801\uC758\n\uBAA8\uB4E0 \uACF5\uACA9\uC744
+      \uBC18\uC0AC\uD569\uB2C8\uB2E4.\n\uBC18\uC0AC\uB41C \uACF5\uACA9\uC740\n2 \uBC30\uC758
+      \uB370\uBBF8\uC9C0\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22304
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uAD11\uD3ED\uD654"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22304
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB0B4 \uD134 \uC2DC\uC791 \uC2DC\n \uD798\uC744 2 \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22305
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uAD11\uD3ED\uD654"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22305
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB0B4 \uD134 \uC2DC\uC791 \uC2DC\n \uD798\uC744 4 \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22308
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uAD11\uD3ED\uD654"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22308
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC18C\uBA78 \uCE74\uB4DC\uB97C 2 \uC7A5\n\uC0AC\uC6A9\uD560 \uB54C\uB9C8\uB2E4\n\uCE74\uB4DC\uB97C
+      1 \uC7A5 \uBF51\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_22309
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uAD11\uD3ED\uD654"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_22309
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC18C\uBA78 \uCE74\uB4DC\uB97C 1 \uC7A5\n\uC0AC\uC6A9\uD560 \uB54C\uB9C8\uB2E4\n\uCE74\uB4DC\uB97C
+      1 \uC7A5 \uBF51\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31002
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC1C\uC0AC"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31002
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31003
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC1C\uC0AC+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31003
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "{D} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC18D\uC0AC"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC1C\uC0AC\uB97C 1 \uC7A5 \uC0DD\uC131\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC18D\uC0AC+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC1C\uC0AC+\uB97C 1 \uC7A5 \uC0DD\uC131\uD569\uB2C8\uB2E4"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31120
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uACF0\uB36B\uC744 \uC124\uCE58 \uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31121
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uACF0\uB36B+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31121
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uACF0\uB36B+\uC744 \uC124\uCE58 \uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31122
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC9C0\uB8B0"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31122
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC9C0\uB8B0\uB97C \uC124\uCE58 \uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31123
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC9C0\uB8B0+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31123
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC9C0\uB8B0+\uB97C \uC124\uCE58 \uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC7A5\uC804"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "1 \uD134 \uB4A4\uC5D0 \uBC1C\uC0AC\uB97C 2 \uC7A5 \uC0DD\uC131\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC7A5\uC804+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "1 \uD134 \uB4A4\uC5D0 \uBC1C\uC0AC+\uB97C 2 \uC7A5 \uC0DD\uC131\uD569\uB2C8\uB2E4"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31220
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC2ED\uC790\uD3ED\uD0C4"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31220
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC2ED\uC790\uD3ED\uD0C4\uC744 \uC124\uCE58\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31221
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC2ED\uC790\uD3ED\uD0C4+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31221
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC2ED\uC790\uD3ED\uD0C4+\uC744 \uC124\uCE58\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31223
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC810\uD504\uB300"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31223
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC810\uD504\uB300\uB97C \uC124\uCE58\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31224
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC810\uD504\uB300+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31224
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC810\uD504\uB300+\uB97C \uC124\uCE58\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31300
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBAA8\uB4E0 \uC801\uC5D0\uAC8C\n\uBC1C\uC0AC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31301
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC11D\uC591\uC774 \uC9C4\uB2E4+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31301
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBAA8\uB4E0 \uC801\uC5D0\uAC8C\n\uBC1C\uC0AC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31302
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB09C\uC0AC"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31302
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC94\uC704 \uB0B4\uC758 \uBB34\uC791\uC704 \uC801\uC5D0\uAC8C 6\uBC88
+      \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31303
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB09C\uC0AC+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31303
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC94\uC704 \uB0B4\uC758 \uBB34\uC791\uC704 \uC801\uC5D0\uAC8C 6\uBC88
+      \uBC1C\uC0AC+\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31304
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC11D\uC591\uC774 \uC9C4\uB2E4"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31304
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD3EC\uACA9 \uC9C0\uC6D0 \uBC84\uD2BC\uC744 \uC124\uCE58\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31305
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC11D\uC591\uC774 \uC9C4\uB2E4+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31305
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD3EC\uACA9 \uC9C0\uC6D0 \uBC84\uD2BC\uC744 \uC124\uCE58\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31306
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC9C0\uB8B0\uBC2D"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31306
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBAA8\uB4E0 \uC7A5\uC18C\uC5D0 \uC9C0\uB8B0\uB97C \uC124\uCE58\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_31307
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC9C0\uB8B0\uBC2D+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_31307
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBAA8\uB4E0 \uC7A5\uC18C\uC5D0 \uC9C0\uB8B0+\uB97C \uC124\uCE58\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC815\uD655\uB3C4 \uD5A5\uC0C1"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC1C\uC0AC\uC758 \uC0AC\uAC70\uB9AC\uB97C\n1 \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC815\uD655\uB3C4 \uD5A5\uC0C1+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC1C\uC0AC\uC758 \uC0AC\uAC70\uB9AC\uB97C\n2 \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32102
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD0C4\uC18D \uC99D\uAC00"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32102
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC1C\uC0AC\uC758 \uB370\uBBF8\uC9C0\uB97C\n3 \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32103
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD0C4\uC18D \uC99D\uAC00+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32103
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC1C\uC0AC\uC758 \uB370\uBBF8\uC9C0\uB97C\n6 \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32104
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC124\uCE58\uAC00\uC18D"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32104
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC124\uCE58 \uD560\uB54C\uB9C8\uB2E4\n\uD798\uC744 1 \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32105
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC124\uD53C\uAC00\uC18D+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32105
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC124\uCE58 \uD560\uB300\uB9C8\uB2E4\n\uD798\uC744 2 \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB3C4\uD0C4"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32202
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC1C\uC0AC\uB97C \uB450\uBC88 \uD560\uB54C\uB9C8\uB2E4.\n \uACF5\uACA9\uD55C
+      \uB300\uC0C1\uC774 \uC544\uB2CC\n \uBB34\uC791\uC704 \uC801\uC5D0\uAC8C\n \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uB3C4\uD0C4+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32203
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBC1C\uC0AC\uB97C \uD560\uB54C\uB9C8\uB2E4\n \uACF5\uACA9\uD55C \uB300\uC0C1\uC774
+      \uC544\uB2CC\n \uBB34\uC791\uC704 \uC801\uC5D0\uAC8C\n \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32204
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD0C4\uC18D \uC99D\uAC00"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32204
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC124\uCE58\uB97C \uD560\uB54C\uB9C8\uB2E4.\n\uC774\uB3D9\uCE74\uB4DC\uB97C\n\uD55C\uC7A5
+      \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_32205
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD0C4\uC18D \uC99D\uAC00+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_32205
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC124\uCE58\uB97C \uD560\uB54C\uB9C8\uB2E4.\n\uC774\uB3D9+\uCE74\uB4DC\uB97C\n\uB450\uC7A5
+      \uC5BB\uC2B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_41002
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD654\uC5FC\uAD6C"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_41002
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uC5D0\uAC8C \uD654\uC5FC\uC744 2 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_41003
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD654\uC5FC\uAD6C+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_41003
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uC5D0\uAC8C \uD654\uC5FC\uC744 4 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_41020
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD574\uACE8 \uBCD1\uC0AC."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_41020
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD574\uACE8 \uBCD1\uC0AC\uB97C \uC18C\uD658\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_41021
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD574\uACE8 \uBCD1\uC0AC."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_41021
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD574\uACE8 \uBCD1\uC0AC\uB97C \uC18C\uD658\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_41100
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uC5D0\uAC8C \uD654\uC5FC\uC744 2 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_41101
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC801\uC5D0\uAC8C \uD654\uC5FC\uC744 4 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_41120
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD574\uACE8 \uBCD1\uC0AC."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_41120
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD574\uACE8 \uBCD1\uC0AC\uB97C \uC18C\uD658\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_41121
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD574\uACE8 \uBCD1\uC0AC."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_41121
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD574\uACE8 \uBCD1\uC0AC\uB97C \uC18C\uD658\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_41140
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC6A9\uC554 \uC9C0\uB300"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_41140
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC6A9\uC554 \uC9C0\uB300\uB97C \uC0DD\uC131\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_41141
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC6A9\uC554 \uC9C0\uB300+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_41141
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC6A9\uC554 \uC9C0\uB300+\uB97C \uC0DD\uC131\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_41240
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBE59\uD558 \uC9C0\uB300"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_41240
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBE59\uD558 \uC9C0\uB300\uB97C \uC0DD\uC131\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_41241
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBE59\uD558 \uC9C0\uB300+"
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_41241
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBE59\uD558 \uC9C0\uB300+\uB97C \uC0DD\uC131\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_42200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC911\uB825."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_42200
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBAA8\uB4E0 \uC801\uC744 1 \uD134\uAC04 \uC18D\uBC15\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_42201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uC911\uB825."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_42201
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uBAA8\uB4E0 \uC801\uC744 2 \uD134\uAC04 \uC18D\uBC15\uC2DC\uD0B5\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_42300
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD55C\uD30C."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_42300
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "2 \uD134\uC5D0 \uD55C\uBC88 \uBAA8\uB4E0 \uC801\uC5D0\uAC8C \uB0C9\uAE30\uB97C
+      \uBD80\uC5EC\uD569\uB2C8\uB2E4."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_name_42301
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "\uD55C\uD30C."
+    pl: 
+    ru: 
+    sr: 
+    sr_Latn: 
+    es: 
+    th: 
+    tr: 
+    uk: 
+    vi: 
+    description: 
+  - code: card_desc_42301
+    en: 
+    pt_BR: 
+    zh_CN: 
+    zh_TW: 
+    nl: 
+    eo: 
+    fi: 
+    fr: 
+    de: 
+    id: 
+    it: 
+    ja: 
+    ko: "1 \uD134\uC5D0 \uD55C\uBC88 \uBAA8\uB4E0 \uC801\uC5D0\uAC8C \uB0C9\uAE30\uB97C
+      \uBD80\uC5EC\uD569\uB2C8\uB2E4."
     pl: 
     ru: 
     sr: 

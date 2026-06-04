@@ -1672,7 +1672,7 @@ MonoBehaviour:
     themeColor: {r: 0, g: 0, b: 0, a: 0}
     startingRelicCodes: 46000000
     startingItemCodes: c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000
-    startingDeckCodes: f0550000f0550000
+    startingDeckCodes: 0a5200000a520000
   - characterName: sex3
     characterType: 1
     portrait: {fileID: 0}

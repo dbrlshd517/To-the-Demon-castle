@@ -24,8 +24,18 @@ namespace DeckRoguelike.Combat
     ///   선택:    NextSequential / RollDice / RollChance / PickRandom
     ///
     ///   공격:
+    ///     TryPlanAttackInRange(self, combat, rangeOffsets, extraDamage=0) → bool
+    ///       — 표준 멜레 패턴. 사거리 안 타겟에 공격 계획. 타겟은 턴 동안 객체 단위 고정
+    ///         (RePlan 재설정 금지, 동시에 여럿일 때만 처음 한 번 랜덤). 사거리가 비면
+    ///         false 반환 — 호출측에서 이동을 계획할 것.
+    ///     TryAcquireAttackTarget(self, combat, rangeOffsets|inRangePredicate, out cell) → bool
+    ///       — 타겟 선택만 수행(공격 등록 X). 룩/비숍처럼 커스텀 공격 등록이 필요할 때.
+    ///     AcquireStickyNearestTarget(self, combat) → Vector2Int
+    ///       — 사거리 무제한 공격용. 최근접(동률 랜덤)으로 한 번 고르면 턴 동안 고정.
     ///     PlanTargetAttack(self, combat, target, extraDamage=0)
     ///       — 지정 대상(Player/Ally/Nearest) 직접 공격. 사거리 체크 없음.
+    ///     PlanTargetAttackAtCell(self, combat, targetCell, extraDamage=0)
+    ///       — Acquire류로 고른 좌표를 상대 좌표(밀침 추적)로 공격 등록.
     ///     PlanRangeAttack(self, combat, offsets, extraDamage=0, absolute=false)
     ///       — 좌표들에 광역 피해. absolute=true면 절대 좌표.
     ///     PlanUnavoidableAttack(self, combat, target, extraDamage=0, targetAlly=null)
@@ -100,6 +110,7 @@ namespace DeckRoguelike.Combat
             EnemyBehaviorRegistry.Register(11071, () => new PoisonMushroom2Behavior());
             
             EnemyBehaviorRegistry.Register(12000, () => new LaserStatueChaserBehavior());
+            EnemyBehaviorRegistry.Register(12004, () => new KingPieceBehavior());
             EnemyBehaviorRegistry.Register(12010, () => new LaserStatueCrossBehavior());
             EnemyBehaviorRegistry.Register(12011, () => new LaserStatueDiagonalBehavior());
 
@@ -113,16 +124,15 @@ namespace DeckRoguelike.Combat
 
     // ── 행동 구현 ─────────────────────────────────────────────────────
 
-    /// <summary>슬라임 (11000): 2턴에 1번 — 인접 시 공격, 아니면 플레이어 방향 1칸 이동 (재계산 시 공격↔이동 자유 전환).</summary>
+    /// <summary>슬라임 (11000): 2턴에 1번 — 인접 시 공격, 아니면 플레이어 방향 1칸 이동.
+    /// 공격 타겟은 턴 동안 고정(RePlan 재설정 금지) — 사거리에서 모두 빠지면 이동으로 전환.</summary>
     public class SlimeBehavior : EnemyBehavior
     {
         public override void PlanTurn(EnemyInstance self, BoardController board)
         {
             // 슬라임 계열은 2턴에 한 번만 행동 — 0번째 턴 행동, 1번째 턴 휴식.
             if (NextSequential(2) == 1) { PlanWait("휴식"); return; }
-            if (IsPlayerInRange(self, board, AdjacentFour))
-                PlanTargetAttack(self, board, AttackTarget.Nearest);
-            else
+            if (!TryPlanAttackInRange(self, board, AdjacentFour))
                 PlanMoveTowardNearest(self, board, 1);
         }
     }
@@ -419,17 +429,27 @@ namespace DeckRoguelike.Combat
     }
 
     /// <summary>고블린 전사 (11020): 인접 시 그 자리에서 공격(이동 없음), 아니면 가장 가까운 대상 방향 1칸 이동.
-    /// 잠금 없음 — 플레이어가 움직여 RePlan될 때마다 사거리를 다시 판정해 공격↔이동을 자유롭게 전환한다.
-    /// 공격은 상대 좌표(가장 가까운 대상)라 RePlan마다 대상을 재조준 → 인접해 있는 한 따라가며 때린다.</summary>
+    /// 카테고리 잠금 없음 — RePlan마다 사거리를 다시 판정해 공격↔이동은 자유 전환하되,
+    /// 공격 타겟 객체는 턴 동안 고정(사거리 안에 있는 한 따라가며 때리고, 다른 객체로 갈아타지 않음).</summary>
     public class GoblineWarriorBehavior : EnemyBehavior
     {
         public override void PlanTurn(EnemyInstance self, BoardController board)
         {
-            // 잠금 없음 — 매 재계산마다 사거리를 새로 판정해 공격↔이동을 자유롭게 전환.
-            if (IsTargetInRange(self, board, AdjacentFour))
-                PlanTargetAttack(self, board, AttackTarget.Nearest);
-            else
+            // 사거리 안에 타겟 없으면 이동으로 전환. 타겟 선택 규칙은 TryAcquireAttackTarget 참조.
+            if (!TryPlanAttackInRange(self, board, AdjacentFour))
                 PlanMoveTowardNearest(self, board, 1);
+        }
+    }
+    /// <summary>킹 (12004): 11020 고블린 전사와 동일 알고리즘이되, 공격·이동 반경이 8방향(대각선 1칸 포함).
+    /// 체스 킹처럼 인접 8칸 안에 대상이 있으면 그 자리에서 공격, 아니면 가장 가까운 대상 방향으로
+    /// 대각선을 포함해 1칸 이동한다. 공격 타겟은 턴 동안 고정(RePlan 재설정 금지).</summary>
+    public class KingPieceBehavior : EnemyBehavior
+    {
+        public override void PlanTurn(EnemyInstance self, BoardController board)
+        {
+            // 11020과 같지만 4방향(AdjacentFour) 대신 8방향(AdjacentEight)으로 판정.
+            if (!TryPlanAttackInRange(self, board, AdjacentEight))
+                PlanMoveTowardNearestEight(self, board, 1);
         }
     }
     /// <summary>
@@ -437,6 +457,8 @@ namespace DeckRoguelike.Combat
     ///   - 발사 턴에는 가장 가까운 대상을 **상대 좌표**(적 기준 offset)로 노린다. 좌표를 고정하지 않으므로
     ///     플레이어 이동마다 PlanTurn이 재호출될 때 offset이 현재 대상 위치로 다시 계산된다 →
     ///     공격 셀(텔레그래프 스프라이트)이 대상을 졸졸 따라가, 칸을 벗어나도 빗나가지 않는다(**회피 불가**).
+    ///   - 타겟 객체는 발사 턴 동안 고정(AcquireStickyNearestTarget) — RePlan 시 좌표만 추적하고
+    ///     중간에 다른 객체가 더 가까워져도 갈아타지 않는다.
     ///   - 상대 좌표라 적이 밀려도(TryMoveEnemy로 재계산) 다시 대상을 향해 재조준한다.
     ///   - (대조: 도적 11040·박쥐 11050은 턴 시작 좌표를 절대 좌표로 한 번만 고정 → 칸을 벗어나면 회피 가능.)
     /// </summary>
@@ -448,8 +470,8 @@ namespace DeckRoguelike.Combat
             if (NextSequential(2) == 1)
             {
                 // 발사 턴 — 상대 좌표로 현재 대상을 노린다. 좌표를 잠그지 않아 재계산마다 offset이
-                // 갱신되므로 대상을 추적한다(회피 불가). 텔레그래프 스프라이트도 대상을 따라간다.
-                Vector2Int target = FindNearestTargetPos(self, board);
+                // 갱신되므로 대상을 추적한다(회피 불가). 타겟 객체는 턴 동안 고정(재설정 금지).
+                Vector2Int target = AcquireStickyNearestTarget(self, board);
                 PlanRangeAttack(self, board, new[] { target - self.GridPos }, absolute: false);
             }
             else
@@ -469,7 +491,7 @@ namespace DeckRoguelike.Combat
                 PlanExplode(self, board);
                 return;
             }
-            PlanMoveTowardPlayer(self, board, 1);
+            PlanMoveTowardNearest(self, board, 1);
         }
 
         /// <summary>자폭 — 점유 셀 기준 사거리 2(체비쇼프 거리 ≤ 2 = 5x5) 광역 피해를 입히고 자신 제거.</summary>
@@ -509,8 +531,8 @@ namespace DeckRoguelike.Combat
 
     /// <summary>
     /// 레이저 석상-추격형 (12000):
-    ///   - 평소: 플레이어 방향 1칸 BFS 이동 (PlanMoveTowardPlayer).
-    ///   - 플레이어가 Manhattan 1(4방향 인접)에 들어오면: 대각선 1칸 이동 + **플레이어 절대 좌표** 공격.
+    ///   - 평소: 가장 가까운 객체(플레이어/아군) 방향 1칸 BFS 이동 (PlanMoveTowardNearest).
+    ///   - 그 객체가 Manhattan 1(4방향 인접)에 들어오면: 대각선 1칸 이동 + **주 타겟 절대 좌표** 공격.
     ///     대각선 방향은 corner pressure 점수(플레이어 escape 셀 덮기) 최대인 셀 우선,
     ///     동점이면 플레이어 최근접 코너에 더 가까운 셀(플레이어를 코너로 밀어붙임).
     ///   - 카테고리 + 공격/이동 셀 모두 PlanTurn 첫 호출에 lock → RePlan에서 좌표 추적 X (회피 가능).
@@ -543,15 +565,15 @@ namespace DeckRoguelike.Combat
                 }
                 else
                 {
-                    PlanMoveTowardPlayer(self, board, 1);
+                    PlanMoveTowardNearest(self, board, 1);
                 }
                 return;
             }
 
             // 첫 PlanTurn — 사거리 판정 후 카테고리/셀 lock.
-            if (ManhattanToPlayer(self, board) <= 1)
+            if (ManhattanToNearest(self, board) <= 1)
             {
-                _chaseAttackCell = board.PlayerSpawnCell;
+                _chaseAttackCell = PrimaryTargetCell(self, board);
                 Vector2Int diag = PickCorneringDiagonal(self, board, _chaseAttackCell);
                 _chaseAttackHasMove = (diag != self.GridPos);
                 if (_chaseAttackHasMove)
@@ -567,7 +589,7 @@ namespace DeckRoguelike.Combat
             }
             else
             {
-                PlanMoveTowardPlayer(self, board, 1);
+                PlanMoveTowardNearest(self, board, 1);
                 LockActionCategory(LockedCategory.Move);
             }
         }
@@ -700,7 +722,7 @@ namespace DeckRoguelike.Combat
                 return;
             }
 
-            if (IsPlayerInRange(self, board, AdjacentEight))
+            if (IsTargetInRange(self, board, AdjacentEight))
             {
                 _willArmNextTurn = true;
                 PlanWait("준비");
@@ -953,14 +975,14 @@ namespace DeckRoguelike.Combat
 
         public override void PlanTurn(EnemyInstance self, BoardController board)
         {
-            if (!_attackMode && IsPlayerInRange(self, board, AdjacentFour))
+            if (!_attackMode && IsTargetInRange(self, board, AdjacentFour))
                 _attackMode = true;
 
             if (_attackMode)
             {
                 if (!_targetLocked)
                 {
-                    _lockedTarget = board.PlayerSpawnCell;
+                    _lockedTarget = PrimaryTargetCell(self, board);
                     _targetLocked = true;
                 }
                 PlanRangeAttack(self, board, new[] { _lockedTarget }, absolute: true);
@@ -981,30 +1003,29 @@ namespace DeckRoguelike.Combat
 
     /// <summary>
     /// 거미 (11060): 대각선 전용 행동.
-    ///   - 대각선 1칸(DiagonalFour)에 플레이어가 있으면 대각선 공격.
-    ///   - 아니면 플레이어와의 맨해튼 거리가 가장 줄어드는 대각선 한 칸으로 이동.
+    ///   - 대각선 1칸(DiagonalFour) 안에 객체가 있으면 대각선 공격 — 타겟은 턴 동안 고정
+    ///     (RePlan 재설정 금지, 동시에 여럿일 때만 처음 한 번 랜덤). 사거리가 비면 이동으로 전환.
+    ///   - 공격 못 하면 가장 가까운 객체와의 맨해튼 거리가 가장 줄어드는 대각선 한 칸으로 이동.
     ///   - 어떤 대각선도 비어있지 않으면 대기.
     /// </summary>
     public class SpiderBehavior : EnemyBehavior
     {
         public override void PlanTurn(EnemyInstance self, BoardController board)
         {
-            if (IsPlayerInRange(self, board, DiagonalFour))
-            {
-                PlanTargetAttack(self, board, AttackTarget.Player);
+            // 대각선 1칸 사거리 안에 타겟이 있으면 공격 (타겟 고정), 아니면 대각선으로 접근.
+            if (TryPlanAttackInRange(self, board, DiagonalFour))
                 return;
-            }
 
-            Vector2Int dest = ChooseDiagonalStepTowardPlayer(self, board);
+            Vector2Int target = PrimaryTargetCell(self, board);
+            Vector2Int dest = ChooseDiagonalStepToward(self, board, target);
             if (dest != self.GridPos)
                 PlanMoveTo(self, board, dest);
             else
                 PlanWait("대기");
         }
 
-        private static Vector2Int ChooseDiagonalStepTowardPlayer(EnemyInstance self, BoardController board)
+        private static Vector2Int ChooseDiagonalStepToward(EnemyInstance self, BoardController board, Vector2Int p)
         {
-            Vector2Int p = board.PlayerSpawnCell;
             Vector2Int cur = self.GridPos;
             int curDist = Mathf.Abs(cur.x - p.x) + Mathf.Abs(cur.y - p.y);
 
@@ -1050,12 +1071,11 @@ namespace DeckRoguelike.Combat
         // ── 페이즈 2: 공격 + 이동 분리 ──────────────────────────────
         private void PhaseTwo(EnemyInstance self, BoardController board)
         {
-            Vector2Int playerPos = board.PlayerSpawnCell;
+            // 공격 슬롯 — 가장 가까운 객체 좌표에 직접 데미지 (타겟 객체는 턴 동안 고정)
+            Vector2Int targetPos = AcquireStickyNearestTarget(self, board);
+            PlanRangeAttack(self, board, new[] { targetPos }, extraDamage: 5, absolute: true);
 
-            // 공격 슬롯 — 플레이어 좌표에 직접 데미지
-            PlanRangeAttack(self, board, new[] { playerPos }, extraDamage: 5, absolute: true);
-
-            // 이동 슬롯 — 플레이어 맨해튼 거리 2칸 빈 셀 중 무작위
+            // 이동 슬롯 — 플레이어 맨해튼 거리 2칸 빈 셀 중 무작위 (보스 재배치 연출 — 플레이어 기준 유지)
             PlanMoveRandomNearPlayer(self, board, 2);
         }
 
@@ -1065,10 +1085,11 @@ namespace DeckRoguelike.Combat
             switch (NextSequential(3))
             {
                 case 0:
-                    PlanMoveTowardPlayer(self, board, steps: 1);
+                    PlanMoveTowardNearest(self, board, steps: 1);
                     break;
                 case 1:
-                    PlanTargetAttack(self, board, AttackTarget.Player, extraDamage: 5);
+                    // 가장 가까운 객체 강공격 — 타겟 객체는 턴 동안 고정(RePlan 재설정 금지).
+                    PlanTargetAttackAtCell(self, board, AcquireStickyNearestTarget(self, board), extraDamage: 5);
                     break;
                 case 2:
                     PlanCustom("강화", (s, c) =>
@@ -1094,11 +1115,12 @@ namespace DeckRoguelike.Combat
     ///   ① 랜덤 모드(기본): 머리가 인접 4칸 중 갈 수 있는 빈 칸 하나를 **랜덤**으로 고른다.
     ///      이 셀은 이번 플레이어 턴 동안 잠궈(hasPlannedStep) 재계획해도 흔들리지 않는다 → 미리보기 일치.
     ///   ② 추격 모드: 머리가 플레이어 쪽으로 한 칸씩 다가간다(인접하면 제자리 공격). 한 번 켜지면 전투 끝까지.
-    ///   전환 트리거(둘 다 "이번 턴 종료 시" 승격 → 미리보기와 실행이 어긋나지 않음):
-    ///     · 잠근 랜덤 이동 셀에 플레이어가 들어오면(= 뱀이 가려던 칸에 플레이어 도달), 또는
-    ///     · 뱀이 피해를 입으면(OnDamaged) → attackModeArmed 예약 → OnTurnFullyResolved에서 attackMode=true.
-    ///   - 공격(사거리 1): 모드와 무관하게 이동 전·후로 머리가 플레이어와 인접하면 같은 턴에 절대 좌표
-    ///     공격을 등록(공격 range 스프라이트 표시). extra(SlideSnake)가 머리를 옮긴 뒤에도 적중.
+    ///   전환 트리거:
+    ///     · 잠근 랜덤 이동 셀에 플레이어가 들어오면(= 뱀이 가려던 칸에 플레이어 도달) → 이번 턴 종료 시 승격(예약).
+    ///     · 뱀이 피해를 입으면(OnDamaged) → **즉시** attackMode=true (예약 없이 그 자리에서 전환).
+    ///   - 공격(사거리 1, 대각선 포함 = 체비쇼프 1, 8방향): 모드와 무관하게 이동 전·후로 머리가 플레이어와
+    ///     인접(대각선 포함)하면 같은 턴에 절대 좌표 공격을 등록(공격 range 스프라이트 표시).
+    ///     extra(SlideSnake)가 머리를 옮긴 뒤에도 적중.
     ///   - 이동 미리보기는 ComputeDeferredMovePreview 오버라이드가 머리의 다음 셀만 채운다(기본 구현은
     ///     PlanCustom 기반 뱀의 미리보기를 지워버리므로 반드시 오버라이드).
     ///   - 허리(중간 몸통)가 처치되면 그 지점부터 꼬리까지의 세그먼트를 한 번에 제거(뱀이 잘림).
@@ -1179,12 +1201,16 @@ namespace DeckRoguelike.Combat
             }
         }
 
-        /// <summary>피격 시 추격 모드를 예약 — 이번 플레이어 턴이 끝나면 attackMode로 승격된다.
-        /// (몸통 어느 세그먼트가 맞아도 같은 그룹이므로 뱀 전체가 추격 모드로 전환.)</summary>
+        /// <summary>피격 즉시 추격 모드로 전환 — 예약(attackModeArmed) 없이 그 자리에서 attackMode를 켠다.
+        /// (몸통 어느 세그먼트가 맞아도 같은 그룹이므로 뱀 전체가 추격 모드로 전환.)
+        /// 잠가둔 이번 턴 랜덤 step도 풀어, 피격에 따른 RePlan에서 미리보기가 추격으로 즉시 갱신되게 한다.</summary>
         public override void OnDamaged(EnemyInstance self, BoardController board, int amount)
         {
             if (amount <= 0) return;
-            StateOf(GroupId(self)).attackModeArmed = true;
+            var st = StateOf(GroupId(self));
+            st.attackMode = true;
+            st.attackModeArmed = false;
+            st.hasPlannedStep = false;
         }
 
         /// <summary>적 턴 종료 정리. 예약된 추격 모드를 이 시점에 승격시켜, 미리보기(랜덤 이동)와
@@ -1249,7 +1275,8 @@ namespace DeckRoguelike.Combat
 
             var st = StateOf(gid);
             Vector2Int cur = self.GridPos;
-            Vector2Int player = board.PlayerSpawnCell;
+            // 주 타겟(가장 가까운 객체 — 플레이어 또는 아군). 머리만 PlanTurn을 돌므로 머리 기준 1회 계산.
+            Vector2Int player = PrimaryTargetCell(self, board);
 
             Vector2Int nextHead;
             if (st.attackMode)
@@ -1275,9 +1302,10 @@ namespace DeckRoguelike.Combat
             st.plannedStep = nextHead;
             st.willMove = canMove;
 
-            // 사거리 1: 이동 전·후 어느 쪽에서든 플레이어와 인접하면 같은 턴에 공격(이동과 동시 공격).
-            bool adjacentNow = Mathf.Abs(cur.x - player.x) + Mathf.Abs(cur.y - player.y) == 1;
-            bool adjacentAfter = Mathf.Abs(nextHead.x - player.x) + Mathf.Abs(nextHead.y - player.y) == 1;
+            // 사거리 1(대각선 포함, 체비쇼프 1 = 8방향): 이동 전·후 어느 쪽에서든 플레이어와 인접하면
+            // 같은 턴에 공격(이동과 동시 공격). 직선뿐 아니라 대각선 인접도 공격 가능.
+            bool adjacentNow = Mathf.Max(Mathf.Abs(cur.x - player.x), Mathf.Abs(cur.y - player.y)) == 1;
+            bool adjacentAfter = Mathf.Max(Mathf.Abs(nextHead.x - player.x), Mathf.Abs(nextHead.y - player.y)) == 1;
             if (adjacentNow || adjacentAfter)
             {
                 // 절대 좌표로 공격 등록 — extra(SlideSnake)가 머리를 옮긴 뒤에도 정확히 플레이어 셀을 친다.
@@ -1316,7 +1344,8 @@ namespace DeckRoguelike.Combat
         private Vector2Int ComputeChaseStep(EnemyInstance head, BoardController board, Vector2Int player)
         {
             Vector2Int cur = head.GridPos;
-            if (Mathf.Abs(cur.x - player.x) + Mathf.Abs(cur.y - player.y) == 1) return cur;
+            // 사거리 1(대각선 포함)이므로 8방향 인접이면 그 자리에서 공격(이동 없음).
+            if (Mathf.Max(Mathf.Abs(cur.x - player.x), Mathf.Abs(cur.y - player.y)) == 1) return cur;
 
             var best = new List<Vector2Int>(4);
             int bestDist = int.MaxValue;
@@ -1419,22 +1448,20 @@ namespace DeckRoguelike.Combat
 
     /// <summary>
     /// 나이트 (11910): 체스 나이트처럼 점프 이동, 인접하면 공격.
-    ///   - 플레이어가 AdjacentFour(상하좌우 1칸) 안에 있으면 사거리 1 공격.
-    ///   - 아니면 8가지 나이트 점프 좌표 중 플레이어 인접(AdjacentFour) 위치로 우선 점프.
-    ///     그런 점프가 없으면 플레이어와 가장 가까워지는 점프를 선택.
+    ///   - AdjacentFour(상하좌우 1칸) 안에 객체가 있으면 사거리 1 공격 — 타겟은 턴 동안 고정
+    ///     (RePlan 재설정 금지). 사거리가 비면 이동으로 전환.
+    ///   - 아니면 8가지 나이트 점프 좌표 중 대상 인접(AdjacentFour) 위치로 우선 점프.
+    ///     그런 점프가 없으면 대상과 가장 가까워지는 점프를 선택.
     ///   - 모든 점프가 막혀있으면 대기.
     /// </summary>
     public class KnightBehavior : EnemyBehavior
     {
         public override void PlanTurn(EnemyInstance self, BoardController board)
         {
-            if (IsPlayerInRange(self, board, AdjacentFour))
-            {
-                PlanTargetAttack(self, board, AttackTarget.Player);
+            if (TryPlanAttackInRange(self, board, AdjacentFour))
                 return;
-            }
 
-            Vector2Int playerPos = board.PlayerSpawnCell;
+            Vector2Int playerPos = PrimaryTargetCell(self, board);
             Vector2Int dest = ChooseKnightJump(self, board, playerPos);
             if (dest != self.GridPos)
                 PlanMoveTo(self, board, dest);
@@ -1475,13 +1502,14 @@ namespace DeckRoguelike.Combat
 
     /// <summary>
     /// 룩 (11911): 체스 룩처럼 직선으로 돌진 공격. 이동 반경 = 공격 사거리 = 직선 무제한.
-    ///   - 플레이어와 같은 행/열에 있으면 그 방향으로 돌진:
-    ///       공격: self+dir*1 ~ player 좌표 모든 셀 (사거리 무제한, 절대 좌표)
-    ///       이동: player - dir 셀(플레이어 바로 앞 한 칸)로 이동
-    ///   - 그 외에는 룩 이동(4방향 직선 무제한)으로 플레이어와 같은 행/열인 칸으로 한 번에 이동.
-    ///     도달 가능한 직선 칸 중 (1) 플레이어와 같은 행/열인 칸을 우선, 그 중 플레이어와
-    ///     맨해튼 거리가 짧은 칸을 선택. 같은 행/열이 모두 막혀있으면 도달 가능한 칸 중
-    ///     플레이어와 가장 가까워지는 칸으로 이동, 그것도 없으면 대기.
+    ///   - 같은 행/열(사거리)에 객체가 있으면 그 방향으로 돌진. 타겟은 턴 동안 고정
+    ///     (RePlan 재설정 금지), 동시에 여럿 정렬 시 처음 한 번만 랜덤:
+    ///       공격: self+dir*1 ~ target 좌표 모든 셀 (사거리 무제한, 절대 좌표)
+    ///       이동: target - dir 셀(대상 바로 앞 한 칸)로 이동
+    ///   - 정렬된 객체가 없으면 룩 이동(4방향 직선 무제한)으로 가장 가까운 객체와 같은
+    ///     행/열인 칸으로 한 번에 이동. 도달 가능한 직선 칸 중 (1) 같은 행/열인 칸을 우선,
+    ///     그 중 맨해튼 거리가 짧은 칸을 선택. 같은 행/열이 모두 막혀있으면 도달 가능한 칸 중
+    ///     가장 가까워지는 칸으로 이동, 그것도 없으면 대기.
     /// 공격 슬롯과 기타(이동) 슬롯을 함께 등록 — 기타→공격 순으로 Phase 1에서 처리되어
     /// 룩이 먼저 정지 위치로 이동한 뒤 절대 좌표 공격이 발사됨.
     ///
@@ -1505,13 +1533,18 @@ namespace DeckRoguelike.Combat
             _dashAttackCell = null;
             _dashStopPos = null;
 
-            Vector2Int player = board.PlayerSpawnCell;
-            Vector2Int diff = player - self.GridPos;
-
-            bool sameRow = diff.y == 0 && diff.x != 0;
-            bool sameCol = diff.x == 0 && diff.y != 0;
-            if (sameRow || sameCol)
+            // 사거리(같은 행/열) 안 객체 중 공격 타겟 선택 — 턴 동안 고정(RePlan 재설정 금지),
+            // 동시에 여럿이 정렬돼 있으면 처음 한 번만 랜덤. 정렬된 객체가 없으면 align 이동.
+            Vector2Int selfPos = self.GridPos;
+            bool aligned = TryAcquireAttackTarget(self, board, pos =>
             {
+                Vector2Int d = pos - selfPos;
+                return (d.y == 0 && d.x != 0) || (d.x == 0 && d.y != 0);
+            }, out Vector2Int player);
+
+            if (aligned)
+            {
+                Vector2Int diff = player - self.GridPos;
                 Vector2Int dir = new Vector2Int(
                     diff.x == 0 ? 0 : (diff.x > 0 ? 1 : -1),
                     diff.y == 0 ? 0 : (diff.y > 0 ? 1 : -1));
@@ -1542,8 +1575,9 @@ namespace DeckRoguelike.Combat
                 return;
             }
 
-            // 정렬 안 됨 — 룩 이동(직선 무제한)으로 플레이어와 같은 행/열 칸으로 이동.
-            Vector2Int dest = FindBestRookAlignCell(self.GridPos, board, player);
+            // 정렬된 객체 없음 — 룩 이동(직선 무제한)으로 가장 가까운 객체와 같은 행/열 칸으로 이동.
+            Vector2Int near = PrimaryTargetCell(self, board);
+            Vector2Int dest = FindBestRookAlignCell(self.GridPos, board, near);
             if (dest != self.GridPos)
                 PlanMoveTo(self, board, dest);
             else
@@ -1630,20 +1664,27 @@ namespace DeckRoguelike.Combat
 
     /// <summary>
     /// 비숍 (11912): 체스 비숍처럼 대각선으로 사거리 무제한 공격.
-    ///   - 플레이어와 대각선 정렬(|dx|==|dy|, dx!=0)이면 대각선 방향으로 self 다음 칸부터
-    ///     플레이어 셀까지 모든 대각선 셀에 광역 공격.
-    ///   - 정렬 안 되어 있으면 대각선 1칸 이동으로 정렬 차이(||dx|-|dy||)를 가장 줄이는
-    ///     칸 선택. 동률이면 플레이어와 맨해튼 가까운 칸 선택. 모든 대각선이 막혀있으면 대기.
+    ///   - 대각선 정렬(|dx|==|dy|, dx!=0)된 객체가 있으면 그 방향으로 self 다음 칸부터
+    ///     대상 셀까지 모든 대각선 셀에 광역 공격. 타겟은 턴 동안 고정(RePlan 재설정 금지),
+    ///     동시에 여럿 정렬 시 처음 한 번만 랜덤. 정렬된 객체가 없으면 이동으로 전환.
+    ///   - 이동은 대각선 1칸 — 가장 가까운 객체와의 정렬 차이(||dx|-|dy||)를 가장 줄이는
+    ///     칸 선택. 동률이면 맨해튼 가까운 칸 선택. 모든 대각선이 막혀있으면 대기.
     /// </summary>
     public class BishopBehavior : EnemyBehavior
     {
         public override void PlanTurn(EnemyInstance self, BoardController board)
         {
-            Vector2Int player = board.PlayerSpawnCell;
-            Vector2Int diff = player - self.GridPos;
-
-            if (diff.x != 0 && Mathf.Abs(diff.x) == Mathf.Abs(diff.y))
+            // 사거리(대각선 정렬) 안 객체 중 공격 타겟 선택 — 턴 동안 고정(RePlan 재설정 금지).
+            Vector2Int selfPos = self.GridPos;
+            bool aligned = TryAcquireAttackTarget(self, board, pos =>
             {
+                Vector2Int d = pos - selfPos;
+                return d.x != 0 && Mathf.Abs(d.x) == Mathf.Abs(d.y);
+            }, out Vector2Int player);
+
+            if (aligned)
+            {
+                Vector2Int diff = player - self.GridPos;
                 int steps = Mathf.Abs(diff.x);
                 Vector2Int dir = new Vector2Int(diff.x > 0 ? 1 : -1, diff.y > 0 ? 1 : -1);
                 var cells = new Vector2Int[steps];
@@ -1653,7 +1694,9 @@ namespace DeckRoguelike.Combat
                 return;
             }
 
-            Vector2Int dest = ChooseDiagonalAlignStep(self, board, player);
+            // 정렬된 객체 없음 — 가장 가까운 객체 기준으로 대각선 정렬 이동.
+            Vector2Int near = PrimaryTargetCell(self, board);
+            Vector2Int dest = ChooseDiagonalAlignStep(self, board, near);
             if (dest != self.GridPos)
                 PlanMoveTo(self, board, dest);
             else

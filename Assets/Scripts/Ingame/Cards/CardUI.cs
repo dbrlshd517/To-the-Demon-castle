@@ -561,6 +561,27 @@ namespace DeckRoguelike.Cards
         /// <summary>선택 패널 모드에서 PointerDown 시 발화</summary>
         public event System.Action<CardUI> OnCardChoosePanelClick;
 
+        // ── 다중 선택 (906/910 대격변 등) ───────────────────────────
+        // SubCardListPanel을 다중 선택 모드로 띄웠을 때, 카드를 클릭하면 토글되어
+        // 살짝 확대된 채 "선택됨"으로 유지되고, 다시 클릭하면 해제된다.
+        // 클릭 자체는 뷰어 카드(IsRuntimeUnplayable)의 OnCardViewClicked 경로로 발화되며,
+        // hover 확대는 외부 CardHoverScaler가 처리한다. 이 baseline 스케일 위에 hover가 얹힌다.
+        [Tooltip("다중 선택 패널에서 '선택됨' 표시로 적용할 확대 배율")]
+        [SerializeField] private float multiSelectScale = 1.12f;
+
+        /// <summary>다중 선택 패널에서 현재 선택(확대) 표시 상태인지.</summary>
+        public bool IsMultiSelected { get; private set; }
+        /// <summary>선택 시 적용되는 확대 배율 — 외부 hover 스케일러가 exit 시 baseline으로 참조.</summary>
+        public float MultiSelectScale => multiSelectScale;
+
+        /// <summary>다중 선택 패널에서 이 카드의 선택 표시를 설정합니다.
+        /// 선택되면 살짝 확대된 채 유지되고, 해제되면 원래 크기로 돌아갑니다.</summary>
+        public void SetMultiSelected(bool selected)
+        {
+            IsMultiSelected = selected;
+            transform.localScale = originalScale * (selected ? multiSelectScale : 1f);
+        }
+
         /// <summary>선택 컨테이너로 이동할 때 hover/sticky/애니메이션 상태를 초기화합니다.</summary>
         public void ResetVisualForChoosePanel()
         {

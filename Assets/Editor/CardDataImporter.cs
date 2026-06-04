@@ -111,7 +111,7 @@ public class CardDataImporter : EditorWindow
 
         // 포맷: cardCode(5자리),cardName,description,effects,keywords
         // cardType·rarity는 cardCode에서 자동 파생 (CardData.CardTypeFromCode)
-        // C=클래스(1공통/2전사/3거너/4메이지) T=타입(1이동/2액션/3파워) R=희귀도(1일반/2고급/3희귀/4전설) N=번호 O=강화(짝수=전/홀수=후)
+        // C=클래스(1공통/2전사/3거너/4메이지) T=타입(1액션/2파워, 이동은 액션 대역에 병합·효과로 식별) R=희귀도(1일반/2고급/3희귀/4전설) N=번호 O=강화(짝수=전/홀수=후)
         // keywords: CardKeyword 플래그를 | 로 구분  예) Exhausts  /  Exhausts|Innate  / 없으면 빈칸
 
         // 전사 액션 카드 (T=2)

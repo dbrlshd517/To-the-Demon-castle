@@ -48,6 +48,35 @@ namespace DeckRoguelike.Combat
         public virtual void OnTrapPlaced(BoardController board, int trapCount) {}
     }
 
+    /// <summary>장전(ReLoad): delayTurns 턴 뒤 플레이어 턴 시작 시 발사 카드(shootCode)를 count장 손패에 추가하고 만료됩니다.
+    /// 카드를 사용한 턴은 세지 않으며, 다음 플레이어 턴 시작부터 카운트다운한다(delayTurns=1 → 다음 턴 시작).</summary>
+    public class DelayedReloadPower : CombatPowerEffect
+    {
+        private readonly int _shootCode;
+        private readonly int _count;
+        private int _turnsLeft;
+
+        public DelayedReloadPower(int shootCode, int count, int delayTurns) : base(count)
+        {
+            _shootCode = shootCode;
+            _count     = count < 1 ? 1 : count;
+            _turnsLeft = delayTurns < 1 ? 1 : delayTurns;
+        }
+
+        public override void OnTurnStart(BoardController board)
+        {
+            _turnsLeft--;
+            if (_turnsLeft > 0) return;
+
+            var card = DeckRoguelike.Core.CardRegistry.GetCard(_shootCode);
+            if (card != null)
+                for (int i = 0; i < _count; i++) board.AddCardToHandFree(card);
+
+            // 1회성 파워 — 카드 지급 후 자신을 해제하고 아이콘 제거.
+            board.UnregisterPower(this);
+        }
+    }
+
     /// <summary>공격을 당했을 때 공격자에게 Value 피해를 줍니다 (가시갑옷).</summary>
     public class AttackedDamagePower : CombatPowerEffect
     {
@@ -162,13 +191,13 @@ namespace DeckRoguelike.Combat
         }
     }
 
-    /// <summary>매 턴 시작 시 단검 카드를 한 장 손에 추가합니다 (Value 0=22002, 1=22003).</summary>
+    /// <summary>매 턴 시작 시 단검 카드를 한 장 손에 추가합니다 (Value 0=21004, 1=21005).</summary>
     public class EveryTurnCreateKnifePower : CombatPowerEffect
     {
         public EveryTurnCreateKnifePower(int value) : base(value) {}
         public override void OnTurnStart(BoardController c)
         {
-            int code = Value >= 1 ? 22003 : 22002;
+            int code = Value >= 1 ? 21005 : 21004;
             var card = DeckRoguelike.Core.CardRegistry.GetCard(code);
             if (card != null) c.AddCardToHandFree(card);
         }
@@ -227,11 +256,27 @@ namespace DeckRoguelike.Combat
         public override void OnCardExhausted(BoardController c) => c.AddStrength(Value);
     }
 
-    /// <summary>소멸 카드를 사용할 때마다 카드 Value장 드로우 (광폭화 - 소멸).</summary>
+    /// <summary>소멸 카드를 _threshold장 사용할 때마다 카드 _drawCount장 드로우 (광폭화 - 소멸).
+    /// _threshold=1이면 소멸 1장마다, 2이면 2장마다 1번 발동한다.</summary>
     public class ExhaustsCardDrawPower : CombatPowerEffect
     {
-        public ExhaustsCardDrawPower(int value) : base(value) {}
-        public override void OnCardExhausted(BoardController c) => c.DrawExtraCards(Value);
+        private readonly int _threshold;
+        private readonly int _drawCount;
+        private int _counter;
+
+        public ExhaustsCardDrawPower(int threshold, int drawCount) : base(drawCount)
+        {
+            _threshold = threshold < 1 ? 1 : threshold;
+            _drawCount = drawCount;
+        }
+
+        public override void OnCardExhausted(BoardController c)
+        {
+            _counter++;
+            if (_counter < _threshold) return;
+            _counter = 0;
+            c.DrawExtraCards(_drawCount);
+        }
     }
 
     /// <summary>이동 카드를 사용할 때마다 힘 +Value.</summary>
@@ -318,13 +363,13 @@ namespace DeckRoguelike.Combat
         public override void OnTrapPlaced(BoardController c, int trapCount) => c.AddStrength(Value);
     }
 
-    /// <summary>트랩을 설치할 때마다 발사 카드(32000)를 Value장 손에 추가 (33302/33303 변형).</summary>
+    /// <summary>트랩을 설치할 때마다 발사 카드(31002)를 Value장 손에 추가 (33302/33303 변형).</summary>
     public class EveryTrapShootCardPower : CombatPowerEffect
     {
         public EveryTrapShootCardPower(int value) : base(value) {}
         public override void OnTrapPlaced(BoardController c, int trapCount)
         {
-            var card = DeckRoguelike.Core.CardRegistry.GetCard(32000);
+            var card = DeckRoguelike.Core.CardRegistry.GetCard(31002);
             if (card == null) return;
             int count = UnityEngine.Mathf.Max(1, Value);
             for (int i = 0; i < count; i++) c.AddCardToHandFree(card);

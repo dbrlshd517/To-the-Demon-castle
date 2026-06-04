@@ -77,6 +77,13 @@ namespace DeckRoguelike.Combat
 
         private int _seqCounter;
 
+        // ── 주 타겟 선택 상태 (이동·공격이 공유하는 "가장 가까운 적") ──────────────
+        // EnemyBehavior와 동형 — 최근접 후보 집합이 그대로면 같은 적 유지, 집합이 바뀌거나 더 가까운
+        // 적이 생기면 후보 중 랜덤 재선택. 턴 종료(ExecuteTurn 끝)에서 초기화.
+        private const int NoTargetId = int.MinValue;
+        private readonly HashSet<int> _lastNearestIds = new HashSet<int>();
+        private int _currentTargetId = NoTargetId;
+
         // ── 표준 hooks ────────────────────────────────────────────
         public virtual void OnSpawn(AllyInstance self, BoardController board) { }
 
@@ -88,6 +95,9 @@ namespace DeckRoguelike.Combat
             _attackAction?.Invoke(self, board);
             _moveAction?.Invoke(self, board);
             ClearAllSlots();
+            // 주 타겟 초기화 — 다음 턴에 최근접 적을 새로 선택.
+            _lastNearestIds.Clear();
+            _currentTargetId = NoTargetId;
         }
 
         public virtual void OnDeath(AllyInstance self, BoardController board) { }
@@ -129,30 +139,62 @@ namespace DeckRoguelike.Combat
             return false;
         }
 
-        /// <summary>가장 가까운 적 위치. 적이 없으면 self.GridPos.</summary>
+        /// <summary>주 타겟(가장 가까운 적) 위치. 적이 없으면 self.GridPos.</summary>
         protected Vector2Int FindNearestEnemyPos(AllyInstance self, BoardController board)
         {
-            Vector2Int best = self.GridPos;
-            int bestDist = int.MaxValue;
-            foreach (var e in board.GetAliveEnemies())
-            {
-                int d = Mathf.Abs(self.GridPos.x - e.GridPos.x) + Mathf.Abs(self.GridPos.y - e.GridPos.y);
-                if (d < bestDist) { bestDist = d; best = e.GridPos; }
-            }
-            return best;
+            var e = PrimaryEnemyTarget(self, board);
+            return e != null ? e.GridPos : self.GridPos;
         }
 
-        /// <summary>가장 가까운 적 인스턴스. 없으면 null.</summary>
+        /// <summary>주 타겟(가장 가까운 적) 인스턴스. 없으면 null.</summary>
         protected EnemyInstance FindNearestEnemy(AllyInstance self, BoardController board)
+            => PrimaryEnemyTarget(self, board);
+
+        /// <summary>
+        /// 이동·공격이 공유하는 "주 타겟" 적. 자신에게서 가장 가까운 적을 고른다. 같은 최소 거리가
+        /// 여럿이면 랜덤. 재계산 시 최근접 후보 집합이 그대로면 같은 적을 유지하고, 집합이 바뀌거나
+        /// 더 가까운 적이 생기면 후보 중 랜덤으로 다시 선택. 적이 없으면 null.
+        /// </summary>
+        protected EnemyInstance PrimaryEnemyTarget(AllyInstance self, BoardController board)
         {
-            EnemyInstance best = null;
-            int bestDist = int.MaxValue;
+            // 1) 최소 거리.
+            int minDist = int.MaxValue;
             foreach (var e in board.GetAliveEnemies())
             {
                 int d = Mathf.Abs(self.GridPos.x - e.GridPos.x) + Mathf.Abs(self.GridPos.y - e.GridPos.y);
-                if (d < bestDist) { bestDist = d; best = e; }
+                if (d < minDist) minDist = d;
             }
-            return best;
+            if (minDist == int.MaxValue)
+            {
+                _lastNearestIds.Clear();
+                _currentTargetId = NoTargetId;
+                return null;
+            }
+
+            // 2) 최소 거리 후보 수집.
+            var ids = new List<int>();
+            var objs = new List<EnemyInstance>();
+            foreach (var e in board.GetAliveEnemies())
+            {
+                int d = Mathf.Abs(self.GridPos.x - e.GridPos.x) + Mathf.Abs(self.GridPos.y - e.GridPos.y);
+                if (d != minDist) continue;
+                // EnemyInstance는 UnityEngine.Object가 아닌 일반 클래스 → 참조 기반 GetHashCode()로 식별.
+                ids.Add(e.GetHashCode());
+                objs.Add(e);
+            }
+
+            // 3) 집합 그대로면 유지, 아니면 랜덤 재선택.
+            var nearestIds = new HashSet<int>(ids);
+            int chosen;
+            if (nearestIds.SetEquals(_lastNearestIds) && nearestIds.Contains(_currentTargetId))
+                chosen = ids.IndexOf(_currentTargetId);
+            else
+                chosen = UnityEngine.Random.Range(0, ids.Count);
+
+            _lastNearestIds.Clear();
+            foreach (var id in ids) _lastNearestIds.Add(id);
+            _currentTargetId = ids[chosen];
+            return objs[chosen];
         }
 
         protected int ManhattanToEnemy(AllyInstance self, BoardController board)

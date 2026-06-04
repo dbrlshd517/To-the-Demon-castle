@@ -103,6 +103,12 @@ namespace DeckRoguelike.UI
         private List<CardData>             _customPickPool;
         private System.Action<CardData>    _onCustomPick;
 
+        // Sub 다중 선택 전용 (906/910 대격변 — 지정 수만큼 토글 선택하면 즉시 처리)
+        private bool                            _multiSelectActive;
+        private int                             _multiSelectRequired;
+        private System.Action<List<CardData>>   _onMultiSelectComplete;
+        private readonly List<CardUI>           _multiSelectedUIs = new List<CardUI>();
+
         // ──────────────────────────────────────────────
         #region Unity Lifecycle
 
@@ -221,6 +227,7 @@ namespace DeckRoguelike.UI
             onFinishCallback = onFinish;
             _customPickPool  = null;
             _onCustomPick    = null;
+            ResetMultiSelectState();
             if (confirmPanel != null) cardConfirmPanel = confirmPanel;
             RebuildGrid();
             if (scrollRect != null && scrollRect.content != null)
@@ -236,6 +243,7 @@ namespace DeckRoguelike.UI
         {
             _customPickPool   = cards ?? new List<CardData>();
             _onCustomPick     = onPicked;
+            ResetMultiSelectState();
             currentRestMode   = RestCardMode.Remove; // confirm 패널은 단일 카드 표시
             onFinishCallback  = null;
             if (confirmPanel != null) cardConfirmPanel = confirmPanel;
@@ -245,11 +253,50 @@ namespace DeckRoguelike.UI
         }
 
         /// <summary>
+        /// 906/910 대격변 등 — 카드 풀에서 정확히 count장을 토글 선택받습니다.
+        /// 카드를 클릭하면 토글되어 살짝 확대된 채 "선택됨"으로 유지되고, 다시 클릭하면 해제됩니다.
+        /// count장이 모두 선택되면 confirm 패널 없이 즉시 onComplete(선택된 카드 목록)이 호출되고 패널이 닫힙니다.
+        /// </summary>
+        public void SetupMultiCardPicker(List<CardData> cards, int count,
+                                         System.Action<List<CardData>> onComplete)
+        {
+            _customPickPool        = cards ?? new List<CardData>();
+            _onCustomPick          = null;
+            _multiSelectActive     = true;
+            _multiSelectRequired   = Mathf.Max(1, count);
+            _onMultiSelectComplete = onComplete;
+            _multiSelectedUIs.Clear();
+            currentRestMode        = RestCardMode.Remove;
+            onFinishCallback       = null;
+            RebuildGrid();
+            if (scrollRect != null && scrollRect.content != null)
+                scrollRect.normalizedPosition = new Vector2(0f, 1f);
+        }
+
+        private void ResetMultiSelectState()
+        {
+            _multiSelectActive     = false;
+            _multiSelectRequired   = 0;
+            _onMultiSelectComplete = null;
+            _multiSelectedUIs.Clear();
+        }
+
+        /// <summary>
         /// 사용자가 픽을 확정하지 않고 패널을 닫았을 때(백버튼 등) 호출됩니다.
-        /// SetupCardPicker 콜백이 아직 살아있으면 null로 호출해 취소 처리하고 상태를 비웁니다.
+        /// 단일 픽/다중 선택 콜백이 아직 살아있으면 취소로 처리하고 상태를 비웁니다.
         /// </summary>
         public void CancelPickerIfPending()
         {
+            if (_onMultiSelectComplete != null)
+            {
+                var mcb = _onMultiSelectComplete;
+                _onMultiSelectComplete = null;
+                _multiSelectActive     = false;
+                _multiSelectedUIs.Clear();
+                _customPickPool        = null;
+                mcb.Invoke(new List<CardData>()); // 확정 없이 닫힘 → 빈 목록(취소)
+                return;
+            }
             if (_onCustomPick == null) return;
             var cb = _onCustomPick;
             _onCustomPick   = null;
@@ -598,6 +645,12 @@ namespace DeckRoguelike.UI
 
         private void RebuildSubGrid()
         {
+            if (_multiSelectActive)
+            {
+                RebuildMultiSelectGrid();
+                return;
+            }
+
             List<CardData> cards;
             if (_customPickPool != null)
             {
@@ -632,6 +685,69 @@ namespace DeckRoguelike.UI
                 LayoutRebuilder.ForceRebuildLayoutImmediate(rt);
                 Canvas.ForceUpdateCanvases();
             }
+        }
+
+        /// <summary>다중 선택 모드 그리드. 카드 클릭 시 토글 선택되며, confirm 패널을 거치지 않는다.</summary>
+        private void RebuildMultiSelectGrid()
+        {
+            _multiSelectedUIs.Clear();
+
+            foreach (var card in _customPickPool)
+            {
+                var item   = Instantiate(cardPrefab, cardGridContainer);
+                var cardUI = item.GetComponent<CardUI>();
+                if (cardUI == null) continue;
+
+                cardUI.Initialize(card);
+                cardUI.IsRuntimeUnplayable = true;
+                cardUI.SetClickable(true);
+                // 뷰어 카드의 click(=PointerUp + 짧은 이동)이 OnCardViewClicked로 발화된다 → 토글로 사용.
+                cardUI.OnCardViewClicked += ToggleMultiSelect;
+                AddListHoverEffect(item);
+            }
+
+            if (cardGridContainer is RectTransform rt)
+            {
+                LayoutRebuilder.ForceRebuildLayoutImmediate(rt);
+                Canvas.ForceUpdateCanvases();
+            }
+        }
+
+        private void ToggleMultiSelect(CardUI ui)
+        {
+            if (ui == null || !_multiSelectActive) return;
+
+            if (_multiSelectedUIs.Contains(ui))
+            {
+                _multiSelectedUIs.Remove(ui);
+                ui.SetMultiSelected(false);
+                return;
+            }
+
+            _multiSelectedUIs.Add(ui);
+            ui.SetMultiSelected(true);
+
+            if (_multiSelectedUIs.Count >= _multiSelectRequired)
+                CompleteMultiSelect();
+        }
+
+        private void CompleteMultiSelect()
+        {
+            var picked = _multiSelectedUIs
+                .Select(u => u.CardData)
+                .Where(c => c != null)
+                .ToList();
+
+            var cb = _onMultiSelectComplete;
+            _onMultiSelectComplete = null;
+            _multiSelectActive     = false;
+            _multiSelectedUIs.Clear();
+            _customPickPool        = null;
+
+            // confirm 패널 없이 즉시 닫고 콜백 실행. (CloseRestCardList → CancelPickerIfPending는
+            // _onMultiSelectComplete가 이미 null이라 취소 콜백을 발화하지 않는다.)
+            InGameUIController.Instance?.CloseRestCardList();
+            cb?.Invoke(picked);
         }
 
         private void OnSubCardClicked(CardData card)
@@ -798,8 +914,13 @@ namespace DeckRoguelike.UI
         private class CardHoverScaler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             public float hoverScale = 1.3f;
+            private DeckRoguelike.Cards.CardUI _cardUI;
+            private void Awake() => _cardUI = GetComponent<DeckRoguelike.Cards.CardUI>();
             public void OnPointerEnter(PointerEventData _) => transform.localScale = Vector3.one * hoverScale;
-            public void OnPointerExit (PointerEventData _) => transform.localScale = Vector3.one;
+            // 다중 선택 패널에서 '선택됨' 카드는 hover가 풀려도 살짝 확대된 baseline을 유지한다.
+            public void OnPointerExit (PointerEventData _) =>
+                transform.localScale = Vector3.one *
+                    (_cardUI != null && _cardUI.IsMultiSelected ? _cardUI.MultiSelectScale : 1f);
         }
 
         #endregion

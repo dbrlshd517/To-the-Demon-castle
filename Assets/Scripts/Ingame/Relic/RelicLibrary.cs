@@ -33,13 +33,14 @@ namespace DeckRoguelike.Relic
                 // 1xx 희귀 유물 (Uncommon)
                 { 100, () => new PostRestStrengthRelic() },      // 휴식 후 전투 힘 +4
                 { 101, () => new PostShopStrengthRelic() },      // 상점 후 전투 힘 +4
-                { 102, () => new PostMysteryStrengthRelic() },   // 미지 후 전투 힘 +2
+
+                { 102, () => new UpgradeStartingDeckRelic() },   // 시작 카드 전부 강화
                 { 103, () => new RestBonusRelic() },             // 휴식의 부적 — 휴식 HP +15
                 { 104, () => new ShopBonusRelic() },             // 상점의 부적 — 상점 HP +15
-                { 105, () => new MysteryBonusRelic() },          // 미지의 부적 — 미지 HP +7
+
                 { 106, () => new MaxHPRelic() },                 // 최대 HP +7
                 { 107, () => new BloodVialRelic() },             // 피의 약병 — 전투 시작 HP +3
-                { 108, () => new TreasureMapRelic() },           // 금속 탐지기
+
                 { 109, () => new BossStrengthRelic() },          // 보스 전투 힘 +3
                 { 110, () => new StrengthRelic() },              // 힘 +1
                 { 111, () => new ThornsRelic() },                // 공격받을 때 적 피해 3
@@ -50,8 +51,9 @@ namespace DeckRoguelike.Relic
                 { 116, () => new RestHealBonusRelic() },         // 휴식 시 채력 전부 회복
                 { 117, () => new NoActionNextDrawRelic() },      // 액션 미사용 → 다음턴 +1
                 { 118, () => new NoMoveNextDrawRelic() },        // 이동 미사용 → 다음턴 +1
-                { 119, () => new NoPowerNextDrawRelic() },       // 파워 미사용 → 다음턴 +1
+                { 119, () => new ShuffleStrengthRelic() },       // 셔플마다 힘 +1
                 { 170, () => new LowHpStrengthRelic() },         // 채력 50%↓ 힘 +3
+                { 180, () => new TrapImmuneRelic() },            // 설치 위 이동 시 발동 안 함(트랩 면역)
                 { 190, () => new ExtraBurnRelic() },             // 화염 부여 시 +1 추가
 
                 // 2xx 영웅 유물 (Rare)
@@ -63,10 +65,10 @@ namespace DeckRoguelike.Relic
                 { 205, () => new EveryThreeTurnDrawRelic() },    // 3턴마다 카드 +1
                 { 206, () => new ExtraCardRewardChoiceRelic() }, // 카드 보상 선택지 +1
                 { 207, () => new ActionChoiceRelic() },          // 각인된 부적 (액션)
-                { 208, () => new MoveChoiceRelic() },            // 각인된 부적 (이동)
-                { 209, () => new PowerChoiceRelic() },           // 각인된 부적 (파워)
-                { 210, () => new UpgradeStartingDeckRelic() },   // 시작 카드 전부 강화
-                { 211, () => new ShuffleStrengthRelic() },       // 셔플마다 힘 +1
+                { 208, () => new PowerChoiceRelic() },           // 각인된 부적 (파워)
+                { 209, () => new KillMaxHpRelic() },             // 각인 — 적 처치 시 최대 HP +2
+                { 210, () => new DiscardStrengthRelic() },       // 매턴 버리는 카드 수만큼 힘
+                { 211, () => new NoPowerNextDrawRelic() },       // 파워 미사용 → 다음턴 +1
                 { 212, () => new RandomUpgradeOnObtainRelic() }, // 획득 시 카드 2장 무작위 강화
                 { 213, () => new ShopBetterDiscountRelic() },    // 상점 품절X + 30% 할인
                 { 214, () => new DangerCombatEnemyHPRelic() },   // 위험 전투 적 HP 25%↓
@@ -76,13 +78,14 @@ namespace DeckRoguelike.Relic
                 { 218, () => new AnyCardCountDrawRelic() },      // 수련의 일지 — 10장 사용마다 +1
                 { 219, () => new KillHealRelic() },              // 적 처치 시 HP +2
                 { 270, () => new DamageReductionRelic() },       // 피해 -1
+                { 280, () => new GunnerStartShootRelic() },      // 거너 시작 — 전투 시작 시 발사 3장
                 { 290, () => new AllyHpBoostRelic() },           // 소환수 체력 +5
 
                 // 3xx 영웅 유물 (Rare)
                 { 300, () => new UpgradedRewardRelic() },        // 카드 보상 강화 상태
                 { 301, () => new FreeMapMoveRelic() },           // 자유의 발걸음
                 { 302, () => new RandomSpawnRelic() },           // 예측 불허
-                { 303, () => new DiscardStrengthRelic() },       // 매턴 버리는 카드 수만큼 힘
+
                 { 304, () => new CombatStartFearRelic() },       // 공포의 위압
                 { 305, () => new TurnEndRandomUpgradeRelic() },  // 턴 끝 무작위 카드 강화
                 { 306, () => new ArmorBreakFearRelic() },        // 방어도 파괴 시 공포
@@ -120,6 +123,12 @@ namespace DeckRoguelike.Relic
                 { 602, () => new ChooseAnyCardRelic() },         // 원하는 카드 1장
                 { 603, () => new TwentyTurnSweepRelic() },       // 20턴 → 모든 적 처치
 
+                
+                
+                //안쓰는 저장 유물
+                { 700, () => new PostMysteryStrengthRelic() },   // 미지 후 전투 힘 +2
+                { 701, () => new MysteryBonusRelic() },          // 미지의 부적 — 미지 HP +7
+                { 702, () => new TreasureMapRelic() },           // 금속 탐지기
                 // 9xx 보스 유물
                 { 900, () => new PandoraBoxRelic() },            // 판도라의 상자
                 { 901, () => new EliteOrBossDrawRelic() },       // 위기의 직감
@@ -127,15 +136,15 @@ namespace DeckRoguelike.Relic
                 { 903, () => new KeepHandPlusDrawRelic() },      // 영원의 손
                 { 904, () => new PotionDoubleRelic() },          // 연금술사의 손길 — 아이템 효과 2배
                 { 905, () => new NoPotionDrawRelic() },          // 금욕의 서약 — 매턴 +1, 아이템 차단
-                { 906, () => new RarityUpgradeRelic() },         // 대격변
+                { 906, () => new CataclysmTransformRelic() },    // 대격변 — 카드 2장 변화
                 { 907, () => new CursedPowerRelic() },           // 저주받은 힘
                 { 908, () => new NoUpgradeDrawRelic() },         // 망각의 인장 — 매턴 +1, 강화 차단
                 { 909, () => new EmptyHandDrawRelic() },         // 마지막 한발
-                { 910, () => new EnemyAttackBuffDrawRelic() },   // 분노한 적
+                { 910, () => new CataclysmRemoveRelic() },       // 대격변 — 카드 3장 제거
                 { 911, () => new NoRestHealDrawRelic() },        // 수면의 단절
                 { 970, () => new WarriorBossHealRelic() },       // 전사 보스
                 { 971, () => new HpLossDrawRelic() },            // HP 잃을 때 카드 +1
-                { 972, () => new NoExhaustRelic() },             // 소멸 방지
+                { 972, () => new MoveCardPlayDrawRelic() },      // 소멸의 공명 — 이동 카드 사용 시 카드 +1
                 { 980, () => new GunnerBossDrawRelic() },        // 거너 보스
                 { 981, () => new AreaDamageDoubleRelic() },      // 범위 피해 2배
                 { 982, () => new MoveDrawRelic() },              // 이동 시 카드 +1
@@ -366,7 +375,6 @@ namespace DeckRoguelike.Relic
     }
 
     public class ActionChoiceRelic : StartingHandCardRelic { protected override CardType TargetType => CardType.Action; }
-    public class MoveChoiceRelic   : StartingHandCardRelic { protected override CardType TargetType => CardType.Move;   }
     public class PowerChoiceRelic  : StartingHandCardRelic { protected override CardType TargetType => CardType.Power;  }
     /// <summary>205: 적의 방어도를 파괴하면 공포를 부여합니다.</summary>
     public class ArmorBreakFearRelic : RelicEffect
@@ -643,6 +651,54 @@ namespace DeckRoguelike.Relic
         }
     }
 
+    /// <summary>906 대격변: 덱에서 카드 2장을 선택해 더 높은 등급의 무작위 카드로 변화시킵니다.
+    /// 다중 선택 패널(토글)로 2장을 모두 고르면 confirm 없이 즉시 변화합니다.</summary>
+    public class CataclysmTransformRelic : RelicEffect
+    {
+        public override RelicCategory Category => RelicCategory.Temporary;
+        public override void OnRelicObtained(GameManager gm)
+        {
+            var dm = DeckManager.Instance;
+            if (dm == null) return;
+
+            var pool = new List<CardData>(dm.MasterDeck);
+            if (pool.Count == 0) return;
+
+            int count = Mathf.Min(2, pool.Count);
+            InGameUIController.Instance?.OpenMultiCardPicker(pool, count, picked =>
+            {
+                if (picked == null) return;
+                foreach (var c in picked)
+                    RarityUpgradeRelic.TransformCard(c);
+                Debug.Log($"[CataclysmTransformRelic] {picked.Count}장 변화 완료");
+            });
+        }
+    }
+
+    /// <summary>910 대격변: 덱에서 카드 3장을 선택해 제거합니다.
+    /// 다중 선택 패널(토글)로 3장을 모두 고르면 confirm 없이 즉시 제거합니다.</summary>
+    public class CataclysmRemoveRelic : RelicEffect
+    {
+        public override RelicCategory Category => RelicCategory.Temporary;
+        public override void OnRelicObtained(GameManager gm)
+        {
+            var dm = DeckManager.Instance;
+            if (dm == null) return;
+
+            var pool = dm.MasterDeck.Where(c => !c.NonRemovable).ToList();
+            if (pool.Count == 0) return;
+
+            int count = Mathf.Min(3, pool.Count);
+            InGameUIController.Instance?.OpenMultiCardPicker(pool, count, picked =>
+            {
+                if (picked == null) return;
+                foreach (var c in picked)
+                    dm.RemoveCardFromDeck(c);
+                Debug.Log($"[CataclysmRemoveRelic] {picked.Count}장 제거 완료");
+            });
+        }
+    }
+
     /// <summary>910 저주받은 힘: 매 턴 +1, 저주 카드 1장 획득 (제거 불가).</summary>
     public class CursedPowerRelic : RelicEffect
     {
@@ -804,6 +860,20 @@ namespace DeckRoguelike.Relic
         }
     }
 
+    /// <summary>280 거너 시작: 전투 시작 시 발사 카드를 3장 손패에 가져옵니다.
+    /// 발사 카드 자체의 키워드(소멸 등)를 그대로 사용합니다.</summary>
+    public class GunnerStartShootRelic : RelicEffect
+    {
+        // 발사 기본 카드 코드 (새 체계: 31002 = 둘째자리 1 액션 대역).
+        private const int ShootCardCode = 31002;
+
+        public override void OnCombatStart(RelicCombatContext ctx)
+        {
+            if (ctx?.Board == null) return;
+            for (int i = 0; i < 3; i++) ctx.Board.GrantClassRelicCard(ShootCardCode);
+        }
+    }
+
     /// <summary>90 메이지 시작: 전투 시작 시 순간이동 카드(41000) 한 장을 손패에 추가합니다.
     /// Ethereal로 부여되어 사용/턴종료 시 소멸됩니다.</summary>
     public class MageStartTeleportRelic : RelicEffect
@@ -882,11 +952,15 @@ namespace DeckRoguelike.Relic
         }
     }
 
-    /// <summary>117: 액션 카드 미사용 시 다음 턴 카드 +1.</summary>
-    public class NoActionNextDrawRelic : NoTypeUsedNextDrawRelic
+    /// <summary>117: 이번 턴에 공격하지 않으면(적에게 실제 피해를 입히지 않으면) 다음 턴 카드 +1.
+    /// 카드 타입이 아니라 실제 공격 발생(OnEnemyDamaged)을 기준으로 판정한다.</summary>
+    public class NoActionNextDrawRelic : NoBattleActionNextDrawRelic
     {
-        protected override CardType FilterType => CardType.Action;
         protected override string Tag => "[NoActionNextDrawRelic]";
+        public override void OnEnemyDamaged(RelicCombatContext ctx, EnemyInstance enemy, int amount)
+        {
+            if (amount > 0) _didActionThisTurn = true;
+        }
     }
 
     /// <summary>118: 획득 시 카드 2장 무작위 강화. UI/선택 미구현으로 스텁.</summary>
@@ -995,8 +1069,15 @@ namespace DeckRoguelike.Relic
         private const int WarriorBossTurnMoveCardCode = 21001;
     }
 
-    /// <summary>972 전사 보스 — 더이상 카드 소멸 안 됨. 카드 효과 단계 개입 필요로 스텁.</summary>
-    public class NoExhaustRelic : RelicEffect { }
+    /// <summary>972 소멸의 공명 — 이동 카드를 사용할 때마다 카드를 한 장 더 뽑습니다.</summary>
+    public class MoveCardPlayDrawRelic : RelicEffect
+    {
+        public override void OnCardPlayed(RelicCombatContext ctx, CardData card)
+        {
+            if (card != null && card.CardTypeFromCode == CardType.Move)
+                ctx?.Board?.DrawExtraCards(1);
+        }
+    }
 
     /// <summary>980 거너 보스: 적 처치 시 카드 +2.</summary>
     public class GunnerBossDrawRelic : RelicEffect
@@ -1426,11 +1507,34 @@ namespace DeckRoguelike.Relic
         }
     }
 
-    /// <summary>118 이동 카드 미사용 시 다음 턴 카드 +1.</summary>
-    public class NoMoveNextDrawRelic : NoTypeUsedNextDrawRelic
+    /// <summary>118: 이번 턴에 이동하지 않으면 다음 턴 카드 +1.
+    /// 카드 타입이 아니라 실제 이동 발생(OnPlayerMoved)을 기준으로 판정한다.</summary>
+    public class NoMoveNextDrawRelic : NoBattleActionNextDrawRelic
     {
-        protected override CardType FilterType => CardType.Move;
         protected override string Tag => "[NoMoveNextDrawRelic]";
+        public override void OnPlayerMoved(RelicCombatContext ctx, int totalMoveCount)
+        {
+            _didActionThisTurn = true;
+        }
+    }
+
+    /// <summary>117/118 공통 베이스: 이번 턴에 특정 행동(공격/이동)을 한 번도 하지 않으면 다음 턴 +1 드로우.
+    /// 파생 클래스가 해당 행동 훅(OnEnemyDamaged/OnPlayerMoved)에서 _didActionThisTurn을 true로 만든다.</summary>
+    public abstract class NoBattleActionNextDrawRelic : RelicEffect
+    {
+        protected abstract string Tag { get; }
+        protected bool _didActionThisTurn;
+
+        public override void OnCombatStart(RelicCombatContext ctx)     { _didActionThisTurn = false; }
+        public override void OnPlayerTurnStart(RelicCombatContext ctx) { _didActionThisTurn = false; }
+        public override void OnPlayerTurnEnd(RelicCombatContext ctx)
+        {
+            if (!_didActionThisTurn && ctx?.Board != null)
+            {
+                ctx.Board.AddTimedBonusDraw(1, 1);
+                Debug.Log($"{Tag} 미실행 — 다음 턴 카드 +1");
+            }
+        }
     }
 
     /// <summary>119 파워 카드 미사용 시 다음 턴 카드 +1.</summary>
@@ -1440,7 +1544,8 @@ namespace DeckRoguelike.Relic
         protected override string Tag => "[NoPowerNextDrawRelic]";
     }
 
-    /// <summary>117/118/119 공통 베이스: 지정 타입 카드를 이번 턴에 한 번도 쓰지 않으면 다음 턴 +1 드로우.</summary>
+    /// <summary>119 베이스: 지정 타입 카드를 이번 턴에 한 번도 쓰지 않으면 다음 턴 +1 드로우.
+    /// (117/118은 카드 타입이 아닌 실제 공격/이동 발생으로 판정 — NoBattleActionNextDrawRelic 참조.)</summary>
     public abstract class NoTypeUsedNextDrawRelic : RelicEffect
     {
         protected abstract CardType FilterType { get; }
@@ -1545,6 +1650,20 @@ namespace DeckRoguelike.Relic
             GameManager.Instance?.Heal(2);
         }
     }
+
+    /// <summary>209 각인 — 적을 처치할 때마다 최대 HP가 2 증가합니다 (ModifyMaxHP가 현재 HP도 함께 +2).</summary>
+    public class KillMaxHpRelic : RelicEffect
+    {
+        public override void OnEnemyKilled(RelicCombatContext ctx, EnemyInstance enemy)
+        {
+            GameManager.Instance?.ModifyMaxHP(2);
+        }
+    }
+
+    /// <summary>180 — 플레이어가 설치(Trap) 위로 이동해도 트랩이 발동되지 않습니다.
+    /// 트랩은 제거되지 않고 남아 적이 밟으면 정상 발동합니다.
+    /// 실제 무효화는 BoardController.TryTriggerHazard에서 HasRelic(180) 검사로 처리되는 마커 유물입니다.</summary>
+    public class TrapImmuneRelic : RelicEffect { }
 
     /// <summary>290 소환수의 체력 +5. (BoardController.SummonAlly에서 HasRelic(290) 체크 — MaxHP/CurrentHP +5)</summary>
     public class AllyHpBoostRelic : RelicEffect { }

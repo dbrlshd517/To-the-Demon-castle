@@ -18,6 +18,13 @@ namespace DeckRoguelike.Core
 
             lookup = new Dictionary<int, AllyData>();
             var loaded = Addressables.LoadAssetsAsync<AllyData>("Allies", null).WaitForCompletion();
+            if (loaded == null)
+            {
+                // "Allies" 라벨 에셋이 하나도 없으면 LoadAssetsAsync는 null을 돌려준다 → 크래시 대신 빈 채로 둔다.
+                Debug.LogWarning("[AllyRegistry] \"Allies\" 라벨 에셋을 찾을 수 없습니다. " +
+                    "Tools > Addressables > Setup GameResources 를 실행해 라벨을 등록하세요.");
+                return;
+            }
             foreach (var ally in loaded)
             {
                 if (ally == null) continue;

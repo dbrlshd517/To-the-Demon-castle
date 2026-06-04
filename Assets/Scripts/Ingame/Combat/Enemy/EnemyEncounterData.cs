@@ -50,6 +50,9 @@ namespace DeckRoguelike.Combat
         Fixed,
         Random,
         Opposite,
+        // ※ enum 정수값은 직렬화에 사용된다. 기존 에셋의 Random(1)/Opposite(2)를
+        //    깨뜨리지 않으려고 신규 Range는 맨 끝(3)에 추가한다.
+        Range,
     }
 
     [System.Serializable]
@@ -57,11 +60,12 @@ namespace DeckRoguelike.Combat
     {
         public EnemyData enemyData;
         public PlacementType placementType;
-        [Tooltip("Fixed: 그리드 열, Random/Opposite: 사용 안 함")]
+        [Tooltip("Fixed: 그리드 열, Random/Range/Opposite: 사용 안 함")]
         public int col;
-        [Tooltip("Fixed: 그리드 행, Random/Opposite: 사용 안 함")]
+        [Tooltip("Fixed: 그리드 행, Random/Range/Opposite: 사용 안 함")]
         public int row;
-        [Tooltip("Random 배치 시 플레이어로부터의 맨해튼 거리 제한")]
+        [Tooltip("Random: 플레이어로부터 맨해튼 거리 1~range 안의 모든 셀에서 랜덤 배치. " +
+                 "Range: 플레이어로부터 맨해튼 거리가 정확히 range인 셀(고리)에서 랜덤 배치.")]
         public int placementRange;
         [Tooltip("Opposite 배치 시 사용. 플레이어 사분면 반대 코너에서 시작해 행→열 순으로 매긴 1-based 번호. " +
                  "예: 1 = 반대 코너 셀, 행 다 채우면 한 행 플레이어 쪽으로 이동.")]

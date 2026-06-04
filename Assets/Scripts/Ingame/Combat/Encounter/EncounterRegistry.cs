@@ -19,6 +19,13 @@ namespace DeckRoguelike.Core
 
             all = new List<EnemyEncounterData>();
             var loaded = Addressables.LoadAssetsAsync<EnemyEncounterData>("Encounters", null).WaitForCompletion();
+            if (loaded == null)
+            {
+                // "Encounters" 라벨 에셋이 하나도 없으면 LoadAssetsAsync는 null을 돌려준다 → 크래시 대신 빈 채로 둔다.
+                Debug.LogWarning("[EncounterRegistry] \"Encounters\" 라벨 에셋을 찾을 수 없습니다. " +
+                    "Tools > Addressables > Setup GameResources 를 실행해 라벨을 등록하세요.");
+                return;
+            }
             foreach (var enc in loaded)
             {
                 if (enc != null) all.Add(enc);

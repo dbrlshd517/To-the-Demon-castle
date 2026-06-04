@@ -1566,7 +1566,10 @@ namespace DeckRoguelike.UI
             _combatStartBonusCards = 0;
 
             FireRelicHook((r, ctx) => r.OnPlayerTurnStart(ctx));
-            foreach (var p in _activePowers) p.OnTurnStart(this);
+            // 장전(DelayedReloadPower) 등 OnTurnStart에서 UnregisterPower로 자신을 해제하는 1회성 파워가
+            // _activePowers를 수정하므로 스냅샷을 순회한다 (OnTurnEnd와 동일 패턴).
+            var startTurnSnapshot = new List<CombatPowerEffect>(_activePowers);
+            foreach (var p in startTurnSnapshot) p.OnTurnStart(this);
 
             // 카드 타입 봉인 턴 감소
             var expiredTypes = new List<CardType>();
@@ -3085,6 +3088,14 @@ namespace DeckRoguelike.UI
         public void DamageEnemyFromPos(EnemyInstance enemy, int amount, Vector2Int attackerPos)
         {
             if (enemy == null) return;
+
+            // 플레이어가 공격하면 공격 대상(적) 방향으로 바라본다 — 수평 차이가 있을 때만 갱신.
+            // (attackerPos == playerSpawnCell 일 때만 플레이어 공격으로 간주; 아군 공격은 제외)
+            if (attackerPos == playerSpawnCell)
+            {
+                if (enemy.GridPos.x > playerSpawnCell.x) SetFacingRight(true);
+                else if (enemy.GridPos.x < playerSpawnCell.x) SetFacingRight(false);
+            }
 
             // 23302(최후의 공격) 등 이번 턴 데미지 배율 — 다회타격/커스텀 데미지를 포함한 모든 직접 공격에 일괄 적용.
             // EffectType.Damage 경로는 ApplyCardEffects에서 더 이상 배율을 곱하지 않으므로 여기서만 한 번 적용된다.
@@ -6771,6 +6782,15 @@ namespace DeckRoguelike.UI
             var hazard = cell.OccupyingTrap;
             if (hazard?.Data == null) return;
 
+            // 180 유물: 플레이어는 설치(Trap) 위로 이동해도 발동되지 않는다.
+            // 트랩은 제거하지 않고 그대로 남겨, 이후 적이 밟으면 정상 발동되게 한다.
+            if (source == HazardTriggerSource.Player
+                && GameManager.Instance != null && GameManager.Instance.HasRelic(180))
+            {
+                Debug.Log($"[Hazard] 180 유물 — 플레이어 트랩 발동 무효 @ {pos}");
+                return;
+            }
+
             // hover 미리보기 정리 (발동 셀에 표시 중이던 미리보기 제거)
             if (_hoveredHazard == hazard) ClearHazardHoverPreview();
 
@@ -7630,24 +7650,29 @@ namespace DeckRoguelike.UI
                 ShowUnitAttackPreviews();
             }
 
-            var entry = enemy.StatusEffects.Find(s => s.Type == type);
-            string key   = type switch
-            {
-                StatusEffectType.Fire   => "fire",
-                StatusEffectType.Stun   => "stun",
-                StatusEffectType.Freeze => "freeze",
-                StatusEffectType.Fear   => "fear",
-                _                       => "freeze"
-            };
-            Sprite icon  = type switch
-            {
-                StatusEffectType.Fire   => fireIcon,
-                StatusEffectType.Stun   => stunIcon,
-                StatusEffectType.Freeze => freezeIcon,
-                StatusEffectType.Fear   => (fearIcon != null ? fearIcon : stunIcon),
-                _                       => freezeIcon
-            };
-            // 적 상태이상은 데이터만 저장
+            // 해로운 상태이상 아이콘을 적 effectContainer에 동기화
+            RefreshEnemyStatusIcons(enemy);
+        }
+
+        /// <summary>적이 가진 해로운 상태이상(화염/기절/빙결/공포/냉기/속박)을
+        /// UnitUI의 effectContainer 아이콘으로 동기화합니다.
+        /// 스택이 0 이하이거나 없으면 해당 아이콘은 제거됩니다.</summary>
+        private void RefreshEnemyStatusIcons(EnemyInstance enemy)
+        {
+            if (enemy == null || enemy.UI == null) return;
+
+            SyncEnemyStatusIcon(enemy, StatusEffectType.Fire,    "fire",    fireIcon);
+            SyncEnemyStatusIcon(enemy, StatusEffectType.Stun,    "stun",    stunIcon);
+            SyncEnemyStatusIcon(enemy, StatusEffectType.Freeze,  "freeze",  freezeIcon);
+            SyncEnemyStatusIcon(enemy, StatusEffectType.Fear,    "fear",    fearIcon != null ? fearIcon : stunIcon);
+            SyncEnemyStatusIcon(enemy, StatusEffectType.Cold,    "cold",    freezeIcon);
+            SyncEnemyStatusIcon(enemy, StatusEffectType.Bondage, "bondage", null);
+        }
+
+        private void SyncEnemyStatusIcon(EnemyInstance enemy, StatusEffectType type, string key, Sprite icon)
+        {
+            var s = enemy.StatusEffects.Find(e => e.Type == type);
+            enemy.UI.SetEffect(key, icon, s != null ? s.Stacks : 0);
         }
 
         /// <summary>플레이어에게 카드 타입 봉인 디버프를 부여합니다.</summary>
@@ -7730,9 +7755,10 @@ namespace DeckRoguelike.UI
             if (entry.Stacks >= 3)
             {
                 enemy.StatusEffects.RemoveAll(s => s.Type == StatusEffectType.Cold);
-                ApplyStatus(enemy, StatusEffectType.Freeze, 1);
+                ApplyStatus(enemy, StatusEffectType.Freeze, 1); // 내부에서 아이콘 동기화
                 Debug.Log($"[Cold] {enemy.Name} 냉기 3 누적 → 빙결 1턴");
             }
+            RefreshEnemyStatusIcons(enemy);
         }
 
         /// <summary>살아있는 모든 적에게 냉기 stacks를 누적합니다 (한파 카드용). 각 적이 3 누적 시 개별 빙결 전환.</summary>
@@ -8298,27 +8324,9 @@ namespace DeckRoguelike.UI
                     && s.Type != StatusEffectType.Freeze
                     && s.Type != StatusEffectType.Fear) continue;
                 s.Stacks--;
-                string key = s.Type switch
-                {
-                    StatusEffectType.Stun   => "stun",
-                    StatusEffectType.Freeze => "freeze",
-                    _                       => "fear"
-                };
                 if (s.Stacks <= 0)
-                {
                     enemy.StatusEffects.RemoveAt(i);
-                    // 적 상태이상 제거 (데이터만)
-                }
-                else
-                {
-                    Sprite icon = s.Type switch
-                    {
-                        StatusEffectType.Stun   => stunIcon,
-                        StatusEffectType.Freeze => freezeIcon,
-                        _                       => (fearIcon != null ? fearIcon : stunIcon)
-                    };
-                    // 적 상태이상 데이터만 저장
-                }
+                RefreshEnemyStatusIcons(enemy);
                 Debug.Log($"[CombatController] {enemy.Name} 기절/빙결/공포로 턴 스킵");
                 return true;
             }
@@ -8332,13 +8340,16 @@ namespace DeckRoguelike.UI
             foreach (var enemy in enemies)
             {
                 if (enemy == null) continue;
+                bool changed = false;
                 for (int i = enemy.StatusEffects.Count - 1; i >= 0; i--)
                 {
                     var s = enemy.StatusEffects[i];
                     if (s.Type != StatusEffectType.Bondage) continue;
                     s.Stacks--;
                     if (s.Stacks <= 0) enemy.StatusEffects.RemoveAt(i);
+                    changed = true;
                 }
+                if (changed) RefreshEnemyStatusIcons(enemy);
             }
         }
 

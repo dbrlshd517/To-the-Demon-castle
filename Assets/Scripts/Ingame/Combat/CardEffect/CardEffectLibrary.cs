@@ -116,6 +116,7 @@ namespace DeckRoguelike.Combat
             CardEffectRegistry.Register("ShootDamage",         ShootDamage);
             CardEffectRegistry.Register("Dodge",               Dodge);
             CardEffectRegistry.Register("ReLoad",              ReLoad);
+            CardEffectRegistry.Register("FastReLoad",          FastReLoad);
             CardEffectRegistry.Register("everyShoot_ricochet", EveryShootRicochet);
             CardEffectRegistry.Register("everyShoot_Strength", EveryShootStrength);
             CardEffectRegistry.Register("Shoot_MoveCard",      ShootMoveCard);
@@ -531,9 +532,19 @@ namespace DeckRoguelike.Combat
         private static void ExhaustsCardStrength(CardEffectContext ctx)
             => RegisterPowerWithIcon(ctx, new ExhaustsCardStrengthPower(ctx.Value));
 
-        /// <summary>소멸 카드 사용 시 카드 value장 드로우</summary>
+        /// <summary>소멸 카드를 X장 사용할 때마다 카드 Y장 드로우. valueRaw "X.Y" (Y 생략 시 1장).</summary>
         private static void ExhaustsCardDraw(CardEffectContext ctx)
-            => RegisterPowerWithIcon(ctx, new ExhaustsCardDrawPower(ctx.Value));
+        {
+            int threshold = ctx.Value;
+            int draw = 1;
+            if (!string.IsNullOrEmpty(ctx.ValueRaw))
+            {
+                var parts = ctx.ValueRaw.Split('.');
+                if (parts.Length > 0 && int.TryParse(parts[0], out var t)) threshold = t;
+                if (parts.Length > 1 && int.TryParse(parts[1], out var d)) draw = d;
+            }
+            RegisterPowerWithIcon(ctx, new ExhaustsCardDrawPower(threshold, draw));
+        }
 
         /// <summary>이동 카드 사용 시 힘 +value</summary>
         private static void MoveCardStrength(CardEffectContext ctx)
@@ -1007,14 +1018,37 @@ namespace DeckRoguelike.Combat
                 ctx.Card?.Description ?? "다음 공격을 무효화합니다.");
         }
 
-        /// <summary>32200/32201 재장전: value장의 32002(또는 32003) 카드를 손패에 추가.</summary>
-        private static void ReLoad(CardEffectContext ctx)
+        /// <summary>발사 카드 코드. 기본 31002(발사), 강화 시 31003(발사+).</summary>
+        private const int ShootCardCode        = 31002;
+        private const int ShootCardCodeUpgraded = 31003;
+
+        /// <summary>생성 카드(속사/장전)가 만들 발사 카드 코드. 카드 자신의 강화 여부에 따라 발사/발사+ 선택.</summary>
+        private static int ShootCodeFor(CardEffectContext ctx)
+            => ctx.Card != null && ctx.Card.IsUpgraded ? ShootCardCodeUpgraded : ShootCardCode;
+
+        /// <summary>31100/31101 속사: 즉시 발사(31002, 강화 시 31003) 카드를 value장 손패에 추가.</summary>
+        private static void FastReLoad(CardEffectContext ctx)
         {
             int count = UnityEngine.Mathf.Max(1, ctx.Value);
-            int code = ctx.Card != null && ctx.Card.IsUpgraded ? 32003 : 32002;
-            var card = DeckRoguelike.Core.CardRegistry.GetCard(code);
+            var card = DeckRoguelike.Core.CardRegistry.GetCard(ShootCodeFor(ctx));
             if (card == null) return;
             for (int i = 0; i < count; i++) ctx.Board.AddCardToHandFree(card);
+        }
+
+        /// <summary>32200/32201 장전: valueRaw "X.Y" → X턴 뒤 플레이어 턴 시작 시 발사(31002, 강화 시 31003) 카드를 Y장 손패에 추가.
+        /// 만료 전까지 TopBar에 아이콘으로 "장전 중"을 표시한다.</summary>
+        private static void ReLoad(CardEffectContext ctx)
+        {
+            // ctx.Value는 valueRaw 정수부(=지연 턴 X). 카드 장수 Y는 valueRaw의 소수부에서 읽는다.
+            int delayTurns = UnityEngine.Mathf.Max(1, ctx.Value);
+            int count = 1;
+            if (!string.IsNullOrEmpty(ctx.ValueRaw))
+            {
+                var parts = ctx.ValueRaw.Split('.');
+                if (parts.Length > 0 && int.TryParse(parts[0], out var d)) delayTurns = UnityEngine.Mathf.Max(1, d);
+                if (parts.Length > 1 && int.TryParse(parts[1], out var c)) count      = UnityEngine.Mathf.Max(1, c);
+            }
+            RegisterPowerWithIcon(ctx, new DelayedReloadPower(ShootCodeFor(ctx), count, delayTurns));
         }
 
         /// <summary>33202/33203 도탄: 발사 N회마다 무작위 적에게 추가 발사.</summary>

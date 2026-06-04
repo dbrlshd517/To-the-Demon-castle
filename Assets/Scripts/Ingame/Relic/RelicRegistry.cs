@@ -46,22 +46,25 @@ namespace DeckRoguelike.Relic
             return null;
         }
 
-        /// <summary>일반 유물(1xx) 또는 보스 유물(9xx) 목록을 반환합니다.</summary>
+        /// <summary>일반 유물(1xx) 또는 보스 유물(9xx) 목록을 반환합니다.
+        /// 7xx 미사용 유물(IsUnused)은 풀에서 제외됩니다.</summary>
         public static List<RelicData> GetByType(bool bossRelic)
         {
             var result = new List<RelicData>();
             foreach (var entry in entries.Values)
-                if (entry.data.IsBossRelic == bossRelic)
+                if (entry.data.IsBossRelic == bossRelic && !entry.data.IsUnused)
                     result.Add(entry.data);
             return result;
         }
 
-        /// <summary>등록된 모든 RelicData 목록을 반환합니다.</summary>
+        /// <summary>등록된 모든 RelicData 목록을 반환합니다.
+        /// 7xx 미사용 유물(IsUnused)은 도감 등 열거에서 제외됩니다.</summary>
         public static List<RelicData> GetAll()
         {
             var result = new List<RelicData>();
             foreach (var entry in entries.Values)
-                result.Add(entry.data);
+                if (!entry.data.IsUnused)
+                    result.Add(entry.data);
             return result;
         }
 

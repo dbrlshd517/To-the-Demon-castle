@@ -1018,6 +1018,7 @@ MonoBehaviour:
   enemyTurnDelay: 1
   playerRangePreviewScale: 0.8
   enemyRangePreviewScale: 0.9
+  enemyMovePreviewScale: 1
   endTurnButton: {fileID: 119993219}
   turnIndicatorText: {fileID: 0}
   turnIndicator: {fileID: 0}
@@ -1065,7 +1066,7 @@ MonoBehaviour:
   cardConfirmPanel: {fileID: 2078320071}
   restHealPercent: 0.3
   mapDangerCombatCount: 3
-  mapEventCount: 3
+  mapEventCount: 0
   mapRestCount: 1
   mapShopCount: 1
   mapTreasureCount: 0

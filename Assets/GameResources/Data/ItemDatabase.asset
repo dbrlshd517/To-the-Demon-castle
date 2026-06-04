@@ -18,11 +18,6 @@ MonoBehaviour:
     description: "\uBB34\uC791\uC704 \uC561\uC158 \uCE74\uB4DC 1\uC7A5\uC744 \uC190\uC73C\uB85C
       \uAC00\uC838\uC635\uB2C8\uB2E4."
     icon: {fileID: 0}
-  - itemCode: 101
-    itemName: "\uC774\uB3D9 \uD3EC\uC158"
-    description: "\uBB34\uC791\uC704 \uC774\uB3D9 \uCE74\uB4DC 1\uC7A5\uC744 \uC190\uC73C\uB85C
-      \uAC00\uC838\uC635\uB2C8\uB2E4."
-    icon: {fileID: 0}
   - itemCode: 102
     itemName: "\uD30C\uC6CC \uD3EC\uC158"
     description: "\uBB34\uC791\uC704 \uD30C\uC6CC \uCE74\uB4DC 1\uC7A5\uC744 \uC190\uC73C\uB85C
@@ -53,7 +48,7 @@ MonoBehaviour:
   - itemCode: 108
     itemName: "\uC7AC\uC0AC\uC6A9 \uD3EC\uC158"
     description: "\uB2E4\uC74C\uC5D0 \uC0AC\uC6A9\uD558\uB294 \uCE74\uB4DC\uB97C
-      \uD55C \uBC88 \uB354 \uC0AC\uC6A9\uD569\uB2C8\uB2E4."
+      \uBCF5\uC0AC\uD558\uACE0 \uC18C\uBA78\uC744 \uBD80\uC5EC\uD569\uB2C8\uB2E4."
     icon: {fileID: 0}
   - itemCode: 109
     itemName: "\uC12C\uAD11\uD0C4"
@@ -83,11 +78,6 @@ MonoBehaviour:
   - itemCode: 202
     itemName: "\uD3ED\uD0C4"
     description: "\uBAA8\uB4E0 \uBC94\uC704\uC5D0 10 \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
-    icon: {fileID: 0}
-  - itemCode: 203
-    itemName: "\uC131\uC218"
-    description: "\uC790\uC2E0\uC5D0\uAC8C \uAC78\uB9B0 \uD574\uB85C\uC6B4 \uD6A8\uACFC\uB97C
-      \uBAA8\uB450 \uC81C\uAC70\uD569\uB2C8\uB2E4"
     icon: {fileID: 0}
   - itemCode: 204
     itemName: "\uC0AC\uAE30 \uC8FC\uC0AC\uC704"
@@ -130,6 +120,11 @@ MonoBehaviour:
     itemName: "\uC784\uD50C\uB780\uD2B8"
     description: "\uC790\uC2E0\uC744 \uC81C\uC678\uD55C \uBAA8\uB4E0 \uC544\uAD70
       \uC720\uB2DB\uC758 \uCCB4\uB825\uC744 10 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    icon: {fileID: 0}
+  - itemCode: 700
+    itemName: "\uC131\uC218"
+    description: "\uC790\uC2E0\uC5D0\uAC8C \uAC78\uB9B0 \uD574\uB85C\uC6B4 \uD6A8\uACFC\uB97C
+      \uBAA8\uB450 \uC81C\uAC70\uD569\uB2C8\uB2E4"
     icon: {fileID: 0}
   - itemCode: 800
     itemName: ???

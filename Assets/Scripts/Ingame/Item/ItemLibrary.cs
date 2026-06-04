@@ -25,7 +25,6 @@ namespace DeckRoguelike.Item
                 
 
                 { 100, () => new ActionPotionItem() },  // 액션 포션
-                { 101, () => new MovePotionItem() },       // 이동 포션
                 { 102, () => new PowerPotionItem() },      // 파워 포션
                 { 103, () => new RecyclePotionItem() },    // 재활용 포션 (버린 더미에서 1장)
                 { 104, () => new ForesightPotionItem() },  // 예지 포션 (뽑을 더미에서 1장)
@@ -55,7 +54,6 @@ namespace DeckRoguelike.Item
                 { 200, () => new HealthPotionItem() },     // 체력 포션
                 { 201, () => new GhostPotionItem() },      // 유령 포션
                 { 202, () => new BombItem() },             // 폭탄
-                { 203, () => new HolyWaterItem() },        // 성수
                 { 204, () => new LuckyDiceItem() },        // 사기 주사위
                 { 205, () => new RainbowPotionItem() },    // 무지개 포션
                 { 206, () => new RouletteItem() },         // 돌림판
@@ -66,6 +64,8 @@ namespace DeckRoguelike.Item
                 { 270, () => new IronMaskItem() },         // 철가면 (Warrior)
                 { 280, () => new DogTagItem() },           // 군번줄 (Gunner)
                 { 290, () => new BoneFluteItem() },        // 뼈피리 (Mage)
+                //안쓰는 아이템
+                { 700, () => new HolyWaterItem() },        // 성수
             };
 
         public static void RegisterAll()
@@ -132,17 +132,6 @@ namespace DeckRoguelike.Item
         }
     }
 
-    /// <summary>101 이동 포션 - 무작위 이동 카드 1장을 손으로 가져옵니다</summary>
-    public class MovePotionItem : ItemEffect
-    {
-        public override bool CanUse(ItemUseContext ctx) => ctx.InCombat;
-        public override void OnItemUsed(ItemUseContext ctx)
-        {
-            var cards = ItemLibrary.GetRandomCardsOfType(CardType.Move, 1);
-            if (cards.Count == 0) return;
-            ctx.Board.AddCardToHandFree(cards[0]);
-        }
-    }
 
     /// <summary>102 파워 포션 - 무작위 파워 카드 1장을 손으로 가져옵니다</summary>
     public class PowerPotionItem : ItemEffect

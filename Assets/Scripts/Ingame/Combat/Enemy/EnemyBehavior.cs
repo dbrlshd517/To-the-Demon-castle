@@ -16,8 +16,14 @@ namespace DeckRoguelike.Combat
     ///   4. EnemyBehaviorRegistry.Register(enemyCode, () => new MyBehavior()) 로 등록.
     ///
     /// [슬롯 구조 — 한 턴 안에서 동시에 등록 가능]
-    ///   ① 공격 슬롯 : PlanTargetAttack / PlanRangeAttack / PlanUnavoidableAttack
+    ///   ① 공격 슬롯 : TryPlanAttackInRange (표준 — 사거리 안 타겟 고정 공격, 비면 false)
+    ///                  / PlanTargetAttack / PlanTargetAttackAtCell / PlanRangeAttack
+    ///                  / PlanUnavoidableAttack
     ///                  / PlanAttackAndMoveToCell (공격 후 그 좌표로 이동까지 한 슬롯에서 처리)
+    ///   공격 타겟 규칙: 한 번 정해진 공격 목표는 같은 플레이어 턴 동안 객체 단위로 고정
+    ///   (RePlan 재설정 금지 — 좌표만 추적). 랜덤은 사거리 안 후보가 동시에 여럿인데 아직
+    ///   타겟이 없을 때 한 번만. 사거리 안에 아무도 없으면 타겟 해제 → 이동으로 전환.
+    ///   (TryAcquireAttackTarget / AcquireStickyNearestTarget 참조)
     ///   ② 이동 슬롯 (모두 Phase 2 지연 — player 턴 종료 후 BoardController가 정렬·실행):
     ///       PlanMoveTowardNearest / PlanMoveTowardPlayer / PlanMoveTowardAlly  — BFS 최단경로
     ///       PlanMoveAwayFromPlayer  — greedy 후퇴
@@ -29,8 +35,11 @@ namespace DeckRoguelike.Combat
     ///                  / PlanSummon / PlanSelfDestruct / PlanCustom
     ///   같은 슬롯 안에서 마지막 호출만 살아남습니다 (덮어쓰기). 슬롯이 다르면 공존.
     ///   PlanWait는 모든 슬롯을 비웁니다.
-    ///   Phase 1 (ExecuteTurn) — 기타 → 공격 (PlanAttackAndMoveToCell의 이동도 여기 포함)
-    ///   Phase 2 — 지연 이동을 정렬해 라운드-로빈으로 실행 후 OnTurnFullyResolved로 정리.
+    ///   Phase 1 (ExecuteTurn) — 기타 → 공격 → 이동.
+    ///     PlanAttackAndMoveToCell의 이동은 물론, 공격 슬롯과 이동 슬롯을 같은 턴에
+    ///     함께 등록한 경우(공격+이동 동시 행동)의 이동도 Phase 1에서 공격 직후 즉시 수행.
+    ///   Phase 2 — (공격 없이) 이동만 등록한 적의 지연 이동을 정렬해 라운드-로빈으로 실행 후
+    ///     OnTurnFullyResolved로 정리.
     ///
     /// [예시 — 슬라임]
     ///   if (IsPlayerInRange(self, combat, AdjacentFour))
@@ -162,6 +171,25 @@ namespace DeckRoguelike.Combat
             if (_lockedCategory == LockedCategory.None) _lockedCategory = c;
         }
 
+        // ── 주 타겟 선택 상태 (이동·공격이 공유하는 "가장 가까운 객체") ──────────────
+        // 최근접 후보 집합(_lastNearestIds)과 현재 타겟(_currentTargetId)을 턴 동안 보존한다.
+        // _lockedCategory와 마찬가지로 ResetPlanState(슬롯 비우기)로는 지워지지 않아 RePlan을 거쳐도
+        // 살아남고, 적 턴 종료 시 OnTurnFullyResolved에서 초기화 → 다음 턴 새로 선택.
+        // 규칙: 재계산 때 최근접 후보 집합이 그대로면 같은 타겟 유지(깜빡임 방지), 집합이 바뀌거나
+        //       더 가까운 객체가 생기면 후보 중 랜덤으로 다시 선택. ([[project_enemy_ai_lock]] 패턴)
+        private const int NoTargetId     = int.MinValue;   // 아직 선택된 타겟 없음
+        private const int PlayerTargetId = -1;             // 플레이어 식별자 (아군은 GetInstanceID())
+        private readonly HashSet<int> _lastNearestIds = new HashSet<int>();
+        private int _currentTargetId = NoTargetId;
+
+        // ── 공격 타겟 고정 (RePlan 재설정 금지) ──────────────
+        // 한 번 정해진 "공격 목표"는 같은 플레이어 턴 동안 객체 단위로 고정된다.
+        // RePlan은 좌표만 그 객체의 현재 위치로 갱신(추적)할 뿐 다른 객체로 갈아타지 않는다.
+        // 랜덤 선택은 "사거리 안에 후보가 동시에 여럿인데 아직 타겟이 없을 때" 단 한 번만 발생.
+        // 사거리 안에 후보가 하나도 없으면 타겟 해제 → 호출측이 이동으로 전환.
+        // _lockedCategory처럼 ResetPlanState로는 지워지지 않고 OnTurnFullyResolved에서 초기화.
+        private int _attackTargetId = NoTargetId;
+
         // ── 표준 hooks ────────────────────────────────────────────
         /// <summary>유닛이 전투에 소환될 때 1회 호출됩니다.</summary>
         public virtual void OnSpawn(EnemyInstance self, BoardController board) { }
@@ -178,14 +206,30 @@ namespace DeckRoguelike.Combat
 
         /// <summary>
         /// 적 턴 Phase 1 — 기타·공격 슬롯 실행 (PlanAttackAndMoveToCell의 공격좌표이동도 여기 포함).
-        /// 일반 이동은 모두 Phase 2(BoardController가 정렬·실행)로 미뤄집니다.
-        /// 실행 순서: 기타 → 공격.
+        /// 실행 순서: 기타 → 공격 → (공격이 있었다면) 이동.
+        /// 공격과 이동을 같은 턴에 함께 계획하면 이동도 여기 Phase 1에서 공격 직후 즉시 수행합니다.
+        /// 이동만 계획한 적의 이동은 그대로 Phase 2(BoardController가 정렬·실행)로 미뤄집니다.
         /// </summary>
         public virtual void ExecuteTurn(EnemyInstance self, BoardController board)
         {
             _extraAction?.Invoke(self, board);
+            bool didAttack = _attackAction != null;
             _attackAction?.Invoke(self, board);
-            // Phase 1 슬롯만 정리. 지연 이동은 Phase 2 종료 후 OnTurnFullyResolved에서 클리어.
+
+            // 공격과 이동을 같은 턴에 함께 계획한 경우 — 이동을 Phase 2로 미루지 않고
+            // 공격 직후 이 자리에서 즉시 수행한다 (요구: "공격턴에도 이동도 같이").
+            // 이동만 계획한 적은 그대로 Phase 2 지연 이동(둘러싸기·셀 비우기 정렬)을 유지.
+            if (didAttack && HasDeferredMove && self.CurrentHP > 0)
+            {
+                int guard = _deferredMoveSteps + 2;
+                while (HasDeferredMove && guard-- > 0)
+                {
+                    if (!ExecuteDeferredMoveStep(self, board)) break;
+                }
+            }
+
+            // Phase 1 슬롯만 정리. (위에서 소진하지 못한) 지연 이동은 Phase 2 종료 후
+            // OnTurnFullyResolved에서 클리어.
             ClearAttackSlot();
             ClearExtraSlot();
             plannedSkillPositions.Clear();
@@ -197,6 +241,9 @@ namespace DeckRoguelike.Combat
         {
             ClearMoveSlot();
             _lockedCategory = LockedCategory.None;   // 행동 잠금 해제 — 다음 턴에 새로 결정
+            _lastNearestIds.Clear();                 // 주 타겟 초기화 — 다음 턴에 최근접 새로 선택
+            _currentTargetId = NoTargetId;
+            _attackTargetId = NoTargetId;            // 공격 타겟 해제 — 다음 턴에 새로 선택
         }
 
         /// <summary>유닛이 사망할 때 호출됩니다.</summary>
@@ -318,18 +365,138 @@ namespace DeckRoguelike.Combat
         }
 
         /// <summary>가장 가까운 적대 대상(플레이어 또는 아군) 위치를 반환합니다. 대상이 없으면 self.GridPos.
-        /// 거리는 footprint 사각형에서 target까지의 최소 Manhattan 거리 (size ≥ 2 적도 정확).</summary>
+        /// 이동·공격이 공유하는 주 타겟 — 동률 시 랜덤, 재계산 시 후보 집합이 바뀌면 재선택.
+        /// (구현은 PrimaryTargetCell 참조.)</summary>
         protected Vector2Int FindNearestTargetPos(EnemyInstance self, BoardController board)
+            => PrimaryTargetCell(self, board);
+
+        /// <summary>
+        /// 이동·공격이 공유하는 "주 타겟" 좌표. 자신에게서 가장 가까운 적대 객체(플레이어 또는 아군)를
+        /// 고른다. 같은 최소 거리가 여럿이면 랜덤. 재계산(RePlan) 시:
+        ///   · 최근접 후보 집합이 직전과 같고 현재 타겟이 그 안에 있으면 → 같은 타겟 유지(깜빡임 방지).
+        ///   · 집합이 바뀌거나(예: 3→2) 더 가까운 객체가 생기면 → 후보 중 랜덤으로 다시 선택.
+        /// 거리는 footprint 사각형에서 target까지의 최소 Manhattan 거리(size ≥ 2 적도 정확).
+        /// 후보가 없으면 self.GridPos.
+        /// </summary>
+        protected Vector2Int PrimaryTargetCell(EnemyInstance self, BoardController board)
         {
-            Vector2Int best = board.PlayerSpawnCell;
-            int bestDist = FootprintMinManhattan(self.GridPos, self.Size, best);
+            // 1) 최소 거리 계산 — 플레이어 + 살아있는 아군.
+            int minDist = FootprintMinManhattan(self.GridPos, self.Size, board.PlayerSpawnCell);
             foreach (var ally in board.GetAllies())
             {
                 if (ally.CurrentHP <= 0) continue;
                 int d = FootprintMinManhattan(self.GridPos, self.Size, ally.GridPos);
-                if (d < bestDist) { bestDist = d; best = ally.GridPos; }
+                if (d < minDist) minDist = d;
             }
-            return best;
+
+            // 2) 최소 거리 후보(=nearest)의 식별자/좌표 수집. 플레이어를 먼저 넣어 안정적 순서 유지.
+            var ids = new List<int>();
+            var cells = new List<Vector2Int>();
+            if (FootprintMinManhattan(self.GridPos, self.Size, board.PlayerSpawnCell) == minDist)
+            {
+                ids.Add(PlayerTargetId);
+                cells.Add(board.PlayerSpawnCell);
+            }
+            foreach (var ally in board.GetAllies())
+            {
+                if (ally.CurrentHP <= 0) continue;
+                if (FootprintMinManhattan(self.GridPos, self.Size, ally.GridPos) != minDist) continue;
+                // EnemyInstance/AllyInstance는 UnityEngine.Object가 아닌 일반 클래스 → 인스턴스 식별은
+                // 참조 기반 GetHashCode() 사용 (SnakeBehavior의 그룹 키와 동일 방식). player는 -1 상수.
+                ids.Add(ally.GetHashCode());
+                cells.Add(ally.GridPos);
+            }
+
+            if (ids.Count == 0)
+            {
+                _lastNearestIds.Clear();
+                _currentTargetId = NoTargetId;
+                return self.GridPos;
+            }
+
+            // 3) 후보 집합이 그대로이고 현재 타겟이 살아있으면 유지, 아니면 랜덤 재선택.
+            var nearestIds = new HashSet<int>(ids);
+            int chosen;
+            if (nearestIds.SetEquals(_lastNearestIds) && nearestIds.Contains(_currentTargetId))
+                chosen = ids.IndexOf(_currentTargetId);
+            else
+                chosen = UnityEngine.Random.Range(0, ids.Count);
+
+            _lastNearestIds.Clear();
+            foreach (var id in ids) _lastNearestIds.Add(id);
+            _currentTargetId = ids[chosen];
+            return cells[chosen];
+        }
+
+        /// <summary>
+        /// 사거리(rangeOffsets) 기반 공격 타겟 선택 — 한 번 정해지면 같은 턴 RePlan에서 재설정 금지.
+        ///   · 이번 턴 타겟이 이미 있고 아직 사거리 안·생존이면 → 그대로 유지 (좌표만 현재 위치로 추적).
+        ///   · 타겟이 없거나 무효(사망·사거리 이탈)면 → 사거리 안 후보 중 랜덤 (동시에 여럿일 때만 랜덤 의미).
+        ///   · 사거리 안에 후보가 하나도 없으면 → 타겟 해제 후 false. 호출측에서 이동으로 전환할 것.
+        /// 사거리 판정은 footprint 기준(멀티셀 적 정확).
+        /// </summary>
+        protected bool TryAcquireAttackTarget(EnemyInstance self, BoardController board,
+                                              Vector2Int[] rangeOffsets, out Vector2Int targetCell)
+            => TryAcquireAttackTarget(self, board,
+                   pos => IsInRangeFromFootprint(self.GridPos, self.Size, pos, rangeOffsets),
+                   out targetCell);
+
+        /// <summary>TryAcquireAttackTarget의 사거리 술어(predicate) 버전 — 룩/비숍처럼 offsets로
+        /// 표현 불가능한 사거리(같은 행/열, 대각선 정렬 등)에 사용. inRange가 true인 좌표의
+        /// 객체만 공격 후보가 된다. 고정/랜덤/해제 규칙은 offsets 버전과 동일.</summary>
+        protected bool TryAcquireAttackTarget(EnemyInstance self, BoardController board,
+                                              Func<Vector2Int, bool> inRange, out Vector2Int targetCell)
+        {
+            // 1) 사거리 안 후보 수집 — 플레이어 + 살아있는 아군. (식별자: player=-1, ally=GetHashCode())
+            var ids = new List<int>();
+            var cells = new List<Vector2Int>();
+            if (inRange(board.PlayerSpawnCell))
+            {
+                ids.Add(PlayerTargetId);
+                cells.Add(board.PlayerSpawnCell);
+            }
+            foreach (var ally in board.GetAllies())
+            {
+                if (ally.CurrentHP <= 0 || !inRange(ally.GridPos)) continue;
+                ids.Add(ally.GetHashCode());
+                cells.Add(ally.GridPos);
+            }
+
+            // 2) 사거리 안에 아무도 없음 → 타겟 해제. 호출측이 move로 전환.
+            if (ids.Count == 0)
+            {
+                _attackTargetId = NoTargetId;
+                targetCell = self.GridPos;
+                return false;
+            }
+
+            // 3) 기존 타겟이 아직 후보에 있으면 유지(재설정 금지), 없을 때만 랜덤으로 새로 선택.
+            int idx = ids.IndexOf(_attackTargetId);
+            if (idx < 0)
+            {
+                idx = UnityEngine.Random.Range(0, ids.Count);
+                _attackTargetId = ids[idx];
+            }
+            targetCell = cells[idx];
+            return true;
+        }
+
+        /// <summary>사거리 무제한 공격용 주 타겟 — 처음 선택 시 가장 가까운 객체(동률 랜덤),
+        /// 같은 턴 RePlan에서는 그 객체가 살아있는 한 거리와 무관하게 유지(재설정 금지).
+        /// 좌표는 그 객체의 현재 위치로 추적된다. (고블린 궁수·악마 군주 등 원거리 직격용)</summary>
+        protected Vector2Int AcquireStickyNearestTarget(EnemyInstance self, BoardController board)
+        {
+            // 이미 정해진 타겟이 살아있으면 그대로 — 좌표만 현재 위치로 갱신.
+            if (_attackTargetId == PlayerTargetId) return board.PlayerSpawnCell;
+            if (_attackTargetId != NoTargetId)
+                foreach (var ally in board.GetAllies())
+                    if (ally.CurrentHP > 0 && ally.GetHashCode() == _attackTargetId)
+                        return ally.GridPos;
+
+            // 새로 선택 — 최근접(동률 랜덤) 로직 재사용 후 공격 타겟으로 고정.
+            Vector2Int cell = PrimaryTargetCell(self, board);
+            _attackTargetId = _currentTargetId;
+            return cell;
         }
 
         /// <summary>플레이어까지의 맨해튼 거리. footprint 사각형 기준 (점→사각형 최소 거리).</summary>
@@ -420,12 +587,19 @@ namespace DeckRoguelike.Combat
         /// </summary>
         protected void PlanTargetAttack(EnemyInstance self, BoardController board,
                                         AttackTarget target, int extraDamage = 0)
+            => PlanTargetAttackAtCell(self, board, ResolveTargetPos(self, board, target), extraDamage);
+
+        /// <summary>
+        /// 지정 좌표의 대상을 상대 좌표(밀침 추적)로 공격. TryAcquireAttackTarget /
+        /// AcquireStickyNearestTarget으로 고른 타겟 좌표를 그대로 공격 슬롯에 등록할 때 사용.
+        /// </summary>
+        protected void PlanTargetAttackAtCell(EnemyInstance self, BoardController board,
+                                              Vector2Int targetPos, int extraDamage = 0)
         {
             ClearAttackSlot();
             int dmg = Mathf.Max(0, self.Damage + extraDamage);
             _attackIntent = $"공격 {dmg}";
 
-            Vector2Int targetPos = ResolveTargetPos(self, board, target);
             Vector2Int offset = targetPos - self.GridPos;
             _attackOffsets.Add(offset);
 
@@ -434,6 +608,20 @@ namespace DeckRoguelike.Combat
                 Vector2Int cell = s.GridPos + offset;
                 c.ApplyDamageAtCell(dmg, cell, s);
             };
+        }
+
+        /// <summary>
+        /// 사거리(rangeOffsets) 안 타겟에 공격 계획 — 표준 멜레 패턴 헬퍼.
+        /// 타겟은 같은 턴 동안 객체 단위로 고정(RePlan 재설정 금지, 좌표만 추적),
+        /// 처음 선택 시 사거리 안 후보가 동시에 여럿이면 랜덤.
+        /// 사거리 안에 아무도 없으면 false만 반환 — 호출측에서 이동을 계획할 것.
+        /// </summary>
+        protected bool TryPlanAttackInRange(EnemyInstance self, BoardController board,
+                                            Vector2Int[] rangeOffsets, int extraDamage = 0)
+        {
+            if (!TryAcquireAttackTarget(self, board, rangeOffsets, out Vector2Int cell)) return false;
+            PlanTargetAttackAtCell(self, board, cell, extraDamage);
+            return true;
         }
 
         /// <summary>
@@ -619,6 +807,15 @@ namespace DeckRoguelike.Combat
         {
             SetDeferredMove(steps, "이동",
                 nextStep:   (s, c) => ComputeBfsStepToward(s, c, FindNearestTargetPos(s, c)),
+                sortAnchor: (s, c) => FindNearestTargetPos(s, c));
+        }
+
+        /// <summary>가장 가까운 대상 방향으로 8방향(대각선 포함) BFS 최단경로 이동 (Phase 2).
+        /// PlanMoveTowardNearest와 동일하되 한 걸음에 대각선 이동을 허용한다 (체스 킹 등).</summary>
+        protected void PlanMoveTowardNearestEight(EnemyInstance self, BoardController board, int steps = 1)
+        {
+            SetDeferredMove(steps, "이동",
+                nextStep:   (s, c) => ComputeBfsStepToward(s, c, FindNearestTargetPos(s, c), AdjacentEight),
                 sortAnchor: (s, c) => FindNearestTargetPos(s, c));
         }
 
@@ -1165,9 +1362,13 @@ namespace DeckRoguelike.Combat
         ///   1차 tiebreaker — target에 대한 footprint Manhattan 거리가 작을수록 우선
         ///   2차 tiebreaker — 다른 적과의 min Chebyshev 거리가 클수록 우선 (둘러싸기 spread)
         /// 이동 불가면 self.GridPos 반환.</summary>
-        protected Vector2Int ComputeBfsStepToward(EnemyInstance self, BoardController board, Vector2Int target)
+        protected Vector2Int ComputeBfsStepToward(EnemyInstance self, BoardController board, Vector2Int target,
+            Vector2Int[] dirs = null)
         {
             if (!board.IsInBoard(target)) return self.GridPos;
+
+            // dirs == null 이면 4방향(상하좌우) BFS — 기존 동작. AdjacentEight를 넘기면 대각선 포함 8방향 이동.
+            if (dirs == null) dirs = AdjacentFour;
 
             Vector2Int size = self.Size;
             bool isMultiCell = size.x > 1 || size.y > 1;
@@ -1186,7 +1387,7 @@ namespace DeckRoguelike.Combat
             {
                 Vector2Int cur = queue.Dequeue();
                 int cd = dist[cur];
-                foreach (var dir in AdjacentFour)
+                foreach (var dir in dirs)
                 {
                     Vector2Int nxt = cur + dir;
                     if (!board.IsInBoard(nxt)) continue;
@@ -1221,7 +1422,7 @@ namespace DeckRoguelike.Combat
             }
 
             var candidates = new List<Vector2Int>();
-            foreach (var dir in AdjacentFour)
+            foreach (var dir in dirs)
             {
                 Vector2Int nxt = self.GridPos + dir;
                 if (!board.IsInBoard(nxt)) continue;

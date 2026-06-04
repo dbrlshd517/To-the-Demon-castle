@@ -13,6 +13,7 @@ namespace DeckRoguelike.Relic
     ///   3xx = 영웅(Rare) 유물
     ///   4xx = 상점 전용 유물 (상점에서만 구매 가능, 희귀=Uncommon 등급)
     ///   5xx/6xx = 상점 전용 영웅(Rare) 유물
+    ///   7xx = 미사용(폐기) 유물 — 도감·인게임 풀 어디에도 생성되지 않음
     ///   9xx = 보스 유물
     ///   ※ 유물은 일반(Common) 등급 없음 — 희귀(Uncommon)/영웅(Rare) 2등급
     ///
@@ -36,6 +37,10 @@ namespace DeckRoguelike.Relic
 
         public bool IsBossRelic     => relicCode / 100 == 9;
         public bool IsShopOnlyRelic => relicCode / 100 >= 4 && relicCode / 100 <= 6;
+
+        /// <summary>7xx — 미사용(폐기) 유물. 도감 표시와 인게임 보상/상점 풀 모두에서 제외됩니다.
+        /// (시작 유물 70/80/90은 두 자리 코드라 relicCode/100==0 이므로 여기 해당되지 않음.)</summary>
+        public bool IsUnused        => relicCode / 100 == 7;
 
         /// <summary>70/80/90 — 직업 시작 유물. 상점·위험 보상에서 제외됩니다.</summary>
         public bool IsStartingRelic => relicCode == 70 || relicCode == 80 || relicCode == 90;

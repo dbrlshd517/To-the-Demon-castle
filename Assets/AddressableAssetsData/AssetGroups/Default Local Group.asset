@@ -21,20 +21,26 @@ MonoBehaviour:
     m_SerializedLabels:
     - Events
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 020a3a703ddf53b4ba5f10202c996854
-    m_Address: Data/Cards/33300
+  - m_GUID: 00a5002e0db4e37458ee21fefbf687b5
+    m_Address: Data/Cards/31223
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 035319a13bfd2fc42a2af35477fa5f86
-    m_Address: Data/Cards/33103
+  - m_GUID: 020e77c89f531e7439f6376ee8cc131c
+    m_Address: Data/Cards/31307
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 043e19871c4b2ff44bac2d996b32a03c
-    m_Address: Data/Cards/22211
+  - m_GUID: 02b9bf3337d55d34fbbfad0a4501b7a0
+    m_Address: Data/Cards/41120
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 035673799e52d344ab8906d66e22c4ff
+    m_Address: Data/Cards/31200
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -62,12 +68,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Allies
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0b38dd0df9f41314ebc6216ee32530f9
-    m_Address: Data/Cards/22208
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0bc6987784fde9a44afdc310c89a4da5
     m_Address: Data/Events/31011
     m_ReadOnly: 0
@@ -79,14 +79,20 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0ccacfa7fa267ae44923d42217439375
-    m_Address: Data/Cards/23103
+  - m_GUID: 0c00f22380cb4e547855b266d823a9cf
+    m_Address: Data/Cards/21108
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0ebf81985afa72142afd9ce990b7e474
-    m_Address: Data/Cards/33203
+  - m_GUID: 0d41d261ee5a5ff499b9b960d53b5062
+    m_Address: Data/Cards/31300
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0dee5596f2cbf46479e0b704ae62d959
+    m_Address: Data/Cards/21205
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -99,12 +105,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 10a590c4736716c4595efee3e4048525
     m_Address: Data/Cards/22106
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 10dc5c4e76773df4b937ed1991c50483
-    m_Address: Data/Cards/23202
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -125,8 +125,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 11e0f790691fd4b4886d352bea8e1129
-    m_Address: Data/Cards/22212
+  - m_GUID: 11a62cb0d955c2d48abb603bd1991751
+    m_Address: Data/Cards/21306
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -142,23 +142,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1421f43758438f24a878949a11da84c5
-    m_Address: Data/Cards/42100
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1424bb6575dcf72408fc5d9d04d1600e
     m_Address: Data/Events/11010
     m_ReadOnly: 0
     m_SerializedLabels:
     - Events
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 161077a21b53baf49bf9214e68651f35
-    m_Address: Data/Cards/22001
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 161fa3ccfda59f84da9bcf0b76daac99
     m_Address: Data/Cards/60003
@@ -178,23 +166,22 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 17a7c55636ae68048a7727c4f54a0d68
-    m_Address: Data/Cards/22000
+  - m_GUID: 186f6dd7a18de4b4ca52a63c53260d7a
+    m_Address: Data/Cards/21203
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1827abc87cc33884c8148c868dea87ae
-    m_Address: Data/Cards/12201
+  - m_GUID: 1b1738825e1e5304b837e20b4f047b66
+    m_Address: Data/Cards/31224
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 18337b9e43f930c4694b5d6951927e1a
-    m_Address: Data/Cards/33306
+  - m_GUID: 1b254cc57596cf44c92b304677d90974
+    m_Address: Sprites/Ingame/map/8
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1bb75e61ecb83ea48bb2a446f28f1d5f
     m_Address: Sprites/Ingame/Combat/Rangepreview/enemyattack_unactive
@@ -207,11 +194,34 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c12b3f5277e89c47b8c0b4aa485963f
+    m_Address: Data/Cards/32100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f48e026468978b4eb1ca625eb44b59e
+    m_Address: Data/Cards/22305
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f54fb03947ee2541a205857d645ae6a
+    m_Address: Data/Hazards/32221
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Hazards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2048eb6653caac9479481c223a38575d
     m_Address: Data/Cards/22205
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20de6914b02371d4f91c7a12a902ecde
+    m_Address: Sprites/Ingame/Combat/Tile/Common/lava
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2134c39ca73303646bd568ecda3ea0f3
     m_Address: Sprites/Ingame/Combat/Rangepreview/enemypower_unactive
@@ -235,8 +245,32 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 240d6d6f71d37e840a416da988a8b4a1
+    m_Address: Data/Cards/11256
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2434606ab56067b4ea2bfff02ee58cdf
+    m_Address: Data/Cards/21106
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 25a76dca0eeb4f847907aca69a46b9e5
+    m_Address: Data/Cards/31301
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2724e49782bc83940b6c0e71b2b900ab
     m_Address: Data/Cards/32300
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28378e87f13bf8543bb8c07b97e2b6bd
+    m_Address: Data/Cards/42201
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -251,22 +285,10 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 29779c13e6fe9bb4e8d262bc745b61a2
-    m_Address: Data/Cards/33303
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 29cf8c01b7ec05b408459e266041f2b2
     m_Address: Sprites/Ingame/Combat/Enemy/11000
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2a43134e69d5c64439ac15e0f85723fd
-    m_Address: Data/Cards/42000
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2a5901365d968ef4d9046761af8402cc
     m_Address: mWooshSmallCrit
@@ -295,10 +317,22 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2dd0cb26594502e439945f747a3ba366
+    m_Address: Data/Cards/32104
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2df677bb3e3ca574c966018f8f8271ff
     m_Address: Sprites/Ingame/Combat/Rangepreview/playerattack_active
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ea41f27d38caa2489c77ceeb342ba29
+    m_Address: Data/Cards/32204
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3065dc01eac7b7746ab1101a17e40e09
     m_Address: Data/Cards/60002
@@ -310,6 +344,12 @@ MonoBehaviour:
     m_Address: Sprites/Ingame/Combat/background_1-export
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 312e762ffdb460d4fae02f4d647c1e9a
+    m_Address: Data/Cards/22308
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3150388a6db04dd4abf6f9aad378930b
     m_Address: Data/Cards/11206
@@ -323,16 +363,16 @@ MonoBehaviour:
     m_SerializedLabels:
     - Allies
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3353b3ad08f397b4997421e3695877cc
+    m_Address: Data/Cards/21202
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 338c16ae58ed1224baff15411d5670d0
     m_Address: Sprites/Ingame/Combat/stage1_Tilemap
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 35cf7feaa842fd447937df02a4e2250d
-    m_Address: Data/Cards/22209
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 35ea3468f16573240b313622b7682f3c
     m_Address: Data/Cards/32301
@@ -374,8 +414,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3b06472e6f94c284da572cd660f819e9
-    m_Address: Data/Cards/23104
+  - m_GUID: 38385e6144efd9646ad227f0fd152717
+    m_Address: Data/Cards/22304
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3a98a9bccf4f8c3419135709bd4bead4
+    m_Address: Data/Cards/41101
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -385,14 +431,26 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3f43d075cc21647459815e6c9eb0e9ee
-    m_Address: Data/Cards/22108
+  - m_GUID: 3d3046e9942b2e04fb6ec590436d25e6
+    m_Address: Data/Cards/31122
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d6a3d8499c875543850133d87b5b176
+    m_Address: Data/Cards/31221
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 404135ad94c019e439acb851ff15d12f
     m_Address: Data/Cards/32307
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4095875e4f363d14c9a5d8f1194d78b6
+    m_Address: Data/Cards/21005
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -408,8 +466,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 414a39ec70c13c04cb07971ad3665875
-    m_Address: Data/Cards/23205
+  - m_GUID: 42104f12e9d747746b4c2d5a7aeea469
+    m_Address: Data/Cards/21209
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -443,6 +501,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48562c660fa1b2949bfb691de8ba2188
+    m_Address: Data/Cards/21353
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 48f7826223a020445bcf1ab20cb910b4
     m_Address: Data/Cards/11204
     m_ReadOnly: 0
@@ -454,6 +518,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Enemies
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ab7b91ca74a0a049bbadfbe9d244d7d
+    m_Address: Data/Cards/21204
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4abbda9049f57c04da050cd56c5b051a
     m_Address: Data/Events/21010
@@ -467,41 +537,17 @@ MonoBehaviour:
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4afff97041cf93546b0b802b023d60bf
-    m_Address: Data/Cards/33201
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4bf9781d863e2cb419de566bd4f2ac67
-    m_Address: Data/Cards/42140
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4d7337d6cc6ade4418668c09420f3f3d
     m_Address: Data/Cards/22105
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4ddb0ce9f37dd97489c058bf1a27166f
-    m_Address: Data/Cards/23204
+  - m_GUID: 4e568417950f1bf4d9cfe0a5978d6fc2
+    m_Address: Data/Hazards/32140
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4e12458619ecc414a989a95aad8fd54a
-    m_Address: Data/Cards/23106
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4e9ec8fccd1a4d14d8ff832a72952b13
-    m_Address: Data/Cards/33202
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
+    - Hazards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4ecc82e93d02d8d4d945a463e9b84aee
     m_Address: Data/Cards/21001
@@ -509,19 +555,30 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4edb56b6141286b4ea5c88cab2145b80
-    m_Address: Data/Cards/11208
+  - m_GUID: 4eda36c335fff6544b5d71729420b0f2
+    m_Address: Sprites/Ingame/Combat/Tile/Common/chill
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4f2705cf015a43e4899489c5e510f390
     m_Address: TooltipDatabase
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 511878cd661b1b044b57b4afd466f644
-    m_Address: Data/Cards/32223
+  - m_GUID: 50f63347d741c7e40bda4a98c34006f3
+    m_Address: Data/Cards/42301
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50f831bff3a0186418ecbb4a592f9871
+    m_Address: Data/Cards/41140
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5139fbc7f2d0d6148a5585e18d3d5d9a
+    m_Address: Data/Cards/21003
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -531,17 +588,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 51e1b89d867b7324997645bc4dacfa88
-    m_Address: Data/Cards/42020
+  - m_GUID: 51e9bc9dd3443f5439855d943199fdb2
+    m_Address: Data/Hazards/32141
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5220aaab2936fc742971d3243292c68f
-    m_Address: Data/Cards/33305
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
+    - Hazards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 52e0221b167d354469a73ced2deab732
     m_Address: Data/Enemies/12000
@@ -549,14 +600,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 556fc9aa129abce4cbfc00f8ca1d31dc
-    m_Address: Data/Cards/22306
+  - m_GUID: 54b1f7bf553f2a749813a250da563f97
+    m_Address: Data/Cards/42200
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5580015b95e7eaa4b90f0881686f00c3
-    m_Address: Data/Cards/23102
+  - m_GUID: 54f0d480da284f343b08cc473db6e2c0
+    m_Address: Data/Cards/11201
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 556fc9aa129abce4cbfc00f8ca1d31dc
+    m_Address: Data/Cards/22306
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -566,20 +623,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 57ab404b865114b408dc7da0799b6143
-    m_Address: Data/Cards/33104
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 593dc85952befcb469ab65ac7096681e
     m_Address: Data/Cards/22200
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 59956b9f65d74c54d9c8b38d60960213
-    m_Address: Data/Cards/23304
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -590,13 +635,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a099bb3f5fe04449a503c045db20e99
+    m_Address: Data/Cards/21107
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5aef227138293e340b66733a0b019655
+    m_Address: Sprites/Ingame/map/3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5b4dc19a47d018d4895195f61a89d55d
     m_Address: Sprites/Ingame/map/7
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5c1f68925303b6a4dac9fc3295d02a81
-    m_Address: Data/Cards/42101
+  - m_GUID: 5b7f989c2d2f9de4a8ab6f283d8df565
+    m_Address: Data/Cards/31302
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -607,20 +663,32 @@ MonoBehaviour:
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5cd96b6ce151c884d946879c1c272a48
+    m_Address: Data/Cards/32202
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d6238895b69ea74cbaa64abbdb2ec64
+    m_Address: Data/Cards/11258
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5da06095d869f4244b18c168648e410a
     m_Address: Data/Enemies/12070
     m_ReadOnly: 0
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5f06875fecf525a43be99b21dba95d0e
-    m_Address: Data/Cards/21300
+  - m_GUID: 5dacccabd45273648a61ec38115bbf5f
+    m_Address: Data/Cards/21004
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5f9cdb74ef7d44a40bba34bc75a5acf7
-    m_Address: Data/Cards/22210
+  - m_GUID: 5f06875fecf525a43be99b21dba95d0e
+    m_Address: Data/Cards/21300
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -637,14 +705,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - Events
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 62c14832c3e4fc84b94cc607df3c2701
-    m_Address: Data/Cards/32224
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 632c9fe1a3c764345bc01675b629aa33
-    m_Address: Data/Cards/23107
+  - m_GUID: 60bcc209f7fe2f743b5c1fcefc69ef31
+    m_Address: Data/Cards/21208
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -666,48 +728,30 @@ MonoBehaviour:
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 660c0374a47209247869977a632201d1
-    m_Address: Data/Cards/43301
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 662728673c95cdc419c9bde442fb07f0
     m_Address: Sprites/Ingame/Combat/card deck2
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 663edf4701bd2e44fafdbf976ecd034d
-    m_Address: Data/Cards/42120
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6689cb89587e62546a2609d8a8a83ed6
     m_Address: Sprites/Ingame/Combat/Rangepreview/playerpower_unactive
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6956bd6a1f4b57b42807baf93223aced
-    m_Address: Data/Cards/12200
+  - m_GUID: 670d636dc56a15843ad4ab57a035abef
+    m_Address: Data/Cards/31201
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6967bb1baa61d1d4aa7be3bd1e899f7d
-    m_Address: Data/Cards/12207
+  - m_GUID: 6a3a1e9066b629541ab2b3ab5d8652cf
+    m_Address: Data/Cards/32101
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6a82be8b32453e0409ea837f8fac0adf
-    m_Address: Data/Cards/22215
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6ac8ae62a7c80d64dad06f9958551c9f
-    m_Address: Data/Cards/23307
+  - m_GUID: 6b6021258adb07a448778f2996711762
+    m_Address: Data/Cards/11253
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -724,8 +768,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6d667282317304f4ea8dff64bd8d4fcc
-    m_Address: Data/Cards/12205
+  - m_GUID: 6e7d68b1accbdd14aaa739fdf84aaf6d
+    m_Address: Data/Cards/22309
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ec7bb08aab974c4ea034e57e7a69a6b
+    m_Address: Data/Cards/41100
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -735,26 +785,10 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4eda36c335fff6544b5d71729420b0f2
-    m_Address: Sprites/Ingame/Combat/Tile/Common/chill
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 20de6914b02371d4f91c7a12a902ecde
-    m_Address: Sprites/Ingame/Combat/Tile/Common/lava
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6fd0045e8ab255840bab94972f2d192b
     m_Address: Sprites/Ingame/Common/Topbar/map sprite
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6ff5a4b8ea7902749ae3d25d7ad14565
-    m_Address: Data/Cards/23203
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 70000a0070000a0070000a0070000a07
     m_Address: Data/Cards/70000
@@ -773,8 +807,14 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7098e5aea9e08b346b34b08830b68e9d
-    m_Address: Data/Cards/22003
+  - m_GUID: 708ba18d9a67f814ca7b17be2e5739a9
+    m_Address: Data/Hazards/32223
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Hazards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 71e2ab5b2aa6612448ceb36103c44166
+    m_Address: Data/Cards/21109
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -796,14 +836,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 75a92bd8a59b27642ab5633852844cab
-    m_Address: Data/Cards/33301
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 770f08467f38b95439a9ca9839e73a42
-    m_Address: Data/Cards/12204
+  - m_GUID: 74adcb20919d02447a26a4e8bb22cb55
+    m_Address: Data/Cards/21104
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -814,8 +848,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7e405fd84b06e9a489f343f8f19a4c27
-    m_Address: Data/Cards/23309
+  - m_GUID: 78f3578bd283b96418af634bfefe5e36
+    m_Address: Data/Cards/21213
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79a6ac2ce061fdb40b9e4b0754e848ba
+    m_Address: Data/Cards/32105
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c0a841d8b64de942b82e7a95f21c158
+    m_Address: Data/Cards/21215
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -849,22 +895,22 @@ MonoBehaviour:
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 81e8a56ed86a7dc459e5bcb811717884
-    m_Address: Data/Cards/32002
+  - m_GUID: 807f8b58e33c6094e8308701ba3b0ffc
+    m_Address: Data/Cards/11252
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 838b1e6ab020fa34cb36dd7fa70d019a
+    m_Address: Data/Hazards/32123
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Hazards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 84a3880db813f0f44959eae474bcef8c
     m_Address: Data/ItemDatabase
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 84c37e62a870ad64ea717abe126eb08f
-    m_Address: Data/Cards/32120
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 852f26ba90802324482cfd3059c70f30
     m_Address: Data/Events/22010
@@ -872,19 +918,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - Events
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 855e253e7cf6bd2429c8d11a7e83e286
-    m_Address: Data/Cards/12203
+  - m_GUID: 86273655019aa444e94eb4cd1c7a554d
+    m_Address: Data/Cards/22204
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 85a1af4e509c4b049bbf931d69a62ecd
-    m_Address: Sprites/Ingame/map/8
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 86273655019aa444e94eb4cd1c7a554d
-    m_Address: Data/Cards/22204
+  - m_GUID: 8862ace3e5254a340b06e423f3132c62
+    m_Address: Data/Cards/11255
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -899,6 +940,12 @@ MonoBehaviour:
     m_Address: Sprites/Ingame/Combat/discardcard
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89150ce730cca894bae18cd79d5c7ec6
+    m_Address: Data/Cards/21350
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 89c2a70dbee606f469227e41064b5c8b
     m_Address: Data/Allies/10003
@@ -916,12 +963,6 @@ MonoBehaviour:
     m_Address: Sprites/Ingame/Combat/Rangepreview/playersummun_unactive
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8d127e0a7dccdd540a209d7abe269b69
-    m_Address: Data/Cards/22002
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8d94a7db3499a9f4abb18e994f49786d
     m_Address: Data/Cards/32306
@@ -941,14 +982,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 92a6d6a873537404c8219664d63c885f
-    m_Address: Data/Cards/23200
+  - m_GUID: 91036463eb61471498da74643a5cb125
+    m_Address: Data/Cards/31101
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 92e640f1e34e85240a1635b15e4b7a35
-    m_Address: Data/Cards/11209
+  - m_GUID: 936dbf5e1406ff24e8c31604497f6d9b
+    m_Address: Data/Cards/41003
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -976,8 +1017,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Encounters
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 964d5560444664c449fd34ea56aa6534
+    m_Address: Data/Cards/11200
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 965aa1ad44fe55b4c9c7965088661c66
     m_Address: Data/Cards/32305
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96e835d475ed47d4fa4a00ef028b17a4
+    m_Address: Data/Cards/41021
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1004,20 +1057,26 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9ae8376bf4da9e94a8c15b940285cb66
-    m_Address: Data/Cards/23308
+  - m_GUID: 9b76e39557f2e6942932bb2511f407f5
+    m_Address: Data/Cards/42300
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9cdd7b17b54bddc4686b1136e3c489da
-    m_Address: Data/Cards/22302
+  - m_GUID: 9c77522f2dccb4c4fa091d6ed3dd7a30
+    m_Address: Data/Cards/21002
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9d2a732e33cb06f4c89d9e790be4db6d
-    m_Address: Data/Cards/33307
+  - m_GUID: 9cac9a9ae246c774eab83adf4c2df31c
+    m_Address: Data/Cards/21307
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f4aa8dc58579594da74814da9523697
+    m_Address: Data/Cards/21352
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1033,20 +1092,26 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a0e2f6f60977e66488ed140c671899e3
-    m_Address: Data/Cards/32121
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a17a22e1dc8f8b6439c8fc32ef7890ba
     m_Address: Data/Events/42021
     m_ReadOnly: 0
     m_SerializedLabels:
     - Events
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a31d8011362175b4c86562f371b66b54
-    m_Address: Data/Cards/33302
+  - m_GUID: a1ac26762e78e0242b4ba743d5a4b6c0
+    m_Address: Data/Cards/21211
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1d5c61f070d8b447afd607367a0c7b1
+    m_Address: Data/Hazards/32243
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Hazards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a35b01ac661d333409c5b65f0a34fc20
+    m_Address: Data/Cards/31303
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1057,18 +1122,31 @@ MonoBehaviour:
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a6817682dad6bb14188eeee4fbeb10c3
-    m_Address: Sprites/Ingame/map/3
+  - m_GUID: a773603ce7fe9f34198d9609a4fa0f5e
+    m_Address: Data/Cards/21250
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7f33bdfcd0a6fa4ba3ac8767a12e0e1
+    m_Address: Data/Cards/31120
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a9ce10fcb5b817645840ef1a14ec45b2
     m_Address: Prefabs/Combat/Unitprefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ab1d7c47611741a4a94ce36d2445a401
-    m_Address: Data/Cards/32000
+  - m_GUID: aa43ecdc72e2e0740a68077c1e4bb1ba
+    m_Address: Data/Cards/11254
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab12b0396ac277d4caf688e13bd6d594
+    m_Address: Data/Cards/11257
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1084,23 +1162,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ad9d62f036ba45c48a13a7a516db2f45
-    m_Address: Data/Cards/42001
+  - m_GUID: ad4d254b524498140a4b24e2ecb5f9d3
+    m_Address: Data/Cards/21101
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ada54891bdb34d64181c76e567c114c3
-    m_Address: Data/Cards/32001
+  - m_GUID: addfb1e2bfd0f7b4a9ab6724eab53d93
+    m_Address: Data/Cards/21210
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: af90f7914c539b34aa66ed9a0370f3cd
-    m_Address: Data/Cards/23100
+  - m_GUID: afade319765710d4a9c074f7d08bdb2f
+    m_Address: Data/Hazards/32121
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Cards
+    - Hazards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b000a99f47cc25340bb30a1ad3859875
     m_Address: Data/Cards/41000
@@ -1108,14 +1186,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b01a84cd857258c40ad662f6cbd6aad0
-    m_Address: Data/Cards/33304
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b14c28d339c7d1e4bac0940af26047dc
-    m_Address: Data/Cards/42121
+  - m_GUID: b4a73db280ae7e6458172f1aa68f67b3
+    m_Address: Data/Cards/11259
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1132,6 +1204,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b71abd74d7811ae4d91abd6008e14785
+    m_Address: Data/Cards/31305
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b72b3233d89d9764081c6b1378486f6b
     m_Address: Data/Cards/80002
     m_ReadOnly: 0
@@ -1143,6 +1221,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b76cc3788ad974548b0cc1f67c32dde9
+    m_Address: Data/Cards/21351
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b7e314e1ca10b1242887c55aebf53514
     m_Address: Sprites/Ingame/Common/energy sprite
     m_ReadOnly: 0
@@ -1150,12 +1234,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b7f939bb27652ec4883ea2d4a54592dc
     m_Address: Data/Cards/60006
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b7fa800b5c77c0e429d9ec72081dd5ab
-    m_Address: Data/Cards/32003
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1177,11 +1255,11 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bac645f018d016647b5c73ac75624f6d
-    m_Address: Data/Cards/22109
+  - m_GUID: bad22a2af951cca4f996b412f00a26bd
+    m_Address: Data/Hazards/32222
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Cards
+    - Hazards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: baf3dd4e07e31fc419f47cdebdc05651
     m_Address: Sprites/Ingame/Combat/Sprite-0004
@@ -1194,20 +1272,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bc18acac1fbe70b4bb84f09c9be7bc20
-    m_Address: Data/Cards/32122
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bc507d815575ed64bb2dff1284f1e225
-    m_Address: Data/Cards/43200
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bcc71f7ba333dc448b6ea07ab1f9096b
-    m_Address: Data/Cards/23300
+  - m_GUID: bcc19f41b10c96c408aac1e8f1fad7d4
+    m_Address: Data/Cards/31123
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1217,20 +1283,14 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bebc93a160f762949992d86d84ee4e2d
-    m_Address: Data/Cards/33105
+  - m_GUID: bec5548ba9f85904c8cf8726b8281cb3
+    m_Address: Data/Cards/32103
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c1f4d4dfff7e55a4fafb614f44c4b9d1
-    m_Address: Data/Cards/12202
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c1f9152857b914d4f92ae8d9f7b5d368
-    m_Address: Data/Cards/33102
+  - m_GUID: c256a9e8c612e6f4eb00b196ea257062
+    m_Address: Data/Cards/41002
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1241,17 +1301,10 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c3260e13bcdc8cd4b9911c2274d90d7d
-    m_Address: Data/Cards/42141
+  - m_GUID: c5130b93aad8cfa4b8e293f086178889
+    m_Address: Sprites/Ingame/map/5
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c4d1cb3de946336469676edbcfcc1293
-    m_Address: Data/Cards/23101
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c5ea4c620d5741f4e825e81266823cd6
     m_Address: Data/Cards/21200
@@ -1259,15 +1312,34 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c6242b4f1af8ff149b66d1081922a671
-    m_Address: Sprites/Ingame/map/5
+  - m_GUID: c686e094d89a7814b8d4b0330dd8a75a
+    m_Address: Data/Cards/41240
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c72bcfd678a3389449f4a89f8fd35707
+    m_Address: Data/Cards/31306
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9e1ced2a89a77e4a8b3af999d4341bc
+    m_Address: Data/Cards/41020
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c9fe2139e586e8947b1bb8a0139e0146
     m_Address: Sprites/Common/rangeinfo/player
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca450cff38400064f99a3dc1d1623c69
+    m_Address: Data/Cards/21212
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cad640ef1556a7b4fb8c046fdca07d23
     m_Address: Prefabs/Common/BackButton
@@ -1279,12 +1351,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Encounters
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cb3734757703a00438072ec3860cf622
-    m_Address: Data/Cards/43300
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cb47cc931c60c5441989d838e1ac736e
     m_Address: Sprites/Ingame/Combat/Rangepreview/enemymove_unacitive
@@ -1306,6 +1372,12 @@ MonoBehaviour:
     m_Address: Sprites/Ingame/Combat/Rangepreview/enemysummun_active
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce1677249a8d9774385884a97c99e686
+    m_Address: Data/Hazards/32242
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Hazards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cebbfe39fd1130a4e8281dc97b4082b4
     m_Address: Data/Cards/22300
@@ -1336,24 +1408,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d09c82cd0720fa24fa42a9aaebfaf546
-    m_Address: Data/Cards/33101
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d0b544843981f6a429e6978d6f0d0c1e
-    m_Address: Data/Cards/23305
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d0b9ea04b80e8fe4eb64a26774b1f39a
-    m_Address: Data/Cards/23301
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d0cc2ccadd522a24c8416d1e1568f7d2
     m_Address: Data/Cards/22202
     m_ReadOnly: 0
@@ -1364,12 +1418,6 @@ MonoBehaviour:
     m_Address: Assets/GameResources
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d17e8176061c2264a970e8e54acff7a4
-    m_Address: Data/Cards/42241
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d1ea1b67bd6f358439e3cc0609105b7d
     m_Address: Data/Enemies/11050
@@ -1382,12 +1430,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d4b20aa97b2d1fb42aad7ec4a12f902b
-    m_Address: Data/Cards/33100
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d5fb3be0f03ca7e4f92be57186e55f79
     m_Address: Sprites/Ingame/Combat/Sprite-0005 1
     m_ReadOnly: 0
@@ -1397,6 +1439,12 @@ MonoBehaviour:
     m_Address: Sprites/Ingame/map/1
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d70204faa44746747a1ea13c9cd5606c
+    m_Address: Data/Hazards/32120
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Hazards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d7340b3885f18bb49a420cca0eee3d0c
     m_Address: Data/LocalizationDatabase
@@ -1414,6 +1462,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d81cc13e2d2c3d546a511fe81efa3627
+    m_Address: Data/Cards/31304
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: da066e725ba34ed4d9f89e6d0720a501
     m_Address: Data/Cards/60000
     m_ReadOnly: 0
@@ -1426,14 +1480,26 @@ MonoBehaviour:
     m_SerializedLabels:
     - Encounters
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da549cc60cebb24448303a6caa333183
+    m_Address: Data/Cards/32102
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da866386e1b694c46af5df9831051eae
+    m_Address: Data/Cards/31100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: db06e819023e8af4a93a14a6c7f42483
     m_Address: Data/Enemies/11060
     m_ReadOnly: 0
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: db92e472755fc8b42bc762dedee0eafa
-    m_Address: Data/Cards/23201
+  - m_GUID: db1a21c78a47d234b9b72755dfcc9b9e
+    m_Address: Data/Cards/32203
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1443,48 +1509,42 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df1911694f772164cb40f93fb3d94013
+    m_Address: Data/Cards/21105
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df96b1dae3021df45b75aef1ee51d1ac
+    m_Address: Data/Cards/41141
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e07c3d7203effc245a1585a819c5de36
     m_Address: Prefabs/Combat/Itemprefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e0b9af64d2e296647a5aba652d82044d
-    m_Address: Data/Cards/22213
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e1809790a4c400540920bca116f8a18d
-    m_Address: Data/Cards/32123
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e1ebae6ab68f05040b47a3f14b798b1a
-    m_Address: Data/Cards/43201
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e1f14dc2c4ba4e54fb40ecb75130da78
     m_Address: Sprites/Ingame/Common/Sheld
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e5a7d21f138274d43ace44cdc84eadb6
-    m_Address: Data/Cards/22214
+  - m_GUID: e319f36b88ad5f248b13107f98d76c20
+    m_Address: Data/Cards/32205
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3effb084c5086542b3f8e4f49f1e768
+    m_Address: Data/Cards/21304
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e71eed3fe1abcaa4db0ff9b12d35a17f
     m_Address: Data/Cards/22207
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e77deb38132e67c48b9dd4165d6323d6
-    m_Address: Data/Cards/12206
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1499,14 +1559,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ed27507d3d08b0049bb0a636660d5730
-    m_Address: Data/Cards/22303
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ed5b3ee8649f27d46a86d14aeb2b923e
-    m_Address: Data/Cards/33200
+  - m_GUID: ed4da96de0a281c4fb6b4f3cca599708
+    m_Address: Data/Cards/31220
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1528,14 +1582,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Events
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f25790eefcb351e4aaa479a13786ea36
-    m_Address: Data/Cards/23306
+  - m_GUID: f0826720273386a42b1c6514007662dc
+    m_Address: Data/Cards/21305
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f2693b8b067927f439bb2ff369c37601
-    m_Address: Data/Cards/32220
+  - m_GUID: f2069e0e02af02c47924f3dfda2e279f
+    m_Address: Data/Cards/21100
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f29e9ad9ce284a145aaf0e0b3af59928
+    m_Address: Data/Cards/21207
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1544,6 +1604,18 @@ MonoBehaviour:
     m_Address: Sprites/Ingame/Combat/Rangepreview/playermove_unacitive
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f3043e8ba0137454b99cdfa89985f169
+    m_Address: Data/Hazards/32220
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Hazards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f3160b11af61c3649951e690222f3e83
+    m_Address: Data/Cards/21214
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f3221a898358c7340ac30c867ee2da3b
     m_Address: Data/Enemies/11000
@@ -1562,8 +1634,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - Enemies
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f7b36dca93045254ea03a1c22590c94b
-    m_Address: Data/Cards/42240
+  - m_GUID: f71b9834f9ac90440862a8322407978d
+    m_Address: Data/Cards/21251
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7598bdd013323b4a83b093c826ce964
+    m_Address: Data/Cards/31003
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1573,14 +1651,38 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7f402f60ad1b194b97f774826bc8170
+    m_Address: Data/Hazards/32122
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Hazards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f87cd0c10ab227a458931fc973777164
+    m_Address: Data/Cards/31002
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f905fdc7efdfcda4a9b2b493eeabe808
+    m_Address: Data/Cards/31121
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f9c6739b1cd2aba479d593ceb5d95099
     m_Address: Data/Events/12010
     m_ReadOnly: 0
     m_SerializedLabels:
     - Events
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fb597844af1df11419bf1a1046fe6a2e
-    m_Address: Data/Cards/23105
+  - m_GUID: fa5388557f04cc244aa4cd23651a67c2
+    m_Address: Data/Cards/21206
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa8c924fbe83d2d4fa2927ce1cb831ab
+    m_Address: Data/Cards/41241
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards
@@ -1594,6 +1696,12 @@ MonoBehaviour:
     m_Address: Prefabs/Combat/Navigationbutton
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbdef423c9ee68a478e7b7894b942fdf
+    m_Address: Data/Cards/41121
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cards
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fbe1fce380b1ff44488d9496973ee1fc
     m_Address: Data/WheelScrollTuning
@@ -1613,18 +1721,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fd247b53ae4b3584aa3f88a53555193d
     m_Address: Data/Cards/11202
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fd3864d8a639f0742bde8437387800d5
-    m_Address: Data/Cards/42021
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cards
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ff75b9f2d5eeeca49a5f5f37105ac16e
-    m_Address: Data/Cards/32221
     m_ReadOnly: 0
     m_SerializedLabels:
     - Cards

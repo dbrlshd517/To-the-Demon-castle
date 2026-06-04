@@ -84,9 +84,10 @@ namespace DeckRoguelike.Combat
                     CharacterType.Mage    => 4,
                     _                     => 1,
                 };
+                // 둘째자리 1=액션 대역(이동 포함). 기본 액션 c1002(타격/발사/화염구), 기본 이동 c1000.
                 var codes = new List<int>();
-                for (int i = 0; i < 2; i++) codes.Add(c * 10000 + 1100); // 액션 첫번째 카드 2장
-                codes.Add(c * 10000 + 2100);                              // 이동 첫번째 카드 1장
+                for (int i = 0; i < 2; i++) codes.Add(c * 10000 + 1002); // 기본 액션 카드 2장
+                codes.Add(c * 10000 + 1000);                              // 기본 이동 카드 1장
                 source = CardRegistry.GetCards(codes);
             }
 

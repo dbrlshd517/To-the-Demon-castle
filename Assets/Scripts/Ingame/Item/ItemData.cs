@@ -12,6 +12,7 @@ namespace DeckRoguelike.Item
     ///     1xx = 일반(Common) 아이템
     ///     2xx = 희귀(Uncommon) 아이템
     ///     3xx = 희귀(Uncommon) 아이템 (상위 등급 폐지 — Uncommon=희귀에 통합)
+    ///     7xx = 미사용(폐기) 아이템 — 도감·인게임 풀 어디에도 생성되지 않음
     ///     9xx = 보스 아이템
     ///
     ///   Y (십의 자리) = 캐릭터 전용 여부
@@ -33,6 +34,9 @@ namespace DeckRoguelike.Item
         public Sprite icon;
 
         public bool IsBossItem => itemCode / 100 == 9;
+
+        /// <summary>7xx — 미사용(폐기) 아이템. 도감 표시와 인게임 보상/상점 풀 모두에서 제외됩니다.</summary>
+        public bool IsUnused => itemCode / 100 == 7;
 
         /// <summary>코드 첫째 자리를 희귀도 인덱스로 반환합니다 (아이템은 일반/희귀 2등급).
         /// 1xx → 0(일반/Common), 2xx/3xx → 1(희귀/Uncommon).</summary>

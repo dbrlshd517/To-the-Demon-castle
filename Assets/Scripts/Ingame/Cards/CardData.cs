@@ -53,7 +53,7 @@ namespace DeckRoguelike.Cards
         // ── cardCode 파싱 프로퍼티 ────────────────────────────
         // [구조] C T R N O
         //   C(1): 클래스  1=공통 2=전사 3=거너 4=메이지
-        //   T(2): 타입    1=이동 2=액션 3=파워
+        //   T(2): 타입    1=액션 2=파워 (이동은 액션 대역에 병합 — 자리수가 아니라 주 효과로 식별)
         //   R(3): 희귀도  1=일반 2=희귀 3=영웅 4=전설
         //   N(4): 번호
         //   O(5): 강화    짝수=강화전 홀수=강화후
@@ -73,7 +73,7 @@ namespace DeckRoguelike.Cards
         };
 
         // 카드 분류 (ClassDigit):
-        //   1~4 : 전투 카드 — TypeDigit으로 Move/Action/Power 결정.
+        //   1~4 : 전투 카드 — 주(첫) 효과가 이동 계열이면 Move, 아니면 TypeDigit으로 Action/Power 결정.
         //   6,7 : 비전투 사용 카드 — CardType.None.
         //         6xxxx = 보상/시스템 카드(골드/유물/아이템/카드보상/넘기기/휴식/강화/카드제거/전투재시작/메인메뉴).
         //         7xxxx = 맵 이동, 강화 등.
@@ -84,15 +84,40 @@ namespace DeckRoguelike.Cards
         // 잘못 매칭되는 것을 원천 차단. 6/7 카드는 모두 자체 dispatch 경로(`HandleShopCardPlay`/`HandleRestCardPlay`/
         // `HandleMapMoveCardPlay`/`ExecuteCard` for _rewardCards)로 실행되므로 generic type 기반 실행 흐름이 필요 없음.
         // IsSelfPlayCard는 `PrimaryTargeting == TargetType.Self`로 여전히 true가 되므로 SelfPlay UI 흐름 유지됨.
-        public CardType CardTypeFromCode => (ClassDigit == 6 || ClassDigit == 7 || ClassDigit == 8)
-            ? CardType.None
-            : TypeDigit switch
+        public CardType CardTypeFromCode
+        {
+            get
             {
-                1 => CardType.Move,
-                2 => CardType.Action,
-                3 => CardType.Power,
-                _ => CardType.Action,
-            };
+                if (ClassDigit == 6 || ClassDigit == 7 || ClassDigit == 8)
+                    return CardType.None;
+                // 이동은 둘째자리(액션 대역)에 병합돼 있으므로, 자리수가 아니라
+                // 주(첫) 효과가 이동 계열인지로 먼저 판정한다.
+                if (effects != null && effects.Count > 0 && IsMovementEffect(effects[0]))
+                    return CardType.Move;
+                return TypeDigit switch
+                {
+                    1 => CardType.Action,
+                    2 => CardType.Power,
+                    3 => CardType.Power, // 전환기 호환: 구 파워(3) 잔존분
+                    _ => CardType.Action,
+                };
+            }
+        }
+
+        /// <summary>주 효과가 이동 계열(EffectType.Move 또는 이동 커스텀 효과)인지.</summary>
+        private static bool IsMovementEffect(CardEffect e)
+            => e != null && (e.effectType == EffectType.Move
+                || (e.effectType == EffectType.Custom && IsMovementCustomEffectId(e.customEffectId)));
+
+        /// <summary>
+        /// 이동으로 취급해야 하는 Custom 효과 ID 목록.
+        /// 돌진(pushEnmemy)·비껴치기(Movediagonal_Damage)·벽력일섬(BehindEnemy_Move)처럼
+        /// 주 효과로 이동하는 카드는 여기에 등록해야 CardType.Move로 분류된다.
+        /// ※ 새 이동 카드를 추가하면 이 목록에 반드시 ID를 등록할 것.
+        /// (Damage_killedMove 숙명처럼 주 효과가 Damage인 카드는 등록하지 않음 → Action 유지)
+        /// </summary>
+        public static bool IsMovementCustomEffectId(string id)
+            => id == "pushEnmemy" || id == "Movediagonal_Damage" || id == "BehindEnemy_Move";
 
         // 강화 여부는 정규 카드(ClassDigit 1~4)에만 적용. 보상/특수 템플릿(5xxxx, 6xxxx, 7xxxx, 8xxxx)은
         // cardCode 마지막 자리가 강화 플래그가 아니므로 IsUpgraded가 항상 false 여야 한다.

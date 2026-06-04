@@ -2025,6 +2025,22 @@ namespace DeckRoguelike.UI
         }
 
         /// <summary>
+        /// 906/910 대격변 등에서 사용: 카드 풀을 띄워 정확히 count장을 토글 선택받습니다.
+        /// 카드 클릭 시 토글 선택(확대 표시)되고, count장이 모두 선택되면 confirm 없이 즉시
+        /// onComplete(선택 목록)이 호출되고 패널이 닫힙니다. 확정 없이 닫히면 빈 목록으로 호출됩니다.
+        /// </summary>
+        public void OpenMultiCardPicker(List<CardData> cards, int count,
+                                        System.Action<List<CardData>> onComplete)
+        {
+            if (subCardListController == null) { onComplete?.Invoke(new List<CardData>()); return; }
+
+            subCardListController.gameObject.SetActive(true);
+            subCardListController.SetupMultiCardPicker(cards, count, onComplete);
+            SetTopBarButtonsInteractable(false);
+            PushPanel("RestCardList", CloseRestCardList);
+        }
+
+        /// <summary>
         /// 906/909 유물 등에서 사용: BoardController.BuildRewardPickCards로 보상 풀을 만든 뒤
         /// subCardListController(SetupCardPicker)로 1장 선택받습니다.
         /// 선택 시 onPicked(card), 스킵/취소 시 onPicked(null) 호출.

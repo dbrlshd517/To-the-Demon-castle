@@ -55,7 +55,8 @@ public class EnemyEncounterImporter : EditorWindow
 
         EditorGUILayout.HelpBox(
             "enemies 포맷:\n" +
-            "  랜덤: 11000:3.random:3 → 11000 유닛 3개, 플레이어 맨해튼 거리 3 이내\n" +
+            "  랜덤: 11000:3.random:3 → 11000 유닛 3개, 플레이어 맨해튼 거리 1~3 안의 모든 셀에서 랜덤\n" +
+            "  사거리: 11000:3.range:3 → 11000 유닛 3개, 플레이어 맨해튼 거리가 정확히 3인 셀(고리)에서 랜덤\n" +
             "  고정: 11000:2.1 → 11000 유닛 1개, (col=2,row=1)\n" +
             "  반대편: 11000:3.opposite:1.2.3 → 11000 유닛 3개를 1/2/3번 셀에 배치.\n" +
             "          번호는 플레이어 사분면 반대 코너에서 시작해 행→열 순(플레이어 쪽으로) 1~N.\n" +
@@ -255,7 +256,8 @@ public class EnemyEncounterImporter : EditorWindow
 
     /// <summary>
     /// enemies 파싱 -> EnemySlot[]
-    /// 랜덤: 11000:3.random:3 → 11000 유닛 3개, 플레이어 맨해튼 거리 3 이내
+    /// 랜덤: 11000:3.random:3 → 11000 유닛 3개, 거리 1~3 안의 모든 셀에서 랜덤
+    /// 사거리: 11000:3.range:3 → 11000 유닛 3개, 거리가 정확히 3인 셀(고리)에서 랜덤
     /// 고정: 11000:2.1 → 11000 유닛 1개, (col=2, row=1)
     /// 여러 그룹은 / 로 구분
     /// boardCols/boardRows가 주어지면 고정 좌표가 범위 밖일 때 경고를 찍는다.
@@ -322,6 +324,19 @@ public class EnemyEncounterImporter : EditorWindow
                     {
                         enemyData = enemyData,
                         placementType = PlacementType.Random,
+                        placementRange = range,
+                        spawnGroupId = groupId,
+                    });
+            }
+            else if (afterDot.StartsWith("range:"))
+            {
+                int count = ParseInt(beforeDot, 1);
+                int range = ParseInt(afterDot.Substring(6), 3);
+                for (int i = 0; i < count; i++)
+                    list.Add(new EnemySlot
+                    {
+                        enemyData = enemyData,
+                        placementType = PlacementType.Range,
                         placementRange = range,
                         spawnGroupId = groupId,
                     });
